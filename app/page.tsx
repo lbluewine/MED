@@ -58,11 +58,24 @@ export default function Home() {
         <CampoBusca municipioId={id} indice={indiceSerializado(id)} />
       </div>
 
-      <p className="mt-8">
-        <a className="underline" href={`/${id}/remedios`}>
-          Ou veja a lista completa de remédios, de A a Z
-        </a>
-      </p>
+      <ul className="mt-8">
+        <li className="border-t border-linha">
+          <a
+            className="block min-h-[48px] py-3 text-[20px] underline"
+            href={`/${id}/onde-pegar`}
+          >
+            Ver onde pegar remédio em {municipio.nome}
+          </a>
+        </li>
+        <li className="border-t border-linha">
+          <a
+            className="block min-h-[48px] py-3 text-[20px] underline"
+            href={`/${id}/remedios`}
+          >
+            Ver a lista completa de remédios, de A a Z
+          </a>
+        </li>
+      </ul>
     </div>
   );
 }

@@ -87,7 +87,7 @@ def endereco(u: dict, geo_conferida: bool) -> dict:
 
 ENTREGA_DISTRITAL = (
     "Remédios do componente básico, incluindo os controlados. É a farmácia de "
-    "referência do distrito e atende em tempo integral."
+    "referência do distrito."
 )
 ENTREGA_DISPENSARIO = (
     "Parte dos remédios do componente básico. Procure a unidade onde você faz "
@@ -100,6 +100,8 @@ FARMACIAS = {
     "Farmácia Distrital Centro": dict(
         tipo="farmacia_distrital", dispensa=["basico"], entrega=ENTREGA_DISTRITAL,
         divergencias=[
+            "A REMUME de 2024 informa outro telefone: (48) 3430-0959. "
+            "Se ninguém atender no número acima, tente esse.",
             "A REMUME de 2024 informa o CEP 88801-530 para este mesmo endereço, "
             "e o portal da prefeitura informa 88810-020. A rua e o número são os mesmos.",
             "A REMUME informa que esta farmácia abre das 7h às 19h.",
@@ -135,13 +137,19 @@ FARMACIAS = {
         tipo="farmacia_ceaf", dispensa=["especializado"],
         entrega="Os remédios de alto custo, que quem entrega é o governo do estado (CEAF).",
         divergencias=[
+            "A REMUME de 2024 informa outro telefone: (48) 3431-2789. "
+            "Se ninguém atender no número acima, tente esse.",
             "A REMUME informa esta farmácia como Clínicas Integradas da UNESC, "
             "com atendimento das 8h às 17h.",
         ]),
     "Complexo de Saúde Santo Agostinho": dict(
         tipo="farmacia_alimentar", dispensa=[],
         entrega="Fórmulas infantis, dietas para sonda, complementos alimentares e o que foi pedido na justiça.",
-        divergencias=["A REMUME informa atendimento das 8h às 17h."]),
+        divergencias=[
+            "A REMUME de 2024 informa outro telefone: (48) 3437-7893. "
+            "Se ninguém atender no número acima, tente esse.",
+            "A REMUME informa atendimento das 8h às 17h.",
+        ]),
     "CAPS II - Centro de Atenção Psicossocial II": dict(
         tipo="farmacia_caps", dispensa=["basico"],
         entrega="Remédios para quem faz tratamento no próprio CAPS II.",

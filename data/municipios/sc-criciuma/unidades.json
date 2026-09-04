@@ -2229,6 +2229,7 @@
     "restricao": null,
     "observacoes": null,
     "divergencias": [
+      "A REMUME de 2024 informa outro telefone: (48) 3437-7893. Se ninguém atender no número acima, tente esse.",
       "A REMUME informa atendimento das 8h às 17h."
     ],
     "proveniencia": [
@@ -2446,6 +2447,7 @@
     "restricao": null,
     "observacoes": null,
     "divergencias": [
+      "A REMUME de 2024 informa outro telefone: (48) 3431-2789. Se ninguém atender no número acima, tente esse.",
       "A REMUME informa esta farmácia como Clínicas Integradas da UNESC, com atendimento das 8h às 17h."
     ],
     "proveniencia": [
@@ -2502,7 +2504,7 @@
     "dispensa": [
       "basico"
     ],
-    "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito e atende em tempo integral.",
+    "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
     "restricao": null,
     "observacoes": null,
     "divergencias": [
@@ -2557,7 +2559,7 @@
     "dispensa": [
       "basico"
     ],
-    "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito e atende em tempo integral.",
+    "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
     "restricao": null,
     "observacoes": null,
     "divergencias": [
@@ -2613,10 +2615,11 @@
     "dispensa": [
       "basico"
     ],
-    "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito e atende em tempo integral.",
+    "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
     "restricao": null,
     "observacoes": null,
     "divergencias": [
+      "A REMUME de 2024 informa outro telefone: (48) 3430-0959. Se ninguém atender no número acima, tente esse.",
       "A REMUME de 2024 informa o CEP 88801-530 para este mesmo endereço, e o portal da prefeitura informa 88810-020. A rua e o número são os mesmos.",
       "A REMUME informa que esta farmácia abre das 7h às 19h."
     ],
@@ -2669,7 +2672,7 @@
     "dispensa": [
       "basico"
     ],
-    "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito e atende em tempo integral.",
+    "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
     "restricao": null,
     "observacoes": null,
     "divergencias": [
@@ -2724,7 +2727,7 @@
     "dispensa": [
       "basico"
     ],
-    "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito e atende em tempo integral.",
+    "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
     "restricao": null,
     "observacoes": null,
     "divergencias": [
@@ -2780,7 +2783,7 @@
     "dispensa": [
       "basico"
     ],
-    "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito e atende em tempo integral.",
+    "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
     "restricao": null,
     "observacoes": null,
     "divergencias": [
@@ -2830,7 +2833,7 @@
     "dispensa": [
       "basico"
     ],
-    "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito e atende em tempo integral.",
+    "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
     "restricao": null,
     "observacoes": null,
     "divergencias": [
@@ -2871,7 +2874,7 @@
     "dispensa": [
       "basico"
     ],
-    "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito e atende em tempo integral.",
+    "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
     "restricao": null,
     "observacoes": null,
     "divergencias": [
@@ -2912,7 +2915,7 @@
     "dispensa": [
       "basico"
     ],
-    "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito e atende em tempo integral.",
+    "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
     "restricao": null,
     "observacoes": null,
     "divergencias": [
@@ -2953,7 +2956,7 @@
     "dispensa": [
       "basico"
     ],
-    "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito e atende em tempo integral.",
+    "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
     "restricao": null,
     "observacoes": null,
     "divergencias": [
