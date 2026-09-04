@@ -132,6 +132,13 @@ export const FormaFarmaceutica = z.enum([
   "supositorio",
   "adesivo",
   "po",
+  "locao",
+  "gel",
+  "pasta",
+  "oleo",
+  "solucao_nasal",
+  "solucao_inalatoria",
+  "solucao_retal",
 ]);
 
 // ---------------------------------------------------------------------------
@@ -251,15 +258,35 @@ export const Unidades = z.array(Unidade).refine(
 // data/municipios/<id>/remume.json
 // ---------------------------------------------------------------------------
 
+/** O paciente leva para casa, ou o remédio é usado dentro da unidade? */
+export const Retirada = z.enum(["leva_para_casa", "usado_na_unidade"]);
+
 export const ItemRemume = z.object({
   principio_ativo: z.string().min(1),
-  /** Como está escrito na fonte: "50 mg", "25 mg/mL". */
-  concentracao: z.string().min(1),
-  forma: FormaFarmaceutica,
+  /**
+   * A apresentação inteira, como está escrita na fonte:
+   * "600 mg granulado envelopes com 5g". É isto que a tela mostra.
+   */
+  apresentacao: z.string().min(1),
+  /** Separados da apresentação. Nulos quando não dá para separar com certeza. */
+  concentracao: z.string().min(1).nullable(),
+  forma: FormaFarmaceutica.nullable(),
   componente: Componente,
-  onde_retirar: z.array(TipoUnidade).min(1),
-  /** Que receita o farmacêutico aceita para este item. Define a validade. */
-  tipo_receita: TipoReceita,
+  /**
+   * Os remédios de uso ambulatorial são aplicados dentro da unidade ou do
+   * pronto atendimento. A tela nunca pode mandar alguém ir buscar um deles.
+   */
+  retirada: Retirada,
+  /** Pode ser vazio: nem todo local que a fonte cita é um balcão de entrega. */
+  onde_retirar: z.array(TipoUnidade),
+  /** Os locais como a fonte escreve. Sempre mostrado, mapeado ou não. */
+  locais_texto: z.string().min(1),
+  /**
+   * Que receita o farmacêutico aceita para este item. Define a validade.
+   * Nulo quando a fonte não informa: a tela diz que não sabe e manda perguntar
+   * na unidade.
+   */
+  tipo_receita: TipoReceita.nullable(),
   /** Classe do medicamento como a fonte escreve: "antiviral", "vitamina". */
   classificacao: z.string().min(1).nullable(),
   exige: z.array(Exigencia).min(1),
@@ -271,9 +298,9 @@ export const ItemRemume = z.object({
 
 export const Remume = z.array(ItemRemume).refine(
   (itens) =>
-    new Set(itens.map((i) => `${i.principio_ativo}|${i.concentracao}|${i.forma}`))
+    new Set(itens.map((i) => `${i.principio_ativo}|${i.apresentacao}|${i.retirada}`))
       .size === itens.length,
-  "há itens repetidos (mesmo princípio ativo, concentração e forma)",
+  "há itens repetidos (mesmo princípio ativo, apresentação e forma de retirada)",
 );
 
 // ---------------------------------------------------------------------------
@@ -328,6 +355,7 @@ export type Geo = z.infer<typeof Geo>;
 export type FormaFarmaceutica = z.infer<typeof FormaFarmaceutica>;
 export type Municipio = z.infer<typeof Municipio>;
 export type Unidade = z.infer<typeof Unidade>;
+export type Retirada = z.infer<typeof Retirada>;
 export type ItemRemume = z.infer<typeof ItemRemume>;
 export type Revisao = z.infer<typeof Revisao>;
 export type Medicamento = z.infer<typeof Medicamento>;
