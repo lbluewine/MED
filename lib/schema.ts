@@ -292,6 +292,12 @@ export const ItemRemume = z.object({
   exige: z.array(Exigencia).min(1),
   /** Liga o item à ficha editorial nacional, quando existir. */
   slug_ficha: Slug.nullable(),
+  /**
+   * A referência legal que a fonte anexa ao nome, como "Controlado Port.
+   * 344/98 - Lista C1". Fica registrada mas não vai para a tela: é jargão, e
+   * o que ela significa já está dito no tipo de receita.
+   */
+  nota_regulatoria: z.string().min(1).nullable(),
   observacoes: z.string().min(1).nullable(),
   proveniencia: Proveniencia,
 });

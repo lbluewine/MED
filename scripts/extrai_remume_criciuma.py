@@ -123,10 +123,19 @@ def item(reg: dict) -> dict | None:
     # A classificação é o que vem antes da parte sobre receita.
     corte = re.search(r"Receitu[aá]rio|Notifica[çc][ãa]o", classe, re.I)
     classificacao = limpa(classe[: corte.start()]) if corte else None
-    resto = limpa(classe[corte.end():]) if corte else ""
-    resto = re.sub(r"^(simples|em duas vias|de Controle Especial[^A-ZÀ-Ý]*|"
-                   r"de Receita\s*[“\"]?[AB][”\"]?\s*(Azul|Amarela)|acompanhado de receita)",
-                   "", resto, flags=re.I).strip(" -–—*")
+
+    # O que sobra depois de tirar a frase da receita inteira é observação.
+    # Recortar por posição deixava rabo ("Branca em 2 vias”") no registro.
+    resto = classe[corte.end() - len(corte.group(0)):] if corte else ""
+    for frase in (
+        r"Receitu[aá]rio\s+de\s+Controle\s+Especial\s*[“\"]?Branca\s+em\s+2\s+vias[”\"]?",
+        r"Notifica[çc][ãa]o\s+de\s+Receita\s*[“\"]?[AB][”\"]?\s*(Azul|Amarela)"
+        r"(\s+acompanhado\s+de\s+receita)?",
+        r"Receitu[aá]rio\s+em\s+duas\s+vias",
+        r"Receitu[aá]rio\s+simples",
+    ):
+        resto = re.sub(frase, " ", resto, flags=re.I)
+    resto = limpa(resto).strip(" -–—*“”\"")
 
     local = reg["local"]
     onde = []
@@ -135,7 +144,10 @@ def item(reg: dict) -> dict | None:
             onde.append(tipo)
 
     forma, conc = forma_e_concentracao(limpa(reg["apresentacao"]), nome)
-    observacoes = " ".join(x for x in (nota_nome, resto or None) if x).strip() or None
+    # A nota legal do nome ("Controlado Port. 344/98 - Lista C1", "RDC
+    # 471/2021") fica registrada, mas fora de `observacoes`: é jargão que já
+    # está dito de outro jeito no tipo de receita. Ver docs/CONTEUDO.md.
+    observacoes = resto or None
 
     return {
         "principio_ativo": nome,
@@ -154,6 +166,7 @@ def item(reg: dict) -> dict | None:
             else ["receita_original"]
         ),
         "slug_ficha": None,
+        "nota_regulatoria": nota_nome,
         "observacoes": observacoes,
         "proveniencia": PROVENIENCIA,
     }

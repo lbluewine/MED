@@ -1,6 +1,29 @@
 @import "tailwindcss";
 
 /*
+ * Atkinson Hyperlegible, do Braille Institute. Desenhada para baixa visão:
+ * as letras não se confundem entre si. A escolha existe por causa do público.
+ *
+ * Servida junto com o site, nunca por CDN. Fonte de terceiro vaza o IP de
+ * quem lê, e aqui isso seria dado de saúde. Ver docs/STACK.md.
+ */
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fontes/AtkinsonHyperlegible-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fontes/AtkinsonHyperlegible-Bold.woff2") format("woff2");
+}
+
+/*
  * Tokens de docs/STACK.md. Verde, vermelho e âmbar carregam significado, então
  * nunca aparecem sozinhos: sempre com texto e ícone.
  */

@@ -1,0 +1,94 @@
+/**
+ * Traduz o vocabulário técnico da fonte para o jeito que a pessoa fala.
+ * Ver a tabela de tradução obrigatória em docs/CONTEUDO.md.
+ *
+ * Todo termo técnico que precisa aparecer vem explicado na mesma frase.
+ */
+import type { Componente, Exigencia, TipoReceita, TipoUnidade } from "./schema";
+import { VALIDADE_RECEITA_DIAS } from "./prazos";
+
+/**
+ * Frase inteira, com o artigo dentro. Montar "Na " + rótulo dá "Na posto de
+ * saúde", que está errado e soa como texto de robô.
+ */
+export const ONDE_RETIRAR: Record<TipoUnidade, string> = {
+  farmacia_distrital: "Na farmácia do seu distrito",
+  dispensario_ubs: "No posto de saúde do seu bairro (UBS)",
+  farmacia_estrategica: "Na Farmácia Estratégica",
+  farmacia_ceaf: "Na Farmácia Escola, que entrega os remédios de alto custo",
+  farmacia_alimentar: "Na farmácia de fórmulas e dietas",
+  farmacia_caps: "Na farmácia do CAPS onde você faz tratamento",
+  programa_insumos: "No programa de medida de glicemia",
+  farmacia_popular: "Na Farmácia Popular",
+};
+
+/** Título curto, para lista e cabeçalho. */
+export const NOME_UNIDADE_CURTO: Record<TipoUnidade, string> = {
+  farmacia_distrital: "Farmácia do distrito",
+  dispensario_ubs: "Posto de saúde (UBS)",
+  farmacia_estrategica: "Farmácia Estratégica",
+  farmacia_ceaf: "Farmácia de alto custo",
+  farmacia_alimentar: "Fórmulas e dietas",
+  farmacia_caps: "Farmácia do CAPS",
+  programa_insumos: "Programa de glicemia",
+  farmacia_popular: "Farmácia Popular",
+};
+
+/** Nenhum texto do site pode ter o nome de um município escrito fixo. */
+export function quemEntrega(componente: Componente, municipio: string): string {
+  if (componente === "basico") {
+    return `A prefeitura de ${municipio} entrega este remédio.`;
+  }
+  if (componente === "estrategico") {
+    return (
+      "Este remédio vem de um programa do Ministério da Saúde e é entregue " +
+      "aqui na cidade."
+    );
+  }
+  return (
+    "Este é um remédio de alto custo, que quem entrega é o governo do estado " +
+    "(CEAF). Precisa de um pedido feito pelo médico."
+  );
+}
+
+export const EXIGENCIA: Record<Exigencia, string> = {
+  receita_original: "A receita original, não uma cópia",
+  documento_com_foto: "Um documento com foto (RG ou CNH)",
+  cartao_sus: "O Cartão do SUS",
+  certidao_nascimento_crianca: "Se for criança, serve a certidão de nascimento",
+  documento_de_quem_retira:
+    "Se outra pessoa for buscar, o documento com foto dela",
+  laudo_lme: "O laudo que o médico preenche para pedir o remédio (LME)",
+};
+
+export const NOME_RECEITA: Record<TipoReceita, string> = {
+  simples: "receita comum",
+  controle_especial_branca_2_vias: "receita branca de controle especial, em duas vias",
+  notificacao_b_azul: "receita azul",
+  notificacao_a_amarela: "receita amarela",
+  antimicrobiano_2_vias: "receita de antibiótico, em duas vias",
+};
+
+/**
+ * O que dizer sobre a validade da receita.
+ *
+ * A receita comum é o caso confuso: vale 30 dias, mas se o médico escreveu
+ * "uso contínuo" o prazo é bem maior e depende do remédio. Por isso a frase
+ * não afirma um número só.
+ */
+export function validadeDaReceita(tipo: TipoReceita): string {
+  const dias = VALIDADE_RECEITA_DIAS[tipo];
+  if (tipo === "simples") {
+    return (
+      `A receita comum vale ${dias} dias. Se o médico escreveu "uso contínuo" ` +
+      "na receita, ela vale por mais tempo. Pergunte na farmácia."
+    );
+  }
+  if (tipo === "antimicrobiano_2_vias") {
+    return (
+      `Essa receita vale ${dias} dias. Se o médico escreveu "uso contínuo", ` +
+      "vale 90 dias."
+    );
+  }
+  return `Essa receita vale ${dias} dias, contados da data que está escrita nela.`;
+}
