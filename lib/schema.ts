@@ -53,24 +53,53 @@ export const Proveniencia = z
 /** Componente da Assistência Farmacêutica. Define quem entrega e como se pede. */
 export const Componente = z.enum(["basico", "especializado", "estrategico"]);
 
+/**
+ * Os tipos vieram da seção 8 da REMUME de Criciúma. Outro município pode
+ * organizar diferente; acrescente aqui em vez de forçar um encaixe errado.
+ */
 export const TipoUnidade = z.enum([
-  "farmacia_municipal",
+  /** Farmácia de referência do distrito sanitário. Entrega o básico e os controlados. */
+  "farmacia_distrital",
+  /** Balcão dentro da UBS. Entrega parte do básico. */
   "dispensario_ubs",
+  /** Programas estratégicos: HIV, tuberculose, hanseníase, hepatites. */
+  "farmacia_estrategica",
+  /** Alto custo (CEAF). Em Criciúma é a Farmácia Escola da UNESC. */
   "farmacia_ceaf",
+  /** Fórmulas infantis, dietas enterais e demandas judiciais. */
+  "farmacia_alimentar",
+  /** Atende só quem é acompanhado no CAPS. */
   "farmacia_caps",
+  /** Programa de insumos, como o de automonitoramento da glicemia. */
+  "programa_insumos",
   "farmacia_popular",
 ]);
 
 /** O que a pessoa precisa levar para retirar. */
 export const Exigencia = z.enum([
-  "receita_sus_valida",
-  "receita_qualquer_origem",
+  /** A via original da receita, não uma cópia. */
+  "receita_original",
   "documento_com_foto",
   "cartao_sus",
-  "comprovante_residencia",
-  "receita_controlada_azul",
-  "receita_controlada_amarela",
+  /** Certidão de nascimento serve quando o paciente é criança. */
+  "certidao_nascimento_crianca",
+  /** Quem retira no lugar do paciente apresenta o próprio documento. */
+  "documento_de_quem_retira",
+  /** O laudo que o médico preenche para pedir o remédio de alto custo (LME). */
   "laudo_lme",
+]);
+
+/**
+ * Tipo de receita e sua validade, conforme a seção "Da validade das receitas"
+ * da REMUME de Criciúma. Chegar com a receita vencida é a viagem perdida mais
+ * comum, então este dado vai na tela.
+ */
+export const TipoReceita = z.enum([
+  "simples",
+  "controle_especial_branca_2_vias",
+  "notificacao_b_azul",
+  "notificacao_a_amarela",
+  "antimicrobiano_2_vias",
 ]);
 
 export const FormaFarmaceutica = z.enum([
@@ -101,10 +130,16 @@ export const Municipio = z.object({
   uf: z.string().length(2).regex(/^[A-Z]{2}$/),
   /** Código IBGE de 7 dígitos. */
   ibge: z.string().regex(/^\d{7}$/),
+  /** DDD, para completar os telefones que a fonte escreve sem ele. */
+  ddd: z.string().regex(/^\d{2}$/),
   /** Telefone geral da assistência farmacêutica, usado no aviso de dado velho. */
   telefone_assistencia_farmaceutica: z.string().min(1).nullable(),
-  /** Se a REMUME local atende só residentes. Ver docs/PROJETO.md. */
-  exige_residencia: z.boolean(),
+  /**
+   * O que a fonte exige de todo mundo, antes de qualquer medicamento.
+   * Em Criciúma: morar na cidade e ter cadastro no sistema municipal.
+   * Isto vai na tela, não em nota de rodapé.
+   */
+  exigencias_gerais: z.array(z.string().min(1)),
   /** Centro do mapa. */
   centro: z.object({ lat: z.number(), lng: z.number() }),
   proveniencia: Proveniencia,
@@ -116,8 +151,12 @@ export const Municipio = z.object({
 
 export const Horario = z
   .object({
-    /** Texto curto e legível: "seg-sex", "sábado". */
-    dias: z.string().min(1),
+    /**
+     * Texto curto e legível: "seg-sex", "sábado".
+     * `null` quando a fonte informa o horário mas não diz em quais dias.
+     * A tela precisa dizer isso, não chutar "seg-sex".
+     */
+    dias: z.string().min(1).nullable(),
     abre: z.string().regex(/^\d{2}:\d{2}$/),
     fecha: z.string().regex(/^\d{2}:\d{2}$/),
   })
@@ -126,12 +165,31 @@ export const Horario = z
     path: ["fecha"],
   });
 
-export const Endereco = z.object({
-  logradouro: z.string().min(1),
-  bairro: z.string().min(1),
-  cep: z.string().regex(/^\d{5}-\d{3}$/),
+/**
+ * Coordenada do pino no mapa.
+ *
+ * Só existe depois que uma pessoa abriu o mapa e confirmou que o pino cai na
+ * porta certa. Sem isso a unidade aparece na lista, com endereço e telefone,
+ * e fica fora do mapa. Pino errado manda alguém para o lugar errado, o que é
+ * pior que não ter mapa.
+ */
+export const Geo = z.object({
   lat: z.number().min(-34).max(6),
   lng: z.number().min(-74).max(-33),
+  conferido_por: z.string().min(1),
+  conferido_em: DataISO,
+});
+
+export const Endereco = z.object({
+  logradouro: z.string().min(1),
+  /** `null` quando a fonte não informa o bairro. */
+  bairro: z.string().min(1).nullable(),
+  /**
+   * `null` quando a fonte não traz CEP ou traz um CEP inválido.
+   * Não adivinhe o CEP certo: registre null e explique em `observacoes`.
+   */
+  cep: z.string().regex(/^\d{5}-\d{3}$/).nullable(),
+  geo: Geo.nullable(),
 });
 
 export const Unidade = z.object({
@@ -139,10 +197,20 @@ export const Unidade = z.object({
   nome: z.string().min(1),
   tipo: TipoUnidade,
   endereco: Endereco,
-  telefones: z.array(z.string().min(1)),
+  /**
+   * Como está na fonte, com ou sem DDD. O DDD do município completa o que
+   * falta na hora de mostrar. Não reescreva o número aqui.
+   */
+  telefones: z.array(z.string().regex(/^(\(\d{2}\) )?\d{4,5}-\d{4}$/)),
   horarios: z.array(Horario).min(1),
-  /** Quais componentes esta unidade entrega. */
-  dispensa: z.array(Componente).min(1),
+  /**
+   * Quais componentes esta unidade entrega. Pode ser vazio: a farmácia de
+   * fórmulas alimentares e o programa de insumos para diabetes não entregam
+   * medicamento de nenhum componente.
+   */
+  dispensa: z.array(Componente),
+  /** O que a unidade entrega, na palavra da fonte. Aparece na tela. */
+  entrega_descricao: z.string().min(1),
   /**
    * Texto quando o atendimento é limitado a um público.
    * Nunca mande alguém para uma unidade sem mostrar isto.
@@ -168,6 +236,10 @@ export const ItemRemume = z.object({
   forma: FormaFarmaceutica,
   componente: Componente,
   onde_retirar: z.array(TipoUnidade).min(1),
+  /** Que receita o farmacêutico aceita para este item. Define a validade. */
+  tipo_receita: TipoReceita,
+  /** Classe do medicamento como a fonte escreve: "antiviral", "vitamina". */
+  classificacao: z.string().min(1).nullable(),
   exige: z.array(Exigencia).min(1),
   /** Liga o item à ficha editorial nacional, quando existir. */
   slug_ficha: Slug.nullable(),
@@ -228,6 +300,8 @@ export type Proveniencia = z.infer<typeof Proveniencia>;
 export type Componente = z.infer<typeof Componente>;
 export type TipoUnidade = z.infer<typeof TipoUnidade>;
 export type Exigencia = z.infer<typeof Exigencia>;
+export type TipoReceita = z.infer<typeof TipoReceita>;
+export type Geo = z.infer<typeof Geo>;
 export type FormaFarmaceutica = z.infer<typeof FormaFarmaceutica>;
 export type Municipio = z.infer<typeof Municipio>;
 export type Unidade = z.infer<typeof Unidade>;

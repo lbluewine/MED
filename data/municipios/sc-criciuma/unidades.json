@@ -1,0 +1,589 @@
+[
+  {
+    "id": "criciuma-farmacia-ubs-centro",
+    "nome": "Farmácia da UBS Centro",
+    "tipo": "farmacia_distrital",
+    "endereco": {
+      "logradouro": "Rua João Pessoa, 187",
+      "bairro": null,
+      "cep": "88801-530",
+      "geo": null
+    },
+    "telefones": [
+      "(48) 3430-0959"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos do componente básico, incluindo os controlados. Atende em tempo integral e é a farmácia de referência do distrito.",
+    "restricao": null,
+    "observacoes": null,
+    "proveniencia": {
+      "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+      "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+      "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+      "fonte_data": "2024-11-01",
+      "extraido_em": "2026-09-03",
+      "verificado_em": "2026-09-03",
+      "metodo": "ia-assistida"
+    }
+  },
+  {
+    "id": "criciuma-farmacia-ubs-santa-luzia",
+    "nome": "Farmácia da UBS Santa Luzia",
+    "tipo": "farmacia_distrital",
+    "endereco": {
+      "logradouro": "Rua Braz Cardoso Fernandes, sem número",
+      "bairro": "Santa Luzia",
+      "cep": "88807-270",
+      "geo": null
+    },
+    "telefones": [
+      "3461-9450"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "18:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos do componente básico, incluindo os controlados. Atende em tempo integral e é a farmácia de referência do distrito.",
+    "restricao": null,
+    "observacoes": null,
+    "proveniencia": {
+      "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+      "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+      "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+      "fonte_data": "2024-11-01",
+      "extraido_em": "2026-09-03",
+      "verificado_em": "2026-09-03",
+      "metodo": "ia-assistida"
+    }
+  },
+  {
+    "id": "criciuma-farmacia-ubs-prospera",
+    "nome": "Farmácia da UBS Próspera",
+    "tipo": "farmacia_distrital",
+    "endereco": {
+      "logradouro": "Rua Pernambuco, esquina com a Travessa do Mineiro, sem número. Fundos da Praça da Chaminé",
+      "bairro": null,
+      "cep": "88813-010",
+      "geo": null
+    },
+    "telefones": [
+      "(48) 3439-3097"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos do componente básico, incluindo os controlados. Atende em tempo integral e é a farmácia de referência do distrito.",
+    "restricao": null,
+    "observacoes": null,
+    "proveniencia": {
+      "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+      "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+      "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+      "fonte_data": "2024-11-01",
+      "extraido_em": "2026-09-03",
+      "verificado_em": "2026-09-03",
+      "metodo": "ia-assistida"
+    }
+  },
+  {
+    "id": "criciuma-farmacia-wosocris-rio-maina",
+    "nome": "Farmácia da Wosocris / Rio Maina",
+    "tipo": "farmacia_distrital",
+    "endereco": {
+      "logradouro": "Rua Virgílio Mondardo, sem número",
+      "bairro": "Catarinense",
+      "cep": "88818-338",
+      "geo": null
+    },
+    "telefones": [
+      "(48) 3403-7000"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos do componente básico, incluindo os controlados. Atende em tempo integral e é a farmácia de referência do distrito.",
+    "restricao": null,
+    "observacoes": null,
+    "proveniencia": {
+      "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+      "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+      "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+      "fonte_data": "2024-11-01",
+      "extraido_em": "2026-09-03",
+      "verificado_em": "2026-09-03",
+      "metodo": "ia-assistida"
+    }
+  },
+  {
+    "id": "criciuma-farmacia-ubs-boa-vista",
+    "nome": "Farmácia da UBS Boa Vista",
+    "tipo": "farmacia_distrital",
+    "endereco": {
+      "logradouro": "Rua Tangará, esquina com a Rua São Francisco do Sul, sem número",
+      "bairro": "Boa Vista",
+      "cep": null,
+      "geo": null
+    },
+    "telefones": [
+      "(48) 3445-8765"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos do componente básico, incluindo os controlados. Atende em tempo integral e é a farmácia de referência do distrito.",
+    "restricao": null,
+    "observacoes": "A fonte traz um CEP inválido para este endereço, então não mostramos o CEP. O endereço e o telefone estão corretos conforme a fonte.",
+    "proveniencia": {
+      "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+      "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+      "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+      "fonte_data": "2024-11-01",
+      "extraido_em": "2026-09-03",
+      "verificado_em": "2026-09-03",
+      "metodo": "ia-assistida"
+    }
+  },
+  {
+    "id": "criciuma-farmacia-ubs-quarta-linha",
+    "nome": "Farmácia da UBS Quarta Linha",
+    "tipo": "farmacia_distrital",
+    "endereco": {
+      "logradouro": "Rodovia Monsueto Luiz Rosso, sem número",
+      "bairro": null,
+      "cep": "88812-499",
+      "geo": null
+    },
+    "telefones": [
+      "(48) 3437-6741"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos do componente básico, incluindo os controlados. Atende em tempo integral e é a farmácia de referência do distrito.",
+    "restricao": null,
+    "observacoes": null,
+    "proveniencia": {
+      "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+      "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+      "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+      "fonte_data": "2024-11-01",
+      "extraido_em": "2026-09-03",
+      "verificado_em": "2026-09-03",
+      "metodo": "ia-assistida"
+    }
+  },
+  {
+    "id": "criciuma-farmacia-ubs-santa-barbara",
+    "nome": "Farmácia da UBS Santa Bárbara",
+    "tipo": "farmacia_distrital",
+    "endereco": {
+      "logradouro": "Rua Sampaio Viana",
+      "bairro": "Santa Bárbara",
+      "cep": "88804-270",
+      "geo": null
+    },
+    "telefones": [
+      "(48) 3445-8405"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos do componente básico, incluindo os controlados. Atende em tempo integral e é a farmácia de referência do distrito.",
+    "restricao": null,
+    "observacoes": null,
+    "proveniencia": {
+      "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+      "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+      "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+      "fonte_data": "2024-11-01",
+      "extraido_em": "2026-09-03",
+      "verificado_em": "2026-09-03",
+      "metodo": "ia-assistida"
+    }
+  },
+  {
+    "id": "criciuma-farmacia-ubs-sao-sebastiao",
+    "nome": "Farmácia da UBS São Sebastião",
+    "tipo": "farmacia_distrital",
+    "endereco": {
+      "logradouro": "Rua José Machado de Souza, sem número",
+      "bairro": "São Sebastião",
+      "cep": "88807-150",
+      "geo": null
+    },
+    "telefones": [
+      "(48) 3445-8470"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos do componente básico, incluindo os controlados. Atende em tempo integral e é a farmácia de referência do distrito.",
+    "restricao": null,
+    "observacoes": null,
+    "proveniencia": {
+      "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+      "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+      "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+      "fonte_data": "2024-11-01",
+      "extraido_em": "2026-09-03",
+      "verificado_em": "2026-09-03",
+      "metodo": "ia-assistida"
+    }
+  },
+  {
+    "id": "criciuma-farmacia-ubs-mina-do-mato",
+    "nome": "Farmácia da UBS Mina do Mato",
+    "tipo": "farmacia_distrital",
+    "endereco": {
+      "logradouro": "Rua Antônio Teodoro Máximo, sem número",
+      "bairro": "Mina do Mato",
+      "cep": "88810-530",
+      "geo": null
+    },
+    "telefones": [
+      "(48) 3403-6011"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos do componente básico, incluindo os controlados. Atende em tempo integral e é a farmácia de referência do distrito.",
+    "restricao": null,
+    "observacoes": null,
+    "proveniencia": {
+      "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+      "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+      "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+      "fonte_data": "2024-11-01",
+      "extraido_em": "2026-09-03",
+      "verificado_em": "2026-09-03",
+      "metodo": "ia-assistida"
+    }
+  },
+  {
+    "id": "criciuma-farmacia-estrategica",
+    "nome": "Farmácia Estratégica",
+    "tipo": "farmacia_estrategica",
+    "endereco": {
+      "logradouro": "Rua Rio dos Cedros, 155",
+      "bairro": "Santa Augusta",
+      "cep": null,
+      "geo": null
+    },
+    "telefones": [
+      "3445-8730"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "16:00"
+      }
+    ],
+    "dispensa": [
+      "estrategico"
+    ],
+    "entrega_descricao": "Remédios dos programas de HIV e aids, hepatites, tuberculose, hanseníase, sífilis, toxoplasmose, influenza e tabagismo.",
+    "restricao": null,
+    "observacoes": "Fica no Centro de Vigilância em Saúde. A fonte traz um CEP inválido para este endereço, então não mostramos o CEP. O endereço e o telefone estão corretos conforme a fonte.",
+    "proveniencia": {
+      "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+      "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+      "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+      "fonte_data": "2024-11-01",
+      "extraido_em": "2026-09-03",
+      "verificado_em": "2026-09-03",
+      "metodo": "ia-assistida"
+    }
+  },
+  {
+    "id": "criciuma-farmacia-escola-unesc",
+    "nome": "Farmácia Escola (alto custo)",
+    "tipo": "farmacia_ceaf",
+    "endereco": {
+      "logradouro": "Clínicas Integradas da UNESC",
+      "bairro": null,
+      "cep": null,
+      "geo": null
+    },
+    "telefones": [
+      "3431-2789"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "especializado"
+    ],
+    "entrega_descricao": "Os remédios de alto custo, que quem entrega é o governo do estado (CEAF).",
+    "restricao": null,
+    "observacoes": "A fonte não informa o endereço completo nem o CEP das Clínicas Integradas.",
+    "proveniencia": {
+      "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+      "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+      "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+      "fonte_data": "2024-11-01",
+      "extraido_em": "2026-09-03",
+      "verificado_em": "2026-09-03",
+      "metodo": "ia-assistida"
+    }
+  },
+  {
+    "id": "criciuma-farmacia-complexo-santo-agostinho",
+    "nome": "Farmácia do Complexo Santo Agostinho",
+    "tipo": "farmacia_alimentar",
+    "endereco": {
+      "logradouro": "Rua Luis Pirola de Nóe, 150",
+      "bairro": "Vila Isabel",
+      "cep": "88818-070",
+      "geo": null
+    },
+    "telefones": [
+      "3437-7893"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [],
+    "entrega_descricao": "Fórmulas infantis, dietas para sonda, complementos alimentares e o que foi pedido na justiça.",
+    "restricao": null,
+    "observacoes": null,
+    "proveniencia": {
+      "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+      "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+      "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+      "fonte_data": "2024-11-01",
+      "extraido_em": "2026-09-03",
+      "verificado_em": "2026-09-03",
+      "metodo": "ia-assistida"
+    }
+  },
+  {
+    "id": "criciuma-farmacia-caps-iii",
+    "nome": "Farmácia do CAPS III",
+    "tipo": "farmacia_caps",
+    "endereco": {
+      "logradouro": "Rua Santo Antônio, 1080",
+      "bairro": "Cruzeiro do Sul",
+      "cep": "88811-040",
+      "geo": null
+    },
+    "telefones": [
+      "3403-3450"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Remédios para quem faz tratamento no próprio CAPS III.",
+    "restricao": "Atende só quem é acompanhado no CAPS III. Se você não faz tratamento lá, procure a farmácia distrital do seu bairro.",
+    "observacoes": null,
+    "proveniencia": {
+      "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+      "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+      "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+      "fonte_data": "2024-11-01",
+      "extraido_em": "2026-09-03",
+      "verificado_em": "2026-09-03",
+      "metodo": "ia-assistida"
+    }
+  },
+  {
+    "id": "criciuma-farmacia-caps-ii",
+    "nome": "Farmácia do CAPS II",
+    "tipo": "farmacia_caps",
+    "endereco": {
+      "logradouro": "Rua Madre Tereza Michel, 446",
+      "bairro": "Michel",
+      "cep": null,
+      "geo": null
+    },
+    "telefones": [
+      "3445-8736"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Remédios para quem faz tratamento no próprio CAPS II.",
+    "restricao": "Atende só quem é acompanhado no CAPS II. Se você não faz tratamento lá, procure a farmácia distrital do seu bairro.",
+    "observacoes": "A fonte não informa o CEP.",
+    "proveniencia": {
+      "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+      "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+      "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+      "fonte_data": "2024-11-01",
+      "extraido_em": "2026-09-03",
+      "verificado_em": "2026-09-03",
+      "metodo": "ia-assistida"
+    }
+  },
+  {
+    "id": "criciuma-farmacia-caps-ii-ad",
+    "nome": "Farmácia do CAPS II AD",
+    "tipo": "farmacia_caps",
+    "endereco": {
+      "logradouro": "Rua João Batista Rita, sem número",
+      "bairro": "Santa Luzia",
+      "cep": "88806-100",
+      "geo": null
+    },
+    "telefones": [
+      "3445-8488"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Remédios para quem faz tratamento no próprio CAPS II AD.",
+    "restricao": "Atende só quem é acompanhado no CAPS II AD. Se você não faz tratamento lá, procure a farmácia distrital do seu bairro.",
+    "observacoes": null,
+    "proveniencia": {
+      "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+      "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+      "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+      "fonte_data": "2024-11-01",
+      "extraido_em": "2026-09-03",
+      "verificado_em": "2026-09-03",
+      "metodo": "ia-assistida"
+    }
+  },
+  {
+    "id": "criciuma-pamgc",
+    "nome": "Programa de medida de glicemia (PAMGC)",
+    "tipo": "programa_insumos",
+    "endereco": {
+      "logradouro": "Clínicas Integradas da UNESC",
+      "bairro": null,
+      "cep": null,
+      "geo": null
+    },
+    "telefones": [
+      "3431-4538"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [],
+    "entrega_descricao": "Insulina NPH e Regular, fitas e aparelho de medir açúcar no sangue.",
+    "restricao": "Entrega as fitas e o aparelho só para quem usa insulina ou está grávida. É preciso fazer cadastro antes.",
+    "observacoes": "Leve uma caixa de isopor pequena para trazer a insulina. A fonte não informa o endereço completo das Clínicas Integradas.",
+    "proveniencia": {
+      "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+      "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+      "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+      "fonte_data": "2024-11-01",
+      "extraido_em": "2026-09-03",
+      "verificado_em": "2026-09-03",
+      "metodo": "ia-assistida"
+    }
+  }
+]

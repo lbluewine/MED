@@ -40,6 +40,9 @@ for (const id of municipios) {
     console.log(
       `${municipio.nome}/${municipio.uf}: ${remume.length} itens, ${unidades.length} unidades`,
     );
+    if (remume.length === 0) {
+      aviso(`${id}: sem remume.json. A busca não responde para esta cidade.`);
+    }
 
     // Integridade entre arquivos: a REMUME não pode mandar ninguém para um tipo
     // de unidade que o município não tem.

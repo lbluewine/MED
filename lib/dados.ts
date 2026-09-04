@@ -54,8 +54,15 @@ export function carregaUnidades(municipioId: string): Unidade[] {
   return leJson(join(pasta(municipioId), "unidades.json"), Unidades);
 }
 
+/**
+ * Uma cidade pode publicar as unidades antes da lista de medicamentos.
+ * Sem `remume.json`, a busca não responde e a tela diz isso — em vez de
+ * quebrar o site inteiro.
+ */
 export function carregaRemume(municipioId: string): ItemRemume[] {
-  return leJson(join(pasta(municipioId), "remume.json"), Remume);
+  const caminho = join(pasta(municipioId), "remume.json");
+  if (!existsSync(caminho)) return [];
+  return leJson(caminho, Remume);
 }
 
 /** Fichas editoriais, iguais no país inteiro. */

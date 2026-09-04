@@ -30,3 +30,17 @@ export function dataPorExtenso(dataISO: string): string {
   const [ano, mes, dia] = dataISO.split("-");
   return `${dia}/${mes}/${ano}`;
 }
+
+/**
+ * Validade da receita, em dias, conforme a REMUME de Criciúma versão 11/2024.
+ *
+ * A receita simples é o caso confuso: a validade depende do que está escrito
+ * nela, não só do tipo. Por isso o valor é uma faixa e a tela explica.
+ */
+export const VALIDADE_RECEITA_DIAS = {
+  simples: 30,
+  controle_especial_branca_2_vias: 30,
+  notificacao_b_azul: 30,
+  notificacao_a_amarela: 30,
+  antimicrobiano_2_vias: 10,
+} as const;
