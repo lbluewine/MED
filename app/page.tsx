@@ -70,6 +70,14 @@ export default function Home() {
         <li className="border-t border-linha">
           <a
             className="block min-h-[48px] py-3 text-[20px] underline"
+            href="/alto-custo"
+          >
+            Ver como pedir remédio de alto custo
+          </a>
+        </li>
+        <li className="border-t border-b border-linha">
+          <a
+            className="block min-h-[48px] py-3 text-[20px] underline"
             href={`/${id}/remedios`}
           >
             Ver a lista completa de remédios, de A a Z

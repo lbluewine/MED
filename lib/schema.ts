@@ -310,6 +310,58 @@ export const Remume = z.array(ItemRemume).refine(
 );
 
 // ---------------------------------------------------------------------------
+// data/estados/<uf>/ceaf.json — alto custo
+// ---------------------------------------------------------------------------
+
+/** Que papel é esse. Serve para explicar o jargão em português na tela. */
+export const TipoDocumentoCeaf = z.enum([
+  "protocolo",
+  "formulario",
+  "termo_responsabilidade",
+  "resumo",
+  "lme",
+  "declaracao",
+  "outro",
+]);
+
+/** Um papel que o pedido de alto custo precisa. */
+export const DocumentoCeaf = z.object({
+  nome: z.string().min(1),
+  tipo: TipoDocumentoCeaf,
+  url: z.url(),
+  descricao: z.string().min(1).nullable(),
+  /** Como a fonte informa: "143.04 KB". */
+  tamanho: z.string().min(1).nullable(),
+  publicado_em: DataISO.nullable(),
+});
+
+/**
+ * Uma doença atendida pelo CEAF e os papéis que o pedido dela exige.
+ *
+ * É o que falta nas cartilhas, que dizem "traga os exames necessários" sem
+ * dizer quais, para qual doença. Ver docs/PROJETO.md.
+ */
+export const CondicaoCeaf = z.object({
+  slug: Slug,
+  nome: z.string().min(1),
+  /** O nome como o portal do estado escreve, em maiúsculas. */
+  nome_fonte: z.string().min(1),
+  url_fonte: z.url(),
+  documentos: z.array(DocumentoCeaf),
+});
+
+export const Ceaf = z.object({
+  uf: z.string().length(2).regex(/^[A-Z]{2}$/),
+  /** Formulários que valem para qualquer doença, como o LME. */
+  documentos_gerais: z.array(DocumentoCeaf),
+  condicoes: z.array(CondicaoCeaf).refine(
+    (cs) => new Set(cs.map((c) => c.slug)).size === cs.length,
+    "há condições com o mesmo slug",
+  ),
+  proveniencia: Proveniencia,
+});
+
+// ---------------------------------------------------------------------------
 // data/nacional/medicamentos.json — ficha editorial
 // ---------------------------------------------------------------------------
 
@@ -364,4 +416,8 @@ export type Unidade = z.infer<typeof Unidade>;
 export type Retirada = z.infer<typeof Retirada>;
 export type ItemRemume = z.infer<typeof ItemRemume>;
 export type Revisao = z.infer<typeof Revisao>;
+export type TipoDocumentoCeaf = z.infer<typeof TipoDocumentoCeaf>;
+export type DocumentoCeaf = z.infer<typeof DocumentoCeaf>;
+export type CondicaoCeaf = z.infer<typeof CondicaoCeaf>;
+export type Ceaf = z.infer<typeof Ceaf>;
 export type Medicamento = z.infer<typeof Medicamento>;

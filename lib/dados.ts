@@ -8,12 +8,14 @@ import { readdirSync, readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import type { ZodType } from "zod";
 import {
+  Ceaf,
   Medicamentos,
   Municipio,
   Remume,
   Unidades,
   type ItemRemume,
   type Medicamento as TMedicamento,
+  type Ceaf as TCeaf,
   type Municipio as TMunicipio,
   type Unidade,
 } from "./schema";
@@ -63,6 +65,13 @@ export function carregaRemume(municipioId: string): ItemRemume[] {
   const caminho = join(pasta(municipioId), "remume.json");
   if (!existsSync(caminho)) return [];
   return leJson(caminho, Remume);
+}
+
+/** A lista de alto custo do estado, com os papéis de cada doença. */
+export function carregaCeaf(uf: string): TCeaf | null {
+  const caminho = join(RAIZ, "estados", uf, "ceaf.json");
+  if (!existsSync(caminho)) return null;
+  return leJson(caminho, Ceaf);
 }
 
 /** Fichas editoriais, iguais no país inteiro. */

@@ -4,7 +4,13 @@
  *
  * Todo termo técnico que precisa aparecer vem explicado na mesma frase.
  */
-import type { Componente, Exigencia, TipoReceita, TipoUnidade } from "./schema";
+import type {
+  Componente,
+  Exigencia,
+  TipoDocumentoCeaf,
+  TipoReceita,
+  TipoUnidade,
+} from "./schema";
 import { VALIDADE_RECEITA_DIAS } from "./prazos";
 
 /**
@@ -92,3 +98,46 @@ export function validadeDaReceita(tipo: TipoReceita): string {
   }
   return `Essa receita vale ${dias} dias, contados da data que está escrita nela.`;
 }
+
+/**
+ * O que cada papel do alto custo é, dito em português.
+ *
+ * Os nomes que o portal do estado usa são jargão: "TER Asma", "Portaria
+ * Conjunta SAES/SCTIE". A pessoa precisa saber o que é aquilo e quem preenche.
+ */
+export const TIPO_DOCUMENTO: Record<
+  TipoDocumentoCeaf,
+  { titulo: string; explicacao: string }
+> = {
+  protocolo: {
+    titulo: "As regras desta doença",
+    explicacao:
+      "São as regras do Ministério da Saúde para essa doença (PCDT). Quem " +
+      "usa é o médico, para saber o que pedir.",
+  },
+  formulario: {
+    titulo: "Formulário desta doença",
+    explicacao: "O médico preenche na consulta.",
+  },
+  termo_responsabilidade: {
+    titulo: "Termo de responsabilidade",
+    explicacao:
+      "O papel em que você assina dizendo que o médico explicou o " +
+      "tratamento (TER).",
+  },
+  resumo: {
+    titulo: "Resumo das regras",
+    explicacao: "Versão curta das regras, para o médico consultar.",
+  },
+  lme: {
+    titulo: "O laudo do médico (LME)",
+    explicacao:
+      "É o pedido em si. Sem ele o processo não anda, e quem preenche é o " +
+      "médico.",
+  },
+  declaracao: {
+    titulo: "Declaração",
+    explicacao: "Papel que você ou o médico assina. Nem todos servem para o seu caso.",
+  },
+  outro: { titulo: "Documento", explicacao: "" },
+};

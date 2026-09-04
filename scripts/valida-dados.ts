@@ -4,6 +4,7 @@
  * Roda no CI e antes de qualquer merge. Sai com código 1 se algo não valida.
  */
 import {
+  carregaCeaf,
   carregaMedicamentos,
   carregaMunicipio,
   carregaRemume,
@@ -69,6 +70,25 @@ for (const id of municipios) {
   } catch (e) {
     erro(e instanceof Error ? e.message : String(e));
   }
+}
+
+try {
+  const ceaf = carregaCeaf("sc");
+  if (ceaf === null) {
+    aviso("sem data/estados/sc/ceaf.json. O guia de alto custo fica sem lista.");
+  } else {
+    const semDocumento = ceaf.condicoes.filter((c) => c.documentos.length === 0);
+    const total = ceaf.condicoes.reduce((n, c) => n + c.documentos.length, 0);
+    console.log(
+      `CEAF ${ceaf.uf}: ${ceaf.condicoes.length} condições, ${total} documentos, ` +
+        `${ceaf.documentos_gerais.length} formulários padrão`,
+    );
+    for (const c of semDocumento) {
+      aviso(`CEAF: "${c.nome}" não tem documento publicado na fonte.`);
+    }
+  }
+} catch (e) {
+  erro(e instanceof Error ? e.message : String(e));
 }
 
 try {
