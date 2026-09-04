@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import Cabecalho from "@/components/Cabecalho";
+import Pagina from "@/components/Pagina";
 import CampoBusca from "@/components/CampoBusca";
 import { carregaMunicipio, listaMunicipios } from "@/lib/dados";
 import { montaIndice, sugere } from "@/lib/busca";
@@ -38,9 +38,7 @@ export default async function Busca({
   const achados = q.trim() ? sugere(indice, q, 10) : [];
 
   return (
-    <div>
-      <Cabecalho municipioId={id} />
-      <div className="mx-auto max-w-2xl px-4 py-10 md:px-12 md:py-14">
+    <Pagina municipioId={id} atual="inicio">
       <h1 className="text-[30px] font-bold leading-tight">
         {q.trim() ? `Resultado para "${q}"` : "Procurar remédio"}
       </h1>
@@ -103,7 +101,6 @@ export default async function Busca({
       <p className="mt-8 text-texto-suave">
         A lista é a de {municipio.nome}.
       </p>
-      </div>
-    </div>
+    </Pagina>
   );
 }

@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import Cabecalho from "@/components/Cabecalho";
+import Pagina from "@/components/Pagina";
 import NotaFonte from "@/components/NotaFonte";
 import {
   carregaCeaf,
@@ -99,11 +99,7 @@ export default async function Condicao({
   const [municipioNav] = listaMunicipios();
 
   return (
-    <div>
-      <div className="nao-imprime">
-        <Cabecalho municipioId={municipioNav} />
-      </div>
-      <div className="mx-auto max-w-2xl px-4 py-10 md:px-12 md:py-14">
+    <Pagina municipioId={municipioNav} atual="alto-custo">
       <p className="nao-imprime">
         <a className="underline" href="/alto-custo">
           Voltar para a lista de doenças
@@ -256,8 +252,7 @@ export default async function Condicao({
         </p>
       </section>
 
-        <NotaFonte proveniencia={ceaf.proveniencia} telefone={null} />
-      </div>
-    </div>
+      <NotaFonte proveniencia={ceaf.proveniencia} telefone={null} />
+    </Pagina>
   );
 }

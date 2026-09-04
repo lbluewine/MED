@@ -1,4 +1,4 @@
-import Cabecalho from "@/components/Cabecalho";
+import Pagina from "@/components/Pagina";
 import NotaFonte from "@/components/NotaFonte";
 import { carregaCeaf, carregaMunicipio, carregaUnidades, listaMunicipios } from "@/lib/dados";
 
@@ -9,17 +9,14 @@ export default function AltoCusto() {
   const ceaf = carregaCeaf("sc");
   if (!ceaf) {
     return (
-      <div>
-        <Cabecalho municipioId={municipioNav} />
-        <div className="mx-auto max-w-2xl px-4 py-10 md:px-12 md:py-14">
+      <Pagina municipioId={municipioNav} atual="alto-custo">
           <h1 className="text-[30px] font-bold leading-tight md:text-[38px]">
             Remédio de alto custo
           </h1>
           <p className="mt-4 max-w-[65ch]">
             Ainda não publicamos esta parte.
           </p>
-        </div>
-      </div>
+      </Pagina>
     );
   }
 
@@ -32,9 +29,8 @@ export default function AltoCusto() {
   });
 
   return (
-    <div>
-      <Cabecalho municipioId={municipioNav} />
-      <div className="mx-auto max-w-2xl px-4 py-10 md:px-12 md:py-14">
+    <Pagina municipioId={municipioNav} atual="alto-custo" largura="larga">
+      <div className="max-w-2xl">
       <h1 className="text-[30px] font-bold leading-tight md:text-[38px]">
         Remédio de alto custo
       </h1>
@@ -64,14 +60,16 @@ export default function AltoCusto() {
         </section>
       )}
 
-      <section className="mt-8">
+      </div>
+
+      <section id="doencas" className="mt-8 scroll-mt-8">
         <h2 className="text-2xl font-bold">Qual é a sua doença?</h2>
         <p className="mt-2 max-w-[65ch]">
           São {ceaf.condicoes.length} doenças atendidas em Santa Catarina.
         </p>
-        <ul className="mt-4">
+        <ul className="mt-4 gap-x-10 md:columns-2">
           {ceaf.condicoes.map((c) => (
-            <li key={c.slug} className="border-b border-linha">
+            <li key={c.slug} className="break-inside-avoid border-b border-linha">
               <a
                 href={`/alto-custo/${c.slug}`}
                 className="block min-h-[48px] py-3 text-[20px] underline"
@@ -83,8 +81,7 @@ export default function AltoCusto() {
         </ul>
       </section>
 
-        <NotaFonte proveniencia={ceaf.proveniencia} telefone={null} />
-      </div>
-    </div>
+      <NotaFonte proveniencia={ceaf.proveniencia} telefone={null} />
+    </Pagina>
   );
 }

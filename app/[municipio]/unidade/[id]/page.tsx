@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Botao from "@/components/Botao";
-import Cabecalho from "@/components/Cabecalho";
+import Pagina from "@/components/Pagina";
 import CartaoUnidade, { telefoneCompleto } from "@/components/CartaoUnidade";
 import NotaFonte from "@/components/NotaFonte";
 import { carregaMunicipio, carregaUnidades, listaMunicipios } from "@/lib/dados";
@@ -40,29 +40,25 @@ export default async function PaginaUnidade({
   const restrito = Boolean(unidade.restricao);
 
   return (
-    <div>
-      <Cabecalho municipioId={municipioId} />
-
-      <div className={`${restrito ? "bg-processo" : "bg-tem"} px-4 py-8 text-fundo md:px-12 md:py-10`}>
-        <div className="mx-auto max-w-5xl">
-          <p className="max-w-[28ch] text-[30px] font-bold leading-tight md:text-[38px]">
-            {restrito ? "Atendimento restrito" : NOME_UNIDADE_CURTO[unidade.tipo]}
-          </p>
-          {unidade.restricao ? (
-            <p className="mt-3 max-w-[50ch] text-xl leading-snug">{unidade.restricao}</p>
-          ) : (
-            unidade.horarios.length > 0 && (
-              <p className="mt-3 max-w-[50ch] text-xl leading-snug">
-                {unidade.horarios.map((h) => `${h.abre} às ${h.fecha}`).join(" e ")}
-                {unidade.horarios.every((h) => h.dias === null) &&
-                  " — a fonte não diz em quais dias"}
-              </p>
-            )
-          )}
-        </div>
+    <Pagina municipioId={municipioId} atual="onde-pegar" largura="larga">
+      <div className={`${restrito ? "bg-processo" : "bg-tem"} px-5 py-7 text-fundo md:px-8 md:py-9`}>
+        <p className="max-w-[28ch] text-[30px] font-bold leading-tight md:text-[38px]">
+          {restrito ? "Atendimento restrito" : NOME_UNIDADE_CURTO[unidade.tipo]}
+        </p>
+        {unidade.restricao ? (
+          <p className="mt-3 max-w-[50ch] text-xl leading-snug">{unidade.restricao}</p>
+        ) : (
+          unidade.horarios.length > 0 && (
+            <p className="mt-3 max-w-[50ch] text-xl leading-snug">
+              {unidade.horarios.map((h) => `${h.abre} às ${h.fecha}`).join(" e ")}
+              {unidade.horarios.every((h) => h.dias === null) &&
+                " — a fonte não diz em quais dias"}
+            </p>
+          )
+        )}
       </div>
 
-      <div className="mx-auto max-w-5xl px-4 py-8 md:px-12 md:py-10">
+      <div className="pt-8">
         <h1 className="text-[30px] font-bold leading-tight md:text-[38px]">{unidade.nome}</h1>
 
         <div className="mt-6 flex flex-col gap-3 md:flex-row">
@@ -135,6 +131,6 @@ export default async function PaginaUnidade({
           telefone={municipio.telefone_assistencia_farmaceutica}
         />
       </div>
-    </div>
+    </Pagina>
   );
 }

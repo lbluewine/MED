@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
-import Cabecalho from "@/components/Cabecalho";
 import NotaFonte from "@/components/NotaFonte";
+import Pagina from "@/components/Pagina";
 import Resposta from "@/components/Resposta";
 import { carregaMunicipio, carregaUnidades, listaMunicipios } from "@/lib/dados";
-import { buscaRemedio, listaRemedios } from "@/lib/remedios";
+import { buscaRemedio, listaRemedios, paraSlug } from "@/lib/remedios";
 import {
   EXIGENCIA,
   NOME_RECEITA,
@@ -133,6 +133,17 @@ export default async function PaginaRemedio({
   ];
   const componentes = [...new Set(remedio.apresentacoes.map((a) => a.componente))];
 
+  // O grupo em que a lista põe este remédio. Quase sempre um só; quando a fonte
+  // diverge entre apresentações, os dois aparecem, porque os dois são o dado.
+  const classes = [
+    ...new Map(
+      remedio.apresentacoes
+        .map((a) => a.classificacao)
+        .filter((c): c is string => c !== null)
+        .map((c) => [paraSlug(c), c]),
+    ),
+  ];
+
   // Todas as fontes que sustentam esta página, sem repetir.
   const fontes = [
     ...new Map(
@@ -143,9 +154,7 @@ export default async function PaginaRemedio({
   ];
 
   return (
-    <div>
-      <Cabecalho municipioId={id} />
-      <div className="mx-auto max-w-2xl px-4 py-10 md:px-12 md:py-14">
+    <Pagina municipioId={id} atual="remedios">
       <h1 className="text-[30px] font-bold leading-tight">{remedio.nome}</h1>
       {remedio.grafias.length > 1 && (
         <p className="mt-1 text-texto-suave">
@@ -208,17 +217,46 @@ export default async function PaginaRemedio({
         </ul>
       </section>
 
+      {classes.length > 0 && (
+        <section className="mt-8">
+          <h2 className="text-2xl font-bold">
+            Em que grupo a lista põe este remédio
+          </h2>
+          <p className="mt-2 max-w-[65ch]">
+            {classes.length === 1
+              ? "A lista classifica este remédio como:"
+              : "A lista classifica este remédio nestes grupos:"}
+          </p>
+          <ul className="mt-2 max-w-[65ch] list-disc pl-6">
+            {classes.map(([slugClasse, nome]) => (
+              <li key={slugClasse} className="mt-1">
+                <a
+                  className="underline"
+                  href={`/${id}/remedios/tipo/${slugClasse}`}
+                >
+                  {nome}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-3 max-w-[65ch] text-texto-suave">
+            Esse é o nome do grupo na lista, não o que o remédio faz por você.
+            Estar no mesmo grupo que outro remédio não quer dizer que um
+            substitui o outro. Quem decide é o seu médico.
+          </p>
+        </section>
+      )}
+
       <p className="mt-8">
         <a className="underline" href="/">
           Procurar outro remédio
         </a>
       </p>
 
-        <NotaFonte
-          proveniencia={fontes}
-          telefone={municipio.telefone_assistencia_farmaceutica}
-        />
-      </div>
-    </div>
+      <NotaFonte
+        proveniencia={fontes}
+        telefone={municipio.telefone_assistencia_farmaceutica}
+      />
+    </Pagina>
   );
 }

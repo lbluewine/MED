@@ -1,4 +1,4 @@
-import Cabecalho from "@/components/Cabecalho";
+import Pagina from "@/components/Pagina";
 import { listaMunicipios } from "@/lib/dados";
 import { AVISO_INDEPENDENTE } from "@/lib/textos";
 
@@ -8,9 +8,7 @@ export default function Sobre() {
   const [id] = listaMunicipios();
 
   return (
-    <div>
-      <Cabecalho municipioId={id} />
-      <div className="mx-auto max-w-2xl px-4 py-10 md:px-12 md:py-14">
+    <Pagina municipioId={id} atual="sobre">
         <h1 className="text-[30px] font-bold leading-tight md:text-[38px]">
           Sobre este site
         </h1>
@@ -50,7 +48,6 @@ export default function Sobre() {
           {/* TODO: nomes e vínculos, com autorização de cada pessoa. */}
           {AVISO_INDEPENDENTE}
         </p>
-      </div>
-    </div>
+    </Pagina>
   );
 }

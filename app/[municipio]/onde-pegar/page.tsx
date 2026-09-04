@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation";
-import Cabecalho from "@/components/Cabecalho";
 import CartaoUnidade from "@/components/CartaoUnidade";
 import Mapa, { type PontoMapa } from "@/components/Mapa";
 import NotaFonte from "@/components/NotaFonte";
+import Pagina from "@/components/Pagina";
 import { carregaMunicipio, carregaUnidades, listaMunicipios } from "@/lib/dados";
 import { distanciaKm } from "@/lib/geo";
 import { NOME_UNIDADE_CURTO } from "@/lib/rotulos";
@@ -60,9 +60,7 @@ export default async function OndePegar({
   ];
 
   return (
-    <div>
-      <Cabecalho municipioId={id} />
-      <div className="mx-auto max-w-5xl px-4 py-10 md:px-12 md:py-14">
+    <Pagina municipioId={id} atual="onde-pegar" largura="larga">
         <h1 className="max-w-[20ch] text-[30px] font-bold leading-tight md:text-[38px]">
           Onde pegar remédio em {municipio.nome}
         </h1>
@@ -83,7 +81,7 @@ export default async function OndePegar({
               const doTipo = unidades.filter((u) => u.tipo === tipo);
               if (doTipo.length === 0) return null;
               return (
-                <section key={tipo} className="mt-10 first:mt-0">
+                <section key={tipo} id={tipo} className="mt-10 scroll-mt-8 first:mt-0">
                   <h2 className="text-2xl font-bold">
                     {NOME_UNIDADE_CURTO[tipo]} ({doTipo.length})
                   </h2>
@@ -130,7 +128,6 @@ export default async function OndePegar({
           proveniencia={fontes}
           telefone={municipio.telefone_assistencia_farmaceutica}
         />
-      </div>
-    </div>
+    </Pagina>
   );
 }
