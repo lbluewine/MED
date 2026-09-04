@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+/*
+ * Tokens de docs/STACK.md. Verde, vermelho e âmbar carregam significado, então
+ * nunca aparecem sozinhos: sempre com texto e ícone.
+ */
+@theme {
+  --color-fundo: #ffffff;
+  --color-texto: #1a1a1a;
+  --color-texto-suave: #4a4a4a;
+  --color-linha: #d9d9d9;
+  --color-tem: #0b6e4f;
+  --color-nao-tem: #a4231e;
+  --color-processo: #b45309;
+
+  --font-sans: "Atkinson Hyperlegible", system-ui, sans-serif;
+
+  /* Corpo 18px. Nada abaixo de 16px em lugar nenhum. */
+  --text-base: 1.125rem;
+  --text-base--line-height: 1.6;
+  --text-sm: 1rem;
+  --text-sm--line-height: 1.6;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-fundo);
+  color: var(--color-texto);
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+/* Foco visível e nítido, sem depender do estilo do navegador. */
+:focus-visible {
+  outline: 3px solid var(--color-texto);
+  outline-offset: 2px;
+}
+
+/* Movimento só como resposta a uma ação, e nem isso para quem pediu menos. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Muita gente vai imprimir o checklist e levar no papel. */
+@media print {
+  .nao-imprime {
+    display: none !important;
+  }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.9em;
+  }
+}
