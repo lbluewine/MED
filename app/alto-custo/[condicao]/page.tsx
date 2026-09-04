@@ -114,6 +114,57 @@ export default async function Condicao({
         médico.
       </p>
 
+      {/*
+        A parte mais útil da página, e a que as cartilhas não dão: quais
+        exames, para qual doença, para qual remédio. Vem do Resumo publicado
+        pela SES/SC e é citada sem reescrita.
+
+        O mesmo Resumo traz dose, critério de inclusão e monitoramento. Nada
+        disso aparece aqui: é conteúdo clínico, e conteúdo clínico não vai ao
+        ar sem revisão farmacêutica. Ver docs/CONTEUDO.md.
+      */}
+      {c.anexos_obrigatorios.length > 0 ? (
+        <section className="mt-8">
+          <h2 className="text-2xl font-bold">O que o pedido precisa ter</h2>
+          <p className="mt-2 max-w-[65ch]">
+            Depende do remédio que o médico for pedir. Veja o seu na lista.
+          </p>
+          {c.anexos_obrigatorios.map((g) => (
+            <div key={g.itens.join("|")} className="mt-6">
+              {g.medicamentos.length > 0 && (
+                <h3 className="text-[20px] font-bold">
+                  Para {g.medicamentos.join(", ")}
+                </h3>
+              )}
+              <ul className="mt-2">
+                {g.itens.map((i) => (
+                  <li key={i} className="max-w-[65ch] border-b border-linha py-3">
+                    <span aria-hidden="true" className="mr-2 font-bold">
+                      ☐
+                    </span>
+                    {i}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </section>
+      ) : (
+        <p className="mt-8 max-w-[65ch] border-l-4 border-processo pl-4">
+          <span aria-hidden="true">! </span>
+          Não conseguimos ler no documento do estado quais exames este pedido
+          precisa. Pergunte na farmácia de alto custo, ou abra o resumo mais
+          abaixo.
+        </p>
+      )}
+
+      {c.cid10.length > 0 && (
+        <p className="mt-6 max-w-[65ch] text-texto-suave">
+          O código desta doença no laudo é {c.cid10.join(", ")}. Quem preenche é
+          o médico.
+        </p>
+      )}
+
       {c.documentos.length > 0 ? (
         <section className="mt-8">
           <h2 className="text-2xl font-bold">
@@ -186,9 +237,9 @@ export default async function Condicao({
           O que esta página não diz
         </h2>
         <p className="mt-2 max-w-[65ch]">
-          Quais exames o seu caso precisa, e em que ordem fazer as coisas. Isso
-          depende do seu tratamento, e quem sabe é o médico e o farmacêutico da
-          farmácia de alto custo. Ligue antes de ir.
+          A ordem dos passos, e se o seu caso se encaixa nas regras. Quem
+          decide isso é o médico. Também não dizemos dose nem como tomar: isso
+          está no documento do estado, escrito para o profissional.
         </p>
         <p className="mt-2 max-w-[65ch]">
           Esta página junta o que o estado publica em{" "}

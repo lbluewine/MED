@@ -341,12 +341,32 @@ export const DocumentoCeaf = z.object({
  * É o que falta nas cartilhas, que dizem "traga os exames necessários" sem
  * dizer quais, para qual doença. Ver docs/PROJETO.md.
  */
+/**
+ * O que o pedido precisa anexar, agrupado pelo remédio a que se refere.
+ *
+ * Cada remédio da mesma doença exige exames diferentes. Juntar tudo numa lista
+ * só faria a pessoa achar que precisa de todos. Os textos são citados do
+ * Resumo publicado pela SES/SC, sem reescrita: aqui não se resume exigência
+ * de processo.
+ */
+export const GrupoAnexos = z.object({
+  medicamentos: z.array(z.string().min(1)),
+  itens: z.array(z.string().min(1)).min(1),
+});
+
 export const CondicaoCeaf = z.object({
   slug: Slug,
   nome: z.string().min(1),
-  /** O nome como o portal do estado escreve, em maiúsculas. */
+  /** O nome como o portal do estado escreve. */
   nome_fonte: z.string().min(1),
   url_fonte: z.url(),
+  /** Os códigos CID-10 da doença. Vão no laudo do médico. */
+  cid10: z.array(z.string().regex(/^[A-Z]\d{2}(\.\d+)?$/)),
+  /**
+   * Vazio quando o Resumo da fonte não traz a seção, ou quando o PDF não pôde
+   * ser lido. Nesse caso a tela diz que não sabe, em vez de ficar em branco.
+   */
+  anexos_obrigatorios: z.array(GrupoAnexos),
   documentos: z.array(DocumentoCeaf),
 });
 
@@ -418,6 +438,7 @@ export type ItemRemume = z.infer<typeof ItemRemume>;
 export type Revisao = z.infer<typeof Revisao>;
 export type TipoDocumentoCeaf = z.infer<typeof TipoDocumentoCeaf>;
 export type DocumentoCeaf = z.infer<typeof DocumentoCeaf>;
+export type GrupoAnexos = z.infer<typeof GrupoAnexos>;
 export type CondicaoCeaf = z.infer<typeof CondicaoCeaf>;
 export type Ceaf = z.infer<typeof Ceaf>;
 export type Medicamento = z.infer<typeof Medicamento>;

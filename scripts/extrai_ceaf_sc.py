@@ -13,6 +13,8 @@ Rodar:
 import json
 import re
 import html
+import subprocess
+import tempfile
 import time
 import unicodedata
 import urllib.request
@@ -89,16 +91,129 @@ def tipo_documento(nome_bruto: str) -> str:
 
 
 def condicoes_do_indice(pagina: str) -> dict[str, str]:
+    """
+    A lista fica no bloco "Protocolos clínicos, TER, resumos e formulários".
+
+    Não usar o menu lateral: ele está desatualizado e traz doenças que já
+    mudaram de nome. Foi assim que a Púrpura Trombocitopênica Idiopática, hoje
+    Trombocitopenia Imune Primária, aparecia sem documento nenhum.
+    """
+    bloco = re.search(
+        r'<div[^>]*class="[^"]*lista-ter[^"]*"[^>]*>(.*?)'
+        r'(?=<div class="card-header"|</div>\s*</div>\s*</div>\s*</div>\s*</div>)',
+        pagina,
+        re.S,
+    )
+    if not bloco:
+        raise SystemExit("não achei o bloco lista-ter no índice do CEAF")
+
     achadas = {}
     for href, nome in re.findall(
-        r'<a[^>]+href="([^"]+)"[^>]*>\s*([^<]{3,120}?)\s*</a>', pagina
+        r'<li><a href="([^"]+)"[^>]*>.*?</i>\s*([^<]+?)\s*</a></li>', bloco.group(1), re.S
     ):
-        if "componente-especializado-da-assistencia-farmaceutica-ceaf" not in href:
-            continue
-        if "protocolos-clinicos-ter-resumos-e-formularios/" not in href:
-            continue
-        achadas[html.unescape(nome).strip()] = href
+        achadas[re.sub(r"\s+", " ", html.unescape(nome)).strip()] = href.split("?")[0]
     return achadas
+
+
+# ---------------------------------------------------------------------------
+# O PDF "Resumo" de cada doença
+# ---------------------------------------------------------------------------
+#
+# O Resumo é a peça que faltava: ele lista, por medicamento, os "Anexos
+# Obrigatórios", ou seja, quais exames e papéis aquele pedido exige. É a
+# resposta que as cartilhas não dão.
+#
+# O mesmo PDF traz dose, critério de inclusão e monitoramento. Nada disso é
+# lido aqui. É conteúdo clínico, e conteúdo clínico não vai ao ar sem revisão
+# farmacêutica registrada. Ver a regra 2 no CLAUDE.md e docs/CONTEUDO.md.
+
+# Onde a seção de anexos começa e onde termina, nas variações que a fonte usa.
+INICIO_ANEXOS = re.compile(r"Anexos?\s+Obrigat[óo]ri[oa]s?\s*:?", re.I)
+FIM_ANEXOS = re.compile(
+    r"^\s*(Administra[çc][ãa]o|Posologia|Monitoramento|Exclus[ãa]o|Inclus[ãa]o|"
+    r"Tempo\s+de\s+Tratamento|Prescri[çc][ãa]o|Medicamento|Apresenta[çc][ãa]o|"
+    r"CID-?10|Crit[ée]rios?)\b",
+    re.I | re.M,
+)
+RODAPE = re.compile(r"DIAF/SA[SE]/SES/SC.*|^\s*\d+\s*$", re.M)
+
+
+def texto_do_pdf(caminho: Path) -> str:
+    saida = subprocess.run(
+        ["pdftotext", "-layout", str(caminho), "-"], capture_output=True, text=True
+    )
+    return saida.stdout
+
+
+MEDICAMENTO = re.compile(r"^\s*Medicamentos?\s{2,}(.+?)\s*$", re.M)
+
+
+def anexos_obrigatorios(texto: str) -> list[dict]:
+    """
+    Os "Anexos Obrigatórios" do Resumo, agrupados pelo medicamento a que
+    pertencem.
+
+    Cada remédio da doença pede exames diferentes, e juntar tudo numa lista só
+    faria a pessoa achar que precisa de todos. O nome do medicamento vem da
+    linha "Medicamento" logo acima do bloco.
+    """
+    grupos: list[dict] = []
+    for m in INICIO_ANEXOS.finditer(texto):
+        antes = texto[: m.start()]
+        med = None
+        for mm in MEDICAMENTO.finditer(antes):
+            med = re.sub(r"\s+", " ", mm.group(1)).strip()
+
+        resto = texto[m.end():]
+        fim = FIM_ANEXOS.search(resto)
+        trecho = RODAPE.sub(" ", resto[: fim.start()] if fim else resto[:1500])
+
+        itens: list[str] = []
+        for pedaco in re.split(r"[\n\r]+\s*(?:[-–—•‣]|\u200b|\d+[.)])\s*", trecho):
+            item = re.sub(r"\s+", " ", pedaco).strip(" -–—•;:.\u200b\u2060")
+            if 8 <= len(item) <= 400 and item not in itens:
+                itens.append(item)
+        if not itens:
+            continue
+
+        # Dois medicamentos podem pedir exatamente a mesma coisa.
+        anterior = next((g for g in grupos if g["itens"] == itens), None)
+        if anterior and med and med not in anterior["medicamentos"]:
+            anterior["medicamentos"].append(med)
+        elif not anterior:
+            grupos.append({"medicamentos": [med] if med else [], "itens": itens})
+    return grupos
+
+
+CID = re.compile(r"CID-?10\s*:?\s*((?:[A-Z]\d{2}(?:\.\d+)?[,;\s]*)+)", re.I)
+
+
+def cids(texto: str) -> list[str]:
+    """Os códigos CID-10 que a doença usa. Vão no laudo, então ajudam a conferir."""
+    fora: list[str] = []
+    for m in CID.finditer(texto):
+        for c in re.findall(r"[A-Z]\d{2}(?:\.\d+)?", m.group(1)):
+            if c not in fora:
+                fora.append(c)
+    return fora
+
+
+def le_resumo(url: str) -> tuple[list[str], list[str]] | None:
+    """Baixa o Resumo e devolve (anexos, cids). None quando não dá para ler."""
+    with tempfile.TemporaryDirectory() as tmp:
+        destino = Path(tmp) / "resumo.pdf"
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=120) as r:
+                destino.write_bytes(r.read())
+        except Exception:
+            return None
+        if destino.read_bytes()[:4] != b"%PDF":
+            return None
+        texto = texto_do_pdf(destino)
+    if not texto.strip():
+        return None
+    return anexos_obrigatorios(texto), cids(texto)
 
 
 def documentos(pagina: str) -> list[dict]:
@@ -154,21 +269,38 @@ def main() -> None:
     achadas = condicoes_do_indice(indice)
     print(f"{len(achadas)} condições no índice")
 
-    condicoes, sem_doc = [], []
+    condicoes, sem_doc, nao_lidos = [], [], []
     for i, (nome, href) in enumerate(sorted(achadas.items()), 1):
         pagina = baixa(BASE + href)
         docs = documentos(pagina)
-        titulo = titulo_humano(nome)
+        titulo = nome
+
+        # O Resumo é onde estão os exames exigidos. Sem ele, a condição entra
+        # só com os papéis, e a página diz que não sabe quais exames pedir.
+        resumo = next((d for d in docs if d["tipo"] == "resumo"), None)
+        anexos, cid10 = [], []
+        if resumo:
+            lido = le_resumo(resumo["url"])
+            if lido:
+                anexos, cid10 = lido
+            else:
+                nao_lidos.append(titulo)
+
         condicoes.append({
             "slug": slug(nome),
             "nome": titulo,
             "nome_fonte": html.unescape(nome).strip(),
             "url_fonte": BASE + href,
+            "cid10": cid10,
+            "anexos_obrigatorios": anexos,
             "documentos": docs,
         })
         if not docs:
             sem_doc.append(titulo)
-        print(f"  [{i:>3}/{len(achadas)}] {titulo[:52]:<52} {len(docs)} documento(s)")
+        print(
+            f"  [{i:>3}/{len(achadas)}] {titulo[:46]:<46} "
+            f"{len(docs)} doc, {len(anexos)} grupo(s) de anexos"
+        )
         time.sleep(0.8)
 
     SNAPSHOT.parent.mkdir(parents=True, exist_ok=True)
@@ -197,8 +329,12 @@ def main() -> None:
 
     total = sum(len(c["documentos"]) for c in condicoes)
     print(f"\n{len(condicoes)} condições, {total} documentos")
+    com_anexos = sum(1 for c in condicoes if c["anexos_obrigatorios"])
+    print(f"{com_anexos} condições com os exames exigidos extraídos do Resumo")
     if sem_doc:
         print(f"{len(sem_doc)} sem documento nenhum: {', '.join(sem_doc[:8])}")
+    if nao_lidos:
+        print(f"{len(nao_lidos)} com Resumo que não deu para ler: {', '.join(nao_lidos[:8])}")
 
 
 if __name__ == "__main__":
