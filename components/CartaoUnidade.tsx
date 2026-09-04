@@ -1,5 +1,7 @@
 import type { Unidade } from "@/lib/schema";
 import { NOME_UNIDADE_CURTO } from "@/lib/rotulos";
+import { distanciaTexto } from "@/lib/geo";
+import Botao from "./Botao";
 
 /** "(48) 3445-8730" a partir do que a fonte escreve e do DDD do município. */
 export function telefoneCompleto(telefone: string, ddd: string): string {
@@ -14,7 +16,9 @@ function Horarios({ unidade }: { unidade: Unidade }) {
       {unidade.horarios.map((h) => `${h.abre} às ${h.fecha}`).join(" e ")}.{" "}
       {/*
         A fonte dá o horário mas não diz em quais dias. Dizer "seg-sex" seria
-        inventar, e mandar alguém num sábado que a porta está fechada.
+        inventar, e mandar alguém num sábado que a porta está fechada. Pela
+        mesma razão, o site nunca afirma "aberta agora": sem saber os dias,
+        essa etiqueta mentiria em algum dia da semana.
       */}
       {unidade.horarios.every((h) => h.dias === null) && (
         <span className="text-texto-suave">
@@ -30,36 +34,67 @@ export default function CartaoUnidade({
   ddd,
   municipioId,
   comTitulo = true,
+  /** Km em linha reta até o centro do município. Ver lib/geo.ts. */
+  distanciaKm,
+  /** Mostra o botão "Ver unidade" à direita, como na lista de "Onde pegar". */
+  comBotao = false,
 }: {
   unidade: Unidade;
   ddd: string;
   municipioId: string;
   /** Falso na página da própria unidade, que já tem o nome no título. */
   comTitulo?: boolean;
+  distanciaKm?: number;
+  comBotao?: boolean;
 }) {
   const { endereco: e } = unidade;
 
   return (
-    <article className="border-b border-linha py-5">
-      {comTitulo && (
-        <h3 className="text-[20px] font-bold">
-          <a href={`/${municipioId}/unidade/${unidade.id}`} className="underline">
-            {unidade.nome}
-          </a>
-        </h3>
-      )}
-      <p className="text-texto-suave">{NOME_UNIDADE_CURTO[unidade.tipo]}</p>
+    <article className="border-b border-linha py-6">
+      <div className="md:grid md:grid-cols-[1fr_auto] md:items-start md:gap-6">
+        <div>
+          {comTitulo && (
+            <h3 className="text-[22px] font-bold md:text-2xl">
+              {comBotao ? (
+                unidade.nome
+              ) : (
+                <a
+                  href={`/${municipioId}/unidade/${unidade.id}`}
+                  className="underline"
+                >
+                  {unidade.nome}
+                </a>
+              )}
+            </h3>
+          )}
+          <p className="mt-1 text-texto-suave">
+            {NOME_UNIDADE_CURTO[unidade.tipo]}
+            {e.bairro ? ` — ${e.bairro}` : ""}
+            {distanciaKm !== undefined ? ` — ${distanciaTexto(distanciaKm)}` : ""}
+          </p>
+        </div>
+        {comBotao && (
+          <Botao
+            variante="secundario"
+            href={`/${municipioId}/unidade/${unidade.id}`}
+            className="mt-3 w-full md:mt-0 md:w-auto"
+          >
+            Ver unidade
+          </Botao>
+        )}
+      </div>
 
       {unidade.restricao && (
-        <p className="mt-2 max-w-[65ch] border-l-4 border-processo pl-4">
-          <span aria-hidden="true">! </span>
-          {unidade.restricao}
-        </p>
+        <div className="mt-3 flex max-w-[44em] items-start gap-3 bg-processo px-4 py-3 text-fundo">
+          <span aria-hidden="true" className="mt-0.5 font-bold">
+            !
+          </span>
+          <p className="font-bold">{unidade.restricao}</p>
+        </div>
       )}
 
-      <p className="mt-2">
+      <p className="mt-3">
         {e.logradouro}
-        {e.bairro ? `, ${e.bairro}` : ""}
         {e.cep ? ` — CEP ${e.cep}` : ""}
       </p>
 

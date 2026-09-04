@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Cabecalho from "@/components/Cabecalho";
 import NotaFonte from "@/components/NotaFonte";
 import {
   carregaCeaf,
@@ -95,9 +96,14 @@ export default async function Condicao({
       .filter((u) => u.tipo === "farmacia_ceaf")
       .map((u) => ({ id, municipio, unidade: u }));
   });
+  const [municipioNav] = listaMunicipios();
 
   return (
-    <div className="mx-auto max-w-2xl px-4 py-10">
+    <div>
+      <div className="nao-imprime">
+        <Cabecalho municipioId={municipioNav} />
+      </div>
+      <div className="mx-auto max-w-2xl px-4 py-10 md:px-12 md:py-14">
       <p className="nao-imprime">
         <a className="underline" href="/alto-custo">
           Voltar para a lista de doenças
@@ -250,7 +256,8 @@ export default async function Condicao({
         </p>
       </section>
 
-      <NotaFonte proveniencia={ceaf.proveniencia} telefone={null} />
+        <NotaFonte proveniencia={ceaf.proveniencia} telefone={null} />
+      </div>
     </div>
   );
 }

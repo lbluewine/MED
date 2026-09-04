@@ -38,28 +38,31 @@ export default function CampoBusca({
         value={termo}
         onChange={(e) => setTermo(e.target.value)}
         aria-describedby="ajuda-q"
-        className="mt-2 w-full border-2 border-texto px-4 py-3 text-[20px]"
+        className="mt-2 min-h-[60px] w-full rounded-[2px] border-2 border-texto px-4 text-[22px]"
       />
+      <p className="mt-2 text-texto-suave">Pode digitar só o começo do nome.</p>
       <button
         type="submit"
-        className="mt-3 min-h-[48px] w-full border-2 border-texto bg-texto px-4 py-3 text-[20px] font-bold text-fundo"
+        className="mt-4 min-h-[60px] w-full rounded-[2px] border-2 border-texto bg-texto px-4 text-[20px] font-bold text-fundo hover:bg-[#333333]"
       >
         Procurar
       </button>
 
       {sugestoes.length > 0 && (
-        <ul className="mt-4 border-t border-linha">
+        <div className="mt-5 border-t border-linha">
           {sugestoes.map((s) => (
-            <li key={s.slug} className="border-b border-linha">
-              <a
-                href={`/${municipioId}/remedio/${s.slug}`}
-                className="block min-h-[48px] py-3 underline"
-              >
-                {s.nome}
-              </a>
-            </li>
+            <a
+              key={s.slug}
+              href={`/${municipioId}/remedio/${s.slug}`}
+              className="block min-h-[64px] border-b border-linha py-3 no-underline hover:bg-[#F2F2F2]"
+            >
+              <span className="block text-[20px] font-bold text-texto">{s.nome}</span>
+              {!s.tem_para_levar && (
+                <span className="block text-texto-suave">não é para levar para casa</span>
+              )}
+            </a>
           ))}
-        </ul>
+        </div>
       )}
     </form>
   );

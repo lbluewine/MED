@@ -66,7 +66,22 @@ def telefones(bruto: str | None) -> list[str]:
     return [re.sub(r"\)\s*", ") ", t) for t in achados]
 
 
+# O portal publica, para estas unidades, um mapa embutido que aponta para um
+# lugar diferente do que a própria página descreve — no caso da Farmácia
+# Distrital Centro, o link do mapa busca "Unidade Básica de Saúde - Central",
+# um nome que não é o da unidade, e com um raio de zoom de 56 km, sinal de
+# copiar e colar errado na hora de editar a página. O endereço em texto (Rua
+# João Pessoa, 187) é a Farmácia da UBS Centro de verdade; o pino, não.
+#
+# Confirmado em 2026-09-04, comparando o texto do endereço com o link do
+# mapa na mesma página. Um pino errado manda alguém para o lugar errado, o
+# que é pior que não ter pino nenhum.
+PINO_NAO_CONFIAVEL = {"Farmácia Distrital Centro"}
+
+
 def endereco(u: dict, geo_conferida: bool) -> dict:
+    if u["nome"] in PINO_NAO_CONFIAVEL:
+        geo_conferida = False
     cep = u.get("cep") or ""
     return {
         "logradouro": re.sub(r",?\s*\bSN\b", ", sem número", u["rua"]).strip(),
@@ -105,6 +120,9 @@ FARMACIAS = {
             "A REMUME de 2024 informa o CEP 88801-530 para este mesmo endereço, "
             "e o portal da prefeitura informa 88810-020. A rua e o número são os mesmos.",
             "A REMUME informa que esta farmácia abre das 7h às 19h.",
+            "O mapa do portal da prefeitura, para este endereço, aponta para um "
+            "lugar chamado de outro jeito. Por isso ela não tem pino no mapa "
+            "deste site, mesmo o endereço e o telefone estando corretos.",
         ]),
     "Farmácia Distrital Santa Luzia": dict(
         tipo="farmacia_distrital", dispensa=["basico"], entrega=ENTREGA_DISTRITAL,

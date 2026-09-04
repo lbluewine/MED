@@ -1,19 +1,24 @@
-import { carregaCeaf, carregaMunicipio, carregaUnidades, listaMunicipios } from "@/lib/dados";
+import Cabecalho from "@/components/Cabecalho";
 import NotaFonte from "@/components/NotaFonte";
+import { carregaCeaf, carregaMunicipio, carregaUnidades, listaMunicipios } from "@/lib/dados";
 
 export const metadata = { title: "Remédio de alto custo — Tem no SUS?" };
 
 export default function AltoCusto() {
+  const [municipioNav] = listaMunicipios();
   const ceaf = carregaCeaf("sc");
   if (!ceaf) {
     return (
-      <div className="mx-auto max-w-2xl px-4 py-10">
-        <h1 className="text-[30px] font-bold leading-tight">
-          Remédio de alto custo
-        </h1>
-        <p className="mt-4 max-w-[65ch]">
-          Ainda não publicamos esta parte.
-        </p>
+      <div>
+        <Cabecalho municipioId={municipioNav} />
+        <div className="mx-auto max-w-2xl px-4 py-10 md:px-12 md:py-14">
+          <h1 className="text-[30px] font-bold leading-tight md:text-[38px]">
+            Remédio de alto custo
+          </h1>
+          <p className="mt-4 max-w-[65ch]">
+            Ainda não publicamos esta parte.
+          </p>
+        </div>
       </div>
     );
   }
@@ -27,8 +32,10 @@ export default function AltoCusto() {
   });
 
   return (
-    <div className="mx-auto max-w-2xl px-4 py-10">
-      <h1 className="text-[30px] font-bold leading-tight">
+    <div>
+      <Cabecalho municipioId={municipioNav} />
+      <div className="mx-auto max-w-2xl px-4 py-10 md:px-12 md:py-14">
+      <h1 className="text-[30px] font-bold leading-tight md:text-[38px]">
         Remédio de alto custo
       </h1>
       <p className="mt-4 max-w-[65ch]">
@@ -76,7 +83,8 @@ export default function AltoCusto() {
         </ul>
       </section>
 
-      <NotaFonte proveniencia={ceaf.proveniencia} telefone={null} />
+        <NotaFonte proveniencia={ceaf.proveniencia} telefone={null} />
+      </div>
     </div>
   );
 }

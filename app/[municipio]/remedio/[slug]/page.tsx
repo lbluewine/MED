@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Cabecalho from "@/components/Cabecalho";
 import NotaFonte from "@/components/NotaFonte";
 import Resposta from "@/components/Resposta";
 import { carregaMunicipio, carregaUnidades, listaMunicipios } from "@/lib/dados";
@@ -142,7 +143,9 @@ export default async function PaginaRemedio({
   ];
 
   return (
-    <div className="mx-auto max-w-2xl px-4 py-10">
+    <div>
+      <Cabecalho municipioId={id} />
+      <div className="mx-auto max-w-2xl px-4 py-10 md:px-12 md:py-14">
       <h1 className="text-[30px] font-bold leading-tight">{remedio.nome}</h1>
       {remedio.grafias.length > 1 && (
         <p className="mt-1 text-texto-suave">
@@ -211,10 +214,11 @@ export default async function PaginaRemedio({
         </a>
       </p>
 
-      <NotaFonte
-        proveniencia={fontes}
-        telefone={municipio.telefone_assistencia_farmaceutica}
-      />
+        <NotaFonte
+          proveniencia={fontes}
+          telefone={municipio.telefone_assistencia_farmaceutica}
+        />
+      </div>
     </div>
   );
 }

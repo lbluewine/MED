@@ -1,8 +1,10 @@
 import { notFound } from "next/navigation";
+import Cabecalho from "@/components/Cabecalho";
 import CartaoUnidade from "@/components/CartaoUnidade";
 import Mapa, { type PontoMapa } from "@/components/Mapa";
 import NotaFonte from "@/components/NotaFonte";
 import { carregaMunicipio, carregaUnidades, listaMunicipios } from "@/lib/dados";
+import { distanciaKm } from "@/lib/geo";
 import { NOME_UNIDADE_CURTO } from "@/lib/rotulos";
 import type { TipoUnidade } from "@/lib/schema";
 
@@ -58,50 +60,77 @@ export default async function OndePegar({
   ];
 
   return (
-    <div className="mx-auto max-w-2xl px-4 py-10">
-      <h1 className="text-[30px] font-bold leading-tight">
-        Onde pegar em {municipio.nome}
-      </h1>
-      <p className="mt-4 max-w-[65ch]">
-        São {unidades.length} lugares. Ligue antes de sair de casa: a lista diz
-        o que cada um entrega, mas não diz o que tem em estoque hoje.
-      </p>
-
-      <Mapa pontos={pontos} centro={municipio.centro} />
-
-      {ORDEM.map((tipo) => {
-        const doTipo = unidades.filter((u) => u.tipo === tipo);
-        if (doTipo.length === 0) return null;
-        return (
-          <section key={tipo} className="mt-10">
-            <h2 className="text-2xl font-bold">
-              {NOME_UNIDADE_CURTO[tipo]} ({doTipo.length})
-            </h2>
-            {doTipo.map((u) => (
-              <CartaoUnidade
-                key={u.id}
-                unidade={u}
-                ddd={municipio.ddd}
-                municipioId={id}
-              />
-            ))}
-          </section>
-        );
-      })}
-
-      {semMapa > 0 && (
-        <p className="mt-8 max-w-[65ch] text-texto-suave">
-          {semMapa === 1
-            ? "Um lugar não aparece no mapa porque ainda não conferimos a localização dele."
-            : `${semMapa} lugares não aparecem no mapa porque ainda não conferimos a localização deles.`}{" "}
-          O endereço e o telefone estão certos.
+    <div>
+      <Cabecalho municipioId={id} />
+      <div className="mx-auto max-w-5xl px-4 py-10 md:px-12 md:py-14">
+        <h1 className="max-w-[20ch] text-[30px] font-bold leading-tight md:text-[38px]">
+          Onde pegar remédio em {municipio.nome}
+        </h1>
+        <p className="mt-2 max-w-[36em] text-texto-suave">
+          São {unidades.length} lugares.
+          {" "}
+          {pontos.length > 0
+            ? `As distâncias abaixo saem do Centro.`
+            : ""}
+          {" "}
+          Ligue antes de sair de casa: a lista diz o que cada um entrega, mas
+          não diz o que tem em estoque hoje.
         </p>
-      )}
 
-      <NotaFonte
-        proveniencia={fontes}
-        telefone={municipio.telefone_assistencia_farmaceutica}
-      />
+        <div className="mt-8 md:grid md:grid-cols-[1fr_360px] md:items-start md:gap-12">
+          <div>
+            {ORDEM.map((tipo) => {
+              const doTipo = unidades.filter((u) => u.tipo === tipo);
+              if (doTipo.length === 0) return null;
+              return (
+                <section key={tipo} className="mt-10 first:mt-0">
+                  <h2 className="text-2xl font-bold">
+                    {NOME_UNIDADE_CURTO[tipo]} ({doTipo.length})
+                  </h2>
+                  <div className="border-t border-linha">
+                    {doTipo.map((u) => (
+                      <CartaoUnidade
+                        key={u.id}
+                        unidade={u}
+                        ddd={municipio.ddd}
+                        municipioId={id}
+                        comBotao
+                        distanciaKm={
+                          u.endereco.geo
+                            ? distanciaKm(municipio.centro, u.endereco.geo)
+                            : undefined
+                        }
+                      />
+                    ))}
+                  </div>
+                </section>
+              );
+            })}
+
+            {semMapa > 0 && (
+              <p className="mt-8 max-w-[65ch] text-texto-suave">
+                {semMapa === 1
+                  ? "Um lugar não aparece no mapa porque ainda não conferimos a localização dele."
+                  : `${semMapa} lugares não aparecem no mapa porque ainda não conferimos a localização deles.`}{" "}
+                O endereço e o telefone estão certos.
+              </p>
+            )}
+          </div>
+
+          <div className="mt-10 md:mt-0 md:sticky md:top-8">
+            <h2 className="text-2xl font-bold">No mapa</h2>
+            <p className="mt-1 text-texto-suave">
+              Posição das unidades com localização conferida.
+            </p>
+            <Mapa pontos={pontos} centro={municipio.centro} />
+          </div>
+        </div>
+
+        <NotaFonte
+          proveniencia={fontes}
+          telefone={municipio.telefone_assistencia_farmaceutica}
+        />
+      </div>
     </div>
   );
 }

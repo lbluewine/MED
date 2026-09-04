@@ -2595,12 +2595,7 @@
       "logradouro": "Rua João Pessoa, 187",
       "bairro": "Centro",
       "cep": "88810-020",
-      "geo": {
-        "lat": -28.66382571943205,
-        "lng": -49.453972033177934,
-        "conferido_por": "Portal da Transparência de Criciúma",
-        "conferido_em": "2026-09-04"
-      }
+      "geo": null
     },
     "telefones": [
       "(48) 3430-0934"
@@ -2621,7 +2616,8 @@
     "divergencias": [
       "A REMUME de 2024 informa outro telefone: (48) 3430-0959. Se ninguém atender no número acima, tente esse.",
       "A REMUME de 2024 informa o CEP 88801-530 para este mesmo endereço, e o portal da prefeitura informa 88810-020. A rua e o número são os mesmos.",
-      "A REMUME informa que esta farmácia abre das 7h às 19h."
+      "A REMUME informa que esta farmácia abre das 7h às 19h.",
+      "O mapa do portal da prefeitura, para este endereço, aponta para um lugar chamado de outro jeito. Por isso ela não tem pino no mapa deste site, mesmo o endereço e o telefone estando corretos."
     ],
     "proveniencia": [
       {
