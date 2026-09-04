@@ -55,10 +55,15 @@ for (const id of municipios) {
       }
     }
 
+    // O frescor de um registro é o da fonte conferida há mais tempo.
     for (const registro of [municipio, ...unidades, ...remume]) {
-      const { verificado_em } = registro.proveniencia;
-      if (dadoDesatualizado(verificado_em)) {
-        aviso(`${id}: dado conferido pela última vez em ${dataPorExtenso(verificado_em)}`);
+      for (const fonte of registro.proveniencia) {
+        if (dadoDesatualizado(fonte.verificado_em)) {
+          aviso(
+            `${id}: "${fonte.fonte_nome}" conferida pela última vez em ` +
+              dataPorExtenso(fonte.verificado_em),
+          );
+        }
       }
     }
   } catch (e) {

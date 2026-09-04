@@ -23,7 +23,7 @@ export const Slug = z
 
 export const Metodo = z.enum(["manual", "ia-assistida", "automatica"]);
 
-export const Proveniencia = z
+export const UmaProveniencia = z
   .object({
     fonte_nome: z.string().min(1),
     fonte_url: z.url(),
@@ -45,6 +45,21 @@ export const Proveniencia = z
     message: "verificado_em não pode ser anterior a extraido_em",
     path: ["verificado_em"],
   });
+
+/**
+ * Um registro pode vir de mais de uma fonte oficial: o portal da transparência
+ * diz onde a farmácia fica, a REMUME diz o que ela entrega. As duas ficam
+ * registradas, e a tela mostra as duas.
+ */
+export const Proveniencia = z.array(UmaProveniencia).min(1);
+
+/**
+ * Quando duas fontes oficiais discordam, o site não escolhe uma e esconde a
+ * outra. Escreve a divergência em português, para a pessoa decidir se liga
+ * antes de sair de casa. Ex.: "A REMUME informa o CEP 88801-530 e o portal
+ * da transparência informa 88810-020 para este mesmo endereço."
+ */
+export const Divergencia = z.string().min(1);
 
 // ---------------------------------------------------------------------------
 // Vocabulário compartilhado
@@ -202,7 +217,12 @@ export const Unidade = z.object({
    * falta na hora de mostrar. Não reescreva o número aqui.
    */
   telefones: z.array(z.string().regex(/^(\(\d{2}\) )?\d{4,5}-\d{4}$/)),
-  horarios: z.array(Horario).min(1),
+  /**
+   * Pode ser vazio quando a fonte não dá um intervalo, por exemplo "24hrs".
+   * Nesse caso a palavra da fonte fica em `observacoes` e a tela mostra ela,
+   * em vez de inventar um horário.
+   */
+  horarios: z.array(Horario),
   /**
    * Quais componentes esta unidade entrega. Pode ser vazio: a farmácia de
    * fórmulas alimentares e o programa de insumos para diabetes não entregam
@@ -217,6 +237,8 @@ export const Unidade = z.object({
    */
   restricao: z.string().min(1).nullable(),
   observacoes: z.string().min(1).nullable(),
+  /** O que as fontes dizem de diferente sobre esta unidade. */
+  divergencias: z.array(Divergencia),
   proveniencia: Proveniencia,
 });
 
@@ -296,6 +318,7 @@ export const Medicamentos = z.array(Medicamento).refine(
 // Tipos
 // ---------------------------------------------------------------------------
 
+export type UmaProveniencia = z.infer<typeof UmaProveniencia>;
 export type Proveniencia = z.infer<typeof Proveniencia>;
 export type Componente = z.infer<typeof Componente>;
 export type TipoUnidade = z.infer<typeof TipoUnidade>;
