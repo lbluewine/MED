@@ -7,25 +7,39 @@ pequeno e certo vale mais que um grande e desatualizado.
 
 O objetivo é provar que o dado se mantém atualizado antes de crescer.
 
-- [ ] Schema Zod e carregamento validado do `data/`
-- [ ] `remume.json` de Criciúma extraído da REMUME publicada, com proveniência
-- [ ] `unidades.json` com endereço, telefone, horário, o que dispensa e
+- [x] Schema Zod e carregamento validado do `data/`
+- [x] `remume.json` de Criciúma extraído da REMUME publicada, com proveniência
+- [x] `unidades.json` com endereço, telefone, horário, o que dispensa e
       restrição de público
-- [ ] Busca "Tem no SUS?" com tolerância a acento e erro de digitação
-- [ ] Página de resultado: tem / não tem, componente, onde retirar, o que levar
-- [ ] "Onde pegar": lista + mapa Leaflet, com alternativa em lista sem JS
-- [ ] Guia do CEAF em SC, passo a passo, com checklist imprimível
+- [x] Busca "Tem no SUS?" com tolerância a acento e erro de digitação
+- [x] Página de resultado: tem / não tem, componente, onde retirar, o que levar
+- [x] "Onde pegar": lista + mapa Leaflet, com alternativa em lista sem JS
+- [x] Guia do CEAF em SC, passo a passo, com checklist imprimível
 - [ ] Página "Sobre": quem faz, de onde vêm os dados, como corrigir um erro
-- [ ] Aviso de projeto independente no rodapé de toda página
-- [ ] Data de verificação visível em toda página com dado
-- [ ] Job semanal que confere as fontes e abre PR quando mudam
+      — no ar, menos dois TODO: falta o canal para relatar erro e os nomes
+      de quem faz, que dependem de autorização de cada pessoa
+- [x] Aviso de projeto independente no rodapé de toda página
+- [x] Data de verificação visível em toda página com dado
+- [x] Job semanal que confere as fontes e abre PR quando mudam
+
+Construído depois, sem estar na lista original:
+
+- [x] Navegação por tipo de medicamento, do jeito que a própria lista
+      classifica (92 grupos)
+- [x] Banner, menu lateral no desktop e paleta de cor
+- [x] Distância até a unidade a partir da localização da pessoa, sob permissão
+- [x] Busca pelo nome comercial (fonte ainda informada pelo mantenedor, não
+      conferida na Anvisa — ver `data/fontes/FONTES.md`)
 
 **Fora do v0:** conteúdo clínico, preço, chat, outros municípios.
 
 ### Critério para dizer que v0 acabou
 
-Três pessoas de 60+ anos, sem ajuda, conseguem descobrir se um remédio da
+Três pessoas de 60+ anos, sem ajuda, conseguem descobrir se um medicamento da
 receita delas tem no SUS e para onde ir. Se não conseguirem, o v0 não acabou.
+
+**Isso ainda não foi testado com ninguém.** Enquanto não for, o v0 não está
+fechado — por mais que a lista acima esteja quase toda marcada.
 
 ## v1 — conteúdo revisado e preço
 
@@ -35,7 +49,7 @@ receita delas tem no SUS e para onde ir. Se não conseguirem, o v0 não acabou.
       por página, aviso de revisão vencida aos 18 meses
 - [ ] Preço máximo CMED com atualização mensal automatizada (PR, não merge)
 - [ ] Marcação de quais itens estão na Farmácia Popular
-- [ ] "Minha lista": montar a lista de remédios e gerar PDF para levar ao
+- [ ] "Minha lista": montar a lista de medicamentos e gerar PDF para levar ao
       farmacêutico da UBS
 - [ ] Link para a bula do paciente na Anvisa em cada ficha
 

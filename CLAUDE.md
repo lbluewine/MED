@@ -52,6 +52,7 @@ perguntando "isso ajuda essa pessoa?".
 | `docs/DADOS.md` | Ao mexer em arquivos de dados, schema ou pipeline de atualização |
 | `docs/STACK.md` | Ao escrever código, componentes ou estilos |
 | `docs/ROADMAP.md` | Para saber o que é v0 e o que não deve ser construído ainda |
+| `docs/FUNCIONALIDADES.md` | Para saber o que o site já faz, antes de propor algo que já existe |
 
 Não leia todos por padrão. Leia o necessário.
 
