@@ -1343,50 +1343,6 @@
     ]
   },
   {
-    "id": "unidade-basica-de-saude-quarta-linha-hg",
-    "nome": "Unidade Básica de Saúde Quarta Linha / HG",
-    "tipo": "dispensario_ubs",
-    "endereco": {
-      "logradouro": "Rua Monsueto Luiz Rosso, 65",
-      "bairro": "Quarta Linha",
-      "cep": "88812-499",
-      "geo": {
-        "lat": -28.7909601,
-        "lng": -49.3624179,
-        "conferido_por": "Portal da Transparência de Criciúma",
-        "conferido_em": "2026-09-04"
-      }
-    },
-    "telefones": [
-      "(48) 3437-6741"
-    ],
-    "horarios": [
-      {
-        "dias": null,
-        "abre": "07:00",
-        "fecha": "19:00"
-      }
-    ],
-    "dispensa": [
-      "basico"
-    ],
-    "entrega_descricao": "Parte dos remédios do componente básico. Procure a unidade onde você faz acompanhamento.",
-    "restricao": null,
-    "observacoes": null,
-    "divergencias": [],
-    "proveniencia": [
-      {
-        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
-        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
-        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
-        "fonte_data": "2026-09-04",
-        "extraido_em": "2026-09-04",
-        "verificado_em": "2026-09-04",
-        "metodo": "ia-assistida"
-      }
-    ]
-  },
-  {
     "id": "unidade-basica-de-saude-renascer",
     "nome": "Unidade Básica de Saúde Renascer",
     "tipo": "dispensario_ubs",
@@ -2725,10 +2681,9 @@
     ],
     "entrega_descricao": "Remédios do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
     "restricao": null,
-    "observacoes": null,
+    "observacoes": "Fica dentro da Unidade Básica de Saúde (posto de saúde) do bairro, que abre das 7h às 19h. A farmácia, dentro do posto, abre das 8h às 17h.",
     "divergencias": [
-      "A REMUME de 2024 informa o endereço como Rodovia Monsueto Luiz Rosso, sem número, e o portal da prefeitura informa Rua Monsueto Luiz Rosso, 65.",
-      "A REMUME informa que esta farmácia abre das 7h às 19h."
+      "A REMUME de 2024 informa o endereço como Rodovia Monsueto Luiz Rosso, sem número, e o portal da prefeitura informa Rua Monsueto Luiz Rosso, 65."
     ],
     "proveniencia": [
       {

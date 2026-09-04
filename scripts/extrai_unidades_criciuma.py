@@ -138,8 +138,18 @@ FARMACIAS = {
         divergencias=[
             "A REMUME de 2024 informa o endereço como Rodovia Monsueto Luiz Rosso, "
             "sem número, e o portal da prefeitura informa Rua Monsueto Luiz Rosso, 65.",
-            "A REMUME informa que esta farmácia abre das 7h às 19h.",
-        ]),
+        ],
+        # O portal cadastra o mesmo prédio duas vezes: uma como "Unidade
+        # Básica de Saúde Quarta Linha / HG" (o posto de saúde, aberto das 7h
+        # às 19h) e outra como "Farmácia Distrital Quarta Linha" (a farmácia
+        # dentro do posto, aberta das 8h às 17h). Mesmo endereço, mesmo CEP e
+        # mesmo telefone — é uma porta só. Confirmado por quem conhece o
+        # bairro em 2026-09-04.
+        observacoes=(
+            "Fica dentro da Unidade Básica de Saúde (posto de saúde) do "
+            "bairro, que abre das 7h às 19h. A farmácia, dentro do posto, "
+            "abre das 8h às 17h."
+        )),
     "Farmácia Distrital Boa Vista": dict(
         tipo="farmacia_distrital", dispensa=["basico"], entrega=ENTREGA_DISTRITAL,
         divergencias=[
@@ -189,6 +199,15 @@ FARMACIAS = {
             "A REMUME de 2024 informa outro endereço: Rua Santo Antônio, 1080, "
             "no bairro Cruzeiro do Sul. Ligue antes de ir.",
         ]),
+}
+
+# Unidades que o portal cadastra separado, mas que são o mesmo prédio que uma
+# entrada de FARMACIAS. O nome cita quem confirmou, para quem for auditar
+# depois saber que não foi suposição.
+COBERTAS_POR_OUTRA_ENTRADA = {
+    # Mesmo endereço, CEP e telefone que "Farmácia Distrital Quarta Linha".
+    # Confirmado por quem conhece o bairro em 2026-09-04.
+    "Unidade Básica de Saúde Quarta Linha / HG",
 }
 
 # A REMUME chama de "Farmácia Estratégica"; o portal cadastra o mesmo endereço
@@ -253,8 +272,8 @@ def main() -> None:
             vistos.add(nome)
             divergencias = list(cfg["divergencias"])
             turnos = horarios(u["expediente"])
-            observacoes = None
-            if not turnos and u["expediente"]:
+            observacoes = cfg.get("observacoes")
+            if observacoes is None and not turnos and u["expediente"]:
                 # "24hrs" e afins: guardamos a palavra da fonte em vez de inventar
                 # um intervalo que a fonte não deu.
                 observacoes = f"O portal da prefeitura informa o expediente como: {u['expediente']}."
@@ -272,6 +291,10 @@ def main() -> None:
                 "divergencias": divergencias,
                 "proveniencia": [FONTE_PORTAL, FONTE_REMUME],
             })
+            continue
+
+        if nome in COBERTAS_POR_OUTRA_ENTRADA:
+            vistos.add(nome)
             continue
 
         if re.match(r"UBS|Unidade Básica|ESF", nome, re.I):
