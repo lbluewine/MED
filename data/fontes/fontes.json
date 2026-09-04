@@ -1,0 +1,69 @@
+{
+  "comentario": [
+    "O que o job semanal confere. Ver docs/DADOS.md.",
+    "tipo 'arquivo': baixa a URL e compara o SHA-256 com a cópia guardada.",
+    "tipo 'extraida': a fonte é uma página que muda de marcação o tempo todo,",
+    "então o que se compara é o snapshot que o extrator produz.",
+    "tipo 'sem_verificacao': não tem URL estável; só um humano atualiza."
+  ],
+  "fontes": [
+    {
+      "id": "remume-criciuma",
+      "tipo": "arquivo",
+      "descricao": "REMUME de Criciúma",
+      "url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+      "arquivo": "sc-criciuma/remume-2024-11.pdf",
+      "extratores": [
+        "scripts/extrai_remume_criciuma.py"
+      ]
+    },
+    {
+      "id": "ubs-criciuma",
+      "tipo": "arquivo",
+      "descricao": "Lista das UBS de Criciúma, por distrito",
+      "url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/21",
+      "arquivo": "sc-criciuma/ubs-lista-telefonica.pdf",
+      "extrator": null,
+      "extratores": []
+    },
+    {
+      "id": "resme-sc",
+      "tipo": "arquivo",
+      "descricao": "Relação Estadual de Medicamentos Ambulatorial (RESME)",
+      "url": "https://www.saude.sc.gov.br/index.php/pt/component/edocman/relacao-estadual-de-medicamentos-resme-ambulatorial/download",
+      "arquivo": "sc/resme-2026-07-07.pdf",
+      "extrator": null,
+      "extratores": []
+    },
+    {
+      "id": "unidades-criciuma",
+      "tipo": "extraida",
+      "descricao": "Unidades de saúde no Portal da Transparência de Criciúma",
+      "url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+      "arquivo": "sc-criciuma/transparencia-unidades-2026-09-04.json",
+      "extratores": [
+        "scripts/baixa_unidades_criciuma.py",
+        "scripts/extrai_unidades_criciuma.py"
+      ]
+    },
+    {
+      "id": "ceaf-sc",
+      "tipo": "extraida",
+      "descricao": "Doenças e documentos do CEAF em Santa Catarina",
+      "url": "https://www.saude.sc.gov.br/index.php/pt/assistencia-farmaceutica/componente-especializado-da-assistencia-farmaceutica-ceaf",
+      "arquivo": "sc/ceaf-condicoes-2026-09-04.json",
+      "extratores": [
+        "scripts/extrai_ceaf_sc.py"
+      ]
+    },
+    {
+      "id": "pregao-038-criciuma",
+      "tipo": "sem_verificacao",
+      "descricao": "Edital do pregão 038/FMS/2024. Não é lista de dispensação; guardado só como referência.",
+      "url": null,
+      "arquivo": "sc-criciuma/pregao-038-fms-2024-guia-farmacia.pdf",
+      "extrator": null,
+      "extratores": []
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+# Etapa 1 do pipeline de docs/DADOS.md: o robô detecta mudança, o humano aprova.
+#
+# Roda toda segunda de manhã. Ninguém precisa acordar: se a fonte mudou, o
+# pull request espera.
+
+name: Confere as fontes
+
+on:
+  schedule:
+    # 12h UTC = 9h em Brasília.
+    - cron: "0 12 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  conferir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instala o que lê PDF
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - run: npm ci
+
+      - name: Confere as fontes e atualiza a data de conferência
+        id: conferir
+        run: |
+          set +e
+          python3 scripts/verifica_fontes.py --atualizar | tee /tmp/relatorio.txt
+          codigo=${PIPESTATUS[0]}
+          set -e
+          echo "codigo=$codigo" >> "$GITHUB_OUTPUT"
+          # 0 = nada mudou, 1 = alguma fonte mudou, 2 = fonte fora do ar.
+          if [ "$codigo" = "2" ]; then
+            echo "Uma fonte saiu do ar ou mudou de endereço. Isso precisa de gente."
+            exit 1
+          fi
+
+      - name: Valida o dado antes de propor qualquer coisa
+        run: npm run valida-dados
+
+      - name: O site ainda constrói?
+        run: npm run build
+
+      - name: O que mudou
+        id: diff
+        run: |
+          if git diff --quiet; then
+            echo "mudou=nada" >> "$GITHUB_OUTPUT"
+          elif [ -z "$(git diff -U0 | grep -E '^[+-]' | grep -vE '^(\+\+\+|---)' | grep -v 'verificado_em')" ]; then
+            # O único delta é a data de conferência. Nenhum dado de conteúdo
+            # muda, então isso não é "publicar dado sem revisão": é registrar
+            # que hoje a fonte foi conferida e continua a mesma.
+            echo "mudou=so-a-data" >> "$GITHUB_OUTPUT"
+          else
+            echo "mudou=conteudo" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Registra que conferimos hoje
+        if: steps.diff.outputs.mudou == 'so-a-data'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -aqm "Conferimos as fontes: nenhuma mudou
+
+          Só a data de conferência mudou. Nenhum dado de conteúdo foi tocado."
+          git push
+
+      - name: Abre pull request com o que mudou
+        if: steps.diff.outputs.mudou == 'conteudo'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: fontes/mudanca-automatica
+          title: "Uma fonte mudou: revise antes de publicar"
+          commit-message: "Fonte mudou: novo dado extraído, aguardando revisão"
+          delete-branch: true
+          body-path: .github/CORPO_PR_FONTES.md
+
+      - name: Guarda o relatório
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorio-fontes
+          path: /tmp/relatorio.txt

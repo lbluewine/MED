@@ -11,11 +11,32 @@ da fonte. Ver `docs/DADOS.md`.
 | `sc-criciuma/pregao-038-fms-2024-guia-farmacia.pdf` | Edital de pregão para compra de medicamentos **fora** da REMUME (mandado judicial e vulnerabilidade social). **Não é lista de dispensação.** Guardado só porque nomeia as farmácias distritais. | fornecido pelo mantenedor | 2024-11-25 |
 | `sc/resme-2026-07-07.pdf` | Relação Estadual de Medicamentos Ambulatorial (RESME) da SES/SC: CEAF, CESAF e CBAF estaduais. | https://www.saude.sc.gov.br/index.php/pt/component/edocman/relacao-estadual-de-medicamentos-resme-ambulatorial/download | 2026-07-07 |
 
+| `sc-criciuma/transparencia-unidades-2026-09-04.json` | Endereço, telefone, e-mail, expediente e coordenada das unidades de saúde, lidos do Portal da Transparência de Criciúma. | https://transparencia.criciuma.sc.gov.br/unidades | 2026-09-04 |
+| `sc/ceaf-condicoes-2026-09-04.json` | As doenças atendidas pelo CEAF em SC, os papéis de cada uma e os exames que o pedido exige. | https://www.saude.sc.gov.br/index.php/pt/assistencia-farmaceutica/componente-especializado-da-assistencia-farmaceutica-ceaf | 2026-09-04 |
+
 ## Conferir se as fontes mudaram
 
-```
-sha256sum -c $(find data/fontes -name '*.sha256')
+`fontes.json` declara o que é conferido e como. Para rodar à mão:
+
+```bash
+npm run verifica-fontes
 ```
 
-O job semanal faz isso automaticamente e abre um pull request quando o hash
-muda. Ele nunca faz merge sozinho.
+O script sai com código 1 se alguma fonte mudou e 2 se alguma saiu do ar.
+Fonte fora do ar falha alto de propósito: falha silenciosa é pior que erro.
+
+Duas fontes não são um arquivo, e sim uma página que muda de marcação sem o
+conteúdo mudar. Para essas, o que se compara é o snapshot que o extrator
+produz, e por isso o snapshot precisa sair sempre na mesma ordem.
+
+## O job semanal
+
+`.github/workflows/verifica-fontes.yml` roda isso toda segunda de manhã:
+
+- **Nada mudou** — só a data de conferência é regravada, e vai direto para o
+  `main`. Nenhum dado de conteúdo é tocado, e o workflow confere isso linha a
+  linha antes de commitar.
+- **Alguma fonte mudou** — o arquivo de origem novo é guardado, os extratores
+  rodam, e um pull request espera revisão humana. Nunca há merge automático de
+  dado.
+- **Alguma fonte saiu do ar** — o job falha e ninguém mexe em nada.

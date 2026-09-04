@@ -9,7 +9,8 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "valida-dados": "tsx scripts/valida-dados.ts"
+    "valida-dados": "tsx scripts/valida-dados.ts",
+    "verifica-fontes": "python3 scripts/verifica_fontes.py"
   },
   "dependencies": {
     "leaflet": "^1.9.4",
