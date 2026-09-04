@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Tem no SUS?",
   description:
-    "Descubra se o seu remédio tem no SUS em Criciúma, onde retirar e o que levar.",
+    "Descubra se o seu medicamento tem no SUS em Criciúma, onde retirar e o que levar.",
 };
 
 export const viewport: Viewport = {

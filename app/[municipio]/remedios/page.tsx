@@ -32,13 +32,13 @@ export default async function Remedios({
   return (
     <Pagina municipioId={id} atual="remedios" largura="larga">
       <h1 className="max-w-[20ch] text-[30px] font-bold leading-tight md:text-[38px]">
-        Remédios da lista de {municipio.nome}
+        Medicamentos da lista de {municipio.nome}
       </h1>
       <p className="mt-4 max-w-[65ch]">
-        São {remedios.length} remédios, em ordem alfabética. Se preferir olhar
+        São {remedios.length} medicamentos, em ordem alfabética. Se preferir olhar
         por grupo, veja{" "}
         <a className="underline" href={`/${id}/remedios/tipos`}>
-          os {classes.length} tipos de remédio
+          os {classes.length} tipos de medicamento
         </a>
         .
       </p>
@@ -48,7 +48,7 @@ export default async function Remedios({
           <a
             key={l}
             href={`#letra-${l}`}
-            className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-[2px] border-2 border-linha font-bold no-underline hover:bg-[#F2F2F2]"
+            className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-[var(--radius-botao)] border-2 border-marca-linha font-bold text-marca-link no-underline hover:border-marca-link hover:bg-marca-fundo"
           >
             {l}
           </a>
@@ -59,7 +59,7 @@ export default async function Remedios({
         <section key={l} className="mt-10">
           <h2
             id={`letra-${l}`}
-            className="scroll-mt-8 border-b-2 border-texto pb-1 text-2xl font-bold"
+            className="scroll-mt-8 border-b-2 border-marca-linha pb-1 text-2xl font-bold text-marca"
           >
             {l}
           </h2>

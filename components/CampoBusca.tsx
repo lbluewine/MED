@@ -25,7 +25,7 @@ export default function CampoBusca({
   return (
     <form action={`/${municipioId}/busca`} method="get" role="search">
       <label htmlFor="q" className="block font-bold">
-        Nome do remédio
+        Nome do medicamento
       </label>
       <p id="ajuda-q" className="mt-1 text-texto-suave">
         Escreva como está na receita ou na caixa. Não precisa acertar o acento.
@@ -38,12 +38,12 @@ export default function CampoBusca({
         value={termo}
         onChange={(e) => setTermo(e.target.value)}
         aria-describedby="ajuda-q"
-        className="mt-2 min-h-[60px] w-full rounded-[2px] border-2 border-texto px-4 text-[22px]"
+        className="mt-2 min-h-[60px] w-full rounded-[var(--radius-botao)] border-2 border-marca-linha px-4 text-[22px] focus:border-marca-link"
       />
       <p className="mt-2 text-texto-suave">Pode digitar só o começo do nome.</p>
       <button
         type="submit"
-        className="mt-4 min-h-[60px] w-full rounded-[2px] border-2 border-texto bg-texto px-4 text-[20px] font-bold text-fundo hover:bg-[#333333]"
+        className="mt-4 min-h-[60px] w-full rounded-[var(--radius-botao)] border-2 border-marca-link bg-marca-link px-4 text-[20px] font-bold text-fundo hover:bg-marca"
       >
         Procurar
       </button>
@@ -54,7 +54,7 @@ export default function CampoBusca({
             <a
               key={s.slug}
               href={`/${municipioId}/remedio/${s.slug}`}
-              className="block min-h-[64px] border-b border-linha py-3 no-underline hover:bg-[#F2F2F2]"
+              className="block min-h-[64px] border-b border-linha py-3 no-underline hover:bg-marca-fundo"
             >
               <span className="block text-[20px] font-bold text-texto">{s.nome}</span>
               {!s.tem_para_levar && (

@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 import CartaoUnidade from "@/components/CartaoUnidade";
 import Mapa, { type PontoMapa } from "@/components/Mapa";
+import MinhaDistancia from "@/components/MinhaDistancia";
 import NotaFonte from "@/components/NotaFonte";
 import Pagina from "@/components/Pagina";
 import { carregaMunicipio, carregaUnidades, listaMunicipios } from "@/lib/dados";
-import { distanciaKm } from "@/lib/geo";
 import { NOME_UNIDADE_CURTO } from "@/lib/rotulos";
 import type { TipoUnidade } from "@/lib/schema";
 
@@ -16,7 +16,7 @@ export const metadata = { title: "Onde pegar — Tem no SUS?" };
 
 /**
  * A ordem é a da chance de a pessoa precisar, não a alfabética. Quem chega
- * aqui quase sempre quer um remédio comum, e isso é farmácia do distrito ou
+ * aqui quase sempre quer um medicamento comum, e isso é farmácia do distrito ou
  * posto de saúde.
  */
 const ORDEM: TipoUnidade[] = [
@@ -62,18 +62,19 @@ export default async function OndePegar({
   return (
     <Pagina municipioId={id} atual="onde-pegar" largura="larga">
         <h1 className="max-w-[20ch] text-[30px] font-bold leading-tight md:text-[38px]">
-          Onde pegar remédio em {municipio.nome}
+          Onde pegar medicamento em {municipio.nome}
         </h1>
         <p className="mt-2 max-w-[36em] text-texto-suave">
-          São {unidades.length} lugares.
-          {" "}
-          {pontos.length > 0
-            ? `As distâncias abaixo saem do Centro.`
-            : ""}
-          {" "}
-          Ligue antes de sair de casa: a lista diz o que cada um entrega, mas
-          não diz o que tem em estoque hoje.
+          São {unidades.length} lugares. Ligue antes de sair de casa: a lista
+          diz o que cada um entrega, mas não diz o que tem em estoque hoje, nem
+          em quais dias da semana cada lugar abre.
         </p>
+
+        {pontos.length > 0 && (
+          <MinhaDistancia
+            pontos={pontos.map((p) => ({ id: p.id, lat: p.lat, lng: p.lng }))}
+          />
+        )}
 
         <div className="mt-8 md:grid md:grid-cols-[1fr_360px] md:items-start md:gap-12">
           <div>
@@ -82,10 +83,10 @@ export default async function OndePegar({
               if (doTipo.length === 0) return null;
               return (
                 <section key={tipo} id={tipo} className="mt-10 scroll-mt-8 first:mt-0">
-                  <h2 className="text-2xl font-bold">
+                  <h2 className="text-[26px] font-bold tracking-tight text-marca">
                     {NOME_UNIDADE_CURTO[tipo]} ({doTipo.length})
                   </h2>
-                  <div className="border-t border-linha">
+                  <div className="mt-4 grid gap-4">
                     {doTipo.map((u) => (
                       <CartaoUnidade
                         key={u.id}
@@ -93,11 +94,6 @@ export default async function OndePegar({
                         ddd={municipio.ddd}
                         municipioId={id}
                         comBotao
-                        distanciaKm={
-                          u.endereco.geo
-                            ? distanciaKm(municipio.centro, u.endereco.geo)
-                            : undefined
-                        }
                       />
                     ))}
                   </div>
@@ -116,7 +112,7 @@ export default async function OndePegar({
           </div>
 
           <div className="mt-10 md:mt-0 md:sticky md:top-8">
-            <h2 className="text-2xl font-bold">No mapa</h2>
+            <h2 className="text-[26px] font-bold tracking-tight text-marca">No mapa</h2>
             <p className="mt-1 text-texto-suave">
               Posição das unidades com localização conferida.
             </p>

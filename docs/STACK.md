@@ -84,10 +84,39 @@ Público: pessoa idosa, celular barato, luz do sol, mão trêmula.
 --tem           #0B6E4F   verde: o SUS entrega
 --nao-tem       #A4231E   vermelho: não está na lista
 --processo      #B45309   âmbar: precisa de processo (CEAF)
+
+--marca         #1E3A8A   azul de identidade: banner, títulos de seção
+--marca-link    #1E40AF   link, botão de ação, item ativo do menu
+--marca-fundo   #EFF4FF   topo de cartão, estado hover
+--marca-linha   #C7D7FE   borda de cartão
+
+--superficie        #F7F7F7   fundo de cartão
+--superficie-forte  #EDEDED   contador, estado hover
+--linha-suave       #E6E6E6
+
+--radius-cartao  10px
+--radius-botao   6px
 ```
+
+O fundo da **página** continua branco puro, para contraste máximo no sol. Os
+cinzas acima só separam bloco de bloco; o texto sobre eles segue `--texto`, que
+dá 16:1 mesmo no mais escuro.
 
 Verde, vermelho e âmbar carregam significado, então **nunca são a única pista**:
 sempre acompanhados de texto e ícone. Daltonismo é comum na faixa etária.
+
+Pela mesma razão o azul é a cor de identidade e os três semânticos não são.
+Se o verde virar enfeite — banner, botão, cabeçalho — ele para de querer dizer
+"o SUS entrega", que é a informação mais importante do site. O azul fica longe
+dos três no círculo cromático e não compete com nenhum. Regra prática: **cor de
+enfeite é azul; verde, vermelho e âmbar só quando significam alguma coisa.**
+
+O botão de ação principal é azul pela mesma razão — era verde, e "ligar para a
+unidade" não é "tem no SUS".
+
+Todo par foi conferido contra AA (4,5:1): branco sobre `--marca` 10,4:1;
+`--marca-link` sobre branco 8,7:1; texto sobre `--marca-fundo` 15,8:1.
+Link continua **sublinhado**: a cor nunca é a única pista.
 
 ### Tipografia
 
@@ -107,6 +136,10 @@ por causa do público, não por estética.
 - A resposta principal ("tem" / "não tem") aparece **acima da dobra**, em texto
   grande, antes de qualquer detalhe.
 - Sem carrossel, sem accordion escondendo informação crítica, sem modal.
+  Cartão é permitido e preferido para separar blocos irmãos — apresentações de
+  um medicamento, unidades de saúde —, desde que **nada dentro dele comece
+  dobrado**. O cartão serve para a pessoa achar o bloco dela, não para esconder
+  o conteúdo atrás de um clique.
 - Sem animação de entrada. Movimento só como resposta a uma ação do usuário, e
   respeitando `prefers-reduced-motion`.
 - Toda página imprime bem. Muita gente vai imprimir o checklist do CEAF e levar
@@ -129,6 +162,12 @@ dado:
 
 - Sem login, sem conta, sem cadastro.
 - "Minha lista" fica só no `localStorage` do aparelho. Nunca sobe para servidor.
+- **Localização.** A distância até cada unidade só aparece se a pessoa clicar e
+  liberar. Nunca é pedida ao abrir a página. A coordenada é usada dentro do
+  navegador, para o cálculo, e não é enviada, gravada nem registrada em lugar
+  nenhum. Sem a permissão, a lista aparece inteira, só sem os quilômetros.
+  Nunca mostrar distância a partir de um ponto que não seja o da pessoa: um
+  número que parece ser dela e não é engana pior que a ausência do número.
 - Sem cookie de identificação, sem pixel, sem script de terceiro.
 - Sem Google Fonts via CDN — fonte servida junto com o site, para não vazar IP.
 - Se um dia houver métrica, tem que ser agregada e sem identificação

@@ -56,10 +56,10 @@ export default function Home() {
     <Pagina municipioId={id} atual="inicio" largura="larga">
       <div className="max-w-3xl">
         <h1 className="text-[30px] font-bold leading-tight tracking-tight md:text-[38px]">
-          Qual remédio você está procurando?
+          Qual medicamento você está procurando?
         </h1>
         <p className="mt-4 max-w-[36em] text-texto-suave">
-          Veja se o SUS de {municipio.nome} entrega esse remédio de graça, onde
+          Veja se o SUS de {municipio.nome} entrega esse medicamento de graça, onde
           retirar e o que levar. Digite o nome que está na receita.
         </p>
 
@@ -69,16 +69,16 @@ export default function Home() {
 
         <div className="mt-10 grid gap-3 border-t border-linha pt-8 sm:grid-cols-2">
           <Botao variante="secundario" href={`/${id}/onde-pegar`} className="w-full">
-            Ver onde pegar remédio
+            Ver onde pegar medicamento
           </Botao>
           <Botao variante="secundario" href="/alto-custo" className="w-full">
-            Remédio de alto custo: como pedir
+            Medicamento de alto custo: como pedir
           </Botao>
           <Botao variante="secundario" href={`/${id}/remedios`} className="w-full">
             Lista completa, de A a Z
           </Botao>
           <Botao variante="secundario" href={`/${id}/remedios/tipos`} className="w-full">
-            Ver por tipo de remédio
+            Ver por tipo de medicamento
           </Botao>
         </div>
       </div>

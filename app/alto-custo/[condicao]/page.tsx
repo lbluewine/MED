@@ -111,14 +111,14 @@ export default async function Condicao({
       </h1>
       <p className="mt-4 max-w-[65ch]">
         Esta é a lista de papéis que o governo de Santa Catarina publica para
-        quem pede remédio de alto custo para {c.nome.toLowerCase()}. Imprima
+        quem pede medicamento de alto custo para {c.nome.toLowerCase()}. Imprima
         esta página e leve na consulta: quem preenche os formulários é o
         médico.
       </p>
 
       {/*
         A parte mais útil da página, e a que as cartilhas não dão: quais
-        exames, para qual doença, para qual remédio. Vem do Resumo publicado
+        exames, para qual doença, para qual medicamento. Vem do Resumo publicado
         pela SES/SC e é citada sem reescrita.
 
         O mesmo Resumo traz dose, critério de inclusão e monitoramento. Nada
@@ -127,9 +127,9 @@ export default async function Condicao({
       */}
       {c.anexos_obrigatorios.length > 0 ? (
         <section className="mt-8">
-          <h2 className="text-2xl font-bold">O que o pedido precisa ter</h2>
+          <h2 className="text-[26px] font-bold tracking-tight text-marca">O que o pedido precisa ter</h2>
           <p className="mt-2 max-w-[65ch]">
-            Depende do remédio que o médico for pedir. Veja o seu na lista.
+            Depende do medicamento que o médico for pedir. Veja o seu na lista.
           </p>
           {c.anexos_obrigatorios.map((g) => (
             <div key={g.itens.join("|")} className="mt-6">
@@ -169,7 +169,7 @@ export default async function Condicao({
 
       {c.documentos.length > 0 ? (
         <section className="mt-8">
-          <h2 className="text-2xl font-bold">
+          <h2 className="text-[26px] font-bold tracking-tight text-marca">
             Papéis desta doença ({c.documentos.length})
           </h2>
           <ListaDocumentos documentos={c.documentos} />
@@ -184,7 +184,7 @@ export default async function Condicao({
 
       {ceaf.documentos_gerais.length > 0 && (
         <section className="mt-10">
-          <h2 className="text-2xl font-bold">
+          <h2 className="text-[26px] font-bold tracking-tight text-marca">
             Papéis que valem para qualquer doença
           </h2>
           <p className="mt-2 max-w-[65ch]">
@@ -196,7 +196,7 @@ export default async function Condicao({
       )}
 
       <section className="mt-10">
-        <h2 className="text-2xl font-bold">Onde entregar</h2>
+        <h2 className="text-[26px] font-bold tracking-tight text-marca">Onde entregar</h2>
         {ondeProtocolar.length > 0 ? (
           ondeProtocolar.map(({ id, municipio, unidade }) => (
             <div key={unidade.id} className="mt-3 max-w-[65ch]">
@@ -234,7 +234,7 @@ export default async function Condicao({
       </section>
 
       <section className="mt-10 border-l-4 border-processo pl-4">
-        <h2 className="text-2xl font-bold">
+        <h2 className="text-[26px] font-bold tracking-tight text-marca">
           <span aria-hidden="true">! </span>
           O que esta página não diz
         </h2>

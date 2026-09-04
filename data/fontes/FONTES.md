@@ -14,6 +14,26 @@ da fonte. Ver `docs/DADOS.md`.
 | `sc-criciuma/transparencia-unidades-2026-09-04.json` | Endereço, telefone, e-mail, expediente e coordenada das unidades de saúde, lidos do Portal da Transparência de Criciúma. | https://transparencia.criciuma.sc.gov.br/unidades | 2026-09-04 |
 | `sc/ceaf-condicoes-2026-09-04.json` | As doenças atendidas pelo CEAF em SC, os papéis de cada uma e os exames que o pedido exige. | https://www.saude.sc.gov.br/index.php/pt/assistencia-farmaceutica/componente-especializado-da-assistencia-farmaceutica-ceaf | 2026-09-04 |
 
+## Dado que ainda não tem fonte oficial
+
+`nacional/nomes-comerciais.json` guarda o nome de caixa de cada princípio
+ativo, e é o único arquivo de `data/` cuja origem não é um documento público.
+
+Foi informado pelo mantenedor e **ainda não foi conferido contra o cadastro de
+medicamentos registrados da Anvisa**. Por isso:
+
+- Serve só para a busca encontrar o princípio ativo por um nome de marca.
+  Nenhuma tela afirma que o medicamento é vendido com esses nomes.
+- `npm run valida-dados` avisa em toda execução enquanto
+  `conferido_na_anvisa` for `false`.
+- O pior caso de um nome errado é uma busca que não acha. Se a lista aparecesse
+  na tela, um nome errado viraria afirmação do site — que é o que a regra 1 do
+  `CLAUDE.md` proíbe.
+
+Substituir por extração da Anvisa quando a base estiver acessível: as tentativas
+por `dados.anvisa.gov.br` e pela API de `consultas.anvisa.gov.br` foram
+bloqueadas (DNS e HTTP 403) em 04/09/2026.
+
 ## Conferir se as fontes mudaram
 
 `fontes.json` declara o que é conferido e como. Para rodar à mão:

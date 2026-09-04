@@ -3,7 +3,7 @@
  *
  * O índice é montado no build e enviado pronto para o navegador, para a busca
  * funcionar sem servidor e sem esperar rede. Ele é pequeno: uma linha por
- * remédio.
+ * medicamento.
  */
 import MiniSearch from "minisearch";
 

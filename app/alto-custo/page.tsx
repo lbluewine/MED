@@ -2,7 +2,7 @@ import Pagina from "@/components/Pagina";
 import NotaFonte from "@/components/NotaFonte";
 import { carregaCeaf, carregaMunicipio, carregaUnidades, listaMunicipios } from "@/lib/dados";
 
-export const metadata = { title: "Remédio de alto custo — Tem no SUS?" };
+export const metadata = { title: "Medicamento de alto custo — Tem no SUS?" };
 
 export default function AltoCusto() {
   const [municipioNav] = listaMunicipios();
@@ -11,7 +11,7 @@ export default function AltoCusto() {
     return (
       <Pagina municipioId={municipioNav} atual="alto-custo">
           <h1 className="text-[30px] font-bold leading-tight md:text-[38px]">
-            Remédio de alto custo
+            Medicamento de alto custo
           </h1>
           <p className="mt-4 max-w-[65ch]">
             Ainda não publicamos esta parte.
@@ -32,10 +32,10 @@ export default function AltoCusto() {
     <Pagina municipioId={municipioNav} atual="alto-custo" largura="larga">
       <div className="max-w-2xl">
       <h1 className="text-[30px] font-bold leading-tight md:text-[38px]">
-        Remédio de alto custo
+        Medicamento de alto custo
       </h1>
       <p className="mt-4 max-w-[65ch]">
-        Alguns remédios não são entregues pela prefeitura. Quem entrega é o
+        Alguns medicamentos não são entregues pela prefeitura. Quem entrega é o
         governo do estado, num programa chamado CEAF. Para receber, é preciso
         abrir um pedido com papéis que o seu médico preenche.
       </p>
@@ -46,7 +46,7 @@ export default function AltoCusto() {
 
       {ondeProtocolar.length > 0 && (
         <section className="mt-8">
-          <h2 className="text-2xl font-bold">Onde entregar o pedido</h2>
+          <h2 className="text-[26px] font-bold tracking-tight text-marca">Onde entregar o pedido</h2>
           {ondeProtocolar.map(({ id, municipio, unidade }) => (
             <p key={unidade.id} className="mt-3 max-w-[65ch]">
               Em {municipio.nome}:{" "}
@@ -63,7 +63,7 @@ export default function AltoCusto() {
       </div>
 
       <section id="doencas" className="mt-8 scroll-mt-8">
-        <h2 className="text-2xl font-bold">Qual é a sua doença?</h2>
+        <h2 className="text-[26px] font-bold tracking-tight text-marca">Qual é a sua doença?</h2>
         <p className="mt-2 max-w-[65ch]">
           São {ceaf.condicoes.length} doenças atendidas em Santa Catarina.
         </p>

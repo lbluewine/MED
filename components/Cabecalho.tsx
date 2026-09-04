@@ -15,22 +15,22 @@ export default function Cabecalho({ municipioId }: { municipioId?: string }) {
           {municipioId && (
             <a
               href={`/${municipioId}/onde-pegar`}
-              className="inline-flex min-h-[44px] items-center rounded-[2px] border-2 border-texto px-3 text-base font-bold no-underline hover:bg-[#F2F2F2] md:min-h-[48px] md:px-4 md:text-lg"
+              className="inline-flex min-h-[44px] items-center rounded-[var(--radius-botao)] border-2 border-marca-link px-3 text-base font-bold text-marca-link no-underline hover:bg-marca-fundo md:min-h-[48px] md:px-4 md:text-lg"
             >
               Onde pegar
             </a>
           )}
           <a
             href="/alto-custo"
-            className="inline-flex min-h-[44px] items-center rounded-[2px] border-2 border-texto px-3 text-base font-bold no-underline hover:bg-[#F2F2F2] md:min-h-[48px] md:px-4 md:text-lg"
+            className="inline-flex min-h-[44px] items-center rounded-[var(--radius-botao)] border-2 border-marca-link px-3 text-base font-bold text-marca-link no-underline hover:bg-marca-fundo md:min-h-[48px] md:px-4 md:text-lg"
           >
             Alto custo
           </a>
           <a
             href={municipioId ? `/${municipioId}/remedios` : "/"}
-            className="inline-flex min-h-[44px] items-center rounded-[2px] border-2 border-texto px-3 text-base font-bold no-underline hover:bg-[#F2F2F2] md:min-h-[48px] md:px-4 md:text-lg"
+            className="inline-flex min-h-[44px] items-center rounded-[var(--radius-botao)] border-2 border-marca-link px-3 text-base font-bold text-marca-link no-underline hover:bg-marca-fundo md:min-h-[48px] md:px-4 md:text-lg"
           >
-            Buscar remédio
+            Buscar medicamento
           </a>
         </nav>
       </div>

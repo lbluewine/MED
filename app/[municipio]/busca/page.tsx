@@ -40,7 +40,7 @@ export default async function Busca({
   return (
     <Pagina municipioId={id} atual="inicio">
       <h1 className="text-[30px] font-bold leading-tight">
-        {q.trim() ? `Resultado para "${q}"` : "Procurar remédio"}
+        {q.trim() ? `Resultado para "${q}"` : "Procurar medicamento"}
       </h1>
 
       {q.trim() && achados.length === 0 && (
@@ -48,7 +48,7 @@ export default async function Busca({
           <p className="mt-6 max-w-[65ch] border-l-8 border-nao-tem pl-4 text-[20px]">
             {SEM_RESULTADO}
           </p>
-          <h2 className="mt-8 text-2xl font-bold">O que fazer agora</h2>
+          <h2 className="mt-8 text-[26px] font-bold tracking-tight text-marca">O que fazer agora</h2>
           <ul className="mt-2 max-w-[65ch] list-disc pl-6">
             <li className="mt-2">
               Procure pelo nome genérico, o que vem escrito em letra pequena na
@@ -61,12 +61,12 @@ export default async function Busca({
               e procure com os olhos.
             </li>
             <li className="mt-2">
-              Se for um remédio caro, ele pode ser de alto custo. Quem entrega
+              Se for um medicamento caro, ele pode ser de alto custo. Quem entrega
               esses é o governo do estado (CEAF), não a prefeitura.
             </li>
             <li className="mt-2">
               Leve a receita ao farmacêutico da sua unidade. Ele atende de graça
-              e pode olhar todos os seus remédios juntos.
+              e pode olhar todos os seus medicamentos juntos.
             </li>
           </ul>
         </>
@@ -88,7 +88,7 @@ export default async function Busca({
       )}
 
       <section className="mt-10 border-t border-linha pt-6">
-        <h2 className="text-2xl font-bold">Procurar outro</h2>
+        <h2 className="text-[26px] font-bold tracking-tight text-marca">Procurar outro</h2>
         <div className="mt-4">
           <CampoBusca
             municipioId={id}

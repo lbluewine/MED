@@ -13,7 +13,7 @@ export const AVISO_INDEPENDENTE =
 
 export const RECUSA_CLINICA =
   "Essa pergunta é para o farmacêutico. Ele atende de graça na sua unidade e " +
-  "pode olhar todos os seus remédios juntos.";
+  "pode olhar todos os seus medicamentos juntos.";
 
 /** {data} no formato 12/03/2026. {telefone} pode faltar. */
 export function dadoDesatualizado(data: string, telefone: string | null): string {
@@ -25,7 +25,7 @@ export function dadoDesatualizado(data: string, telefone: string | null): string
 }
 
 export const SEM_RESULTADO =
-  "Não encontramos esse remédio na lista de Criciúma. Isso pode significar " +
+  "Não encontramos esse medicamento na lista de Criciúma. Isso pode significar " +
   "duas coisas: ele não é entregue aqui, ou está cadastrado com outro nome.";
 
 export const SEM_DADO_AINDA =

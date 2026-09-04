@@ -10,12 +10,14 @@ import type { ZodType } from "zod";
 import {
   Ceaf,
   Medicamentos,
+  NomesComerciais,
   Municipio,
   Remume,
   Unidades,
   type ItemRemume,
   type Medicamento as TMedicamento,
   type Ceaf as TCeaf,
+  type NomesComerciais as TNomesComerciais,
   type Municipio as TMunicipio,
   type Unidade,
 } from "./schema";
@@ -72,6 +74,17 @@ export function carregaCeaf(uf: string): TCeaf | null {
   const caminho = join(RAIZ, "estados", uf, "ceaf.json");
   if (!existsSync(caminho)) return null;
   return leJson(caminho, Ceaf);
+}
+
+/**
+ * O nome da caixa, por princípio ativo. Só alimenta a busca.
+ *
+ * Arquivo opcional: sem ele a busca funciona igual, só não acha por marca.
+ */
+export function carregaNomesComerciais(): TNomesComerciais | null {
+  const caminho = join(RAIZ, "nacional", "nomes-comerciais.json");
+  if (!existsSync(caminho)) return null;
+  return leJson(caminho, NomesComerciais);
 }
 
 /** Fichas editoriais, iguais no país inteiro. */

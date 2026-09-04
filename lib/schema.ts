@@ -100,7 +100,7 @@ export const Exigencia = z.enum([
   "certidao_nascimento_crianca",
   /** Quem retira no lugar do paciente apresenta o próprio documento. */
   "documento_de_quem_retira",
-  /** O laudo que o médico preenche para pedir o remédio de alto custo (LME). */
+  /** O laudo que o médico preenche para pedir o medicamento de alto custo (LME). */
   "laudo_lme",
 ]);
 
@@ -236,7 +236,7 @@ export const Unidade = z.object({
    * medicamento de nenhum componente.
    */
   dispensa: z.array(Componente),
-  /** O que a unidade entrega, na palavra da fonte. Aparece na tela. */
+  /** O que a unidade entrega, em linguagem simples. Aparece na tela. */
   entrega_descricao: z.string().min(1),
   /**
    * Texto quando o atendimento é limitado a um público.
@@ -258,7 +258,7 @@ export const Unidades = z.array(Unidade).refine(
 // data/municipios/<id>/remume.json
 // ---------------------------------------------------------------------------
 
-/** O paciente leva para casa, ou o remédio é usado dentro da unidade? */
+/** O paciente leva para casa, ou o medicamento é usado dentro da unidade? */
 export const Retirada = z.enum(["leva_para_casa", "usado_na_unidade"]);
 
 export const ItemRemume = z.object({
@@ -273,7 +273,7 @@ export const ItemRemume = z.object({
   forma: FormaFarmaceutica.nullable(),
   componente: Componente,
   /**
-   * Os remédios de uso ambulatorial são aplicados dentro da unidade ou do
+   * Os medicamentos de uso ambulatorial são aplicados dentro da unidade ou do
    * pronto atendimento. A tela nunca pode mandar alguém ir buscar um deles.
    */
   retirada: Retirada,
@@ -342,9 +342,9 @@ export const DocumentoCeaf = z.object({
  * dizer quais, para qual doença. Ver docs/PROJETO.md.
  */
 /**
- * O que o pedido precisa anexar, agrupado pelo remédio a que se refere.
+ * O que o pedido precisa anexar, agrupado pelo medicamento a que se refere.
  *
- * Cada remédio da mesma doença exige exames diferentes. Juntar tudo numa lista
+ * Cada medicamento da mesma doença exige exames diferentes. Juntar tudo numa lista
  * só faria a pessoa achar que precisa de todos. Os textos são citados do
  * Resumo publicado pela SES/SC, sem reescrita: aqui não se resume exigência
  * de processo.
@@ -420,6 +420,47 @@ export const Medicamentos = z.array(Medicamento).refine(
 );
 
 // ---------------------------------------------------------------------------
+// data/nacional/nomes-comerciais.json — o nome da caixa
+// ---------------------------------------------------------------------------
+
+/**
+ * Nome comercial não é conteúdo clínico: não indica, não desaconselha e não
+ * dosa. É fato de registro — a Anvisa registra que tal marca contém tal
+ * princípio ativo. Por isso mora fora da ficha editorial e não exige revisão
+ * farmacêutica.
+ *
+ * Só alimenta a busca, para quem digita o nome da caixa achar o princípio
+ * ativo. Nenhuma tela afirma "este medicamento é vendido como X": enquanto a
+ * origem não for a Anvisa, o site não põe a lista na cara de ninguém. O pior
+ * caso de um nome errado aqui é uma busca que não encontra.
+ */
+export const OrigemInformada = z.object({
+  /** Quem informou, em português. Não é URL porque não veio de uma. */
+  origem: z.string().min(1),
+  /** Falso enquanto ninguém bateu a lista contra o cadastro da Anvisa. */
+  conferido_na_anvisa: z.boolean(),
+  informado_em: DataISO,
+  /** O que falta para esta fonte virar fonte de verdade. */
+  observacao: z.string().min(1),
+});
+
+export const NomesComerciais = z.object({
+  proveniencia: OrigemInformada,
+  itens: z
+    .array(
+      z.object({
+        /** O mesmo slug que `lib/remedios.ts` gera do princípio ativo. */
+        slug: Slug,
+        nomes: z.array(z.string().min(1)).min(1),
+      }),
+    )
+    .refine(
+      (is) => new Set(is.map((i) => i.slug)).size === is.length,
+      "há mais de uma entrada para o mesmo medicamento",
+    ),
+});
+
+// ---------------------------------------------------------------------------
 // Tipos
 // ---------------------------------------------------------------------------
 
@@ -436,6 +477,7 @@ export type Unidade = z.infer<typeof Unidade>;
 export type Retirada = z.infer<typeof Retirada>;
 export type ItemRemume = z.infer<typeof ItemRemume>;
 export type Revisao = z.infer<typeof Revisao>;
+export type NomesComerciais = z.infer<typeof NomesComerciais>;
 export type TipoDocumentoCeaf = z.infer<typeof TipoDocumentoCeaf>;
 export type DocumentoCeaf = z.infer<typeof DocumentoCeaf>;
 export type GrupoAnexos = z.infer<typeof GrupoAnexos>;

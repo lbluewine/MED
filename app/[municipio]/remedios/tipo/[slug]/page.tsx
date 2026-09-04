@@ -46,7 +46,7 @@ export default async function PaginaClasse({
     <Pagina municipioId={id} atual="classes">
       <p className="text-texto-suave">
         <a className="underline" href={`/${id}/remedios/tipos`}>
-          Remédios por tipo
+          Medicamentos por tipo
         </a>
       </p>
       <h1 className="mt-1 text-[30px] font-bold leading-tight md:text-[38px]">
@@ -55,12 +55,12 @@ export default async function PaginaClasse({
       <p className="mt-4 max-w-[65ch]">
         A lista de {municipio.nome} põe{" "}
         {classe.remedios.length === 1
-          ? "um remédio"
-          : `${classe.remedios.length} remédios`}{" "}
+          ? "um medicamento"
+          : `${classe.remedios.length} medicamentos`}{" "}
         neste grupo. O nome do grupo é o que a própria lista escreve.
       </p>
       <p className="mt-3 max-w-[65ch] border-l-4 border-processo pl-4">
-        Estar no mesmo grupo não quer dizer que um remédio substitui o outro.
+        Estar no mesmo grupo não quer dizer que um medicamento substitui o outro.
         Quem decide qual serve para você é o seu médico.
       </p>
 

@@ -22,13 +22,13 @@ export default function NotaFonte({
   const velho = dadoDesatualizado(maisAntiga.verificado_em);
 
   return (
-    <section className="mt-10 border-t border-linha pt-4">
+    <section className="mt-10 border-t-2 border-marca-linha pt-4">
       {velho && (
         <p className="mb-4 border-l-4 border-processo pl-4 font-bold">
           {frase(dataPorExtenso(maisAntiga.verificado_em), telefone)}
         </p>
       )}
-      <h2 className="font-bold">De onde vem esta informação</h2>
+      <h2 className="font-bold text-marca">De onde vem esta informação</h2>
       <ul className="mt-2">
         {proveniencia.map((f) => (
           <li key={f.fonte_nome} className="mt-2">

@@ -21,7 +21,7 @@ export const ONDE_RETIRAR: Record<TipoUnidade, string> = {
   farmacia_distrital: "Na farmácia do seu distrito",
   dispensario_ubs: "No posto de saúde do seu bairro (UBS)",
   farmacia_estrategica: "Na Farmácia Estratégica",
-  farmacia_ceaf: "Na Farmácia Escola, que entrega os remédios de alto custo",
+  farmacia_ceaf: "Na Farmácia Escola, que entrega os medicamentos de alto custo",
   farmacia_alimentar: "Na farmácia de fórmulas e dietas",
   farmacia_caps: "Na farmácia do CAPS onde você faz tratamento",
   programa_insumos: "No programa de medida de glicemia",
@@ -43,16 +43,16 @@ export const NOME_UNIDADE_CURTO: Record<TipoUnidade, string> = {
 /** Nenhum texto do site pode ter o nome de um município escrito fixo. */
 export function quemEntrega(componente: Componente, municipio: string): string {
   if (componente === "basico") {
-    return `A prefeitura de ${municipio} entrega este remédio.`;
+    return `A prefeitura de ${municipio} entrega este medicamento.`;
   }
   if (componente === "estrategico") {
     return (
-      "Este remédio vem de um programa do Ministério da Saúde e é entregue " +
+      "Este medicamento vem de um programa do Ministério da Saúde e é entregue " +
       "aqui na cidade."
     );
   }
   return (
-    "Este é um remédio de alto custo, que quem entrega é o governo do estado " +
+    "Este é um medicamento de alto custo, que quem entrega é o governo do estado " +
     "(CEAF). Precisa de um pedido feito pelo médico."
   );
 }
@@ -64,7 +64,7 @@ export const EXIGENCIA: Record<Exigencia, string> = {
   certidao_nascimento_crianca: "Se for criança, serve a certidão de nascimento",
   documento_de_quem_retira:
     "Se outra pessoa for buscar, o documento com foto dela",
-  laudo_lme: "O laudo que o médico preenche para pedir o remédio (LME)",
+  laudo_lme: "O laudo que o médico preenche para pedir o medicamento (LME)",
 };
 
 export const NOME_RECEITA: Record<TipoReceita, string> = {
@@ -79,7 +79,7 @@ export const NOME_RECEITA: Record<TipoReceita, string> = {
  * O que dizer sobre a validade da receita.
  *
  * A receita comum é o caso confuso: vale 30 dias, mas se o médico escreveu
- * "uso contínuo" o prazo é bem maior e depende do remédio. Por isso a frase
+ * "uso contínuo" o prazo é bem maior e depende do medicamento. Por isso a frase
  * não afirma um número só.
  */
 export function validadeDaReceita(tipo: TipoReceita): string {

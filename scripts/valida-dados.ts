@@ -7,10 +7,12 @@ import {
   carregaCeaf,
   carregaMedicamentos,
   carregaMunicipio,
+  carregaNomesComerciais,
   carregaRemume,
   carregaUnidades,
   listaMunicipios,
 } from "../lib/dados";
+import { listaRemedios } from "../lib/remedios";
 import { dadoDesatualizado, dataPorExtenso } from "../lib/prazos";
 import { revisaoValida } from "../lib/clinico";
 
@@ -98,6 +100,36 @@ try {
     `Fichas editoriais: ${fichas.length} (${publicaveis} com revisão válida, ` +
       `${fichas.length - publicaveis} sem conteúdo clínico publicável)`,
   );
+} catch (e) {
+  erro(e instanceof Error ? e.message : String(e));
+}
+
+try {
+  const comerciais = carregaNomesComerciais();
+  if (comerciais) {
+    const total = comerciais.itens.reduce((n, i) => n + i.nomes.length, 0);
+    console.log(
+      `Nomes comerciais: ${total} para ${comerciais.itens.length} medicamento(s)`,
+    );
+
+    // Um slug sem medicamento correspondente é nome comercial que nunca vai ser
+    // encontrado: entrou errado ou a lista do município mudou embaixo dele.
+    const conhecidos = new Set(
+      listaMunicipios().flatMap((m) => listaRemedios(m).map((r) => r.slug)),
+    );
+    for (const i of comerciais.itens) {
+      if (!conhecidos.has(i.slug)) {
+        erro(`Nomes comerciais: "${i.slug}" não existe na lista de nenhum município.`);
+      }
+    }
+
+    if (!comerciais.proveniencia.conferido_na_anvisa) {
+      aviso(
+        "Nomes comerciais: a lista ainda não foi conferida na Anvisa. " +
+          `Origem: ${comerciais.proveniencia.origem}`,
+      );
+    }
+  }
 } catch (e) {
   erro(e instanceof Error ? e.message : String(e));
 }

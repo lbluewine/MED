@@ -101,11 +101,11 @@ def endereco(u: dict, geo_conferida: bool) -> dict:
 
 
 ENTREGA_DISTRITAL = (
-    "Remédios do componente básico, incluindo os controlados. É a farmácia de "
+    "Medicamentos do componente básico, incluindo os controlados. É a farmácia de "
     "referência do distrito."
 )
 ENTREGA_DISPENSARIO = (
-    "Parte dos remédios do componente básico. Procure a unidade onde você faz "
+    "Parte dos medicamentos do componente básico. Procure a unidade onde você faz "
     "acompanhamento."
 )
 
@@ -163,7 +163,7 @@ FARMACIAS = {
         divergencias=["Esta farmácia não aparece na REMUME de 2024. Ligue antes de ir."]),
     "Farmácia Escola": dict(
         tipo="farmacia_ceaf", dispensa=["especializado"],
-        entrega="Os remédios de alto custo, que quem entrega é o governo do estado (CEAF).",
+        entrega="Os medicamentos de alto custo, que quem entrega é o governo do estado (CEAF).",
         divergencias=[
             "A REMUME de 2024 informa outro telefone: (48) 3431-2789. "
             "Se ninguém atender no número acima, tente esse.",
@@ -180,12 +180,12 @@ FARMACIAS = {
         ]),
     "CAPS II - Centro de Atenção Psicossocial II": dict(
         tipo="farmacia_caps", dispensa=["basico"],
-        entrega="Remédios para quem faz tratamento no próprio CAPS II.",
+        entrega="Medicamentos para quem faz tratamento no próprio CAPS II.",
         restricao="Atende só quem é acompanhado no CAPS II. Se você não faz tratamento lá, procure a farmácia distrital do seu bairro.",
         divergencias=[]),
     "CAPS II AD - Centro de Atenção Psicossocial II Álcool e Outras Drogas": dict(
         tipo="farmacia_caps", dispensa=["basico"],
-        entrega="Remédios para quem faz tratamento no próprio CAPS II AD.",
+        entrega="Medicamentos para quem faz tratamento no próprio CAPS II AD.",
         restricao="Atende só quem é acompanhado no CAPS II AD. Se você não faz tratamento lá, procure a farmácia distrital do seu bairro.",
         divergencias=[
             "A REMUME de 2024 informa outro endereço: Rua João Batista Rita, "
@@ -193,7 +193,7 @@ FARMACIAS = {
         ]),
     "CAPS III - Centro de Atenção Psicossocial III": dict(
         tipo="farmacia_caps", dispensa=["basico"],
-        entrega="Remédios para quem faz tratamento no próprio CAPS III.",
+        entrega="Medicamentos para quem faz tratamento no próprio CAPS III.",
         restricao="Atende só quem é acompanhado no CAPS III. Se você não faz tratamento lá, procure a farmácia distrital do seu bairro.",
         divergencias=[
             "A REMUME de 2024 informa outro endereço: Rua Santo Antônio, 1080, "
@@ -216,7 +216,7 @@ FARMACIAS["PAMDHA - Programa de Atenção Municipal as Dst Hiv Aids"] = dict(
     tipo="farmacia_estrategica", dispensa=["estrategico"],
     nome_publico="Farmácia Estratégica",
     entrega=(
-        "Remédios dos programas de HIV e aids, hepatites, tuberculose, "
+        "Medicamentos dos programas de HIV e aids, hepatites, tuberculose, "
         "hanseníase, sífilis, toxoplasmose, influenza e tabagismo."
     ),
     divergencias=[

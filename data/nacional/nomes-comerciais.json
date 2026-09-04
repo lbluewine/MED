@@ -1,0 +1,32 @@
+{
+  "proveniencia": {
+    "origem": "Informado pelo mantenedor do projeto.",
+    "conferido_na_anvisa": false,
+    "informado_em": "2026-09-04",
+    "observacao": "Lista ainda não conferida contra o cadastro de medicamentos registrados da Anvisa. Serve só para a busca encontrar o princípio ativo por um nome de caixa; nenhuma tela afirma que o medicamento é vendido com estes nomes. Substituir por extração da Anvisa quando a base estiver acessível."
+  },
+  "itens": [
+    {
+      "slug": "losartana-potassica",
+      "nomes": [
+        "Cozaar",
+        "Corus",
+        "Aradois",
+        "Zart",
+        "Torlós",
+        "Lorsacor",
+        "Losacoron",
+        "Lotanol",
+        "Arartan",
+        "Cytrana",
+        "Lanzacor",
+        "Losartec",
+        "Losartion",
+        "Valtrian",
+        "Zaarpress",
+        "Cardvita",
+        "Losaprin"
+      ]
+    }
+  ]
+}

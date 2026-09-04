@@ -41,7 +41,18 @@ export default async function PaginaUnidade({
 
   return (
     <Pagina municipioId={municipioId} atual="onde-pegar" largura="larga">
-      <div className={`${restrito ? "bg-processo" : "bg-tem"} px-5 py-7 text-fundo md:px-8 md:py-9`}>
+      {/*
+        Aviso em fundo claro, não no âmbar cheio: numa faixa deste tamanho o
+        âmbar sólido pesava mais que a própria informação. A barra lateral e a
+        palavra "restrito" continuam dando o sinal.
+      */}
+      <div
+        className={`${
+          restrito
+            ? "border-l-8 border-aviso-linha bg-aviso text-texto"
+            : "bg-tem text-fundo"
+        } rounded-[var(--radius-cartao)] px-5 py-7 md:px-8 md:py-9`}
+      >
         <p className="max-w-[28ch] text-[30px] font-bold leading-tight md:text-[38px]">
           {restrito ? "Atendimento restrito" : NOME_UNIDADE_CURTO[unidade.tipo]}
         </p>
@@ -97,12 +108,24 @@ export default async function PaginaUnidade({
         )}
 
         {/*
+          A fonte dá o horário mas não os dias. Dito uma vez aqui, e não em
+          cada linha de horário, para não virar ruído.
+        */}
+        {unidade.horarios.length > 0 &&
+          unidade.horarios.every((h) => h.dias === null) && (
+            <p className="mt-3 max-w-[65ch] text-texto-suave">
+              A lista da prefeitura informa o horário, mas não diz em quais dias
+              da semana este lugar abre. Ligue antes de ir.
+            </p>
+          )}
+
+        {/*
           Quando as fontes oficiais discordam, o site mostra as duas. Esconder
           a divergência é escolher por quem vai pegar o ônibus.
         */}
         {unidade.divergencias.length > 0 && (
           <section className="mt-8 border-l-4 border-processo pl-4">
-            <h2 className="text-2xl font-bold">
+            <h2 className="text-2xl font-bold text-marca">
               <span aria-hidden="true">! </span>
               Confira antes de ir
             </h2>

@@ -18,14 +18,24 @@ Sempre que o termo técnico precisar aparecer, explique na mesma frase:
 
 | Não escreva sozinho | Escreva |
 |---|---|
-| REMUME | a lista de remédios que a prefeitura de Criciúma entrega (REMUME) |
-| CEAF | os remédios de alto custo, que quem entrega é o governo do estado (CEAF) |
-| LME | o laudo que o médico preenche para pedir o remédio (LME) |
+| REMUME | a lista de medicamentos que a prefeitura de Criciúma entrega (REMUME) |
+| CEAF | os medicamentos de alto custo, que quem entrega é o governo do estado (CEAF) |
+| LME | o laudo que o médico preenche para pedir o medicamento (LME) |
 | PCDT | as regras do Ministério da Saúde para cada doença (PCDT) |
 | dispensação | entrega |
 | posologia | como tomar |
 | via oral | pela boca |
-| adesão ao tratamento | tomar o remédio direito |
+| adesão ao tratamento | tomar o medicamento direito |
+
+### A palavra é "medicamento"
+
+O site diz **medicamento**, não "remédio", em todo texto de tela. É a palavra
+que a receita, a caixa e a lista da prefeitura usam, e a que evita ambiguidade
+com chá, xarope caseiro e simpatia.
+
+Decisão tomada em 04/09/2026, revendo a orientação anterior de usar a palavra
+falada. As rotas (`/remedios`, `/remedio/[slug]`) continuam como estão: mudá-las
+quebraria link já compartilhado.
 
 ## O que pode e o que não pode ser escrito
 
@@ -41,7 +51,7 @@ Sempre que o termo técnico precisar aparecer, explique na mesma frase:
 
 - **Interações medicamentosas.** Ver não-objetivos em `docs/PROJETO.md`.
 - Indicar, sugerir ou desaconselhar um tratamento.
-- Dizer que um remédio "é melhor" ou "substitui" outro.
+- Dizer que um medicamento "é melhor" ou "substitui" outro.
 - Sugerir dose, mudança de dose ou parada de tratamento.
 - Diagnóstico, mesmo por eliminação.
 
@@ -50,7 +60,7 @@ Sempre que o termo técnico precisar aparecer, explique na mesma frase:
 É legítimo e útil informar que existe outra opção **na lista do município** para
 a mesma condição — desde que a decisão continue com o médico:
 
-> Esse remédio não está na lista de Criciúma. Para essa mesma condição, a lista
+> Esse medicamento não está na lista de Criciúma. Para essa mesma condição, a lista
 > do município tem outras opções. **Converse com seu médico** e mostre esta
 > página: só ele pode decidir se alguma delas serve para o seu caso.
 
@@ -110,10 +120,10 @@ Reutilize exatamente estas, para o site falar sempre igual:
   nem com o Ministério da Saúde. As informações são conferidas com frequência,
   mas confirme na unidade antes de sair de casa."
 - **Recusa clínica:** "Essa pergunta é para o farmacêutico. Ele atende de graça
-  na sua unidade e pode olhar todos os seus remédios juntos."
+  na sua unidade e pode olhar todos os seus medicamentos juntos."
 - **Dado desatualizado:** "Não conseguimos conferir esta informação desde
   {data}. Ela pode ter mudado. Ligue para {telefone} antes de ir."
-- **Sem resultado:** "Não encontramos esse remédio na lista de Criciúma. Isso
+- **Sem resultado:** "Não encontramos esse medicamento na lista de Criciúma. Isso
   pode significar duas coisas: ele não é entregue aqui, ou está cadastrado com
   outro nome." Seguido do caminho: nome genérico, Farmácia Popular, CEAF.
 

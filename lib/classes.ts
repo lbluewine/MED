@@ -20,7 +20,7 @@ export type Classe = {
 };
 
 /**
- * Um remédio entra na classe de cada apresentação sua. Na prática a fonte
+ * Um medicamento entra na classe de cada apresentação sua. Na prática a fonte
  * repete a mesma classificação em todas, mas quando diverge é dado real e as
  * duas classes devem mostrá-lo.
  */
@@ -49,7 +49,7 @@ export function listaClasses(municipioId: string): Classe[] {
     .map(([slug, { grafias, remedios }]) => ({
       slug,
       // A fonte escreve o mesmo grupo de vários jeitos ("Analgésico Opioide",
-      // "Analgésico opióide"). Junta como grafia, igual ao nome do remédio, e
+      // "Analgésico opióide"). Junta como grafia, igual ao nome do medicamento, e
       // mostra sempre a mesma — senão o título mudaria conforme a ordem de
       // leitura do arquivo.
       nome: [...grafias].sort((a, b) => a.localeCompare(b, "pt-BR"))[0]!,
@@ -62,7 +62,7 @@ export function buscaClasse(municipioId: string, slug: string): Classe | null {
   return listaClasses(municipioId).find((c) => c.slug === slug) ?? null;
 }
 
-/** Quantos remédios da lista a fonte não classificou. A tela precisa admitir isso. */
+/** Quantos medicamentos da lista a fonte não classificou. A tela precisa admitir isso. */
 export function semClassificacao(municipioId: string): Remedio[] {
   return listaRemedios(municipioId).filter((r) =>
     r.apresentacoes.every((a) => a.classificacao === null),

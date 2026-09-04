@@ -20,7 +20,7 @@ bolso, ou entra na justiça por falta de informação.
 
 Três coisas, nessa ordem de importância:
 
-1. **"Tem no SUS?"** — busca pelo nome do remédio e responde: tem ou não tem em
+1. **"Tem no SUS?"** — busca pelo nome do medicamento e responde: tem ou não tem em
    Criciúma, de qual componente é (básico / especializado / estratégico), onde
    retirar e o que levar.
 2. **"Onde pegar"** — mapa e lista das farmácias e dispensários do município,

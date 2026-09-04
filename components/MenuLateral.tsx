@@ -39,7 +39,7 @@ const ORDEM_UNIDADES: TipoUnidade[] = [
 function Grupo({ titulo, children }: { titulo: string; children: React.ReactNode }) {
   return (
     <li className="mt-6 first:mt-0">
-      <h3 className="text-[17px] font-bold uppercase tracking-wide text-texto-suave">
+      <h3 className="text-[17px] font-bold uppercase tracking-wide text-marca">
         {titulo}
       </h3>
       <ul className="mt-1 border-l-2 border-linha">{children}</ul>
@@ -64,9 +64,9 @@ function Item({
         href={href}
         aria-current={atual ? "page" : undefined}
         className={
-          "-ml-[2px] flex min-h-[40px] items-center justify-between gap-2 border-l-2 py-1 pl-3 pr-2 no-underline hover:bg-[#F2F2F2] " +
+          "-ml-[2px] flex min-h-[40px] items-center justify-between gap-2 border-l-2 py-1 pl-3 pr-2 no-underline hover:bg-marca-fundo " +
           (atual
-            ? "border-texto font-bold text-texto"
+            ? "border-marca-link bg-marca-fundo font-bold text-marca-link"
             : "border-transparent text-texto")
         }
       >
@@ -102,7 +102,7 @@ export default function MenuLateral({
       <ul>
         <Grupo titulo="Começar">
           <Item href="/" atual={atual === "inicio"}>
-            Buscar um remédio
+            Buscar um medicamento
           </Item>
           <Item href="/sobre" atual={atual === "sobre"}>
             Sobre este site
@@ -110,7 +110,7 @@ export default function MenuLateral({
         </Grupo>
 
         {municipioId && (
-          <Grupo titulo="Remédios da lista">
+          <Grupo titulo="Medicamentos">
             <Item
               href={`/${municipioId}/remedios`}
               contagem={remedios.length}
@@ -123,13 +123,13 @@ export default function MenuLateral({
               contagem={classes.length}
               atual={atual === "classes"}
             >
-              Por tipo de remédio
+              Por tipo de medicamento
             </Item>
           </Grupo>
         )}
 
         {municipioId && porTipo.length > 0 && (
-          <Grupo titulo="Onde pegar">
+          <Grupo titulo="Unidades de saúde">
             <Item
               href={`/${municipioId}/onde-pegar`}
               contagem={unidades.length}
