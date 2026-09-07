@@ -1,4 +1,6 @@
 import { notFound } from "next/navigation";
+import Cartao, { Pilula } from "@/components/Cartao";
+import Migalha from "@/components/Migalha";
 import NotaFonte from "@/components/NotaFonte";
 import Pagina from "@/components/Pagina";
 import { listaClasses, semClassificacao } from "@/lib/classes";
@@ -36,45 +38,52 @@ export default async function TiposDeRemedio({
   ];
 
   return (
-    <Pagina municipioId={id} atual="classes" largura="larga">
-      <h1 className="max-w-[20ch] text-[30px] font-bold leading-tight md:text-[38px]">
-        Medicamentos por tipo
+    <Pagina municipioId={id} atual="classes">
+      <Migalha itens={[{ texto: "Início", href: "/" }, { texto: "Por tipo" }]} />
+
+      <h1 className="text-[30px] font-bold tracking-tight text-marca md:text-[34px]">
+        Por tipo de medicamento
       </h1>
-      <p className="mt-4 max-w-[65ch]">
-        A lista de {municipio.nome} separa os medicamentos em {classes.length}{" "}
-        grupos. O nome do grupo é o que a própria lista escreve.
+      <p className="mt-1.5 max-w-[70ch] text-texto-suave">
+        {classes.length} grupos, do jeito que a própria lista de {municipio.nome}{" "}
+        classifica.
       </p>
-      <p className="mt-3 max-w-[65ch] border-l-4 border-processo pl-4">
+      <p className="mt-3 max-w-[70ch] rounded-r-lg border-l-4 border-[#b57505] bg-[#fdf5e6] px-4 py-3 leading-normal text-[#5a4413]">
         Esta página não diz para que serve cada medicamento, nem se algum deles
         serve para você. Isso quem responde é o seu médico.
       </p>
 
-      <ul className="mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-6 grid gap-3.5 [grid-template-columns:repeat(auto-fit,minmax(268px,1fr))]">
         {classes.map((c) => (
-          <li key={c.slug}>
-            <a
-              href={`/${id}/remedios/tipo/${c.slug}`}
-              className="flex min-h-[64px] items-center justify-between gap-3 rounded-[var(--radius-cartao)] border-2 border-marca-linha px-4 py-3 no-underline hover:border-marca-link hover:bg-marca-fundo"
-            >
-              <span className="font-bold text-marca-link">{c.nome}</span>
-              <span className="flex-none rounded-full bg-marca-fundo px-2.5 py-0.5 text-sm font-bold text-marca">
-                {c.remedios.length}
-              </span>
-            </a>
-          </li>
+          <a
+            key={c.slug}
+            href={`/${id}/remedios/tipo/${c.slug}`}
+            className="block rounded-[var(--radius-cartao)] border border-borda-cartao bg-fundo px-6 py-5 text-texto no-underline transition-shadow hover:border-marca-link hover:shadow-[0_10px_26px_rgba(12,50,111,0.09)]"
+          >
+            <Pilula>{c.remedios.length}</Pilula>
+            <h2 className="mb-1.5 mt-2.5 text-[19px] font-bold leading-tight text-marca-link">
+              {c.nome}
+            </h2>
+            <p className="text-[15px] text-texto-suave">
+              {c.remedios
+                .slice(0, 3)
+                .map((r) => r.nome_curto)
+                .join(", ")}
+              {c.remedios.length > 3 ? "…" : ""}
+            </p>
+          </a>
         ))}
-      </ul>
+      </div>
 
       {semTipo.length > 0 && (
-        <p className="mt-8 max-w-[65ch] text-texto-suave">
-          {semTipo.length === 1
-            ? "Um medicamento da lista não tem grupo informado na fonte, e por isso não aparece acima. Ele está em "
-            : `${semTipo.length} medicamentos da lista não têm grupo informado na fonte, e por isso não aparecem acima. Eles estão em `}
-          <a className="underline" href={`/${id}/remedios`}>
-            todos os medicamentos, de A a Z
-          </a>
-          .
-        </p>
+        <Cartao className="mt-6 px-6 py-4">
+          <p className="max-w-[70ch] text-texto-suave">
+            {semTipo.length === 1
+              ? "Um medicamento da lista não tem grupo informado na fonte, e por isso não aparece acima. Ele está em "
+              : `${semTipo.length} medicamentos da lista não têm grupo informado na fonte, e por isso não aparecem acima. Eles estão em `}
+            <a href={`/${id}/remedios`}>todos os medicamentos, de A a Z</a>.
+          </p>
+        </Cartao>
       )}
 
       <NotaFonte

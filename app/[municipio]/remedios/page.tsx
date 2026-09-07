@@ -1,7 +1,9 @@
 import { notFound } from "next/navigation";
+import Cartao from "@/components/Cartao";
+import Migalha from "@/components/Migalha";
 import Pagina from "@/components/Pagina";
 import { listaClasses } from "@/lib/classes";
-import { carregaMunicipio, listaMunicipios } from "@/lib/dados";
+import { carregaMunicipio, carregaRemume, listaMunicipios } from "@/lib/dados";
 import { listaRemedios } from "@/lib/remedios";
 
 export function generateStaticParams() {
@@ -20,8 +22,8 @@ export default async function Remedios({
   const municipio = carregaMunicipio(id);
   const remedios = listaRemedios(id);
   const classes = listaClasses(id);
+  const apresentacoes = carregaRemume(id).length;
 
-  // Uma letra por vez, para dar âncora e quebrar a lista de 250 nomes.
   const porLetra = new Map<string, typeof remedios>();
   for (const r of remedios) {
     const letra = r.slug[0]!.toUpperCase();
@@ -30,53 +32,63 @@ export default async function Remedios({
   const letras = [...porLetra.keys()].sort((a, b) => a.localeCompare(b, "pt-BR"));
 
   return (
-    <Pagina municipioId={id} atual="remedios" largura="larga">
-      <h1 className="max-w-[20ch] text-[30px] font-bold leading-tight md:text-[38px]">
-        Medicamentos da lista de {municipio.nome}
+    <Pagina municipioId={id} atual="remedios">
+      <Migalha
+        itens={[{ texto: "Início", href: "/" }, { texto: "Medicamentos A–Z" }]}
+      />
+
+      <h1 className="text-[30px] font-bold tracking-tight text-marca md:text-[34px]">
+        Medicamentos de A a Z
       </h1>
-      <p className="mt-4 max-w-[65ch]">
-        São {remedios.length} medicamentos, em ordem alfabética. Se preferir olhar
-        por grupo, veja{" "}
-        <a className="underline" href={`/${id}/remedios/tipos`}>
-          os {classes.length} tipos de medicamento
-        </a>
-        .
+      <p className="mt-1.5 max-w-[70ch] text-texto-suave">
+        Os {remedios.length} medicamentos da lista de {municipio.nome}, em{" "}
+        {apresentacoes} apresentações. Se preferir olhar por grupo, veja{" "}
+        <a href={`/${id}/remedios/tipos`}>os {classes.length} tipos</a>.
       </p>
 
-      <nav aria-label="Pular para uma letra" className="mt-6 flex flex-wrap gap-1">
+      <Cartao className="nao-imprime mb-5 mt-5 flex flex-wrap gap-1.5 px-4 py-3.5">
         {letras.map((l) => (
           <a
             key={l}
             href={`#letra-${l}`}
-            className="inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-[var(--radius-botao)] border-2 border-marca-linha font-bold text-marca-link no-underline hover:border-marca-link hover:bg-marca-fundo"
+            className="flex h-[34px] w-[34px] items-center justify-center rounded-lg font-semibold text-marca-link no-underline hover:bg-marca-link hover:text-white"
           >
             {l}
           </a>
         ))}
-      </nav>
+      </Cartao>
 
-      {letras.map((l) => (
-        <section key={l} className="mt-10">
-          <h2
-            id={`letra-${l}`}
-            className="scroll-mt-8 border-b-2 border-marca-linha pb-1 text-2xl font-bold text-marca"
+      <div className="flex flex-col gap-3.5">
+        {letras.map((l) => (
+          <Cartao
+            as="section"
+            key={l}
+            className="grid grid-cols-[52px_minmax(0,1fr)] items-start gap-4 px-6 pb-2 pt-5"
           >
-            {l}
-          </h2>
-          <ul className="gap-x-10 md:columns-2 xl:columns-3">
-            {porLetra.get(l)!.map((r) => (
-              <li key={r.slug} className="break-inside-avoid border-b border-linha">
+            <h2
+              id={`letra-${l}`}
+              aria-label={`Letra ${l}`}
+              className="scroll-mt-6 text-[34px] font-bold leading-none text-letra-fantasma"
+            >
+              {l}
+            </h2>
+            <div className="columns-1 gap-9 md:columns-2">
+              {porLetra.get(l)!.map((r) => (
                 <a
+                  key={r.slug}
                   href={`/${id}/remedio/${r.slug}`}
-                  className="block min-h-[48px] py-3 text-[20px] underline"
+                  className="flex break-inside-avoid items-baseline justify-between gap-3 border-b border-divisoria py-2.5 text-texto no-underline hover:text-marca-link"
                 >
-                  {r.nome}
+                  <span>{r.nome}</span>
+                  <span className="flex-none font-mono text-sm text-seta">
+                    {r.apresentacoes.length}
+                  </span>
                 </a>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ))}
+              ))}
+            </div>
+          </Cartao>
+        ))}
+      </div>
     </Pagina>
   );
 }

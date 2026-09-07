@@ -8,17 +8,25 @@ import { readdirSync, readFileSync, existsSync } from "node:fs";
 import { join } from "node:path";
 import type { ZodType } from "zod";
 import {
+  CadastroMunicipiosIbge,
   Ceaf,
+  FarmaciaPopular,
+  FarmaciasCredenciadas,
   Medicamentos,
   NomesComerciais,
   Municipio,
   Remume,
+  Rename,
   Unidades,
   type ItemRemume,
   type Medicamento as TMedicamento,
   type Ceaf as TCeaf,
+  type CadastroMunicipiosIbge as TCadastroMunicipiosIbge,
+  type FarmaciaPopular as TFarmaciaPopular,
+  type FarmaciasCredenciadas as TFarmaciasCredenciadas,
   type NomesComerciais as TNomesComerciais,
   type Municipio as TMunicipio,
+  type Rename as TRename,
   type Unidade,
 } from "./schema";
 
@@ -87,9 +95,94 @@ export function carregaNomesComerciais(): TNomesComerciais | null {
   return leJson(caminho, NomesComerciais);
 }
 
+/**
+ * O elenco do Programa Farmácia Popular. É federal: vale para o país inteiro.
+ *
+ * Arquivo opcional. Sem ele, nenhuma tela cita o programa — em vez de citar
+ * pela metade.
+ */
+export function carregaFarmaciaPopular(): TFarmaciaPopular | null {
+  const caminho = join(RAIZ, "nacional", "farmacia-popular.json");
+  if (!existsSync(caminho)) return null;
+  return leJson(caminho, FarmaciaPopular);
+}
+
+/**
+ * As drogarias credenciadas no Programa Farmácia Popular nesta cidade.
+ *
+ * Arquivo opcional, e assim deve ser: enquanto ninguém exportou a lista do
+ * painel do Ministério para esta cidade, a tela mostra só o link do painel,
+ * em vez de uma lista pela metade.
+ */
+export function carregaFarmaciasPopulares(
+  municipioId: string,
+): TFarmaciasCredenciadas | null {
+  const caminho = join(pasta(municipioId), "farmacias-populares.json");
+  if (!existsSync(caminho)) return null;
+  return leJson(caminho, FarmaciasCredenciadas);
+}
+
 /** Fichas editoriais, iguais no país inteiro. */
 export function carregaMedicamentos(): TMedicamento[] {
   const caminho = join(RAIZ, "nacional", "medicamentos.json");
   if (!existsSync(caminho)) return [];
   return leJson(caminho, Medicamentos);
+}
+
+/**
+ * A RENAME: o piso nacional, igual em qualquer município do Brasil.
+ *
+ * Arquivo opcional. Sem ele, uma cidade sem REMUME própria não tem resposta
+ * nenhuma — em vez de uma resposta inventada.
+ */
+export function carregaRename(): TRename | null {
+  const caminho = join(RAIZ, "nacional", "rename.json");
+  if (!existsSync(caminho)) return null;
+  return leJson(caminho, Rename);
+}
+
+/**
+ * O cadastro de municípios do IBGE. Só diz quais nomes de cidade existem —
+ * não é dado de saúde, é o universo válido para o seletor e as rotas.
+ *
+ * Arquivo opcional. Sem ele, o site continua respondendo só pelas cidades já
+ * publicadas em `data/municipios/`.
+ */
+export function carregaCadastroMunicipiosIbge(): TCadastroMunicipiosIbge | null {
+  const caminho = join(RAIZ, "nacional", "municipios-ibge.json");
+  if (!existsSync(caminho)) return null;
+  return leJson(caminho, CadastroMunicipiosIbge);
+}
+
+/**
+ * Um município "genérico": está no cadastro do IBGE, mas ninguém ainda
+ * publicou a REMUME dele aqui. A pessoa só recebe o piso da RENAME — nunca
+ * endereço de unidade, distrito ou receita, porque isso quem decide é a
+ * prefeitura, e essa parte a gente não tem.
+ */
+export type MunicipioGenerico = {
+  id: string;
+  nome: string;
+  uf: string;
+  temRemume: false;
+};
+
+/**
+ * Resolve um slug de município para uma cidade com REMUME publicada, para uma
+ * cidade genérica (só o piso da RENAME) ou para `null` quando o slug não
+ * corresponde a nenhum município do Brasil.
+ */
+export function resolveMunicipio(
+  slug: string,
+): { temRemume: true; municipio: TMunicipio } | { temRemume: false; municipio: MunicipioGenerico } | null {
+  if (existsSync(join(pasta(slug), "municipio.json"))) {
+    return { temRemume: true, municipio: carregaMunicipio(slug) };
+  }
+  const cadastro = carregaCadastroMunicipiosIbge();
+  const achado = cadastro?.municipios.find((m) => m.slug === slug);
+  if (!achado) return null;
+  return {
+    temRemume: false,
+    municipio: { id: achado.slug, nome: achado.nome, uf: achado.uf, temRemume: false },
+  };
 }

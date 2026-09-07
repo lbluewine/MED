@@ -4,15 +4,22 @@
  * Roda no CI e antes de qualquer merge. Sai com código 1 se algo não valida.
  */
 import {
+  carregaCadastroMunicipiosIbge,
   carregaCeaf,
+  carregaFarmaciasPopulares,
   carregaMedicamentos,
   carregaMunicipio,
   carregaNomesComerciais,
+  carregaRename,
   carregaRemume,
   carregaUnidades,
   listaMunicipios,
 } from "../lib/dados";
 import { listaRemedios } from "../lib/remedios";
+import {
+  elencoFarmaciaPopular,
+  itensDoPrincipio,
+} from "../lib/farmacia-popular";
 import { dadoDesatualizado, dataPorExtenso } from "../lib/prazos";
 import { revisaoValida } from "../lib/clinico";
 
@@ -132,6 +139,113 @@ try {
   }
 } catch (e) {
   erro(e instanceof Error ? e.message : String(e));
+}
+
+try {
+  const popular = elencoFarmaciaPopular();
+  if (popular === null) {
+    aviso("sem data/nacional/farmacia-popular.json. Nenhuma tela cita o programa.");
+  } else {
+    const total = popular.grupos.reduce((n, g) => n + g.itens.length, 0);
+
+    // Quantos itens do elenco federal também estão na lista de algum município.
+    // É o número que dá sentido ao cruzamento: se cair para zero de um dia
+    // para o outro, alguma fonte mudou o jeito de escrever os nomes e o
+    // cruzamento parou de casar em silêncio.
+    const casados = new Set(
+      listaMunicipios().flatMap((m) =>
+        listaRemedios(m).flatMap((r) => itensDoPrincipio(r.nome).map((i) => i.texto)),
+      ),
+    );
+    console.log(
+      `Farmácia Popular: ${total} itens em ${popular.grupos.length} indicações, ` +
+        `${casados.size} também na lista de algum município`,
+    );
+
+    if (listaMunicipios().length > 0 && casados.size === 0) {
+      erro(
+        "Farmácia Popular: nenhum item casou com a lista de nenhum município. " +
+          "O cruzamento de princípios ativos provavelmente quebrou.",
+      );
+    }
+
+    for (const grupo of popular.grupos) {
+      for (const item of grupo.itens) {
+        if (item.principios_ativos.length === 0) {
+          erro(`Farmácia Popular: "${item.texto}" ficou sem princípio ativo.`);
+        }
+      }
+    }
+
+    for (const id of listaMunicipios()) {
+      const credenciadas = carregaFarmaciasPopulares(id);
+      if (credenciadas === null) {
+        aviso(
+          `${id}: sem farmacias-populares.json. A página do programa mostra só ` +
+            "o link do painel do Ministério. Ver data/fontes/FONTES.md.",
+        );
+        continue;
+      }
+      if (credenciadas.municipio_id !== id) {
+        erro(
+          `${id}: farmacias-populares.json diz ser de "${credenciadas.municipio_id}".`,
+        );
+      }
+      const fonte = credenciadas.proveniencia[0]!;
+      const comEndereco = credenciadas.farmacias.filter((f) => f.cep).length;
+      const noMapa = credenciadas.farmacias.filter((f) => f.geo).length;
+      const divergencias = credenciadas.farmacias.filter(
+        (f) => f.divergencias.length > 0,
+      ).length;
+      console.log(
+        `Farmácias credenciadas em ${id}: ${credenciadas.farmacias.length} ` +
+          `(painel de ${fonte.fonte_data}, conferido em ${fonte.verificado_em}; ` +
+          `${comEndereco} com endereço completo pelo CNPJ, ${noMapa} no mapa, ` +
+          `${divergencias} com divergência entre as fontes)`,
+      );
+
+      // Sem o cruzamento por CNPJ o endereço é só o nome da rua, e nome de rua
+      // não leva ninguém à porta. Não é erro de dado, é dado pela metade.
+      const semEndereco = credenciadas.farmacias.length - comEndereco;
+      if (semEndereco > 0) {
+        aviso(
+          `${id}: ${semEndereco} farmácia(s) sem endereço completo. Rode ` +
+            "node scripts/completa-cnpj-farmacias.mjs.",
+        );
+      }
+      if (dadoDesatualizado(fonte.verificado_em)) {
+        aviso(
+          `${id}: a lista de farmácias credenciadas não é conferida desde ` +
+            `${dataPorExtenso(fonte.verificado_em)}. A rede muda com o tempo.`,
+        );
+      }
+    }
+  }
+} catch (e) {
+  erro(e instanceof Error ? e.message : String(e));
+}
+
+const cadastro = carregaCadastroMunicipiosIbge();
+if (cadastro) {
+  console.log(
+    `Cadastro de municípios (IBGE): ${cadastro.municipios.length} — universo ` +
+      "do seletor de cidade, não é dado de saúde.",
+  );
+} else {
+  aviso("Cadastro de municípios do IBGE ausente — rode node scripts/baixa-municipios-ibge.mjs.");
+}
+
+const rename = carregaRename();
+if (rename) {
+  console.log(
+    `RENAME (${rename.edicao}): ${rename.itens.length} itens — piso nacional ` +
+      "para cidade sem REMUME própria.",
+  );
+} else {
+  aviso(
+    "RENAME ausente — cidade sem REMUME própria não responde 'tem no SUS' " +
+      "ainda. Ver docs/ROADMAP.md, v2.",
+  );
 }
 
 console.log(`\n${erros} erro(s), ${avisos} aviso(s).`);

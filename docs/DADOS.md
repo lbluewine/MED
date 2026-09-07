@@ -27,6 +27,8 @@ data/
     medicamentos.json       # ficha por princípio ativo (conteúdo editorial)
     precos-cmed.json        # gerado, não editar à mão
     condicoes.json          # condições de saúde e os PCDT relacionados
+    rename.json             # piso nacional (RENAME) — cidade sem REMUME própria
+    municipios-ibge.json    # cadastro de nomes de cidade — não é dado de saúde
   fontes/
     sc-criciuma/
       remume-2024-11.pdf    # cópia do PDF de origem
@@ -35,6 +37,21 @@ data/
 
 **Nada no código pode assumir que só existe Criciúma.** Rotas, buscas e
 componentes recebem o município como parâmetro desde o primeiro dia.
+
+### Município sem REMUME própria — o piso da RENAME
+
+`data/nacional/rename.json` é a RENAME (Relação Nacional de Medicamentos
+Essenciais): o que o SUS garante em qualquer município do Brasil, com ou sem
+lista própria. `data/nacional/municipios-ibge.json` é só o cadastro de nomes
+de cidade do IBGE — não é dado de saúde, é o universo válido para as rotas
+`/[municipio]` e para o seletor de cidade.
+
+`lib/dados.ts#resolveMunicipio(slug)` decide o modo: se existe pasta em
+`data/municipios/`, a cidade responde com a REMUME dela, como sempre. Se não
+existe mas o slug está no cadastro do IBGE, a cidade entra em modo genérico —
+responde só pelo piso da RENAME, nunca por endereço de unidade, distrito ou
+tipo de receita, porque isso é decisão de cada prefeitura e essa parte a gente
+não tem. Ver `docs/ROADMAP.md`, v2.
 
 ## Bloco de proveniência
 
@@ -150,6 +167,103 @@ Sem `revisao` preenchida e com `autorizacao_registrada: true`, os campos
 clínicos **não são renderizados**. O build não quebra — a página simplesmente
 mostra só o que tem fonte e o link para a bula.
 
+### `farmacia-popular.json` — elenco do PFPB (nacional)
+
+O programa é federal: a lista é a mesma no país inteiro, e por isso mora em
+`nacional/`. O arquivo sai de `scripts/extrai_farmacia_popular.py`.
+
+```json
+{
+  "fonte_atualizada_em": "2026-08-31",
+  "como_retirar": { "gratuito": true, "documentos": ["..."], "onde": "...",
+                    "proveniencia": [] },
+  "busca_enderecos": { "url": "https://infoms.saude.gov.br/...", "nome": "..." },
+  "grupos": [
+    {
+      "indicacao": "HIPERTENSÃO",
+      "slug": "hipertensao",
+      "itens": [
+        {
+          "texto": "losartana potássica 50mg",
+          "principios_ativos": ["losartana potássica"],
+          "observacao": null,
+          "insumo": false
+        }
+      ]
+    }
+  ],
+  "proveniencia": []
+}
+```
+
+Duas proveniências, porque são duas fontes: o elenco sai do PDF, e as regras de
+retirada saem da página do programa.
+
+`texto` é o item como o Ministério escreve, e é o que a tela mostra.
+`principios_ativos` existe só para cruzar com a REMUME, em
+`lib/farmacia-popular.ts`. O cruzamento exige **igualdade do conjunto de
+princípios ativos**, depois de reduzir cada nome à base — "cloridrato de
+metformina" e "Metformina, cloridrato de" são o mesmo. Na dúvida, não casa:
+"carbidopa + levodopa" não casa com "levodopa + benserazida".
+
+Nenhuma tela afirma que a apresentação do PFPB é igual à da REMUME. Muitas
+vezes não é — o programa tem metoprolol 25 mg e a cidade tem 50 mg.
+
+### `farmacias-populares.json` — rede credenciada (por município)
+
+As drogarias privadas credenciadas no PFPB nesta cidade. Não entram em
+`unidades.json`: não são unidade do SUS, não têm componente nem exigência
+municipal, e não é a prefeitura que responde por elas.
+
+```json
+{
+  "municipio_id": "sc-criciuma",
+  "farmacias": [
+    {
+      "cnpj": "09077244000147",
+      "razao_social": "DROGARIA E FARMACIA MARANATA LTDA",
+      "nome_fantasia": "REDE PRECO BARATO",
+      "logradouro": "RUA SAO FRANCISCO DO SUL, 135",
+      "complemento": "SALA 01",
+      "bairro_painel": "BOA VISTA",
+      "bairro": "SAO FRANCISCO",
+      "cep": "88805-700",
+      "divergencias": ["O painel informa o bairro BOA VISTA, e a Receita SAO FRANCISCO."]
+    }
+  ],
+  "proveniencia": []
+}
+```
+
+Duas fontes, dois scripts, nesta ordem:
+
+1. `node scripts/extrai-farmacias-pfpb.mjs` lê o painel do Ministério num
+   navegador e traz CNPJ, razão social, rua e bairro.
+2. `node scripts/completa-cnpj-farmacias.mjs` usa o CNPJ para buscar no
+   cadastro da Receita o nome de fachada, o número, o complemento e o CEP.
+3. `node scripts/geocodifica-farmacias.mjs` casa rua e número com o CNEFE do
+   IBGE e preenche `geo`, com `precisao` dizendo se é o número exato ou um
+   ponto interpolado entre os vizinhos.
+
+Arquivo opcional: sem ele a página do programa mostra só o link do painel, e
+`npm run valida-dados` avisa — e avisa de novo se alguma farmácia ficar sem
+endereço completo.
+
+`nome_fantasia` é o nome da placa, e é o que a tela mostra; nulo, vale a razão
+social. `bairro_painel` guarda o que o Ministério informa, separado do `bairro`
+que vai à tela, para o cruzamento poder ser refeito sem se comparar com o
+próprio resultado.
+
+`geo` é do tipo `GeoDoCadastro`, **separado** do `Geo` das unidades do SUS:
+aquele é pino conferido por uma pessoa, este é endereço casado com o cadastro
+do IBGE. Quem não casa fica fora do mapa e continua na lista. Ver
+`data/fontes/FONTES.md`.
+
+A rede muda com o tempo, então a data da versão fica ao lado da lista, não só
+no rodapé. Quando nenhuma farmácia entra nem sai, o extrator mantém
+`fonte_data` e `extraido_em` e avança só `verificado_em` — a versão do dado é
+a mesma, o que mudou é que hoje ela foi conferida.
+
 ### `precos-cmed.json` — gerado
 
 Baixado da tabela CMED/Anvisa. Nunca editar à mão. Guardar a coluna de PMC
@@ -204,6 +318,7 @@ Ninguém precisa acordar; o PR espera.
 | Mudanças no CEAF de SC | Notas técnicas da DIAF/SPS/SES/SC |
 | Bula | Bulário Eletrônico da Anvisa (link, não cópia) |
 | Preço | Tabela CMED/Anvisa |
-| Farmácia Popular | Lista de medicamentos do programa |
+| Farmácia Popular | Elenco de medicamentos e insumos do PFPB (PDF do Ministério da Saúde) |
+| Farmácias credenciadas do PFPB | Painel de endereços do Ministério — consultado pelo usuário, nunca copiado |
 
 Sempre linkar a bula, nunca copiar o texto dela.

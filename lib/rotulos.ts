@@ -43,7 +43,7 @@ export const NOME_UNIDADE_CURTO: Record<TipoUnidade, string> = {
 /** Nenhum texto do site pode ter o nome de um município escrito fixo. */
 export function quemEntrega(componente: Componente, municipio: string): string {
   if (componente === "basico") {
-    return `A prefeitura de ${municipio} entrega este medicamento.`;
+    return `A prefeitura de ${municipio} disponibiliza este medicamento.`;
   }
   if (componente === "estrategico") {
     return (
@@ -141,3 +141,13 @@ export const TIPO_DOCUMENTO: Record<
   },
   outro: { titulo: "Documento", explicacao: "" },
 };
+
+/** "(48) 3445-8730" a partir do que a fonte escreve e do DDD do município. */
+export function telefoneCompleto(telefone: string, ddd: string): string {
+  return telefone.startsWith("(") ? telefone : `(${ddd}) ${telefone}`;
+}
+
+/** O href de ligação, com o DDI e o DDD que a fonte às vezes omite. */
+export function telefoneHref(telefone: string, ddd: string): string {
+  return `tel:+55${ddd}${telefone.replace(/\D/g, "").slice(-9)}`;
+}

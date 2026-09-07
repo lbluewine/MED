@@ -64,6 +64,26 @@
       "arquivo": "sc-criciuma/pregao-038-fms-2024-guia-farmacia.pdf",
       "extrator": null,
       "extratores": []
+    },
+    {
+      "id": "pfpb-elenco",
+      "tipo": "arquivo",
+      "descricao": "Elenco de medicamentos e insumos do Programa Farmácia Popular",
+      "url": "https://www.gov.br/saude/pt-br/composicao/sectics/farmacia-popular/arquivos/elenco-de-medicamentos-e-insumos-pfpb.pdf",
+      "arquivo": "nacional/pfpb-elenco-2026-08-31.pdf",
+      "extratores": [
+        "scripts/extrai_farmacia_popular.py"
+      ]
+    },
+    {
+      "id": "cnefe-criciuma",
+      "tipo": "arquivo",
+      "descricao": "CNEFE do Censo 2022 em Criciúma: endereço com coordenada, do IBGE",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/CSV/Municipio/42_SC/4204608_CRICIUMA.zip",
+      "arquivo": "nacional/cnefe-4204608-criciuma.zip",
+      "extratores": [
+        "scripts/geocodifica-farmacias.mjs"
+      ]
     }
   ]
 }

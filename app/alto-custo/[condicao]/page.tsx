@@ -8,8 +8,8 @@ import {
   listaMunicipios,
 } from "@/lib/dados";
 import { dataPorExtenso } from "@/lib/prazos";
-import { telefoneCompleto } from "@/components/CartaoUnidade";
-import { TIPO_DOCUMENTO } from "@/lib/rotulos";
+
+import { TIPO_DOCUMENTO, telefoneCompleto } from "@/lib/rotulos";
 import type { DocumentoCeaf } from "@/lib/schema";
 
 const UF = "sc";
