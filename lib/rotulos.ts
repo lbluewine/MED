@@ -151,3 +151,89 @@ export function telefoneCompleto(telefone: string, ddd: string): string {
 export function telefoneHref(telefone: string, ddd: string): string {
   return `tel:+55${ddd}${telefone.replace(/\D/g, "").slice(-9)}`;
 }
+
+/**
+ * O nome de cada estado, pela sigla.
+ *
+ * Não é dado de saúde: é a nomenclatura oficial das unidades da federação,
+ * a mesma do cadastro do IBGE em `data/nacional/municipios-ibge.json`, que
+ * traz só a sigla. Serve para a tela de escolher cidade poder dizer
+ * "Santa Catarina" em vez de "SC" para quem não decora sigla.
+ */
+export const NOME_UF: Record<string, string> = {
+  AC: "Acre",
+  AL: "Alagoas",
+  AM: "Amazonas",
+  AP: "Amapá",
+  BA: "Bahia",
+  CE: "Ceará",
+  DF: "Distrito Federal",
+  ES: "Espírito Santo",
+  GO: "Goiás",
+  MA: "Maranhão",
+  MG: "Minas Gerais",
+  MS: "Mato Grosso do Sul",
+  MT: "Mato Grosso",
+  PA: "Pará",
+  PB: "Paraíba",
+  PE: "Pernambuco",
+  PI: "Piauí",
+  PR: "Paraná",
+  RJ: "Rio de Janeiro",
+  RN: "Rio Grande do Norte",
+  RO: "Rondônia",
+  RR: "Roraima",
+  RS: "Rio Grande do Sul",
+  SC: "Santa Catarina",
+  SE: "Sergipe",
+  SP: "São Paulo",
+  TO: "Tocantins",
+};
+
+/**
+ * Quem entrega, em duas palavras. Serve para linha de lista, onde a frase
+ * inteira de `quemEntrega` não cabe.
+ */
+export const COMPONENTE_CURTO: Record<Componente, string> = {
+  basico: "na cidade",
+  estrategico: "programa do Ministério",
+  especializado: "alto custo, pelo estado",
+};
+
+/**
+ * A marca de um medicamento do piso nacional que a lista do município não
+ * traz. Diz **por onde ele vem**, porque isso muda o que a pessoa tem de
+ * fazer: quem procura um de alto custo precisa abrir processo no estado, e
+ * mandá-la "perguntar na sua unidade de saúde" é fazer perder a viagem.
+ *
+ * Todas as três descrevem a via, e nenhuma descreve a ausência — o título da
+ * seção já diz que nada ali está na lista da prefeitura. Isso importa porque
+ * 22 medicamentos estão em mais de um componente e recebem duas marcas: "não
+ * está na lista daqui" ao lado de outra marca se lia como contradição.
+ * Agora cada uma nomeia o balcão onde o medicamento sai, os mesmos nomes da
+ * página "onde pegar" — e dois balcões diferentes no mesmo item se leem como
+ * o que são: muda conforme o tratamento.
+ */
+export const FORA_DA_LISTA_MUNICIPAL: Record<
+  Componente,
+  { marca: string; explicacao: string }
+> = {
+  basico: {
+    marca: "unidades de saúde",
+    explicacao:
+      "Sai no posto de saúde ou na farmácia do distrito, como o resto da " +
+      "lista da prefeitura. Pergunte na sua unidade.",
+  },
+  estrategico: {
+    marca: "farmácia estratégica",
+    explicacao:
+      "Vem de um programa do Ministério da Saúde e sai na Farmácia " +
+      "Estratégica da cidade.",
+  },
+  especializado: {
+    marca: "farmácia de alto custo",
+    explicacao:
+      "Sai na farmácia do alto custo: quem entrega é o governo do estado, " +
+      "não o posto, e o pedido é aberto com papéis que o médico preenche.",
+  },
+};

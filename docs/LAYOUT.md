@@ -11,7 +11,7 @@ Base: o mockup `Tem Remedio.dc.html`, adotado em 05/09/2026.
 Toda página passa por `components/Pagina.tsx`, que monta sempre a mesma coisa:
 
 ```
-Banner          fixo no topo: marca, 4 caminhos, busca, cidade
+Banner          fixo no topo: marca, 4 caminhos, busca, cidade (troca)
 Cabecalho       só abaixo de 1024px: botões grandes dos caminhos principais
 +---------------------------------------------+
 | topo (largura toda) — o banner da home       |
@@ -24,6 +24,14 @@ Rodape          aviso de projeto independente
 
 O `topo` do `Pagina` ocupa a largura inteira, acima das colunas. É onde vai o
 banner da home: dividir o espaço com o menu deixaria a busca estreita demais.
+
+A cidade no `Banner` é um link, não um rótulo: leva a `/cidades`, onde se
+escolhe o estado e depois a cidade. São duas telas e não uma lista aqui porque
+mandar os 5.570 municípios em toda página do site pesaria centenas de KB.
+
+As sugestões do `CampoBusca` saem flutuando (`absolute`) sobre o que vem
+depois. No fluxo, cada letra digitada mudaria a altura do banner e empurraria a
+página embaixo do dedo de quem está lendo.
 
 O menu vem **antes** do conteúdo no HTML, não só na tela: quem usa leitor de
 tela ouve a navegação primeiro, e quem quer pular tem o "Pular para o

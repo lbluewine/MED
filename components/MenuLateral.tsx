@@ -13,19 +13,40 @@ import Cartao from "./Cartao";
 import { carregaCeaf, carregaMunicipio, carregaUnidades } from "@/lib/dados";
 import { listaClasses } from "@/lib/classes";
 import { totalFarmaciaPopular } from "@/lib/farmacia-popular";
-import { listaRemedios } from "@/lib/remedios";
+import { listaRemedios, remediosDoTipoDeUnidade } from "@/lib/remedios";
+import { totalMedicamentosRename } from "@/lib/rename";
+import { medicamentosAltoCusto } from "@/lib/alto-custo";
 import { NOME_UNIDADE_CURTO } from "@/lib/rotulos";
 import type { TipoUnidade } from "@/lib/schema";
 
 /** Qual página está aberta agora. Só para marcar, nunca para esconder item. */
 export type SecaoAtual =
   | "inicio"
+  | "cidades"
   | "remedios"
   | "classes"
   | "onde-pegar"
   | "alto-custo"
   | "farmacia-popular"
   | "sobre";
+
+/**
+ * Os grupos do "Acesso rápido", por onde a pessoa retira.
+ *
+ * Alto custo e Farmácia Popular não entram aqui: um é do estado e o outro é
+ * federal, e ambos já têm atalho próprio mais abaixo. Estes são os balcões da
+ * própria cidade.
+ */
+const POR_ONDE_RETIRAR: {
+  tipo: TipoUnidade;
+  sigla: string;
+  cor: string;
+  nome: string;
+}[] = [
+  { tipo: "dispensario_ubs", sigla: "UBS", cor: "#1a8b5f", nome: "Medicamentos das UBS" },
+  { tipo: "farmacia_distrital", sigla: "DIS", cor: "#0d6e8c", nome: "Medicamentos da farmácia do distrito" },
+  { tipo: "farmacia_estrategica", sigla: "EST", cor: "#b03a6a", nome: "Medicamentos da farmácia estratégica" },
+];
 
 /** A ordem é a da chance de precisar, igual à da página "Onde pegar". */
 const ORDEM_UNIDADES: TipoUnidade[] = [
@@ -92,19 +113,35 @@ function Atalho({
 
 export default function MenuLateral({
   municipioId,
+  cidadeGenerica,
+  uf,
   atual,
 }: {
   municipioId?: string;
+  /** O slug da cidade quando ela não tem lista própria publicada. */
+  cidadeGenerica?: string;
+  /**
+   * O estado da cidade aberta, inclusive quando ela não tem lista própria.
+   * O alto custo é do estado, não da prefeitura: sem saber a UF não dá para
+   * dizer se existe resposta para essa pessoa.
+   */
+  uf?: string;
   atual: SecaoAtual;
 }) {
   const municipio = municipioId ? carregaMunicipio(municipioId) : null;
   const remedios = municipioId ? listaRemedios(municipioId) : [];
   const classes = municipioId ? listaClasses(municipioId) : [];
   const unidades = municipioId ? carregaUnidades(municipioId) : [];
-  const ceaf = municipio ? carregaCeaf(municipio.uf.toLowerCase()) : null;
+  const ufAtual = municipio?.uf ?? uf;
+  const ceaf = ufAtual ? carregaCeaf(ufAtual.toLowerCase()) : null;
   // O que o programa fornece, não quantas farmácias o entregam: é o mesmo
   // número que a página do programa anuncia no título.
   const itensPopular = totalFarmaciaPopular();
+  const itensRename = totalMedicamentosRename();
+  const remediosAltoCusto = medicamentosAltoCusto(ufAtual).length;
+  // O alto custo e a Farmácia Popular ganham a cidade na URL: o conteúdo é do
+  // estado e do país, mas o lugar de retirar é da cidade.
+  const cidade = municipioId ?? cidadeGenerica;
 
   const porTipo = ORDEM_UNIDADES.map((tipo) => ({
     tipo,
@@ -117,6 +154,11 @@ export default function MenuLateral({
         <h2 className="px-4 pb-3 pt-4 text-[16px] font-bold text-marca">
           Acesso rápido
         </h2>
+        {/*
+          Os caminhos são por onde se retira, e não por classe: a pergunta de
+          quem chega é "onde eu pego?". "Por tipo" continua existindo, no
+          cartão de baixo, para quem procura sem saber o nome.
+        */}
         {municipioId && (
           <>
             <Atalho
@@ -127,27 +169,60 @@ export default function MenuLateral({
               contagem={remedios.length}
               atual={atual === "remedios"}
             />
-            <Atalho
-              href={`/${municipioId}/remedios/tipos`}
-              sigla="TIP"
-              cor="#1a8b5f"
-              nome="Por tipo de medicamento"
-              contagem={classes.length}
-              atual={atual === "classes"}
-            />
+            {POR_ONDE_RETIRAR.map(({ tipo, sigla, cor, nome }) => {
+              const quantos = remediosDoTipoDeUnidade(municipioId, tipo).length;
+              if (quantos === 0) return null;
+              return (
+                <Atalho
+                  key={tipo}
+                  href={`/${municipioId}/remedios/onde/${tipo}`}
+                  sigla={sigla}
+                  cor={cor}
+                  nome={nome}
+                  contagem={quantos}
+                />
+              );
+            })}
           </>
         )}
-        <Atalho
-          href="/alto-custo"
-          sigla="ALT"
-          cor="#f0a92b"
-          nome="Medicamentos de alto custo"
-          contagem={ceaf?.condicoes.length}
-          atual={atual === "alto-custo"}
-        />
+        {/*
+          Cidade sem lista da prefeitura tem o A–Z do piso nacional. O atalho
+          por tipo não entra: a classificação por grupo é da lista municipal, e
+          a RENAME não traz uma equivalente cadastrada aqui.
+        */}
+        {!municipioId && cidadeGenerica && itensRename > 0 && (
+          <Atalho
+            href={`/${cidadeGenerica}/remedios`}
+            sigla="A-Z"
+            cor="#1351b4"
+            nome="Todos os medicamentos"
+            contagem={itensRename}
+            atual={atual === "remedios"}
+          />
+        )}
+        {/*
+          Só onde há a lista do estado publicada. Oferecer este caminho a quem
+          mora onde a gente não tem o dado levaria a pessoa a uma página do
+          CEAF de outro estado — papel errado, endereço errado, viagem perdida.
+        */}
+        {/*
+          Aponta para a lista de medicamentos, e a contagem é de medicamentos:
+          quem chega tem o nome na receita, não o nome do protocolo. O caminho
+          pela doença continua, dentro da própria página de alto custo.
+        */}
+        {ceaf && (
+          <Atalho
+            href={cidade ? `/${cidade}/alto-custo/medicamentos` : "/alto-custo"}
+            sigla="ALT"
+            cor="#f0a92b"
+            nome="Medicamentos de alto custo"
+            contagem={cidade ? remediosAltoCusto : ceaf.condicoes.length}
+            atual={atual === "alto-custo"}
+          />
+        )}
         {itensPopular > 0 && (
           <Atalho
-            href="/farmacia-popular"
+            href={cidade ? `/${cidade}/farmacia-popular` : "/farmacia-popular"}
             sigla="FPO"
             cor="#7c4dcc"
             nome="Farmácia Popular"
@@ -197,6 +272,27 @@ export default function MenuLateral({
               </span>
             </a>
           ))}
+        </Cartao>
+      )}
+
+      {/*
+        "Por tipo" saiu do acesso rápido — lá os caminhos são por onde se
+        retira, que é a pergunta de quem chega. Continua aqui para quem procura
+        sem saber o nome do medicamento.
+      */}
+      {municipioId && classes.length > 0 && (
+        <Cartao className="overflow-hidden">
+          <h2 className="px-4 pb-3 pt-4 text-[16px] font-bold text-marca">
+            Outro jeito de procurar
+          </h2>
+          <Atalho
+            href={`/${municipioId}/remedios/tipos`}
+            sigla="TIP"
+            cor="#6b5bb5"
+            nome="Por tipo de medicamento"
+            contagem={classes.length}
+            atual={atual === "classes"}
+          />
         </Cartao>
       )}
     </div>

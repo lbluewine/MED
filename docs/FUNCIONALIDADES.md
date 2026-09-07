@@ -89,14 +89,70 @@ também o Programa Farmácia Popular, que é federal: 41 itens.
 
 ## Qualquer cidade do Brasil
 
-- A home, com mais de uma cidade publicada, ganha um **campo de busca com
-  autocompletar** sobre os 5.570 municípios do IBGE — não só a lista das
-  cidades com REMUME própria.
+- O nome da cidade no topo de toda página é um **botão "Trocar"**. Ele leva a
+  `/cidades`, que lista as cidades com REMUME publicada e os 27 estados.
+- `/cidades/[uf]` traz as cidades daquele estado: **campo de busca com
+  autocompletar** (aceita sem acento e sem caixa) e a lista completa em links,
+  com a marca "lista completa" onde há REMUME publicada.
+- A escolha é por estado, e não num campo único sobre os 5.570 municípios,
+  porque o país inteiro numa página só pesaria demais para quem tem internet
+  ruim. Minas Gerais, o maior, dá 48 KB comprimidos.
+- As duas telas trazem o aviso de residência: cada cidade entrega para quem
+  mora nela.
 - Cidade sem REMUME própria cadastrada aqui ainda tem resposta: `/[cidade]`
   mostra o piso que o SUS garante em qualquer lugar do Brasil, pela RENAME
-  (Relação Nacional de Medicamentos Essenciais), com busca própria.
+  (Relação Nacional de Medicamentos Essenciais), com busca própria. São **966
+  apresentações de 534 medicamentos** da RENAME 2024, nos três componentes —
+  básico, estratégico e especializado.
+- O alto custo tem **dois caminhos**: pelo medicamento
+  (`/[cidade]/alto-custo/medicamentos`, 172 em ordem alfabética) e pela doença
+  (as 110 do CEAF/SC). O primeiro é o principal, porque quem chega tem o nome
+  na receita e não o nome do protocolo. A página de cada medicamento lista as
+  doenças que abrem o pedido, com link para os papéis de cada uma.
+- A ligação medicamento → doença vem da RENAME, da coluna "Documento
+  norteador" do Anexo III (o PCDT de cada um) — 311 ligações, das quais 238
+  casam com uma condição publicada pelo estado. Quando o estado escreve a
+  doença com outro nome, a tela mostra o nome sem link em vez de mandar a
+  pessoa aos papéis de outra doença.
+- O alto custo (CEAF) só é oferecido onde existe a lista do estado publicada.
+  Fora de Santa Catarina o site não mostra esse caminho, em vez de mandar
+  alguém buscar papel de outro estado.
+- O alto custo e a Farmácia Popular têm rota por cidade
+  (`/[cidade]/alto-custo`, `/[cidade]/farmacia-popular`). O que é do estado ou
+  do país aparece igual em todas; o **lugar de retirar é da cidade** — o ponto
+  de entrega do pedido e as drogarias credenciadas só aparecem para a cidade
+  aberta. Onde não temos, o site diz que não sabe e manda ao painel oficial,
+  em vez de mostrar endereço de outro município.
 - Esse modo nunca inventa onde retirar nem qual receita a prefeitura pede —
   isso é decisão de cada município, e sem a lista dela o site não sabe. A tela
   diz isso e encaminha para a UBS mais próxima ou a Secretaria de Saúde.
-- Menu e navegação se ajustam sozinhos: uma cidade genérica não mostra links
-  para lista de medicamentos ou unidades, que não existem para ela.
+- A home de uma cidade sem lista própria tem a **mesma estrutura** da home de
+  Criciúma: banner com busca, "Acesso rápido" e "Informações importantes". O
+  que falta para aquela cidade não aparece — sem as unidades cadastradas não
+  há cartão de "onde retirar", e sem a lista municipal não há "por tipo".
+- A lista **A–Z** existe em qualquer cidade. Numa cidade com REMUME ela traz a
+  lista da prefeitura **e** o piso nacional na mesma lista. Em Criciúma são 181
+  da prefeitura mais 391 só do piso nacional.
+- O que não está na lista da prefeitura é marcado pelo **balcão onde sai** —
+  "unidades de saúde", "farmácia estratégica" e "farmácia de alto custo" —, os
+  mesmos nomes da página "onde pegar". Antes era uma marca só para todos, que
+  mandava perguntar na UBS por um medicamento de alto custo: caminho errado
+  para 80% deles. 22 medicamentos saem por mais de um balcão e recebem duas
+  marcas.
+- Cada um desses nomes leva a `/[cidade]/piso-nacional/[slug]`, com por onde o
+  medicamento sai, as apresentações e — no alto custo — as doenças que abrem o
+  pedido. Antes eram nomes sem clique: a busca da cidade também não os acha,
+  porque procura só na lista municipal.
+- O cruzamento entre a lista municipal e a RENAME lê as grafias que a fonte
+  declara: o sinônimo entre parênteses ("Folinato de cálcio (ácido folínico)")
+  e o nome sem a forma farmacêutica que a REMUME às vezes gruda no fim
+  ("... Suspensão Injetável"). Sem isso o site mostrava como ausente um
+  medicamento que a cidade entrega. Ver `lib/nomes-medicamentos.ts`.
+- O "Acesso rápido" é organizado por **onde se retira** — todos os
+  medicamentos, os das UBS, os da farmácia do distrito, os da farmácia
+  estratégica, os de alto custo e os da Farmácia Popular. É a pergunta que a
+  pessoa traz ("onde eu pego?"). Cada grupo tem lista própria em
+  `/[cidade]/remedios/onde/[tipo]`, e só aparece quando tem medicamento.
+- "Por tipo de medicamento" continua, no cartão "Outro jeito de procurar", para
+  quem procura sem saber o nome.
+- "Início" no topo volta para a home da **cidade escolhida**, não para a raiz.

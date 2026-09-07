@@ -6,7 +6,9 @@
  * detalhes dentro dele.
  */
 import { carregaMedicamentos, carregaNomesComerciais, carregaRemume } from "./dados";
-import type { ItemRemume, Medicamento } from "./schema";
+import { chavesDeBusca } from "./equivalencias";
+import { medicamentosRename } from "./rename";
+import type { Componente, ItemRemume, Medicamento, TipoUnidade } from "./schema";
 
 /** "Ácido fólico" -> "acido-folico" */
 export function paraSlug(texto: string): string {
@@ -113,4 +115,85 @@ export function listaRemedios(municipioId: string): Remedio[] {
 
 export function buscaRemedio(municipioId: string, slug: string): Remedio | null {
   return listaRemedios(municipioId).find((r) => r.slug === slug) ?? null;
+}
+
+/**
+ * Um item da lista A–Z de um município: o que a prefeitura entrega e, junto,
+ * o que o SUS garante em qualquer lugar do Brasil mas a lista de cá não traz.
+ *
+ * As duas coisas na mesma lista porque a pergunta de quem chega é "tem esse
+ * medicamento?", e mandar procurar em duas telas é fazer a pessoa desistir.
+ * O que muda é a marca: só o que está na lista da prefeitura promete onde
+ * retirar e o que levar. O resto diz que é o piso nacional e que a cidade não
+ * cadastrou — nunca que o posto tem.
+ */
+export type ItemListaCidade =
+  | { tipo: "municipal"; slug: string; nome: string; remedio: Remedio }
+  | {
+      tipo: "nacional";
+      slug: string;
+      nome: string;
+      apresentacoes: string[];
+      /**
+       * Em que componente da assistência farmacêutica ele está — é isso que
+       * diz **quem entrega e como se pede**. Sem isso a tela dizia "pergunte
+       * na sua unidade de saúde" para um medicamento de alto custo, cujo
+       * caminho é abrir processo no estado. Eram 312 dos 391 itens.
+       */
+      componentes: Componente[];
+    };
+
+/**
+ * A lista da cidade somada ao piso nacional.
+ *
+ * O casamento é por conjunto de princípios ativos, o mesmo critério de
+ * `lib/farmacia-popular.ts` e `lib/rename.ts`: na dúvida, não casa — e o
+ * medicamento aparece duas vezes, o que é melhor do que sumir.
+ */
+export function listaCidadeComPisoNacional(municipioId: string): ItemListaCidade[] {
+  const municipais = listaRemedios(municipioId);
+  // As regras automáticas mais o que a revisão humana já decidiu. Ver
+  // `lib/equivalencias.ts` para por que isso é dado e não código.
+  const daCidade = new Set(
+    municipais.flatMap((r) => chavesDeBusca(r.nome)).filter((c) => c.length > 0),
+  );
+
+  const itens: ItemListaCidade[] = municipais.map((r) => ({
+    tipo: "municipal",
+    slug: r.slug,
+    nome: r.nome,
+    remedio: r,
+  }));
+
+  for (const m of medicamentosRename()) {
+    const chaves = chavesDeBusca(m.nome).filter((c) => c.length > 0);
+    if (chaves.length === 0 || chaves.some((c) => daCidade.has(c))) continue;
+    itens.push({
+      tipo: "nacional",
+      slug: m.slug,
+      nome: m.nome,
+      apresentacoes: m.itens.map((i) =>
+        i.texto.startsWith(m.nome) ? i.texto.slice(m.nome.length).trim() : i.texto,
+      ),
+      componentes: m.componentes,
+    });
+  }
+
+  return itens.sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"));
+}
+
+/**
+ * Os medicamentos da lista do município que saem num tipo de unidade.
+ *
+ * É o agrupamento que responde a pergunta de quem chega — "onde eu pego?" —
+ * em vez de "de que classe é?". A fonte diz, item a item, em que balcões
+ * aquela apresentação é entregue (`onde_retirar`).
+ */
+export function remediosDoTipoDeUnidade(
+  municipioId: string,
+  tipo: TipoUnidade,
+): Remedio[] {
+  return listaRemedios(municipioId).filter((r) =>
+    r.apresentacoes.some((a) => a.onde_retirar.includes(tipo)),
+  );
 }

@@ -5,6 +5,7 @@
  */
 import {
   carregaCadastroMunicipiosIbge,
+  carregaNomesEquivalentes,
   carregaCeaf,
   carregaFarmaciasPopulares,
   carregaMedicamentos,
@@ -233,6 +234,17 @@ if (cadastro) {
   );
 } else {
   aviso("Cadastro de municípios do IBGE ausente — rode node scripts/baixa-municipios-ibge.mjs.");
+}
+
+const equivalencias = carregaNomesEquivalentes();
+if (equivalencias) {
+  const total = equivalencias.equivalencias.length;
+  const foraDaRename = equivalencias.equivalencias.filter((e) => e.canonico === null).length;
+  console.log(
+    `Grafias equivalentes revisadas: ${total} ` +
+      `(${total - foraDaRename} casam com a RENAME, ${foraDaRename} conferidas fora dela). ` +
+      "Rode npm run revisa-equivalencias para ver o que falta.",
+  );
 }
 
 const rename = carregaRename();

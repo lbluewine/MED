@@ -83,7 +83,7 @@ export default async function Busca({
                 Procure pelo nome genérico, o que vem escrito em letra pequena
                 na caixa. Se for um medicamento caro, ele pode ser de alto
                 custo — quem entrega esses é o governo do estado (CEAF), não a
-                prefeitura. <a href="/alto-custo">Veja como pedir</a>.
+                prefeitura. <a href={`/${id}/alto-custo`}>Veja como pedir</a>.
               </p>
             </Cartao>
           )}
@@ -123,7 +123,7 @@ export default async function Busca({
   const paginaNoPrograma = new Map<string, string>();
   for (const item of itensSemListaMunicipal()) {
     for (const a of item.apresentacoes) {
-      paginaNoPrograma.set(a.texto, `/farmacia-popular/${item.slug}`);
+      paginaNoPrograma.set(a.texto, `/${id}/farmacia-popular/${item.slug}`);
     }
   }
 
@@ -240,7 +240,7 @@ export default async function Busca({
               </ul>
               <ul className="nao-imprime mt-4 leading-normal">
                 <li className="border-t border-divisoria py-2">
-                  <a href="/farmacia-popular">Como funciona o programa</a>
+                  <a href={`/${id}/farmacia-popular`}>Como funciona o programa</a>
                 </li>
                 <li className="border-t border-divisoria py-2">
                   <a href="/farmacia-popular/farmacias">

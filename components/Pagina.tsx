@@ -51,7 +51,11 @@ export default function Pagina({
       />
 
       <div className="nao-imprime lg:hidden">
-        <Cabecalho municipioId={temRemume ? municipioId : undefined} />
+        <Cabecalho
+          municipioId={temRemume ? municipioId : undefined}
+          cidadeGenerica={!temRemume ? municipioId : undefined}
+          uf={municipio?.uf}
+        />
       </div>
 
       <div className="mx-auto max-w-[1180px] px-4 pb-16 pt-6 md:px-7">
@@ -83,6 +87,8 @@ export default function Pagina({
               <div className="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto">
                 <MenuLateral
                   municipioId={temRemume ? municipioId : undefined}
+                  cidadeGenerica={!temRemume ? municipioId : undefined}
+                  uf={municipio?.uf}
                   atual={atual}
                 />
               </div>

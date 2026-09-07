@@ -10,7 +10,8 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "valida-dados": "tsx scripts/valida-dados.ts",
-    "verifica-fontes": "python3 scripts/verifica_fontes.py"
+    "verifica-fontes": "python3 scripts/verifica_fontes.py",
+    "revisa-equivalencias": "tsx scripts/revisa-equivalencias.ts"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

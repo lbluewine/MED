@@ -1,3 +1,4 @@
+import { carregaCeaf } from "@/lib/dados";
 import type { SecaoAtual } from "./MenuLateral";
 
 /**
@@ -30,14 +31,29 @@ export default function Banner({
   temRemume?: boolean;
   atual: SecaoAtual;
 }) {
+  /*
+    "Orientações" reúne alto custo e Farmácia Popular. O alto custo é do
+    estado: quando não temos a lista do estado desta pessoa, o caminho leva ao
+    programa federal, que vale em qualquer cidade — em vez de levar ao CEAF de
+    outro estado. O menu continua com os mesmos cinco itens em toda página.
+  */
+  const temCeaf = municipioUf ? carregaCeaf(municipioUf.toLowerCase()) !== null : false;
+
   const href: Record<string, string> = {
-    Início: "/",
-    Medicamentos:
-      municipioId && temRemume ? `/${municipioId}/remedios` : municipioId ? `/${municipioId}/busca` : "/",
+    // A cidade escolhida manda: "Início" volta para a home dela, não para a
+    // raiz. Quem trocou de cidade e clicava aqui caía em Criciúma de novo.
+    Início: municipioId ? `/${municipioId}` : "/",
+    // A lista A–Z existe nos dois casos: a da prefeitura, ou o piso nacional
+    // da RENAME para quem ainda não tem a própria cadastrada aqui.
+    Medicamentos: municipioId ? `/${municipioId}/remedios` : "/",
     "Unidades de saúde":
       municipioId && temRemume ? `/${municipioId}/onde-pegar` : municipioId ? `/${municipioId}` : "/",
-    Orientações: "/alto-custo",
-    "Sobre o site": "/sobre",
+    Orientações: municipioId
+      ? `/${municipioId}/${temCeaf ? "alto-custo" : "farmacia-popular"}`
+      : temCeaf
+        ? "/alto-custo"
+        : "/farmacia-popular",
+    "Sobre o site": municipioId ? `/${municipioId}/sobre` : "/sobre",
   };
 
   return (
@@ -110,8 +126,21 @@ export default function Banner({
           </form>
         )}
 
+        {/*
+          A cidade não é só um rótulo: é o que decide toda resposta do site, e
+          quem abriu no celular de outra pessoa precisa poder trocar. Por isso
+          é um link, e o "Trocar" aparece escrito — ícone sozinho não se lê.
+
+          Leva para uma página em vez de abrir uma lista aqui: são 5.570
+          cidades, e mandar todas para o navegador em toda página do site
+          pesaria centenas de KB em cima de quem tem internet ruim.
+        */}
         {municipioNome && (
-          <p className="flex flex-none items-center gap-2 font-semibold text-marca">
+          <a
+            href="/cidades"
+            aria-label={`Cidade: ${municipioNome}${municipioUf ? ` – ${municipioUf}` : ""}. Trocar de cidade`}
+            className="flex min-h-[44px] flex-none items-center gap-2 rounded-full border border-linha px-3.5 font-semibold text-marca no-underline hover:border-marca-link hover:bg-marca-veu"
+          >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="flex-none">
               <path
                 d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"
@@ -120,9 +149,17 @@ export default function Banner({
               />
               <circle cx="12" cy="10" r="2.4" fill="currentColor" />
             </svg>
-            {municipioNome}
-            {municipioUf ? ` – ${municipioUf}` : ""}
-          </p>
+            <span>
+              {municipioNome}
+              {municipioUf ? ` – ${municipioUf}` : ""}
+            </span>
+            <span
+              aria-hidden="true"
+              className="nao-imprime text-[13px] font-normal text-marca-link underline"
+            >
+              Trocar
+            </span>
+          </a>
         )}
       </div>
     </header>

@@ -63,12 +63,22 @@ fechado — por mais que a lista acima esteja quase toda marcada.
       07/09/2026 por decisão do mantenedor, antes de o v0 fechar. Cidade sem
       REMUME própria cai no piso nacional da RENAME
       (`data/nacional/rename.json`), nunca em endereço ou unidade inventados.
-      Ver `docs/DADOS.md`. **Falta o dado da RENAME em si**: a extração
-      (`scripts/extrai_rename.py`, a fazer) está bloqueada porque o PDF
-      oficial (`bvsms.saude.gov.br`) e `gov.br/saude` devolvem 403/conexão
-      fechada nesta rede — sem o arquivo, `carregaRename()` retorna `null` e
-      toda cidade sem REMUME mostra "ainda não publicamos esta parte", nunca
-      uma resposta inventada.
+      Ver `docs/DADOS.md`.
+- [x] RENAME publicada — 966 apresentações de 534 medicamentos da RENAME 2024,
+      extraídas em 07/09/2026 por `scripts/extrai_rename.py`. Toda cidade do
+      Brasil passa a ter resposta, no lugar de "ainda não publicamos esta
+      parte".
+
+      `bvsms.saude.gov.br`, que é a fonte canônica, continua com a conexão
+      fechada nesta rede; o script tenta essa primeiro e cai na cópia que a
+      SES/SC publica, registrando na proveniência qual das duas usou.
+
+      A extração lê a cor de fundo da tabela, não só o texto: o nome de um
+      medicamento com várias apresentações fica solto numa célula mesclada, e
+      associá-lo por proximidade dava apresentação trocada — dizia que
+      imiquimode é suspensão oral (é creme) e que naloxona é cápsula (é
+      solução injetável). A faixa de fundo é a única marca no PDF que delimita
+      a célula. Conferido: os 534 nomes batem um a um com os três anexos.
 - [ ] Guia de contribuição explicando como adicionar uma cidade
 - [ ] Segundo município com REMUME própria como prova real do modelo (Içara
       ou Forquilhinha)

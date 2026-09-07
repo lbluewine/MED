@@ -10,6 +10,7 @@ import type { ZodType } from "zod";
 import {
   CadastroMunicipiosIbge,
   Ceaf,
+  NomesEquivalentes,
   FarmaciaPopular,
   FarmaciasCredenciadas,
   Medicamentos,
@@ -22,10 +23,12 @@ import {
   type Medicamento as TMedicamento,
   type Ceaf as TCeaf,
   type CadastroMunicipiosIbge as TCadastroMunicipiosIbge,
+  type NomesEquivalentes as TNomesEquivalentes,
   type FarmaciaPopular as TFarmaciaPopular,
   type FarmaciasCredenciadas as TFarmaciasCredenciadas,
   type NomesComerciais as TNomesComerciais,
   type Municipio as TMunicipio,
+  type MunicipioIbge,
   type Rename as TRename,
   type Unidade,
 } from "./schema";
@@ -152,6 +155,47 @@ export function carregaCadastroMunicipiosIbge(): TCadastroMunicipiosIbge | null 
   const caminho = join(RAIZ, "nacional", "municipios-ibge.json");
   if (!existsSync(caminho)) return null;
   return leJson(caminho, CadastroMunicipiosIbge);
+}
+
+/**
+ * O dicionário de grafias entre a lista de um município e a nacional.
+ *
+ * Arquivo opcional: sem ele o cruzamento usa só as regras automáticas, que é
+ * como o site funcionava antes. Ver `lib/equivalencias.ts`.
+ */
+export function carregaNomesEquivalentes(): TNomesEquivalentes | null {
+  const caminho = join(RAIZ, "nacional", "nomes-equivalentes.json");
+  if (!existsSync(caminho)) return null;
+  return leJson(caminho, NomesEquivalentes);
+}
+
+/**
+ * As siglas de estado que existem no cadastro, em ordem alfabética.
+ *
+ * Lista vazia quando não há cadastro: a tela de escolher cidade some inteira,
+ * em vez de mostrar um estado que não leva a lugar nenhum.
+ */
+export function listaUfsIbge(): string[] {
+  const cadastro = carregaCadastroMunicipiosIbge();
+  if (!cadastro) return [];
+  return [...new Set(cadastro.municipios.map((m) => m.uf))].sort();
+}
+
+/**
+ * Os municípios de um estado, em ordem alfabética.
+ *
+ * A tela de cidade é por estado de propósito: mandar as 5.570 cidades do país
+ * para o navegador seriam centenas de KB em cima de quem tem internet ruim, e
+ * uma lista desse tamanho não se percorre no celular. Um estado são algumas
+ * centenas de nomes.
+ */
+export function municipiosDaUf(uf: string): MunicipioIbge[] {
+  const cadastro = carregaCadastroMunicipiosIbge();
+  if (!cadastro) return [];
+  const alvo = uf.toUpperCase();
+  return cadastro.municipios
+    .filter((m) => m.uf === alvo)
+    .sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"));
 }
 
 /**

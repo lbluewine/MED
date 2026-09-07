@@ -1,6 +1,5 @@
 import InicioMunicipio from "@/components/InicioMunicipio";
 import Pagina from "@/components/Pagina";
-import SeletorDeCidade from "@/components/SeletorDeCidade";
 import {
   carregaCadastroMunicipiosIbge,
   carregaMunicipio,
@@ -52,14 +51,17 @@ export default function Home() {
         </ul>
 
         {cadastro && (
-          <div className="mt-8 max-w-[420px] border-t border-linha pt-6">
+          <div className="mt-8 max-w-[520px] border-t border-linha pt-6">
             <p className="text-texto-suave">
               Sua cidade não está na lista acima? Ainda assim o SUS garante um
               piso de medicamentos em qualquer município do Brasil.
             </p>
-            <div className="mt-3">
-              <SeletorDeCidade municipios={cadastro.municipios} />
-            </div>
+            <a
+              href="/cidades"
+              className="mt-3 inline-flex min-h-[48px] items-center rounded-[10px] bg-marca px-5 text-[16px] font-semibold text-white no-underline hover:bg-marca-link"
+            >
+              Procurar minha cidade
+            </a>
           </div>
         )}
       </Pagina>

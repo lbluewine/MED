@@ -627,12 +627,71 @@ export const ItemRename = z.object({
   principios_ativos: z.array(z.string().min(1)).min(1),
   forma_farmaceutica: z.string().min(1),
   componente: Componente,
+  /**
+   * As doenças para as quais este medicamento é fornecido, como a RENAME
+   * escreve na coluna "Documento norteador" — cada uma é um PCDT, o protocolo
+   * do Ministério da Saúde.
+   *
+   * Só o componente especializado (alto custo) tem. Vazio nos outros: o
+   * básico e o estratégico não são atrelados a um protocolo por doença.
+   */
+  condicoes: z.array(z.string().min(1)).default([]),
+  /**
+   * O código ATC — a classificação internacional do princípio ativo, do
+   * Apêndice A da RENAME. É o único identificador estável que a lista publica:
+   * cruzar fontes por nome depende de cada prefeitura escrever igual, e
+   * nenhuma escreve. Nulo nos poucos que a fonte não classifica (fitoterápicos
+   * e alguns insumos).
+   */
+  codigo_atc: z.string().min(1).nullable().default(null),
 });
 
 export const Rename = z.object({
   edicao: z.string().min(1),
   itens: z.array(ItemRename).min(1),
   proveniencia: Proveniencia,
+});
+
+// ---------------------------------------------------------------------------
+// data/nacional/nomes-equivalentes.json
+// ---------------------------------------------------------------------------
+
+/**
+ * Uma grafia que alguma fonte usa e a lista nacional escreve de outro jeito.
+ *
+ * O cruzamento entre a lista de um município e a RENAME é por nome, e cada
+ * prefeitura escreve à sua maneira: sal na frente ou depois da vírgula, forma
+ * farmacêutica colada, sinônimo entre parênteses. As regras automáticas de
+ * `lib/nomes-medicamentos.ts` resolvem a maior parte, mas não todas — e cada
+ * cidade nova traz grafias novas.
+ *
+ * Este arquivo é onde mora o que a regra não resolve. É dado, não código:
+ * cresce por revisão humana, vale para todas as cidades de uma vez e cada
+ * entrada registra quem conferiu. Ver `docs/DADOS.md` e a regra 3 do
+ * `CLAUDE.md` — robô propõe, humano aprova.
+ */
+export const NomeEquivalente = z.object({
+  /** Como a fonte escreve. */
+  grafia: z.string().min(1),
+  /** Onde essa grafia foi vista: id do município, ou "nacional". */
+  onde: z.string().min(1),
+  /**
+   * O nome do mesmo medicamento na RENAME. Nulo quando a revisão concluiu que
+   * ele **não** está na lista nacional — isso também é resposta, e evita que
+   * alguém reveja o mesmo nome a cada importação.
+   */
+  canonico: z.string().min(1).nullable(),
+  /** O ATC do canônico, quando a RENAME o classifica. Só para conferência. */
+  codigo_atc: z.string().min(1).nullable(),
+  /** Quem conferiu. Nome de pessoa, não "automático". */
+  revisado_por: z.string().min(1),
+  revisado_em: DataISO,
+  /** Por que são (ou não são) o mesmo, quando não é óbvio. */
+  observacao: z.string().min(1).nullable(),
+});
+
+export const NomesEquivalentes = z.object({
+  equivalencias: z.array(NomeEquivalente),
 });
 
 // ---------------------------------------------------------------------------
@@ -684,6 +743,8 @@ export type ItemRename = z.infer<typeof ItemRename>;
 export type Rename = z.infer<typeof Rename>;
 export type MunicipioIbge = z.infer<typeof MunicipioIbge>;
 export type CadastroMunicipiosIbge = z.infer<typeof CadastroMunicipiosIbge>;
+export type NomeEquivalente = z.infer<typeof NomeEquivalente>;
+export type NomesEquivalentes = z.infer<typeof NomesEquivalentes>;
 export type TipoDocumentoCeaf = z.infer<typeof TipoDocumentoCeaf>;
 export type DocumentoCeaf = z.infer<typeof DocumentoCeaf>;
 export type GrupoAnexos = z.infer<typeof GrupoAnexos>;

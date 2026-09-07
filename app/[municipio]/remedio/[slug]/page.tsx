@@ -144,9 +144,12 @@ function NaFarmaciaPopular({
   itens,
   /** A cidade também entrega? Muda o título e o que a pessoa precisa entender. */
   temNaCidade,
+  /** A cidade aberta, para os links levarem as drogarias certas junto. */
+  municipioId,
 }: {
   itens: ItemPFPB[];
   temNaCidade: boolean;
+  municipioId: string;
 }) {
   return (
     <Cartao as="section" className="mt-4 border-[#ddd0f5] bg-[#faf7ff] px-6 py-5">
@@ -183,10 +186,10 @@ function NaFarmaciaPopular({
       {/* Um por linha: dois links juntos numa frase viram um alvo só. */}
       <ul className="nao-imprime mt-4 leading-normal">
         <li className="border-t border-divisoria py-2">
-          <a href="/farmacia-popular">Como funciona o programa</a>
+          <a href={`/${municipioId}/farmacia-popular`}>Como funciona o programa</a>
         </li>
         <li className="border-t border-divisoria py-2">
-          <a href="/farmacia-popular/farmacias">
+          <a href={`/${municipioId}/farmacia-popular/farmacias`}>
             Onde tem farmácia credenciada
           </a>
         </li>
@@ -351,7 +354,7 @@ export default async function PaginaRemedio({
       */}
       {!tem && noPopular.length > 0 && (
         <div className="mt-4">
-          <NaFarmaciaPopular itens={noPopular} temNaCidade={false} />
+          <NaFarmaciaPopular itens={noPopular} temNaCidade={false} municipioId={id} />
         </div>
       )}
 
@@ -379,7 +382,7 @@ export default async function PaginaRemedio({
           </div>
 
           {tem && noPopular.length > 0 && (
-            <NaFarmaciaPopular itens={noPopular} temNaCidade />
+            <NaFarmaciaPopular itens={noPopular} temNaCidade municipioId={id} />
           )}
         </div>
 

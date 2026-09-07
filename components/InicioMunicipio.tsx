@@ -38,12 +38,23 @@ export default function InicioMunicipio({
           A logomarca do SUS aparece aqui com autorização do mantenedor,
           registrada em docs/STACK.md.
         */
-        <section className="banner-sus overflow-hidden rounded-2xl border border-[#d3e2f7] bg-[#eaf4fe] bg-[length:auto_100%] bg-[position:right_-2.5rem_center] bg-no-repeat">
-          <div className="banner-veu px-5 py-6 md:px-6 md:py-7">
+        <section className="banner-sus rounded-2xl border border-[#d3e2f7] bg-[#eaf4fe] bg-[length:auto_100%] bg-[position:right_-2.5rem_center] bg-no-repeat">
+          {/*
+            O canto arredondado é do véu também, e não do corte do pai: sem
+            `overflow-hidden` a lista de sugestões pode passar da borda de baixo
+            do banner. 15px = os 16px do pai menos a borda de 1px, para não
+            sobrar um fio de fundo no canto.
+          */}
+          <div className="banner-veu rounded-[15px] px-5 py-6 md:px-6 md:py-7">
             <p className="text-[11.5px] font-semibold uppercase tracking-[0.16em] text-marca-fraca">
               Medicamentos do SUS em {municipio.nome}
             </p>
-            <h1 className="mt-2 whitespace-nowrap text-[22px] font-bold leading-[1.14] tracking-tight text-marca md:text-[30px]">
+            {/*
+              Uma linha só a partir de 768px, onde a frase cabe. Em tela
+              estreita ela quebra: forçar `nowrap` em 360px joga "no SUS"
+              para fora da tela, e o título é a primeira coisa que a pessoa lê.
+            */}
+            <h1 className="mt-2 text-[22px] font-bold leading-[1.14] tracking-tight text-marca md:whitespace-nowrap md:text-[30px]">
               Encontre seu medicamento{" "}
               <span className="text-marca-link">no SUS</span>
             </h1>
@@ -110,7 +121,7 @@ export default function InicioMunicipio({
           </CartaoAcesso>
 
           <CartaoAcesso
-            href="/alto-custo"
+            href={`/${id}/alto-custo`}
             cor="#b45309"
             icone={
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
@@ -161,7 +172,7 @@ export default function InicioMunicipio({
           <CartaoInfo
             titulo="Medicamento de alto custo"
             texto="Quem entrega é o governo do estado, não o posto. Entenda como abrir o pedido e quais papéis levar."
-            href="/alto-custo"
+            href={`/${id}/alto-custo`}
             chamada="Saiba mais"
             fundo="#fdf0dc"
             icone={
@@ -173,7 +184,7 @@ export default function InicioMunicipio({
           <CartaoInfo
             titulo="Farmácia Popular"
             texto={`${totalFarmaciaPopular()} itens saem de graça na farmácia da rua credenciada, com receita e documento com CPF. É programa federal, fora do posto.`}
-            href="/farmacia-popular"
+            href={`/${id}/farmacia-popular`}
             chamada="Ver o que tem"
             fundo="#f3edfd"
             icone={
@@ -187,7 +198,7 @@ export default function InicioMunicipio({
           <CartaoInfo
             titulo="De onde vêm os dados"
             texto="Cada informação vem de um documento público, e a página mostra qual é e quando foi conferida."
-            href="/sobre"
+            href={`/${id}/sobre`}
             chamada="Sobre o site"
             icone={
               <svg width="34" height="34" viewBox="0 0 24 24" fill="none">

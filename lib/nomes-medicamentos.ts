@@ -49,6 +49,40 @@ const SAIS = [
  */
 const SIGLAS_DE_APRESENTACAO = ["bd", "hbs"];
 
+/**
+ * Formas farmacêuticas que a REMUME às vezes prende ao fim do nome:
+ * "Dipropionato de Betametasona + Fosfato Dissódico de Betametasona Suspensão
+ * Injetável". A forma já vem em campo próprio (`forma`), e no nome ela só
+ * atrapalha — foi o que impediu esse item de casar com o da RENAME, que
+ * escreve o mesmo princípio sem a forma.
+ *
+ * A lista é explícita pelo mesmo motivo das siglas acima: cada entrada decide
+ * um casamento. As mais longas vêm primeiro, para "suspensão injetável" ser
+ * cortada inteira antes de "injetável".
+ */
+const FORMAS_NO_NOME = [
+  "suspensao injetavel",
+  "solucao injetavel",
+  "solucao inalatoria",
+  "solucao oral",
+  "suspensao oral",
+  "solucao nasal",
+  "solucao retal",
+  "spray nasal",
+  "po para solucao injetavel",
+  "comprimido",
+  "capsula",
+  "xarope",
+  "creme",
+  "pomada",
+  "colirio",
+  "injetavel",
+  "supositorio",
+  "adesivo",
+  "locao",
+  "pasta",
+];
+
 /** Nomes próprios que a fonte escreve em caixa alta e a tela precisa preservar. */
 export const NOMES_PROPRIOS: Record<string, string> = { parkinson: "Parkinson" };
 
@@ -85,11 +119,48 @@ export function nomeBase(nome: string): string {
     }
   }
 
+  // Corta a forma farmacêutica quando ela vem colada no fim do nome.
+  let cortou = true;
+  while (cortou) {
+    cortou = false;
+    for (const forma of FORMAS_NO_NOME) {
+      const sufixo = ` ${forma}`;
+      if (base.endsWith(sufixo) && base.length > sufixo.length) {
+        base = base.slice(0, -sufixo.length).trim();
+        cortou = true;
+        break;
+      }
+    }
+  }
+
   const partes = base.split(" ");
   while (partes.length > 1 && SIGLAS_DE_APRESENTACAO.includes(partes[partes.length - 1]!)) {
     partes.pop();
   }
   return partes.join(" ");
+}
+
+/**
+ * As grafias pelas quais um medicamento pode ser reconhecido.
+ *
+ * A REMUME declara sinônimo entre parênteses — "Folinato de cálcio (ácido
+ * folínico)" — e a RENAME lista os dois nomes como itens separados. Sem ler o
+ * parêntese, o site mostrava "ácido folínico" como se a cidade não tivesse,
+ * quando é o mesmo item que ela entrega.
+ *
+ * Só o que a própria fonte escreve. Nada aqui inventa equivalência.
+ */
+export function grafiasDoNome(nome: string): string[] {
+  const grafias = [nome];
+  for (const achado of nome.matchAll(/\(([^)]+)\)/g)) {
+    const limpo = (achado[1] ?? "").trim();
+    // Um parêntese com "+" ou com nome científico não é sinônimo do princípio;
+    // só entra o que parece um nome de medicamento sozinho.
+    if (limpo && !limpo.includes("+") && limpo.split(/\s+/).length <= 4) {
+      grafias.push(limpo);
+    }
+  }
+  return grafias;
 }
 
 /**

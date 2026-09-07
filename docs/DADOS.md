@@ -307,6 +307,70 @@ Ninguém precisa acordar; o PR espera.
 - Se a fonte sair do ar ou mudar de URL, o job falha ruidosamente. Falha
   silenciosa é pior que erro.
 
+## Cruzar a lista de um município com a nacional
+
+O site precisa saber, para cada medicamento da lista de uma prefeitura, se ele
+é o mesmo que a RENAME chama de outro jeito. Sem isso a lista A–Z mostra o
+mesmo remédio duas vezes — uma como da prefeitura, outra como do piso nacional
+— e diz que a cidade não tem algo que ela entrega.
+
+Só que **cruzar por nome não é confiável**, porque nenhuma fonte escreve igual:
+
+| A RENAME escreve | A REMUME de Criciúma escreve |
+|---|---|
+| `cloridrato de metformina` | `Metformina, cloridrato de` |
+| `acetato de betametasona + fosfato dissódico de betametasona` | `Dipropionato de Betametasona + ... Suspensão Injetável` |
+| `ácido folínico` | `Folinato de cálcio (ácido folínico)` |
+| `algestona acetofenida + enantato de estradiol` | `Algestona acetofenida + estradiol enantato (injetável mensal)` |
+
+São dois mecanismos, nesta ordem:
+
+**1. Regras automáticas** (`lib/nomes-medicamentos.ts`). Inverter o sal, cortar
+a forma farmacêutica colada no fim, ler o sinônimo entre parênteses. Cobrem os
+padrões que já apareceram e resolvem a maior parte sozinhas.
+
+**2. Dicionário revisado** (`data/nacional/nomes-equivalentes.json`). O que a
+regra não resolve. Cada entrada diz uma grafia, o nome canônico na RENAME (ou
+`null` quando a conclusão é que **não** está nela) e quem conferiu.
+
+### Por que dicionário, e não mais regras
+
+Aumentar as regras não escala. Cada prefeitura tem suas convenções, e com
+Criciúma sozinha já são **52 grafias sem par (29% da lista dela)**. Com as 295
+cidades de Santa Catarina, seria editar código a cada importação — e código não
+guarda quem aprovou o quê.
+
+O dicionário é dado: revisável, versionado, com autoria, e **vale para todas as
+cidades de uma vez**. Como as REMUMEs municipais copiam da RENAME e umas das
+outras, os nomes se repetem: o dicionário melhora a cada cidade que entra, em
+vez de piorar.
+
+Um `"canonico": null` também é resposta. A cidade pode ter mais que o piso
+nacional — acetilcisteína, adenosina e ácido ascórbico estão na lista de
+Criciúma e não na RENAME —, e registrar isso tira o nome do relatório para
+sempre.
+
+### Como revisar
+
+```
+npm run revisa-equivalencias            # todas as cidades
+npm run revisa-equivalencias sc-criciuma
+```
+
+O relatório lista o que não casou e sugere nomes parecidos da RENAME. **Ele só
+imprime.** Casar por semelhança automaticamente levaria alguém ao medicamento
+errado; quem decide que dois nomes são o mesmo medicamento é gente, e a decisão
+vai à mão para o JSON com `revisado_por` preenchido. É a regra 3 do
+`CLAUDE.md`.
+
+### O código ATC
+
+A RENAME publica o código ATC de 456 dos 513 medicamentos (Apêndice A), e ele
+vai no `rename.json`. É o único identificador estável que a lista traz — nome é
+convenção, código não. As listas municipais não trazem código, então ele ainda
+não serve de chave para o cruzamento; serve de conferência quando alguém revisa
+uma equivalência, e é a base se um dia uma fonte municipal publicar código.
+
 ## Fontes por tipo de dado
 
 | Dado | Fonte |

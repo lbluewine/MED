@@ -96,10 +96,10 @@ export default async function Condicao({
       .filter((u) => u.tipo === "farmacia_ceaf")
       .map((u) => ({ id, municipio, unidade: u }));
   });
-  const [municipioNav] = listaMunicipios();
+
 
   return (
-    <Pagina municipioId={municipioNav} atual="alto-custo">
+    <Pagina atual="alto-custo">
       <p className="nao-imprime">
         <a className="underline" href="/alto-custo">
           Voltar para a lista de doenças
