@@ -1,3 +1,4 @@
+import Migalha from "@/components/Migalha";
 import Pagina from "@/components/Pagina";
 import { listaMunicipios } from "@/lib/dados";
 import { AVISO_INDEPENDENTE } from "@/lib/textos";
@@ -9,7 +10,8 @@ export default function Sobre() {
 
   return (
     <Pagina municipioId={id} atual="sobre">
-        <h1 className="text-[30px] font-bold leading-tight md:text-[38px]">
+        <Migalha itens={[{ texto: "Início", href: "/" }, { texto: "Sobre" }]} />
+        <h1 className="text-[30px] font-bold tracking-tight text-marca md:text-[34px]">
           Sobre este site
         </h1>
 

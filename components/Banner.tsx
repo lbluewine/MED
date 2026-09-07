@@ -1,27 +1,130 @@
+import type { SecaoAtual } from "./MenuLateral";
+
 /**
- * Faixa de identificação no topo de toda página.
+ * Cabeçalho fixo do site: marca, caminhos principais, busca e cidade.
  *
- * O fundo é o azul de marca, nunca o verde. Verde, vermelho e âmbar carregam
- * significado neste site (docs/STACK.md) — verde quer dizer "o SUS entrega".
- * Usar um deles como cor de identidade gastaria o sinal justamente onde ele
- * precisa ser lido de relance.
+ * O símbolo é uma cruz própria, não a logomarca do SUS. A logomarca aparece no
+ * banner da home, com autorização do mantenedor registrada em docs/STACK.md —
+ * mas como marca do site ela diria que este site é do governo, e ele não é.
+ * O aviso de projeto independente está no rodapé de toda página.
  */
-export default function Banner({ municipioNome }: { municipioNome?: string }) {
+const CAMINHOS: { texto: string; secoes: SecaoAtual[] }[] = [
+  { texto: "Início", secoes: ["inicio"] },
+  { texto: "Medicamentos", secoes: ["remedios", "classes"] },
+  { texto: "Unidades de saúde", secoes: ["onde-pegar"] },
+  { texto: "Orientações", secoes: ["alto-custo", "farmacia-popular"] },
+  { texto: "Sobre o site", secoes: ["sobre"] },
+];
+
+export default function Banner({
+  municipioId,
+  municipioNome,
+  municipioUf,
+  temRemume = true,
+  atual,
+}: {
+  municipioId?: string;
+  municipioNome?: string;
+  municipioUf?: string;
+  /** Cidade sem REMUME própria ainda não tem lista nem unidade cadastrada. */
+  temRemume?: boolean;
+  atual: SecaoAtual;
+}) {
+  const href: Record<string, string> = {
+    Início: "/",
+    Medicamentos:
+      municipioId && temRemume ? `/${municipioId}/remedios` : municipioId ? `/${municipioId}/busca` : "/",
+    "Unidades de saúde":
+      municipioId && temRemume ? `/${municipioId}/onde-pegar` : municipioId ? `/${municipioId}` : "/",
+    Orientações: "/alto-custo",
+    "Sobre o site": "/sobre",
+  };
+
   return (
-    <div className="bg-marca text-white">
-      <div className="mx-auto flex max-w-7xl flex-wrap items-baseline justify-between gap-x-6 gap-y-1 px-4 py-4 md:px-8 md:py-5">
-        <a
-          href="/"
-          className="text-[22px] font-bold tracking-tight text-white no-underline md:text-[26px]"
-        >
-          Tem no SUS
+    <header className="sticky top-0 z-40 border-b border-linha bg-fundo">
+      <div className="mx-auto flex max-w-[1440px] flex-wrap items-center gap-x-7 gap-y-3 px-4 py-3 md:px-7">
+        <a href="/" className="flex flex-none items-center gap-3 no-underline">
+          <span
+            aria-hidden="true"
+            className="flex h-[42px] w-[42px] flex-none items-center justify-center rounded-[11px] bg-marca-link"
+          >
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M9.5 3h5v6.5H21v5h-6.5V21h-5v-6.5H3v-5h6.5V3Z" fill="#ffffff" />
+            </svg>
+          </span>
+          <span>
+            <span className="block text-[22px] font-bold leading-tight tracking-tight text-marca">
+              Tem no SUS
+            </span>
+            <span className="block text-[12.5px] text-texto-suave">
+              Saúde pública mais perto de você
+            </span>
+          </span>
         </a>
-        <p className="max-w-[52ch] text-marca-linha">
-          {municipioNome
-            ? `O que o SUS entrega em ${municipioNome}, onde retirar e o que levar.`
-            : "O que o SUS entrega, onde retirar e o que levar."}
-        </p>
+
+        <nav
+          aria-label="Principal"
+          className="nao-imprime hidden flex-1 flex-wrap items-center gap-x-7 gap-y-1 text-[15px] lg:flex"
+        >
+          {CAMINHOS.map(({ texto, secoes }) => {
+            const aqui = secoes.includes(atual);
+            return (
+              <a
+                key={texto}
+                href={href[texto]!}
+                aria-current={aqui ? "page" : undefined}
+                className={`border-b-2 py-1.5 no-underline ${
+                  aqui
+                    ? "border-marca-link font-bold text-marca-link"
+                    : "border-transparent text-texto"
+                }`}
+              >
+                {texto}
+              </a>
+            );
+          })}
+        </nav>
+
+        {municipioId && (
+          <form
+            action={`/${municipioId}/busca`}
+            method="get"
+            role="search"
+            className="nao-imprime ml-auto hidden h-11 max-w-[250px] flex-1 basis-[180px] items-center gap-2.5 rounded-full border border-linha bg-marca-veu px-4 focus-within:border-marca-link focus-within:ring-2 focus-within:ring-marca-link/40 md:flex"
+          >
+            <label htmlFor="busca-topo" className="sr-only">
+              Buscar medicamento
+            </label>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="flex-none">
+              <circle cx="11" cy="11" r="6.5" stroke="currentColor" strokeWidth="2" className="text-texto-suave" />
+              <path d="m16 16 4.5 4.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="text-texto-suave" />
+            </svg>
+            <input
+              id="busca-topo"
+              name="q"
+              type="search"
+              autoComplete="off"
+              placeholder="Buscar medicamento"
+              className="campo-busca-entrada min-w-0 flex-1 bg-transparent text-[15px] outline-none"
+            />
+          </form>
+        )}
+
+        {municipioNome && (
+          <p className="flex flex-none items-center gap-2 font-semibold text-marca">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true" className="flex-none">
+              <path
+                d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"
+                stroke="currentColor"
+                strokeWidth="2"
+              />
+              <circle cx="12" cy="10" r="2.4" fill="currentColor" />
+            </svg>
+            {municipioNome}
+            {municipioUf ? ` – ${municipioUf}` : ""}
+          </p>
+        )}
       </div>
-    </div>
+    </header>
   );
 }

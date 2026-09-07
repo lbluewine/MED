@@ -1,16 +1,18 @@
 /**
- * Navegação em árvore, com os submenus sempre abertos.
+ * Menu da coluna esquerda: dois cartões, tudo aberto, nada dobrado.
  *
- * Sem JavaScript e sem nada que dobre ou desdobre: quem chega vê de uma vez
- * tudo que o site tem. Cada item é um link de verdade, com URL que dá para
- * copiar e mandar por WhatsApp.
+ * "Acesso rápido" leva aos quatro caminhos principais, cada um com sigla
+ * colorida e a contagem real. "Unidades de saúde" lista os tipos com quantas
+ * existem na cidade, e cada linha vai direto para aquela seção.
  *
- * Aparece só a partir de 1024px. No celular quem navega é o Cabecalho, com
- * botões grandes — uma árvore de vinte linhas numa tela de 360px empurraria o
- * conteúdo para baixo da dobra.
+ * Aparece a partir de 1024px. No celular quem navega é o Cabecalho, com
+ * botões grandes — esta árvore numa tela de 360px empurraria o conteúdo para
+ * baixo da dobra. Ver docs/LAYOUT.md.
  */
+import Cartao from "./Cartao";
 import { carregaCeaf, carregaMunicipio, carregaUnidades } from "@/lib/dados";
 import { listaClasses } from "@/lib/classes";
+import { totalFarmaciaPopular } from "@/lib/farmacia-popular";
 import { listaRemedios } from "@/lib/remedios";
 import { NOME_UNIDADE_CURTO } from "@/lib/rotulos";
 import type { TipoUnidade } from "@/lib/schema";
@@ -22,6 +24,7 @@ export type SecaoAtual =
   | "classes"
   | "onde-pegar"
   | "alto-custo"
+  | "farmacia-popular"
   | "sobre";
 
 /** A ordem é a da chance de precisar, igual à da página "Onde pegar". */
@@ -36,46 +39,54 @@ const ORDEM_UNIDADES: TipoUnidade[] = [
   "farmacia_popular",
 ];
 
-function Grupo({ titulo, children }: { titulo: string; children: React.ReactNode }) {
+function Seta() {
   return (
-    <li className="mt-6 first:mt-0">
-      <h3 className="text-[17px] font-bold uppercase tracking-wide text-marca">
-        {titulo}
-      </h3>
-      <ul className="mt-1 border-l-2 border-linha">{children}</ul>
-    </li>
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path d="m9 5 7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+    </svg>
   );
 }
 
-function Item({
+function Atalho({
   href,
-  children,
+  sigla,
+  cor,
+  nome,
   contagem,
-  atual = false,
+  atual,
 }: {
   href: string;
-  children: React.ReactNode;
+  sigla: string;
+  cor: string;
+  nome: string;
   contagem?: number;
   atual?: boolean;
 }) {
   return (
-    <li>
-      <a
-        href={href}
-        aria-current={atual ? "page" : undefined}
-        className={
-          "-ml-[2px] flex min-h-[40px] items-center justify-between gap-2 border-l-2 py-1 pl-3 pr-2 no-underline hover:bg-marca-fundo " +
-          (atual
-            ? "border-marca-link bg-marca-fundo font-bold text-marca-link"
-            : "border-transparent text-texto")
-        }
+    <a
+      href={href}
+      aria-current={atual ? "page" : undefined}
+      className={`grid grid-cols-[30px_minmax(0,1fr)_auto_auto] items-center gap-2.5 border-t border-divisoria px-4 py-2.5 text-[14.5px] no-underline hover:bg-marca-veu ${
+        atual ? "bg-marca-veu" : ""
+      }`}
+    >
+      <span
+        aria-hidden="true"
+        className="flex h-[30px] w-[30px] items-center justify-center rounded-lg text-[10.5px] font-bold text-white"
+        style={{ background: cor }}
       >
-        <span>{children}</span>
-        {contagem !== undefined && (
-          <span className="text-sm text-texto-suave">{contagem}</span>
-        )}
-      </a>
-    </li>
+        {sigla}
+      </span>
+      <span className={`font-semibold text-marca-link ${atual ? "underline" : ""}`}>
+        {nome}
+      </span>
+      <span className="font-mono text-[13px] text-texto-suave">
+        {contagem ?? ""}
+      </span>
+      <span className="text-seta">
+        <Seta />
+      </span>
+    </a>
   );
 }
 
@@ -91,6 +102,9 @@ export default function MenuLateral({
   const classes = municipioId ? listaClasses(municipioId) : [];
   const unidades = municipioId ? carregaUnidades(municipioId) : [];
   const ceaf = municipio ? carregaCeaf(municipio.uf.toLowerCase()) : null;
+  // O que o programa fornece, não quantas farmácias o entregam: é o mesmo
+  // número que a página do programa anuncia no título.
+  const itensPopular = totalFarmaciaPopular();
 
   const porTipo = ORDEM_UNIDADES.map((tipo) => ({
     tipo,
@@ -98,68 +112,93 @@ export default function MenuLateral({
   })).filter((t) => t.quantas > 0);
 
   return (
-    <nav aria-label="Seções do site" className="text-[17px]">
-      <ul>
-        <Grupo titulo="Começar">
-          <Item href="/" atual={atual === "inicio"}>
-            Buscar um medicamento
-          </Item>
-          <Item href="/sobre" atual={atual === "sobre"}>
-            Sobre este site
-          </Item>
-        </Grupo>
-
+    <div className="flex flex-col gap-5">
+      <Cartao className="overflow-hidden">
+        <h2 className="px-4 pb-3 pt-4 text-[16px] font-bold text-marca">
+          Acesso rápido
+        </h2>
         {municipioId && (
-          <Grupo titulo="Medicamentos">
-            <Item
+          <>
+            <Atalho
               href={`/${municipioId}/remedios`}
+              sigla="A-Z"
+              cor="#1351b4"
+              nome="Todos os medicamentos"
               contagem={remedios.length}
               atual={atual === "remedios"}
-            >
-              Todos, de A a Z
-            </Item>
-            <Item
+            />
+            <Atalho
               href={`/${municipioId}/remedios/tipos`}
+              sigla="TIP"
+              cor="#1a8b5f"
+              nome="Por tipo de medicamento"
               contagem={classes.length}
               atual={atual === "classes"}
-            >
-              Por tipo de medicamento
-            </Item>
-          </Grupo>
+            />
+          </>
         )}
-
-        {municipioId && porTipo.length > 0 && (
-          <Grupo titulo="Unidades de saúde">
-            <Item
-              href={`/${municipioId}/onde-pegar`}
-              contagem={unidades.length}
-              atual={atual === "onde-pegar"}
-            >
-              Todos os lugares
-            </Item>
-            {porTipo.map(({ tipo, quantas }) => (
-              <Item
-                key={tipo}
-                href={`/${municipioId}/onde-pegar#${tipo}`}
-                contagem={quantas}
-              >
-                {NOME_UNIDADE_CURTO[tipo]}
-              </Item>
-            ))}
-          </Grupo>
+        <Atalho
+          href="/alto-custo"
+          sigla="ALT"
+          cor="#f0a92b"
+          nome="Medicamentos de alto custo"
+          contagem={ceaf?.condicoes.length}
+          atual={atual === "alto-custo"}
+        />
+        {itensPopular > 0 && (
+          <Atalho
+            href="/farmacia-popular"
+            sigla="FPO"
+            cor="#7c4dcc"
+            nome="Farmácia Popular"
+            contagem={itensPopular}
+            atual={atual === "farmacia-popular"}
+          />
         )}
+      </Cartao>
 
-        <Grupo titulo="Alto custo (CEAF)">
-          <Item href="/alto-custo" atual={atual === "alto-custo"}>
-            Como funciona o pedido
-          </Item>
-          {ceaf && (
-            <Item href="/alto-custo#doencas" contagem={ceaf.condicoes.length}>
-              Doenças da lista
-            </Item>
-          )}
-        </Grupo>
-      </ul>
-    </nav>
+      {municipioId && porTipo.length > 0 && (
+        <Cartao className="overflow-hidden">
+          <h2 className="flex items-center gap-2 px-4 pb-3 pt-4 text-[16px] font-bold text-marca">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 21V5.5L12 3l7 2.5V21H5Z" fill="currentColor" />
+              <path
+                d="M9 9h2M13 9h2M9 13h2M13 13h2"
+                stroke="#ffffff"
+                strokeWidth="1.7"
+                strokeLinecap="round"
+              />
+            </svg>
+            Unidades de saúde
+          </h2>
+          <a
+            href={`/${municipioId}/onde-pegar`}
+            aria-current={atual === "onde-pegar" ? "page" : undefined}
+            className={`grid grid-cols-[minmax(0,1fr)_auto_auto] items-center gap-2.5 border-t border-divisoria px-4 py-2.5 text-[14.5px] no-underline hover:bg-marca-veu ${
+              atual === "onde-pegar" ? "bg-marca-veu" : ""
+            }`}
+          >
+            <span className="font-semibold text-marca-link">Todos os lugares</span>
+            <span className="font-mono text-[13px] text-texto-suave">{unidades.length}</span>
+            <span className="text-seta">
+              <Seta />
+            </span>
+          </a>
+          {porTipo.map(({ tipo, quantas }) => (
+            <a
+              key={tipo}
+              href={`/${municipioId}/onde-pegar#${tipo}`}
+              className="grid grid-cols-[minmax(0,1fr)_auto_auto] items-center gap-2.5 border-t border-divisoria px-4 py-2.5 text-[14.5px] text-texto no-underline hover:bg-marca-veu"
+            >
+              <span>{NOME_UNIDADE_CURTO[tipo]}</span>
+              <span className="font-mono text-[13px] text-texto-suave">{quantas}</span>
+              <span className="text-seta">
+                <Seta />
+              </span>
+            </a>
+          ))}
+        </Cartao>
+      )}
+    </div>
   );
 }

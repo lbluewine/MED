@@ -9,6 +9,8 @@ export type PontoMapa = {
   lat: number;
   lng: number;
   href: string;
+  /** Ponto calculado entre endereços vizinhos, não o endereço em si. */
+  aproximado?: boolean;
 };
 
 const MapaLeaflet = dynamic(() => import("./MapaLeaflet"), {

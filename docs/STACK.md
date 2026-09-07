@@ -120,9 +120,14 @@ Link continua **sublinhado**: a cor nunca é a única pista.
 
 ### Tipografia
 
-Uma família só: **Atkinson Hyperlegible**. Foi desenhada pelo Braille Institute
-para baixa visão, com letras que não se confundem entre si — a escolha existe
-por causa do público, não por estética.
+Uma família só: **Public Sans**, a fonte do design system do governo federal.
+Adotada em 05/09/2026 com o mockup novo, por decisão do mantenedor.
+
+Ela substituiu a **Atkinson Hyperlegible**, do Braille Institute, desenhada
+para baixa visão com letras que não se confundem entre si. A troca é de
+identidade, não de legibilidade — a Atkinson era a escolha melhor para este
+público. Os arquivos dela continuam em `public/fontes/`, e voltar atrás é
+trocar os três `@font-face` no `globals.css`.
 
 - Corpo de texto: **18px**, altura de linha 1.6.
 - Título de página: 30px, peso bold.
@@ -131,15 +136,17 @@ por causa do público, não por estética.
 
 ### Regras de layout
 
+A montagem das telas — esqueleto, menu lateral, cartão, o que cada página faz —
+está em **`docs/LAYOUT.md`**. Aqui ficam só as regras que valem para qualquer
+desenho que venha depois:
+
 - **Mobile primeiro**, testado a 360px.
 - Área de toque mínima de **48×48px**, com 8px de folga entre alvos.
 - A resposta principal ("tem" / "não tem") aparece **acima da dobra**, em texto
   grande, antes de qualquer detalhe.
 - Sem carrossel, sem accordion escondendo informação crítica, sem modal.
-  Cartão é permitido e preferido para separar blocos irmãos — apresentações de
-  um medicamento, unidades de saúde —, desde que **nada dentro dele comece
-  dobrado**. O cartão serve para a pessoa achar o bloco dela, não para esconder
-  o conteúdo atrás de um clique.
+  Cartão é permitido e preferido para separar blocos irmãos, desde que **nada
+  dentro dele comece dobrado**.
 - Sem animação de entrada. Movimento só como resposta a uma ação do usuário, e
   respeitando `prefers-reduced-motion`.
 - Toda página imprime bem. Muita gente vai imprimir o checklist do CEAF e levar
@@ -154,6 +161,22 @@ por causa do público, não por estética.
 - Funciona com JavaScript desligado nas páginas de conteúdo. Só a busca e o mapa
   dependem de JS, e ambos têm alternativa navegável (lista A–Z, lista de
   endereços).
+
+## A logomarca do SUS
+
+O banner da home usa a **logomarca oficial do SUS**, autorizada pelo mantenedor
+em 05/09/2026. A paleta do site é a do padrão gov.br pela mesma decisão.
+
+Isso tem uma consequência que fica registrada: o site é um projeto
+independente, e a marca do governo faz qualquer pessoa supor o contrário — e
+quem mais confia nela é justamente o público deste site.
+
+- A marca do próprio site é a cruz simples do `Banner.tsx`, não a logomarca do
+  SUS. A logomarca aparece como ilustração do banner, nunca como identidade.
+- **O aviso de projeto independente fica no rodapé**, em toda página. Houve uma
+  tarja curta no topo, criada junto com a logomarca; foi removida em 06/09/2026
+  por decisão do mantenedor. O aviso completo continua no rodapé, mas abaixo da
+  dobra — e é acima da dobra que a confusão acontece.
 
 ## LGPD e privacidade
 
@@ -180,3 +203,14 @@ dado:
 - Lighthouse: Acessibilidade 100, Performance ≥ 90 em 4G simulado.
 - Testes só onde erro machuca: parsers de dados, busca e cálculo de preço.
   Não escrever teste de componente visual no v0.
+
+## Playwright
+
+Só em desenvolvimento e no job semanal — `devDependency`, nunca no navegador
+de quem usa o site. Existe por um motivo só: o painel de endereços do Programa
+Farmácia Popular é um Qlik Sense cuja borda recusa WebSocket que não venha de
+uma página carregada. O extrator abre o painel num Chromium e conversa com o
+Qlik de dentro da própria página. Ver `data/fontes/FONTES.md`.
+
+Se um dia o Ministério voltar a publicar a planilha, ou o `dados.gov.br` ficar
+aberto, esta dependência sai.

@@ -202,6 +202,33 @@ export const Geo = z.object({
   conferido_em: DataISO,
 });
 
+/**
+ * Coordenada vinda do cadastro de endereços do IBGE, casada pelo CEP, pela rua
+ * e pelo número.
+ *
+ * É um tipo **separado** de `Geo` de propósito. `Geo` é o pino que alguém abriu
+ * no mapa e confirmou que cai na porta, e é o que as unidades do SUS exigem.
+ * Este aqui ninguém abriu: é o ponto que o recenseador registrou naquele
+ * endereço. Erra pouco, mas erra sozinho — e a diferença entre "conferimos" e
+ * "casamos o endereço" é o tipo de coisa que este projeto não apaga.
+ */
+export const GeoDoCadastro = z.object({
+  lat: z.number().min(-34).max(6),
+  lng: z.number().min(-74).max(-33),
+  /** De onde saiu a coordenada. Vai na nota de fonte. */
+  fonte: z.string().min(1),
+  /**
+   * `numero` é o endereço achado igual no cadastro: é a porta.
+   *
+   * `aproximada` é calculado entre os dois números vizinhos que existem no
+   * cadastro — a farmácia está naquele trecho da rua, não naquele ponto. A
+   * tela avisa, porque a diferença entre "é aqui" e "é por aqui" é a diferença
+   * entre achar a porta e andar procurando.
+   */
+  precisao: z.enum(["numero", "aproximada"]),
+  obtido_em: DataISO,
+});
+
 export const Endereco = z.object({
   logradouro: z.string().min(1),
   /** `null` quando a fonte não informa o bairro. */
@@ -461,6 +488,175 @@ export const NomesComerciais = z.object({
 });
 
 // ---------------------------------------------------------------------------
+// data/nacional/farmacia-popular.json — elenco do PFPB
+// ---------------------------------------------------------------------------
+
+/**
+ * O elenco do Programa Farmácia Popular do Brasil, que é federal: a lista é a
+ * mesma no país inteiro, e por isso mora em `nacional/`.
+ *
+ * `texto` é o item como o Ministério escreve, e é o que a tela mostra. Os
+ * princípios ativos são separados só para cruzar com a lista do município —
+ * o site nunca afirma que a apresentação do PFPB é a mesma que a da REMUME.
+ * Quem confere a dose é a pessoa, olhando a receita.
+ */
+export const ItemFarmaciaPopular = z.object({
+  texto: z.string().min(1),
+  principios_ativos: z.array(z.string().min(1)).min(1),
+  /** O que a fonte anexa depois do travessão, como "ação prolongada". */
+  observacao: z.string().min(1).nullable(),
+  /** Absorvente e fralda estão no programa e não são medicamento. */
+  insumo: z.boolean(),
+});
+
+export const GrupoFarmaciaPopular = z.object({
+  /** A indicação como a fonte escreve, em caixa alta: "HIPERTENSÃO". */
+  indicacao: z.string().min(1),
+  slug: Slug,
+  itens: z.array(ItemFarmaciaPopular).min(1),
+});
+
+export const FarmaciaPopular = z.object({
+  fonte_atualizada_em: DataISO,
+  /**
+   * As regras de retirada vêm da página do programa, não do PDF do elenco.
+   * Fonte diferente, proveniência própria.
+   */
+  como_retirar: z.object({
+    gratuito: z.boolean(),
+    documentos: z.array(z.string().min(1)).min(1),
+    onde: z.string().min(1),
+    proveniencia: Proveniencia,
+  }),
+  /**
+   * O painel oficial de endereços. O site linka em vez de copiar: a rede
+   * credenciada muda toda semana, e uma cópia velha manda alguém a uma
+   * farmácia que já saiu do programa.
+   */
+  busca_enderecos: z.object({
+    url: z.url(),
+    nome: z.string().min(1),
+  }),
+  grupos: z.array(GrupoFarmaciaPopular).min(1),
+  proveniencia: Proveniencia,
+});
+
+// ---------------------------------------------------------------------------
+// data/municipios/<id>/farmacias-populares.json
+// ---------------------------------------------------------------------------
+
+/**
+ * Uma drogaria privada credenciada no Programa Farmácia Popular.
+ *
+ * Não é unidade do SUS, e por isso não entra em `unidades.json`: não tem
+ * componente, não tem exigência municipal e não é a prefeitura que responde
+ * por ela. O que o site sabe dela é endereço, e de quando é o endereço.
+ *
+ * A rede credenciada muda com frequência. Por isso a tela mostra a data da
+ * conferência ao lado da lista, e o link para o painel oficial, que é sempre
+ * o de hoje.
+ */
+export const FarmaciaCredenciada = z.object({
+  /**
+   * O que liga o registro do painel ao cadastro da Receita Federal, e o que
+   * distingue duas lojas da mesma rede na mesma rua.
+   */
+  cnpj: z.string().min(1).nullable(),
+  /**
+   * O nome do CNPJ. O painel do Ministério publica só este — e ninguém procura
+   * "CIA LATINO AMERICANA DE MEDICAMENTOS" na rua.
+   */
+  razao_social: z.string().min(1),
+  /**
+   * O nome da placa, vindo do cadastro da Receita. É o que a tela mostra.
+   * Nulo quando a empresa não declarou nome fantasia; aí vale a razão social.
+   */
+  nome_fantasia: z.string().min(1).nullable(),
+  /**
+   * O endereço como a Receita registra, com tipo e número: "RUA SAO FRANCISCO
+   * DO SUL, 135". Sem o cruzamento por CNPJ, o painel dá só o nome da rua.
+   */
+  logradouro: z.string().min(1),
+  /** "SALA 01", "LOJA 2". Nulo quando não há. */
+  complemento: z.string().min(1).nullable(),
+  /**
+   * O bairro que o painel do Ministério informa. Fica guardado à parte do que
+   * vai à tela para o cruzamento por CNPJ poder ser refeito sem se comparar
+   * com o próprio resultado — e para a divergência entre as duas fontes não
+   * sumir na segunda execução.
+   */
+  bairro_painel: z.string().min(1).nullable(),
+  /** O bairro que a tela mostra: o da Receita, que combina com o CEP. */
+  bairro: z.string().min(1).nullable(),
+  cep: z.string().regex(/^\d{5}-\d{3}$/).nullable(),
+  /**
+   * Onde fica, pelo cadastro de endereços do IBGE. Nula quando o endereço não
+   * foi achado lá — aí a farmácia fica na lista e fora do mapa.
+   */
+  geo: GeoDoCadastro.nullable(),
+  /**
+   * Onde o painel e a Receita discordam. O site não escolhe uma fonte e
+   * esconde a outra: escreve a diferença em português, e quem lê decide.
+   */
+  divergencias: z.array(Divergencia),
+});
+
+export const FarmaciasCredenciadas = z.object({
+  municipio_id: Slug,
+  farmacias: z.array(FarmaciaCredenciada).min(1),
+  proveniencia: Proveniencia,
+});
+
+// ---------------------------------------------------------------------------
+// data/nacional/rename.json
+// ---------------------------------------------------------------------------
+
+/**
+ * A RENAME (Relação Nacional de Medicamentos Essenciais) é o piso: o que todo
+ * SUS do Brasil garante, em qualquer município, com ou sem lista própria.
+ *
+ * Serve para responder "tem no SUS" numa cidade sem REMUME cadastrada — sem
+ * inventar onde retirar ou qual receita a prefeitura pede, porque isso a
+ * RENAME não diz: quem decide isso é cada município. Por isso a página de
+ * medicamento em modo RENAME nunca mostra unidade, distrito nem tipo de
+ * receita — só "isto é garantido no país inteiro" e o texto explicando que a
+ * cidade ainda não tem lista própria aqui.
+ */
+export const ItemRename = z.object({
+  texto: z.string().min(1),
+  principios_ativos: z.array(z.string().min(1)).min(1),
+  forma_farmaceutica: z.string().min(1),
+  componente: Componente,
+});
+
+export const Rename = z.object({
+  edicao: z.string().min(1),
+  itens: z.array(ItemRename).min(1),
+  proveniencia: Proveniencia,
+});
+
+// ---------------------------------------------------------------------------
+// data/nacional/municipios-ibge.json
+// ---------------------------------------------------------------------------
+
+/**
+ * O cadastro de todos os municípios do Brasil, do IBGE. Só existe para o
+ * seletor de cidade saber quais nomes são válidos e para as rotas dinâmicas
+ * decidirem se um slug é uma cidade de verdade — não é o dado de saúde em si.
+ */
+export const MunicipioIbge = z.object({
+  codigo_ibge: z.number().int().positive(),
+  nome: z.string().min(1),
+  uf: z.string().length(2),
+  slug: Slug,
+});
+
+export const CadastroMunicipiosIbge = z.object({
+  municipios: z.array(MunicipioIbge).min(1),
+  proveniencia: Proveniencia,
+});
+
+// ---------------------------------------------------------------------------
 // Tipos
 // ---------------------------------------------------------------------------
 
@@ -478,6 +674,16 @@ export type Retirada = z.infer<typeof Retirada>;
 export type ItemRemume = z.infer<typeof ItemRemume>;
 export type Revisao = z.infer<typeof Revisao>;
 export type NomesComerciais = z.infer<typeof NomesComerciais>;
+export type ItemFarmaciaPopular = z.infer<typeof ItemFarmaciaPopular>;
+export type GrupoFarmaciaPopular = z.infer<typeof GrupoFarmaciaPopular>;
+export type FarmaciaPopular = z.infer<typeof FarmaciaPopular>;
+export type GeoDoCadastro = z.infer<typeof GeoDoCadastro>;
+export type FarmaciaCredenciada = z.infer<typeof FarmaciaCredenciada>;
+export type FarmaciasCredenciadas = z.infer<typeof FarmaciasCredenciadas>;
+export type ItemRename = z.infer<typeof ItemRename>;
+export type Rename = z.infer<typeof Rename>;
+export type MunicipioIbge = z.infer<typeof MunicipioIbge>;
+export type CadastroMunicipiosIbge = z.infer<typeof CadastroMunicipiosIbge>;
 export type TipoDocumentoCeaf = z.infer<typeof TipoDocumentoCeaf>;
 export type DocumentoCeaf = z.infer<typeof DocumentoCeaf>;
 export type GrupoAnexos = z.infer<typeof GrupoAnexos>;

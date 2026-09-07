@@ -45,6 +45,29 @@ jobs:
             exit 1
           fi
 
+      # A rede credenciada do Farmácia Popular não sai por requisição: o painel
+      # do Ministério é um Qlik e a borda dele recusa WebSocket que não venha
+      # de uma página carregada. Por isso o extrator usa um navegador de
+      # verdade. Ver data/fontes/FONTES.md.
+      - name: Instala o navegador do extrator
+        run: npx playwright install --with-deps chromium
+
+      # Falha alto de propósito, como as outras fontes: painel fora do ar
+      # precisa acordar alguém, não passar batido.
+      - name: Atualiza as farmácias credenciadas do PFPB
+        run: node scripts/extrai-farmacias-pfpb.mjs
+
+      # O painel dá razão social e nome da rua. O endereço que serve para
+      # alguém chegar à porta — nome da placa, número e CEP — vem do cadastro
+      # de CNPJ. Só consulta o que entrou novo desde a semana passada.
+      - name: Completa as farmácias novas pelo CNPJ
+        run: node scripts/completa-cnpj-farmacias.mjs
+
+      # Põe no mapa quem casar endereço com o cadastro do IBGE. Só roda sobre
+      # quem ainda não tem ponto; o arquivo do CNEFE está no repositório.
+      - name: Casa os endereços novos com o cadastro do IBGE
+        run: node scripts/geocodifica-farmacias.mjs
+
       - name: Valida o dado antes de propor qualquer coisa
         run: npm run valida-dados
 

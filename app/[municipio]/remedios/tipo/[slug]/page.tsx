@@ -1,5 +1,7 @@
 import { notFound } from "next/navigation";
 import NotaFonte from "@/components/NotaFonte";
+import Cartao from "@/components/Cartao";
+import Migalha from "@/components/Migalha";
 import Pagina from "@/components/Pagina";
 import { buscaClasse, listaClasses } from "@/lib/classes";
 import { carregaMunicipio, listaMunicipios } from "@/lib/dados";
@@ -44,12 +46,14 @@ export default async function PaginaClasse({
 
   return (
     <Pagina municipioId={id} atual="classes">
-      <p className="text-texto-suave">
-        <a className="underline" href={`/${id}/remedios/tipos`}>
-          Medicamentos por tipo
-        </a>
-      </p>
-      <h1 className="mt-1 text-[30px] font-bold leading-tight md:text-[38px]">
+      <Migalha
+        itens={[
+          { texto: "Início", href: "/" },
+          { texto: "Por tipo", href: `/${id}/remedios/tipos` },
+          { texto: classe.nome },
+        ]}
+      />
+      <h1 className="text-[30px] font-bold tracking-tight text-marca md:text-[34px]">
         {classe.nome}
       </h1>
       <p className="mt-4 max-w-[65ch]">
@@ -64,9 +68,10 @@ export default async function PaginaClasse({
         Quem decide qual serve para você é o seu médico.
       </p>
 
-      <ul className="mt-8">
+      <Cartao className="mt-6 px-6 py-2">
+        <ul>
         {classe.remedios.map((r) => (
-          <li key={r.slug} className="border-b border-linha">
+          <li key={r.slug} className="border-b border-divisoria last:border-b-0">
             <a
               href={`/${id}/remedio/${r.slug}`}
               className="block min-h-[48px] py-3 no-underline"
@@ -80,7 +85,8 @@ export default async function PaginaClasse({
             </a>
           </li>
         ))}
-      </ul>
+        </ul>
+      </Cartao>
 
       <NotaFonte
         proveniencia={fontes}

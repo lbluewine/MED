@@ -1,0 +1,443 @@
+{
+  "fonte_atualizada_em": "2026-08-31",
+  "como_retirar": {
+    "gratuito": true,
+    "documentos": [
+      "Documento oficial com foto e número do CPF, ou documento de identidade em que conste o CPF",
+      "Receita médica dentro do prazo de validade, do SUS ou de serviço particular"
+    ],
+    "onde": "Farmácias e drogarias da rede privada credenciadas, identificadas com o selo “Aqui Tem Farmácia Popular”.",
+    "proveniencia": [
+      {
+        "fonte_nome": "Programa Farmácia Popular — Ministério da Saúde",
+        "fonte_url": "https://www.gov.br/saude/pt-br/composicao/sectics/farmacia-popular",
+        "fonte_arquivo": null,
+        "fonte_data": "2026-09-06",
+        "extraido_em": "2026-09-06",
+        "verificado_em": "2026-09-06",
+        "metodo": "manual"
+      }
+    ]
+  },
+  "busca_enderecos": {
+    "url": "https://infoms.saude.gov.br/extensions/SEIDIGI_DEMAS_PFPB_ENDERECOS/index.html",
+    "nome": "Consulta de endereços das farmácias do PFPB — Ministério da Saúde"
+  },
+  "grupos": [
+    {
+      "indicacao": "ASMA",
+      "slug": "asma",
+      "itens": [
+        {
+          "texto": "brometo de ipratrópio 0,02mg",
+          "principios_ativos": [
+            "brometo de ipratrópio"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "brometo de ipratrópio 0,25mg",
+          "principios_ativos": [
+            "brometo de ipratrópio"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "dipropionato de beclometasona 200mcg",
+          "principios_ativos": [
+            "dipropionato de beclometasona"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "dipropionato de beclometasona 250mcg",
+          "principios_ativos": [
+            "dipropionato de beclometasona"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "dipropionato de beclometasona 50mcg",
+          "principios_ativos": [
+            "dipropionato de beclometasona"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "sulfato de salbutamol 100mcg",
+          "principios_ativos": [
+            "sulfato de salbutamol"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "sulfato de salbutamol 5mg",
+          "principios_ativos": [
+            "sulfato de salbutamol"
+          ],
+          "observacao": null,
+          "insumo": false
+        }
+      ]
+    },
+    {
+      "indicacao": "DIABETES",
+      "slug": "diabetes",
+      "itens": [
+        {
+          "texto": "cloridrato de metformina 500mg",
+          "principios_ativos": [
+            "cloridrato de metformina"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "cloridrato de metformina 500mg - ação prolongada",
+          "principios_ativos": [
+            "cloridrato de metformina"
+          ],
+          "observacao": "ação prolongada",
+          "insumo": false
+        },
+        {
+          "texto": "cloridrato de metformina 850mg",
+          "principios_ativos": [
+            "cloridrato de metformina"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "glibenclamida 5mg",
+          "principios_ativos": [
+            "glibenclamida"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "insulina humana regular 100ui/ml",
+          "principios_ativos": [
+            "insulina humana regular"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "insulina humana 100ui/ml",
+          "principios_ativos": [
+            "insulina humana"
+          ],
+          "observacao": null,
+          "insumo": false
+        }
+      ]
+    },
+    {
+      "indicacao": "HIPERTENSÃO",
+      "slug": "hipertensao",
+      "itens": [
+        {
+          "texto": "atenolol 25mg",
+          "principios_ativos": [
+            "atenolol"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "besilato de anlodipino 5 mg",
+          "principios_ativos": [
+            "besilato de anlodipino"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "captopril 25mg",
+          "principios_ativos": [
+            "captopril"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "cloridrato de propranolol 40mg",
+          "principios_ativos": [
+            "cloridrato de propranolol"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "hidroclorotiazida 25mg",
+          "principios_ativos": [
+            "hidroclorotiazida"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "losartana potássica 50mg",
+          "principios_ativos": [
+            "losartana potássica"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "maleato de enalapril 10mg",
+          "principios_ativos": [
+            "maleato de enalapril"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "espironolactona 25 mg",
+          "principios_ativos": [
+            "espironolactona"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "furosemida 40 mg",
+          "principios_ativos": [
+            "furosemida"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "succinato de metoprolol 25 mg",
+          "principios_ativos": [
+            "succinato de metoprolol"
+          ],
+          "observacao": null,
+          "insumo": false
+        }
+      ]
+    },
+    {
+      "indicacao": "ANTICONCEPÇÃO",
+      "slug": "anticoncepcao",
+      "itens": [
+        {
+          "texto": "acetato de medroxiprogesterona 150mg",
+          "principios_ativos": [
+            "acetato de medroxiprogesterona"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "etinilestradiol 0,03mg + levonorgestrel 0,15mg",
+          "principios_ativos": [
+            "etinilestradiol",
+            "levonorgestrel"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "noretisterona 0,35mg",
+          "principios_ativos": [
+            "noretisterona"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "valerato de estradiol 5mg + enantato de noretisterona 50mg",
+          "principios_ativos": [
+            "valerato de estradiol",
+            "enantato de noretisterona"
+          ],
+          "observacao": null,
+          "insumo": false
+        }
+      ]
+    },
+    {
+      "indicacao": "OSTEOPOROSE",
+      "slug": "osteoporose",
+      "itens": [
+        {
+          "texto": "alendronato de sódio 70mg",
+          "principios_ativos": [
+            "alendronato de sódio"
+          ],
+          "observacao": null,
+          "insumo": false
+        }
+      ]
+    },
+    {
+      "indicacao": "DISLIPIDEMIA",
+      "slug": "dislipidemia",
+      "itens": [
+        {
+          "texto": "sinvastatina 10mg",
+          "principios_ativos": [
+            "sinvastatina"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "sinvastatina 20mg",
+          "principios_ativos": [
+            "sinvastatina"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "sinvastatina 40mg",
+          "principios_ativos": [
+            "sinvastatina"
+          ],
+          "observacao": null,
+          "insumo": false
+        }
+      ]
+    },
+    {
+      "indicacao": "DOENÇA DE PARKINSON",
+      "slug": "doenca-de-parkinson",
+      "itens": [
+        {
+          "texto": "carbidopa 25mg + levodopa 250mg",
+          "principios_ativos": [
+            "carbidopa",
+            "levodopa"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "cloridrato de benserazida 25mg + levodopa 100mg",
+          "principios_ativos": [
+            "cloridrato de benserazida",
+            "levodopa"
+          ],
+          "observacao": null,
+          "insumo": false
+        }
+      ]
+    },
+    {
+      "indicacao": "GLAUCOMA",
+      "slug": "glaucoma",
+      "itens": [
+        {
+          "texto": "maleato de timolol 2,5mg",
+          "principios_ativos": [
+            "maleato de timolol"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "maleato de timolol 5mg",
+          "principios_ativos": [
+            "maleato de timolol"
+          ],
+          "observacao": null,
+          "insumo": false
+        }
+      ]
+    },
+    {
+      "indicacao": "RINITE",
+      "slug": "rinite",
+      "itens": [
+        {
+          "texto": "budesonida 32mcg",
+          "principios_ativos": [
+            "budesonida"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "budesonida 50mcg",
+          "principios_ativos": [
+            "budesonida"
+          ],
+          "observacao": null,
+          "insumo": false
+        },
+        {
+          "texto": "dipropionato de beclometasona 50mcg/dose",
+          "principios_ativos": [
+            "dipropionato de beclometasona"
+          ],
+          "observacao": null,
+          "insumo": false
+        }
+      ]
+    },
+    {
+      "indicacao": "DIABETES MELLITUS + DOENÇA CARDIOVASCULAR",
+      "slug": "diabetes-mellitus-doenca-cardiovascular",
+      "itens": [
+        {
+          "texto": "dapagliflozina 10 mg",
+          "principios_ativos": [
+            "dapagliflozina"
+          ],
+          "observacao": null,
+          "insumo": false
+        }
+      ]
+    },
+    {
+      "indicacao": "DIGNIDADE MENSTRUAL",
+      "slug": "dignidade-menstrual",
+      "itens": [
+        {
+          "texto": "absorvente higiênico",
+          "principios_ativos": [
+            "absorvente higiênico"
+          ],
+          "observacao": null,
+          "insumo": true
+        }
+      ]
+    },
+    {
+      "indicacao": "INCONTINÊNCIA URINÁRIA",
+      "slug": "incontinencia-urinaria",
+      "itens": [
+        {
+          "texto": "fralda geriátrica",
+          "principios_ativos": [
+            "fralda geriátrica"
+          ],
+          "observacao": null,
+          "insumo": true
+        }
+      ]
+    }
+  ],
+  "proveniencia": [
+    {
+      "fonte_nome": "Elenco de Medicamentos e Insumos do Programa Farmácia Popular do Brasil",
+      "fonte_url": "https://www.gov.br/saude/pt-br/composicao/sectics/farmacia-popular/arquivos/elenco-de-medicamentos-e-insumos-pfpb.pdf",
+      "fonte_arquivo": "fontes/nacional/pfpb-elenco-2026-08-31.pdf",
+      "fonte_data": "2026-08-31",
+      "extraido_em": "2026-09-06",
+      "verificado_em": "2026-09-06",
+      "metodo": "ia-assistida"
+    }
+  ]
+}

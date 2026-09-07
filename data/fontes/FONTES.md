@@ -34,6 +34,180 @@ Substituir por extração da Anvisa quando a base estiver acessível: as tentati
 por `dados.anvisa.gov.br` e pela API de `consultas.anvisa.gov.br` foram
 bloqueadas (DNS e HTTP 403) em 04/09/2026.
 
+## Programa Farmácia Popular
+
+Duas fontes, com destinos diferentes.
+
+**O elenco** (`nacional/pfpb-elenco-2026-08-31.pdf`) é um PDF de uma página,
+com a tabela de indicações e princípios ativos. Entra no `fontes.json` como
+arquivo: o job semanal compara o SHA-256 e abre PR quando muda.
+
+A tabela tem duas colunas, e o rótulo da indicação vem **centralizado** na
+altura do grupo dele. O texto corrido perde essa ligação, então
+`scripts/extrai_farmacia_popular.py` lê as coordenadas de cada linha e resolve
+o agrupamento por programação dinâmica, minimizando a distância entre o centro
+de cada bloco e o rótulo. O script imprime o agrupamento inteiro ao rodar —
+é isso que precisa de olho humano antes do merge, porque é o que a máquina
+pode errar sem avisar.
+
+**Os endereços das farmácias credenciadas** saem do painel oficial, por
+`scripts/extrai-farmacias-pfpb.mjs`, e viram
+`data/municipios/<id>/farmacias-populares.json`.
+
+O painel é um Qlik Sense: o dado só sai pela Engine API, por WebSocket. Três
+caminhos foram testados em 06/09/2026:
+
+| Caminho | Resultado |
+|---|---|
+| WebSocket direto no `infoms.saude.gov.br` | **403** em todos os caminhos de proxy (`/app`, `/anon/app`, `/sense/app`), com e sem cookie de sessão, por curl e por Node |
+| Planilha `farmacias_credenciadas_pfpb_atualizada.xlsx` no gov.br | **"Conteúdo Restrito"**. Não é WAF: o mesmo `curl` simples baixa o PDF do elenco do mesmo host. O Ministério despublicou o arquivo, e a pasta `/publicacoes` inteira está restrita. O Internet Archive só guardou as páginas HTML, nunca o binário |
+| API do `dados.gov.br` | **401**: exige chave pessoal |
+
+O que funciona é carregar o painel num Chromium e falar com o Qlik de dentro
+da própria página, onde a sessão é válida. É o mesmo caminho de quem abre o
+painel e clica em baixar, feito sem a pessoa. O `playwright` está como
+`devDependency`: não vai para o navegador de quem usa o site.
+
+```bash
+node scripts/extrai-farmacias-pfpb.mjs --campos            # confere os nomes dos campos
+node scripts/extrai-farmacias-pfpb.mjs --municipio sc-criciuma
+```
+
+O job semanal roda isso sozinho. Quando nenhuma farmácia entra nem sai, só
+`verificado_em` avança e o commit vai direto para o `main`; quando a lista
+muda, abre pull request com quem entrou e quem saiu.
+
+### O que o painel não dá, e como o CNPJ resolve
+
+O objeto do painel — "Farmácias Ativas" — tem quatro colunas, e só:
+**CNPJ, Farmácia, Endereço, Bairro**. Sem número na rua, sem CEP, sem
+coordenada, e "Farmácia" é a razão social, não o nome da placa.
+
+Razão social e nome de rua não levam ninguém à porta. O CNPJ resolve os dois,
+e é o que faz `scripts/completa-cnpj-farmacias.mjs`, consultando o cadastro
+público da Receita Federal pela BrasilAPI:
+
+```bash
+node scripts/completa-cnpj-farmacias.mjs             # só o que entrou novo
+node scripts/completa-cnpj-farmacias.mjs --refazer   # tudo de novo
+```
+
+De lá vêm nome de fachada, tipo do logradouro, número, complemento e CEP. Em
+Criciúma, 34 de 34 resolveram, todos com número; 30 têm nome de fachada, e as
+4 sem nome declarado aparecem na tela pela razão social.
+
+Duas travas, porque endereço errado manda gente ao lugar errado:
+
+1. O cadastro tem de ser do mesmo município e estar **ATIVO**.
+2. A rua da Receita precisa ter **alguma palavra significativa em comum** com a
+   do painel. Títulos e tipos de logradouro não contam ("doutor", "general",
+   "rua"), senão "PRACA DR. NEREU RAMOS" e "DOUTOR NEREU RAMOS" pareceriam
+   ruas diferentes. Um CNPJ trocado cairia numa rua sem nenhuma palavra em
+   comum; aí o registro fica como está e o script avisa.
+
+Onde as fontes discordam só na escrita — "GAL." e "GENERAL", "NSA. SRA." e
+"NOSSA SENHORA" —, vale a Receita, que é o endereço de registro e combina com
+o CEP. Onde discordam de verdade, a diferença vira `divergencias` e aparece na
+tela. São 3 em Criciúma, todas de bairro.
+
+Por isso o bairro do painel fica guardado em `bairro_painel`, separado do que
+vai à tela: refazer o cruzamento precisa comparar com o dado do painel, não
+com o resultado da execução anterior — senão a divergência some na segunda
+passada. Esse erro aconteceu e foi corrigido em 06/09/2026.
+
+### A coordenada: CNEFE do IBGE
+
+Nem o painel nem a Receita dão coordenada por farmácia. Quem dá é o **CNEFE**,
+o Cadastro Nacional de Endereços do Censo 2022: uma linha por endereço da
+cidade, com CEP, logradouro, número e o ponto que o recenseador registrou na
+porta. Um arquivo por município, 2,2 MB para Criciúma, guardado em
+`data/fontes/nacional/cnefe-4204608-criciuma.zip`.
+
+```bash
+node scripts/geocodifica-farmacias.mjs
+```
+
+Duas qualidades de resultado, e a tela distingue as duas:
+
+- **`numero`** — o cadastro tem aquele número naquela rua. É a porta. São 22.
+- **`aproximada`** — o cadastro não tem aquele número, e o ponto sai
+  interpolado entre os dois vizinhos que ele tem. A farmácia está naquele
+  trecho da rua. São 11, com pino vazado no mapa e aviso na lista.
+
+Interpolar é bem melhor que pegar o vizinho mais próximo: na Avenida
+Universitária, o vizinho mais perto do 2210 é o 1711 — meio quilômetro antes.
+Entre 1711 e 2380, o ponto cai quase no lugar.
+
+Sobra **1 sem ponto**: o cadastro não conhece a Praça Dr. Nereu Ramos.
+
+### Como o casamento de rua evita o vizinho errado
+
+O CNEFE escreve o logradouro à sua maneira, então a comparação é por palavras,
+ignorando tipo e título ("rua", "avenida", "doutor", "general"). Mas **uma
+palavra em comum não basta**, e este erro aconteceu aqui: "Praça Dr. Nereu
+Ramos" casou com "Rua Nereu Alfredo Villain", noutro bairro, a dois
+quilômetros. Daí as duas portas de entrada:
+
+- **Mesmo CEP**: o CEP já prova que é a rua certa, então uma palavra em comum
+  resolve diferença de grafia ("VALENTIM" e "VALENTIN", "OSVALDO" e "OSWALDO").
+- **CEP que o cadastro não conhece**: só entra quem tem **todas** as palavras
+  do endereço procurado. É o que separa "Nereu Ramos" de "Nereu Alfredo
+  Villain".
+
+Rodar com `--refazer` limpa o ponto antigo antes de recalcular — senão um
+casamento que hoje é recusado continuaria no arquivo por ter passado ontem.
+
+Esta coordenada mora em `GeoDoCadastro`, um tipo **separado** do `Geo` das
+unidades do SUS. Aquele é pino que uma pessoa abriu no mapa e confirmou; este
+ninguém abriu. A diferença entre "conferimos" e "casamos o endereço" não se
+apaga.
+
+### O que não funcionou, para ninguém repetir
+
+Antes do CNEFE, geocodificar por serviço de endereço deu **1 acerto em 34**:
+
+| Tentativa | Por que falhou |
+|---|---|
+| Nominatim / OpenStreetMap | O OSM **não tem numeração de casas** em Criciúma. Ele devolve um trecho da rua, e o trecho que escolhe não é o do número procurado |
+| Coordenada de CEP da BrasilAPI | Cai no **centro do município** em metade dos casos: Rua São Francisco do Sul e Avenida Centenário devolvem o mesmo ponto |
+| Cruzar as duas, aceitando só onde concordam | 1 em 34. Pior: onde concordavam ao metro, era porque uma copia da outra — concordância exata entre serviços "independentes" é cópia, não confirmação |
+
+O `boundingbox` do Nominatim também não serve de margem de erro: ele é de um
+trecho da rua, não da rua toda.
+
+### Se um dos extratores quebrar
+
+O painel pode mudar os nomes dos campos: `--campos` lista os que o app declara,
+e basta corrigir a constante `CAMPOS` no script. Se o painel mudar de
+tecnologia, a saída manual continua sendo filtrar UF e município, aba
+"Informações", botão de download da tabela.
+
+Sem o arquivo a página do programa não fica quebrada: mostra o link do painel,
+e o `npm run valida-dados` avisa que a lista não existe.
+
+### Como tirar a chave do dados.gov.br
+
+A própria especificação da API (`https://dados.gov.br/v3/api-docs`) descreve o
+esquema de autenticação:
+
+- É uma chave de API em **cabeçalho HTTP**, de nome `chave-api-dados-abertos`.
+- **Perfil Consumidor** (o nosso caso): entrar no `dados.gov.br` com a conta
+  gov.br e abrir **"Minha Conta"** — a chave fica na área do lado direito da
+  página. Não precisa de organização nem de aprovação.
+- O perfil **Administrador da Organização** tira a chave em "Tokens de
+  organização", na dashboard. Esse caminho é para quem *publica* dado, não
+  para quem consome; não é o que precisamos.
+
+Com a chave, o conjunto dos estabelecimentos credenciados fica em:
+
+```bash
+curl -H "chave-api-dados-abertos: $CHAVE" \
+  "https://dados.gov.br/dados/api/publico/conjuntos-dados/farmacia_popular_estabelecimento"
+```
+
+A chave é pessoal: ela identifica quem consulta. Se um dia entrar no projeto,
+vai como secret do GitHub Actions, nunca no repositório.
+
 ## Conferir se as fontes mudaram
 
 `fontes.json` declara o que é conferido e como. Para rodar à mão:

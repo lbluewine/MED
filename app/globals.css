@@ -1,26 +1,39 @@
 @import "tailwindcss";
 
 /*
- * Atkinson Hyperlegible, do Braille Institute. Desenhada para baixa visão:
- * as letras não se confundem entre si. A escolha existe por causa do público.
+ * Public Sans, a fonte do design system do governo federal, escolhida em
+ * 05/09/2026 para o site acompanhar o mockup novo.
+ *
+ * Substituiu a Atkinson Hyperlegible, que era do Braille Institute e foi
+ * desenhada para baixa visão. A troca é uma decisão de identidade, não de
+ * legibilidade: os arquivos da Atkinson continuam em public/fontes/ e a volta
+ * é trocar estes três @font-face. Ver docs/STACK.md.
  *
  * Servida junto com o site, nunca por CDN. Fonte de terceiro vaza o IP de
- * quem lê, e aqui isso seria dado de saúde. Ver docs/STACK.md.
+ * quem lê, e aqui isso seria dado de saúde.
  */
 @font-face {
-  font-family: "Atkinson Hyperlegible";
+  font-family: "Public Sans";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/fontes/AtkinsonHyperlegible-Regular.woff2") format("woff2");
+  src: url("/fontes/PublicSans-Regular.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: "Atkinson Hyperlegible";
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fontes/PublicSans-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Public Sans";
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("/fontes/AtkinsonHyperlegible-Bold.woff2") format("woff2");
+  src: url("/fontes/PublicSans-Bold.woff2") format("woff2");
 }
 
 /*
@@ -29,50 +42,62 @@
  */
 @theme {
   --color-fundo: #ffffff;
-  --color-texto: #1a1a1a;
-  --color-texto-suave: #4a4a4a;
-  --color-linha: #d9d9d9;
+  --color-texto: #132b48;
+  --color-texto-suave: #4a6382;
+  --color-linha: #dde6f2;
+
+  /* Os três que querem dizer alguma coisa. Nunca usados como enfeite. */
   --color-tem: #0b6e4f;
   --color-nao-tem: #a4231e;
   --color-processo: #b45309;
 
   /*
-   * Superfícies. O fundo da página continua branco puro, para contraste
-   * máximo no sol. Estes cinzas são só para separar bloco de bloco — o texto
-   * em cima deles segue #1A1A1A, que dá 16:1 mesmo no mais escuro.
-   */
-  /*
-   * Azul de marca. Existe porque verde, vermelho e âmbar já querem dizer
-   * alguma coisa aqui, e uma cor de identidade não pode competir com eles:
-   * se o verde virar enfeite, ele para de significar "o SUS entrega". O azul
-   * fica longe dos três no círculo cromático, então nunca se confunde.
+   * Azul de identidade, na paleta do padrão gov.br, adotada em 05/09/2026
+   * junto com o mockup novo.
    *
-   * Contrastes conferidos: branco sobre --marca 10,4:1; --marca-link sobre
-   * branco 8,7:1; texto sobre --marca-fundo 15,8:1. AA pede 4,5:1.
+   * A cor de enfeite é sempre esta, nunca o verde, o vermelho ou o âmbar: se
+   * o verde virar enfeite, ele para de significar "o SUS entrega", que é a
+   * informação mais importante do site.
+   *
+   * Contrastes conferidos: branco sobre --marca 12,3:1; --marca-link sobre
+   * branco 7,3:1; texto sobre --marca-fundo 12,9:1. AA pede 4,5:1.
    */
-  --color-marca: #1e3a8a;
-  --color-marca-link: #1e40af;
-  --color-marca-fundo: #eff4ff;
-  --color-marca-linha: #c7d7fe;
+  --color-marca: #0c326f;
+  --color-marca-link: #1351b4;
+  --color-marca-fundo: #eef4fc;
+  --color-marca-linha: #dde6f2;
+  /* Fundo de página do mockup: um azul quase branco, não o branco puro. */
+  --color-marca-veu: #f4f8fd;
+  /* Tons do mockup: fundo de página, borda de cartão, divisória interna. */
+  --color-veu-topo: #eef4fc;
+  --color-veu-base: #f7fafe;
+  --color-borda-cartao: #e2eaf5;
+  --color-divisoria: #eef3fa;
+  --color-marca-suave: #e7f0fd;
+  --color-marca-fraca: #3f6bb5;
+  --color-seta: #8aa2bd;
+  --color-letra-fantasma: #c3d5ec;
+
+  /* Números e códigos, no mono do sistema — sem baixar mais uma fonte. */
+  --font-mono: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace;
 
   /*
-   * Aviso em fundo claro. O âmbar cheio (#B45309) com texto branco pesava
-   * demais num cartão pequeno. Aqui o fundo é quase creme e o texto continua
-   * #1A1A1A, o que dá 15:1 — bem acima do mínimo AA.
+   * Aviso em fundo claro. O âmbar cheio com texto branco pesava demais num
+   * cartão pequeno; aqui o texto fica escuro e o contraste sobe para 15:1.
    */
   --color-aviso: #fdf0dc;
   --color-aviso-linha: #e9a23b;
 
-  --color-superficie: #f7f7f7;
-  --color-superficie-forte: #ededed;
+  /* Superfícies: só separam bloco de bloco. O texto em cima segue --texto. */
+  --color-superficie: #f4f8fd;
+  --color-superficie-forte: #e2eaf5;
   --color-linha-suave: #e6e6e6;
 
-  /* Canto de cartão e de botão. Suave o bastante para não parecer caixa de
-     diálogo de sistema, reto o bastante para não virar bolha. */
-  --radius-cartao: 10px;
-  --radius-botao: 6px;
+  /* Canto de cartão e de botão. */
+  --radius-cartao: 14px;
+  --radius-botao: 10px;
 
-  --font-sans: "Atkinson Hyperlegible", system-ui, sans-serif;
+  --font-sans: "Public Sans", system-ui, sans-serif;
 
   /* Corpo 18px. Nada abaixo de 16px em lugar nenhum. */
   --text-base: 1.125rem;
@@ -80,6 +105,7 @@
   --text-sm: 1rem;
   --text-sm--line-height: 1.6;
 }
+
 
 html {
   color-scheme: light;
@@ -94,7 +120,9 @@ a {
 }
 
 body {
-  background: var(--color-fundo);
+  /* Fundo do mockup: azul quase branco no topo, clareando até 420px. */
+  background: linear-gradient(var(--color-veu-topo), var(--color-veu-base) 420px);
+  background-attachment: fixed;
   color: var(--color-texto);
   font-size: var(--text-base);
   line-height: 1.6;
@@ -106,6 +134,16 @@ body {
   outline-offset: 2px;
 }
 
+/*
+  Os campos de busca já mostram o foco com um anel arredondado no contêiner
+  (acompanha a borda da caixa). O contorno quadrado padrão, por cima disso,
+  cortava a caixa arredondada — por isso ele é desligado aqui, com uma classe
+  específica para vencer a regra acima na cascata.
+*/
+.campo-busca-entrada:focus-visible {
+  outline: none;
+}
+
 /* Movimento só como resposta a uma ação, e nem isso para quem pediu menos. */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -113,6 +151,50 @@ body {
   *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/*
+ * A arte do banner da home. Duas versões pelo peso: o público tem internet
+ * ruim, e não faz sentido baixar a imagem grande num celular.
+ */
+.banner-sus {
+  background-image: url("/imagens/banner-sus-mobile.webp");
+}
+
+@media (min-width: 768px) {
+  .banner-sus {
+    background-image: url("/imagens/banner-sus.webp");
+  }
+}
+
+/*
+ * Véu sobre a arte, para o texto ser legível por cima dela.
+ *
+ * No celular a arte chega perto das letras, então o véu é quase cheio. Da
+ * largura em que sobra espaço, ele encurta e libera a faixa entre 45% e 70%,
+ * que é onde a arte traz "Saúde é um direito de todos" — medido na imagem, não
+ * chutado. A logomarca fica de 77% em diante e nunca é coberta.
+ */
+.banner-veu {
+  background-image: linear-gradient(
+    100deg,
+    #eaf4fe 0%,
+    #eaf4fe 62%,
+    rgba(234, 244, 254, 0.9) 78%,
+    rgba(234, 244, 254, 0.55) 100%
+  );
+}
+
+@media (min-width: 1024px) {
+  .banner-veu {
+    background-image: linear-gradient(
+      100deg,
+      #eaf4fe 0%,
+      #eaf4fe 24%,
+      rgba(234, 244, 254, 0.8) 34%,
+      rgba(234, 244, 254, 0) 45%
+    );
   }
 }
 

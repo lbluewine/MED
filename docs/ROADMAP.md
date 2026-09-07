@@ -48,19 +48,38 @@ fechado — por mais que a lista acima esteja quase toda marcada.
 - [ ] Fluxo de revisão farmacêutica: autorização por escrito, bloco de revisão
       por página, aviso de revisão vencida aos 18 meses
 - [ ] Preço máximo CMED com atualização mensal automatizada (PR, não merge)
-- [ ] Marcação de quais itens estão na Farmácia Popular
+- [x] Marcação de quais itens estão na Farmácia Popular — construído em
+      06/09/2026 por decisão do mantenedor, antes de o v0 fechar. Elenco
+      federal completo, cruzamento com a lista municipal e página própria; a
+      rede de farmácias credenciadas continua sendo consulta ao painel oficial
 - [ ] "Minha lista": montar a lista de medicamentos e gerar PDF para levar ao
       farmacêutico da UBS
 - [ ] Link para a bula do paciente na Anvisa em cada ficha
 
 ## v2 — mais municípios
 
-- [ ] Seletor de município e rotas por município já funcionando de ponta a ponta
+- [x] Seletor de cidade e rotas por município funcionando de ponta a ponta,
+      para qualquer um dos 5.570 municípios do Brasil — construído em
+      07/09/2026 por decisão do mantenedor, antes de o v0 fechar. Cidade sem
+      REMUME própria cai no piso nacional da RENAME
+      (`data/nacional/rename.json`), nunca em endereço ou unidade inventados.
+      Ver `docs/DADOS.md`. **Falta o dado da RENAME em si**: a extração
+      (`scripts/extrai_rename.py`, a fazer) está bloqueada porque o PDF
+      oficial (`bvsms.saude.gov.br`) e `gov.br/saude` devolvem 403/conexão
+      fechada nesta rede — sem o arquivo, `carregaRename()` retorna `null` e
+      toda cidade sem REMUME mostra "ainda não publicamos esta parte", nunca
+      uma resposta inventada.
 - [ ] Guia de contribuição explicando como adicionar uma cidade
-- [ ] Segundo município como prova real do modelo (Içara ou Forquilhinha)
+- [ ] Segundo município com REMUME própria como prova real do modelo (Içara
+      ou Forquilhinha)
 - [ ] Aviso claro de residência: cada município atende os próprios moradores.
       Nunca mandar alguém para outra cidade sem esse aviso
 - [ ] "O que a lista daqui tem para essa condição" — sem linguagem de indicação
+- [ ] Sugestão de cidade por geolocalização de IP — depende de serviço de
+      terceiro, precisa de autorização explícita antes de começar (ver
+      `CLAUDE.md`, seção 6). Se algum dia entrar, é sugestão com confirmação
+      explícita ("é essa sua cidade?"), nunca pré-seleção silenciosa: IP erra
+      cidade com frequência, principalmente em rede móvel.
 
 ## v3 — chat
 

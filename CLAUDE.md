@@ -51,6 +51,7 @@ perguntando "isso ajuda essa pessoa?".
 | `docs/CONTEUDO.md` | Ao escrever ou alterar qualquer texto que o usuário lê |
 | `docs/DADOS.md` | Ao mexer em arquivos de dados, schema ou pipeline de atualização |
 | `docs/STACK.md` | Ao escrever código, componentes ou estilos |
+| `docs/LAYOUT.md` | Ao mexer em qualquer tela: esqueleto, menu, cartão, o que cada página faz |
 | `docs/ROADMAP.md` | Para saber o que é v0 e o que não deve ser construído ainda |
 | `docs/FUNCIONALIDADES.md` | Para saber o que o site já faz, antes de propor algo que já existe |
 

@@ -24,9 +24,12 @@ export function dadoDesatualizado(data: string, telefone: string | null): string
   );
 }
 
-export const SEM_RESULTADO =
-  "Não encontramos esse medicamento na lista de Criciúma. Isso pode significar " +
-  "duas coisas: ele não é entregue aqui, ou está cadastrado com outro nome.";
+export function semResultado(municipioNome: string): string {
+  return (
+    `Não encontramos esse medicamento na lista de ${municipioNome}. Isso pode ` +
+    "significar duas coisas: ele não é entregue aqui, ou está cadastrado com outro nome."
+  );
+}
 
 export const SEM_DADO_AINDA =
   "Ainda não publicamos a lista de nenhuma cidade. Quando publicarmos, cada " +

@@ -1,8 +1,11 @@
-import Botao from "@/components/Botao";
-import CampoBusca from "@/components/CampoBusca";
+import InicioMunicipio from "@/components/InicioMunicipio";
 import Pagina from "@/components/Pagina";
-import { carregaMunicipio, listaMunicipios } from "@/lib/dados";
-import { indiceSerializado } from "@/lib/indice";
+import SeletorDeCidade from "@/components/SeletorDeCidade";
+import {
+  carregaCadastroMunicipiosIbge,
+  carregaMunicipio,
+  listaMunicipios,
+} from "@/lib/dados";
 import { SEM_DADO_AINDA } from "@/lib/textos";
 
 export default function Home() {
@@ -24,12 +27,14 @@ export default function Home() {
   // Enquanto houver uma cidade só, a home já é a busca dela. Com mais de uma,
   // a pessoa escolhe primeiro.
   if (municipios.length > 1) {
+    const cadastro = carregaCadastroMunicipiosIbge();
     return (
       <Pagina atual="inicio">
         <h1 className="text-[30px] font-bold leading-tight md:text-[38px]">
           Tem no SUS?
         </h1>
         <p className="mt-4 max-w-[65ch]">Escolha a sua cidade.</p>
+
         <ul className="mt-6">
           {municipios.map((id) => {
             const m = carregaMunicipio(id);
@@ -45,43 +50,23 @@ export default function Home() {
             );
           })}
         </ul>
+
+        {cadastro && (
+          <div className="mt-8 max-w-[420px] border-t border-linha pt-6">
+            <p className="text-texto-suave">
+              Sua cidade não está na lista acima? Ainda assim o SUS garante um
+              piso de medicamentos em qualquer município do Brasil.
+            </p>
+            <div className="mt-3">
+              <SeletorDeCidade municipios={cadastro.municipios} />
+            </div>
+          </div>
+        )}
       </Pagina>
     );
   }
 
   const id = municipios[0]!;
   const municipio = carregaMunicipio(id);
-
-  return (
-    <Pagina municipioId={id} atual="inicio" largura="larga">
-      <div className="max-w-3xl">
-        <h1 className="text-[30px] font-bold leading-tight tracking-tight md:text-[38px]">
-          Qual medicamento você está procurando?
-        </h1>
-        <p className="mt-4 max-w-[36em] text-texto-suave">
-          Veja se o SUS de {municipio.nome} entrega esse medicamento de graça, onde
-          retirar e o que levar. Digite o nome que está na receita.
-        </p>
-
-        <div className="mt-8">
-          <CampoBusca municipioId={id} indice={indiceSerializado(id)} />
-        </div>
-
-        <div className="mt-10 grid gap-3 border-t border-linha pt-8 sm:grid-cols-2">
-          <Botao variante="secundario" href={`/${id}/onde-pegar`} className="w-full">
-            Ver onde pegar medicamento
-          </Botao>
-          <Botao variante="secundario" href="/alto-custo" className="w-full">
-            Medicamento de alto custo: como pedir
-          </Botao>
-          <Botao variante="secundario" href={`/${id}/remedios`} className="w-full">
-            Lista completa, de A a Z
-          </Botao>
-          <Botao variante="secundario" href={`/${id}/remedios/tipos`} className="w-full">
-            Ver por tipo de medicamento
-          </Botao>
-        </div>
-      </div>
-    </Pagina>
-  );
+  return <InicioMunicipio id={id} municipio={municipio} />;
 }

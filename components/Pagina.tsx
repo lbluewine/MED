@@ -1,48 +1,95 @@
 /**
- * Casca comum de toda página: faixa de identificação, navegação e conteúdo.
+ * Casca comum de toda página: cabeçalho, navegação e conteúdo.
  *
- * Duas navegações para o mesmo conjunto de links, cada uma no tamanho de tela
- * em que funciona. Até 1024px, os botões grandes do Cabecalho. Daí para cima,
- * a árvore da lateral, que fica fixa enquanto a página rola.
+ * Duas navegações para os mesmos caminhos, cada uma no tamanho de tela em que
+ * funciona. O cabeçalho do topo tem os caminhos principais em qualquer
+ * largura; a partir de 1024px entram também os cartões do MenuLateral, na
+ * coluna esquerda, com as contagens e os tipos de unidade.
  *
- * Nenhuma das duas depende de JavaScript.
+ * Nenhuma das duas depende de JavaScript. Ver docs/LAYOUT.md.
  */
 import Banner from "./Banner";
 import Cabecalho from "./Cabecalho";
 import MenuLateral, { type SecaoAtual } from "./MenuLateral";
-import { carregaMunicipio } from "@/lib/dados";
+import { resolveMunicipio } from "@/lib/dados";
 
 export default function Pagina({
   municipioId,
   atual,
-  /** "texto" para leitura corrida, "larga" para lista com mapa ou duas colunas. */
-  largura = "texto",
+  /** Sem menu lateral, para páginas que querem a largura toda. */
+  semMenu = false,
+  /**
+   * Bloco que ocupa a largura inteira, acima das colunas. É onde vai o banner
+   * da home: dividir o espaço com o menu deixaria a busca estreita demais.
+   */
+  topo,
   children,
 }: {
   municipioId?: string;
   atual: SecaoAtual;
-  largura?: "texto" | "larga";
+  semMenu?: boolean;
+  topo?: React.ReactNode;
   children: React.ReactNode;
 }) {
-  const municipio = municipioId ? carregaMunicipio(municipioId) : null;
+  /*
+    resolveMunicipio() nunca lê remume.json — cidade sem REMUME própria
+    (município genérico, só a RENAME) precisa continuar dando nome e UF pro
+    cabeçalho, sem quebrar por falta de arquivo. Ver docs/ROADMAP.md, v2.
+  */
+  const resolvido = municipioId ? resolveMunicipio(municipioId) : null;
+  const municipio = resolvido?.municipio ?? null;
+  const temRemume = resolvido?.temRemume ?? false;
 
   return (
     <div>
-      <Banner municipioNome={municipio?.nome} />
+      <Banner
+        municipioId={municipioId}
+        municipioNome={municipio?.nome}
+        municipioUf={municipio?.uf}
+        temRemume={temRemume}
+        atual={atual}
+      />
 
       <div className="nao-imprime lg:hidden">
-        <Cabecalho municipioId={municipioId} />
+        <Cabecalho municipioId={temRemume ? municipioId : undefined} />
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 md:px-8 lg:grid lg:grid-cols-[248px_1fr] lg:gap-10">
-        <div className="nao-imprime hidden border-r border-linha py-10 pr-6 lg:block">
-          <div className="sticky top-8">
-            <MenuLateral municipioId={municipioId} atual={atual} />
-          </div>
-        </div>
+      <div className="mx-auto max-w-[1180px] px-4 pb-16 pt-6 md:px-7">
+        {topo && <div className="mb-7">{topo}</div>}
 
-        <div className="py-10 md:py-14 lg:min-w-0 lg:pl-2">
-          <div className={largura === "texto" ? "max-w-2xl" : ""}>{children}</div>
+        <div
+          className={
+            semMenu ? "" : "lg:grid lg:grid-cols-[300px_minmax(0,1fr)] lg:gap-7"
+          }
+        >
+          {/*
+            O menu vem antes do conteúdo no HTML, e não só na tela: quem usa
+            leitor de tela ouve a navegação primeiro, e quem quer pular tem o
+            "Pular para o conteúdo" do layout.
+          */}
+          {!semMenu && (
+            <aside className="nao-imprime hidden lg:block">
+              {/*
+                O menu tem rolagem própria, limitada à altura da tela.
+
+                Sem isso ele fica preso no topo e o fim dele — a lista de tipos
+                de unidade — não se alcança em tela baixa: a roda do mouse em
+                cima do menu rolava o conteúdo do meio, e o menu ficava cortado.
+
+                A rolagem não é contida de propósito: quando o menu chega ao
+                fim, a página continua descendo normalmente. É o que se espera
+                de uma roda de mouse.
+              */}
+              <div className="sticky top-24 max-h-[calc(100vh-7rem)] overflow-y-auto">
+                <MenuLateral
+                  municipioId={temRemume ? municipioId : undefined}
+                  atual={atual}
+                />
+              </div>
+            </aside>
+          )}
+
+          <div className="min-w-0">{children}</div>
         </div>
       </div>
     </div>
