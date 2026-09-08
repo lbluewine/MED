@@ -1,0 +1,5222 @@
+{
+  "municipio_id": "sc-criciuma",
+  "unidades": [
+    {
+      "cnes": "2419726",
+      "nome": "BIOVITA LABORATORIO DE ANALISES CLINICAS",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOAO CECHINEL",
+        "numero": "31",
+        "bairro": "CENTRO",
+        "cep": "88801-305"
+      },
+      "telefones": [
+        "(48) 3433-5496"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.674398444606965,
+        "lng": -49.35884714126587,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "4917618",
+      "nome": "BIOVITA LABORATORIO DE ANALISES CLINICAS",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA LAURO MULLER",
+        "numero": "30",
+        "bairro": "CENTRO",
+        "cep": "88801-430"
+      },
+      "telefones": [
+        "(48) 3433-5496"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6766361,
+        "lng": -49.3713201,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "4921143",
+      "nome": "BIOVITA LABORATORIO DE ANALISES CLINICAS",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA BRAZ CARDOSO FERNANDES",
+        "numero": "290",
+        "bairro": "SANTA LUZIA",
+        "cep": "88807-270"
+      },
+      "telefones": [
+        "(48) 3433-5496"
+      ],
+      "turno": "ATENDIMENTO SOMENTE PELA MANHA",
+      "geo": {
+        "lat": -28.704779595631855,
+        "lng": -49.42666254724437,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "5122511",
+      "nome": "CLINIIMAGEM DIAGNOSTICO POR IMAGEM",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA MARIO ANDRADE",
+        "numero": "106",
+        "bairro": "CENTRO",
+        "cep": "88811-000"
+      },
+      "telefones": [
+        "(48) 3461-2000"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.676996416575722,
+        "lng": -49.370949268341064,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2909766",
+      "nome": "CLINIIMAGEM FILIAL 8",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ANTONIO DE LUCCA",
+        "numero": "50",
+        "bairro": "PIO CORREA",
+        "cep": "88811-503"
+      },
+      "telefones": [
+        "(48) 3461-2000"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.677278800950965,
+        "lng": -49.36526298522949,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "4076524",
+      "nome": "CONSULTORIO ODONTOLOGICO DR SANDRO",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA GETULIO VARGAS",
+        "numero": "97",
+        "bairro": "CENTRO",
+        "cep": "88801-500"
+      },
+      "telefones": [
+        "(48) 98467-8587"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6726893,
+        "lng": -49.3742099,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2542269",
+      "nome": "DR FLAVIO PAULO ALTHOFF DIAGNOSTICO POR IMAGEM LTDA",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ANTONIO DE LUCCA",
+        "numero": "148",
+        "bairro": "PIO CORREA",
+        "cep": "88811-503"
+      },
+      "telefones": [
+        "(48) 3433-6541"
+      ],
+      "turno": "ATENDIMENTO NOS TURNOS DA MANHA, TARDE E NOITE",
+      "geo": {
+        "lat": -28.6737960071223,
+        "lng": -49.36979055404663,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "9914471",
+      "nome": "EGLAER APARECIDA SANGALETTI CUNHA",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CORONEL PEDRO BENEDET",
+        "numero": "46",
+        "bairro": "CENTRO",
+        "cep": "88801-250"
+      },
+      "telefones": [
+        "(48) 3433-3122"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.676601077171494,
+        "lng": -49.36749458312988,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "5754240",
+      "nome": "LABORATORIO AURORA DIAGNOSTICOS",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA FREDERICO MAYER",
+        "numero": "65",
+        "bairro": "SANTA LUZIA",
+        "cep": "88807-210"
+      },
+      "telefones": [
+        "(48) 99680-6889"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.7020209,
+        "lng": -49.4269259,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-03-17",
+      "observacoes": null
+    },
+    {
+      "cnes": "4826086",
+      "nome": "LABORATORIO BENEDET PIO CORREA",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOAO CECHINEL",
+        "numero": "220",
+        "bairro": "PIO CORREA",
+        "cep": "88811-500"
+      },
+      "telefones": [
+        "(48) 3045-5265"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6760446,
+        "lng": -49.363143,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-09",
+      "observacoes": null
+    },
+    {
+      "cnes": "2594285",
+      "nome": "LABORATORIO BENEDET PROSPERA",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA GENERAL OSVALDO PINTO VEIGA",
+        "numero": "477",
+        "bairro": "PROSPERA",
+        "cep": "88813-000"
+      },
+      "telefones": [
+        "(48) 98874-3519"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.5255883,
+        "lng": -49.3261178,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-09",
+      "observacoes": null
+    },
+    {
+      "cnes": "4765818",
+      "nome": "LABORATORIO BENEDET SANTA LUZIA",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA FREDERICO MAYR",
+        "numero": "65",
+        "bairro": "SANTA LUZIA",
+        "cep": "88807-210"
+      },
+      "telefones": [
+        "(48) 99114-1300"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.673572,
+        "lng": -49.365939,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-09",
+      "observacoes": null
+    },
+    {
+      "cnes": "2647222",
+      "nome": "LABORATORIO BURIGO",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ESTEVES JUNIOR",
+        "numero": "90",
+        "bairro": "CRUZEIRO DO SUL",
+        "cep": "88811-135"
+      },
+      "telefones": [
+        "(48) 3437-3131"
+      ],
+      "turno": "ATENDIMENTO CONTINUO DE 24 HORAS/DIA (PLANTAO:INCLUI SABADOS, DOMINGOS E FERIADOS)",
+      "geo": {
+        "lat": -28.6684893,
+        "lng": -49.3627507,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "9679111",
+      "nome": "LABORATORIO BURIGO",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA VITAL BRASIL",
+        "numero": "200",
+        "bairro": "CRUZEIRO DO SUL",
+        "cep": "88811-042"
+      },
+      "telefones": [
+        "(48) 3737-3131"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.688178255991442,
+        "lng": -49.39453125,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "3534499",
+      "nome": "LABORATORIO COMIN",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CORONEL PEDRO BENEDET",
+        "numero": "350",
+        "bairro": "CENTRO",
+        "cep": "88801-250"
+      },
+      "telefones": [
+        "(48) 3433-7488"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6757436,
+        "lng": -49.3659849,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2647249",
+      "nome": "LABORATORIO DAL PONT",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA SANTO ANTONIO",
+        "numero": "29",
+        "bairro": "CENTRO",
+        "cep": "88801-440"
+      },
+      "telefones": [
+        "(48) 3437-5115"
+      ],
+      "turno": "ATENDIMENTO SOMENTE PELA MANHA",
+      "geo": {
+        "lat": -28.6959951,
+        "lng": -49.186984,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "4677250",
+      "nome": "LABORATORIO DAL PONT PROSPERA",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA GENERAL OSVALDO PINTO DA VEIGA",
+        "numero": "1323",
+        "bairro": "PROSPERA",
+        "cep": "88813-000"
+      },
+      "telefones": [
+        "(48) 3437-5115"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.675000878627376,
+        "lng": -49.354190826416016,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "5539439",
+      "nome": "LABORATORIO DAL PONT SALETE",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA VALENTIN PIZZETTI",
+        "numero": "599",
+        "bairro": "NOSSA SENHORA DA SAL",
+        "cep": "88815-500"
+      },
+      "telefones": [
+        "(48) 3437-5115"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6906946,
+        "lng": -49.3421931,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "4039599",
+      "nome": "LABORATORIO DAL PONT SANTA LUZIA",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA UNIVERSITARIA",
+        "numero": "1717",
+        "bairro": "SANTA LUZIA",
+        "cep": "88807-261"
+      },
+      "telefones": [
+        "(48) 3437-5115"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.70267145584132,
+        "lng": -49.417147636413574,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "4677242",
+      "nome": "LABORATORIO DAL PONT SAO LUIZ",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA SANTOS DUMONT",
+        "numero": "2242",
+        "bairro": "SAO LUIZ",
+        "cep": "88803-200"
+      },
+      "telefones": [
+        "(48) 3437-5115"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.692394666557494,
+        "lng": -49.37730073928833,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "488577",
+      "nome": "LABORATORIO FARINA",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA SANTO ANTONIO",
+        "numero": "141",
+        "bairro": "CENTRO",
+        "cep": "88801-440"
+      },
+      "telefones": [
+        "(48) 99920-2381"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6764729,
+        "lng": -49.3693824,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "488593",
+      "nome": "LABORATORIO FARINA",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA CENTENARIO",
+        "numero": "3400",
+        "bairro": "CENTRO",
+        "cep": "88802-000"
+      },
+      "telefones": [
+        "(48) 3413-4295"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6801291,
+        "lng": -49.3693061,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "5393817",
+      "nome": "LABORATORIO LAVOISIER PASTEUR",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOAO PESSOA",
+        "numero": "207",
+        "bairro": "CENTRO",
+        "cep": "88801-530"
+      },
+      "telefones": [
+        "(48) 3433-4994"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.670470572015336,
+        "lng": -49.378050580377376,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "4903455",
+      "nome": "LABORATORIO MONTEIRO",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA UNIVERSITARIA",
+        "numero": "5070",
+        "bairro": "SAO DEFENDE",
+        "cep": "88808-000"
+      },
+      "telefones": [
+        "(48) 3433-5496"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.702373368804317,
+        "lng": -49.4408297504202,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "4935764",
+      "nome": "LABORATORIO MONTEIRO",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CLARINDA MILIOLI DE LUCA",
+        "numero": "600",
+        "bairro": "MINA DO MATO",
+        "cep": "88810-400"
+      },
+      "telefones": [
+        "(48) 3433-5496"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.684564054643914,
+        "lng": -49.3476676940918,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "5370205",
+      "nome": "LABORATORIO MULHER",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "TRAVESSA ENGENHEIRO BOA NOVA",
+        "numero": "25",
+        "bairro": "CENTRO",
+        "cep": "88801-260"
+      },
+      "telefones": [
+        "(48) 3443-5056"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67722232413682,
+        "lng": -49.37882423400879,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2706989",
+      "nome": "LABORATORIO MUNICIPAL DE CRICIUMA",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "JOAO PESSOA",
+        "numero": "187",
+        "bairro": "CENTRO",
+        "cep": "88801-530"
+      },
+      "telefones": [
+        "(04) 83430-0933"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.676053,
+        "lng": -49.3631531,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2647257",
+      "nome": "LABORATORIO PASTEUR",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOAO CECHINEL",
+        "numero": "71",
+        "bairro": "PIO CORREA",
+        "cep": "88811-500"
+      },
+      "telefones": [
+        "(48) 3437-5114"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.682192167217373,
+        "lng": -49.36204433441162,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "8381526",
+      "nome": "LABORATORIO PASTEUR",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA FREDERICO MAYR",
+        "numero": "34",
+        "bairro": "SANTA LUZIA",
+        "cep": "88807-210"
+      },
+      "telefones": [
+        "(48) 3432-3166"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67036957804885,
+        "lng": -49.379682540893555,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-06-16",
+      "observacoes": null
+    },
+    {
+      "cnes": "8383774",
+      "nome": "LABORATORIO PASTEUR",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA CENTENARIO",
+        "numero": "3420",
+        "bairro": "CENTRO",
+        "cep": "88802-000"
+      },
+      "telefones": [
+        "(48) 3433-1777"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67590452316243,
+        "lng": -49.359190464019775,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-06-16",
+      "observacoes": null
+    },
+    {
+      "cnes": "8384266",
+      "nome": "LABORATORIO PASTEUR",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA COCAL",
+        "numero": "610",
+        "bairro": "MINA UNIAO",
+        "cep": "88806-581"
+      },
+      "telefones": [
+        "(48) 3462-6241"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.670482539035227,
+        "lng": -49.36082124710083,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-06-16",
+      "observacoes": null
+    },
+    {
+      "cnes": "8384282",
+      "nome": "LABORATORIO PASTEUR",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOAO CECHINEL",
+        "numero": "194",
+        "bairro": "CENTRO",
+        "cep": "88811-500"
+      },
+      "telefones": [
+        "(48) 3432-3166"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.671819234793663,
+        "lng": -49.360671043395996,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-06-16",
+      "observacoes": null
+    },
+    {
+      "cnes": "8384290",
+      "nome": "LABORATORIO PASTEUR",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOAQUIM NABUCO",
+        "numero": "87",
+        "bairro": "CENTRO",
+        "cep": "88802-200"
+      },
+      "telefones": [
+        "(48) 3432-3166"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.665474485001617,
+        "lng": -49.36234474182129,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-06-16",
+      "observacoes": null
+    },
+    {
+      "cnes": "8384304",
+      "nome": "LABORATORIO PASTEUR",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA MANOEL SERAFIM INACIO",
+        "numero": "120",
+        "bairro": "RIO MAINA",
+        "cep": "88818-500"
+      },
+      "telefones": [
+        "(48) 3443-7794"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.670162482590907,
+        "lng": -49.35987710952759,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-06-16",
+      "observacoes": null
+    },
+    {
+      "cnes": "8384258",
+      "nome": "LABORATORIO PASTEUR PRIME",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CORONEL PEDRO BENEDET",
+        "numero": "350",
+        "bairro": "CENTRO",
+        "cep": "88801-302"
+      },
+      "telefones": [
+        "(48) 3433-0773"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.676092781459438,
+        "lng": -49.36030626296997,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-06-16",
+      "observacoes": null
+    },
+    {
+      "cnes": "8381445",
+      "nome": "LABORATORIO PAUSTER",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA GENERAL OSVALDO PINTO DA VEIGA",
+        "numero": "1100",
+        "bairro": "PROSPERA",
+        "cep": "88813-000"
+      },
+      "telefones": [
+        "(48) 3439-3620"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.686521762525523,
+        "lng": -49.35015678405762,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-06-16",
+      "observacoes": null
+    },
+    {
+      "cnes": "8381348",
+      "nome": "LABORATORIO PAUSTEUR",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA IMIGRANTE VENZON",
+        "numero": "920",
+        "bairro": "PINHEIRINHO",
+        "cep": "88805-200"
+      },
+      "telefones": [
+        "(48) 3432-3166"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.69066294705287,
+        "lng": -49.38895225524902,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-06-16",
+      "observacoes": null
+    },
+    {
+      "cnes": "4058631",
+      "nome": "LABORATORIO SANTA RITA",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA SANTO ANTONIO",
+        "numero": "11",
+        "bairro": "CENTRO",
+        "cep": "88801-440"
+      },
+      "telefones": [
+        "(48) 3433-2879"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.698718963995393,
+        "lng": -49.350242614746094,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2497220",
+      "nome": "LABORATORIO VIDA E SAUDE",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOSE SALVADOR",
+        "numero": "76",
+        "bairro": "QUARTA LINHA",
+        "cep": "88812-480"
+      },
+      "telefones": [
+        "(48) 3437-0468"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.7875989,
+        "lng": -49.3603105,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "416800",
+      "nome": "LAREG CRICIUMA",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "LABORATORIO DE SAUDE PUBLICA",
+      "codigo_tipo_cnes": 80,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JULIO GAIDZINSKI",
+        "numero": "S/N",
+        "bairro": "CENTRO",
+        "cep": "88811-000"
+      },
+      "telefones": [
+        "(48) 3403-1125"
+      ],
+      "turno": "ATENDIMENTO SOMENTE A TARDE",
+      "geo": {
+        "lat": -28.675735090405848,
+        "lng": -49.36090707778931,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-03-28",
+      "observacoes": null
+    },
+    {
+      "cnes": "108650",
+      "nome": "NSA ODONTOLOGIA",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA DOS IMIGRANTES",
+        "numero": "2379",
+        "bairro": "RIO MAINA",
+        "cep": "88817-600"
+      },
+      "telefones": [
+        "(48) 98869-8338"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.682474537585083,
+        "lng": -49.3770432472229,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-17",
+      "observacoes": null
+    },
+    {
+      "cnes": "3488470",
+      "nome": "NUCLEARMED",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOAO CECHINEL",
+        "numero": "352",
+        "bairro": "CENTRO",
+        "cep": "88811-500"
+      },
+      "telefones": [
+        "(48) 3437-4093"
+      ],
+      "turno": "ATENDIMENTO NOS TURNOS DA MANHA, TARDE E NOITE",
+      "geo": {
+        "lat": -28.67637516827063,
+        "lng": -49.363224506378174,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2647214",
+      "nome": "PATOGENE PATOLOGIA DIAGNOSTICA",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOAO CECHINEL",
+        "numero": "352",
+        "bairro": "PIO CORREA",
+        "cep": "88811-500"
+      },
+      "telefones": [
+        "(48) 3433-1200"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.66905169087656,
+        "lng": -49.34981346130371,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "3932656",
+      "nome": "PRECISAO RADIOLOGIA E ODONTOLOGIA LTDA",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA FELIPE SCHMIDT",
+        "numero": "304",
+        "bairro": "CENTRO",
+        "cep": "88801-240"
+      },
+      "telefones": [
+        "(48) 3438-3888"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.68373578259924,
+        "lng": -49.36178684234619,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "2541580",
+      "nome": "ROCHA LABORATORIO TOTAL",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CONEGO MIGUEL GIACCA",
+        "numero": "36",
+        "bairro": "CENTRO",
+        "cep": "88801-030"
+      },
+      "telefones": [
+        "(48) 3443-7748"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.677994171294653,
+        "lng": -49.37114238739014,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "4321391",
+      "nome": "SAO LUIZ LABORATORIO E SAUDE",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA COCAL",
+        "numero": "726",
+        "bairro": "MINA UNIAO",
+        "cep": "88806-581"
+      },
+      "telefones": [
+        "(48) 3525-3046"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.689652,
+        "lng": -49.4219371,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "9905596",
+      "nome": "SAO LUIZ LABORATORIO E SAUDE",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA SAO DOMINGOS",
+        "numero": "1745",
+        "bairro": "UNIVERSITARIO",
+        "cep": "88805-370"
+      },
+      "telefones": [
+        "(48) 98814-8336"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.702276,
+        "lng": -49.4041917,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2419734",
+      "nome": "URC UNIDADE RADIOLOGICA CRICIUMA LTDA",
+      "categoria": "apoio_diagnostico",
+      "tipo_cnes": "UNIDADE DE APOIO DIAGNOSE E TERAPIA (SADT ISOLADO)",
+      "codigo_tipo_cnes": 39,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ANTONIO DE LUCA",
+        "numero": "139",
+        "bairro": "CENTRO",
+        "cep": "88811-503"
+      },
+      "telefones": [
+        "(48) 3461-0800"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.68123210227246,
+        "lng": -49.3631386756897,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2419866",
+      "nome": "CAPS II AD CRICIUMA",
+      "categoria": "caps",
+      "tipo_cnes": "CENTRO DE ATENCAO PSICOSSOCIAL",
+      "codigo_tipo_cnes": 70,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA LUIZ PIROLLA DE NOE",
+        "numero": "150",
+        "bairro": "VILA ISABEL",
+        "cep": "88818-070"
+      },
+      "telefones": [
+        "(48) 3445-8488"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.669447058768647,
+        "lng": -49.35779571533203,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "3385981",
+      "nome": "CAPS II CRICIUMA",
+      "categoria": "caps",
+      "tipo_cnes": "CENTRO DE ATENCAO PSICOSSOCIAL",
+      "codigo_tipo_cnes": 70,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA MADRE TEREZA MICHEL",
+        "numero": "446",
+        "bairro": "MICHEL",
+        "cep": "88803-030"
+      },
+      "telefones": [
+        "(48) 3445-8736"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.686993839743877,
+        "lng": -49.37390120066675,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "6237193",
+      "nome": "CAPS III CRICIUMA",
+      "categoria": "caps",
+      "tipo_cnes": "CENTRO DE ATENCAO PSICOSSOCIAL",
+      "codigo_tipo_cnes": 70,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA QUINZE DE NOVEMBRO",
+        "numero": "205",
+        "bairro": "CENTRO",
+        "cep": "88801-140"
+      },
+      "telefones": [
+        "(48) 3403-3450"
+      ],
+      "turno": "ATENDIMENTO CONTINUO DE 24 HORAS/DIA (PLANTAO:INCLUI SABADOS, DOMINGOS E FERIADOS)",
+      "geo": {
+        "lat": -28.67976755198324,
+        "lng": -49.36501999835572,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "6782493",
+      "nome": "CAPS INFANTO JUVENIL CRICIUMA",
+      "categoria": "caps",
+      "tipo_cnes": "CENTRO DE ATENCAO PSICOSSOCIAL",
+      "codigo_tipo_cnes": 70,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA URUSSANGA",
+        "numero": "36",
+        "bairro": "VERA CRUZ",
+        "cep": "88801-535"
+      },
+      "telefones": [
+        "(48) 3403-7350"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6710968,
+        "lng": -49.3786642,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "838691",
+      "nome": "A SAUDE",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA TOBIAS BARRETO",
+        "numero": "70",
+        "bairro": "CRUZEIRO DO SUL",
+        "cep": "88811-150"
+      },
+      "telefones": [
+        "(48) 3522-2238"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.675565657375227,
+        "lng": -49.372923374176025,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-08-12",
+      "observacoes": null
+    },
+    {
+      "cnes": "6024025",
+      "nome": "AMA REC SC",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ANTONIO ROSSI",
+        "numero": "420",
+        "bairro": "VILA ZULEIMA",
+        "cep": "88817-140"
+      },
+      "telefones": [
+        "(48) 3462-9804"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.667432549659807,
+        "lng": -49.40126895904541,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-11-06",
+      "observacoes": null
+    },
+    {
+      "cnes": "9161341",
+      "nome": "ANIMA CLINICA MEDICA SS LTDA ME",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA VITAL BRASIL",
+        "numero": "210",
+        "bairro": "CRUZEIRO DO SUL",
+        "cep": "88811-042"
+      },
+      "telefones": [
+        "(48) 3478-7373"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.669296442604704,
+        "lng": -49.37279462814331,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "6754376",
+      "nome": "APAE CRICIUMA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA IMIGRANTE DE LUCCA",
+        "numero": "600",
+        "bairro": "PINHEIRINHO",
+        "cep": "88804-600"
+      },
+      "telefones": [
+        "(48) 3438-2543"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.7019884,
+        "lng": -49.393837,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "5411149",
+      "nome": "AUDIOSUL CLINICA MEDICA LTDA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA CENTENARIO",
+        "numero": "7400",
+        "bairro": "NOSSA SENHORA DA SAL",
+        "cep": "88815-001"
+      },
+      "telefones": [
+        "(48) 99949-7649"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.678295378398822,
+        "lng": -49.358224868774414,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-11-06",
+      "observacoes": null
+    },
+    {
+      "cnes": "9284648",
+      "nome": "BELUAH CLINICA MEDICA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ANTONIO DE LUCCA",
+        "numero": "148",
+        "bairro": "PIO CORREA",
+        "cep": "88811-503"
+      },
+      "telefones": [
+        "(48) 3413-8081"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6761693,
+        "lng": -49.3648112,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "4415205",
+      "nome": "BEM VIVER FISIOTERAPIA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA DOUTOR FRANCISCO DE ASSIS GOMES",
+        "numero": "77",
+        "bairro": "VILA ISABEL",
+        "cep": "88818-075"
+      },
+      "telefones": [
+        "(48) 99624-4946"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6682339,
+        "lng": -49.4340945,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "3370879",
+      "nome": "BIO FISIO",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CORONEL PEDRO BENEDET",
+        "numero": "488",
+        "bairro": "CENTRO",
+        "cep": "88801-250"
+      },
+      "telefones": [
+        "(48) 3442-8562"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.676544599991956,
+        "lng": -49.36622858047485,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "9097341",
+      "nome": "CARDIO MILLENIUM",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "CORONEL PEDRO BENEDET",
+        "numero": "505",
+        "bairro": "CENTRO",
+        "cep": "88801-250"
+      },
+      "telefones": [
+        "(48) 3045-3177"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.66848687701442,
+        "lng": -49.38436031341553,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "7169469",
+      "nome": "CARDIOCLINICA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ANTONIO DE LUCCA",
+        "numero": "91",
+        "bairro": "PIO CORREA",
+        "cep": "88811-503"
+      },
+      "telefones": [
+        "(48) 3413-9888"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.675339746241477,
+        "lng": -49.34809684753418,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "6667937",
+      "nome": "CARDIODAY CLINICA CARDIOLOGICA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ANTONIO DE LUCCA",
+        "numero": "165",
+        "bairro": "PIO CORREA",
+        "cep": "88811-503"
+      },
+      "telefones": [
+        "(48) 3433-2102"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.677994171294653,
+        "lng": -49.37622785568237,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "5797594",
+      "nome": "CARDIOEXPRESS",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CRUZ E SOUZA",
+        "numero": "43",
+        "bairro": "PIO CORREA",
+        "cep": "88811-550"
+      },
+      "telefones": [
+        "(48) 3045-4454"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6758658,
+        "lng": -49.3577977,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "4392248",
+      "nome": "CARLA FISIO",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA DAS ORQUIDEAS",
+        "numero": "520",
+        "bairro": "ARGENTINA",
+        "cep": "88813-582"
+      },
+      "telefones": [
+        "(48) 99993-2580"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6656084,
+        "lng": -49.3281565,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "3600238",
+      "nome": "CENTRO DE ESPECIALIDADES ODONTOLOGICAS PROSPERA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA PERNAMBUCO",
+        "numero": "105",
+        "bairro": "PROSPERA",
+        "cep": "88813-010"
+      },
+      "telefones": [
+        "(48) 3478-6535"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.678075,
+        "lng": -49.3490475,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "7106491",
+      "nome": "CENTRO ESPECIALIZADO EM REABILITACAO CER II UNESC",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA UNIVERSITARIA",
+        "numero": "1105",
+        "bairro": "UNIVERSITARIO",
+        "cep": "88806-000"
+      },
+      "telefones": [
+        "(48) 3431-2532"
+      ],
+      "turno": "ATENDIMENTO NOS TURNOS DA MANHA, TARDE E NOITE",
+      "geo": {
+        "lat": -28.70254605,
+        "lng": -49.4082917194976,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "90352",
+      "nome": "CENTRO ESPECIALIZADO EM REABILITACAO MULTIPROFISSIONAL",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA LUIZ PIROLLA DE NOE",
+        "numero": "150",
+        "bairro": "RIO MAINA",
+        "cep": "88818-070"
+      },
+      "telefones": [
+        "(48) 99951-2274"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6417901,
+        "lng": -49.4230298,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "3441598",
+      "nome": "CENTRO PNEUMOLOGICO CRICIUMA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOAO CECHINEL",
+        "numero": "168",
+        "bairro": "CENTRO",
+        "cep": "88811-500"
+      },
+      "telefones": [
+        "(48) 3437-6453"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67554683146602,
+        "lng": -49.3596625328064,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "4260031",
+      "nome": "CIS MACRO SUL",
+      "categoria": "especializado",
+      "tipo_cnes": "POLICLINICA",
+      "codigo_tipo_cnes": 4,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA LUIZ PIROLLA DE NOE",
+        "numero": "150",
+        "bairro": "VILA ISABEL",
+        "cep": "88818-070"
+      },
+      "telefones": [
+        "(48) 99923-8101"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.666717107199382,
+        "lng": -49.36058521270752,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "7363443",
+      "nome": "CISAMREC",
+      "categoria": "especializado",
+      "tipo_cnes": "POLICLINICA",
+      "codigo_tipo_cnes": 4,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA SANTOS DUMONT",
+        "numero": "1980",
+        "bairro": "SAO LUIZ",
+        "cep": "88803-200"
+      },
+      "telefones": [
+        "(48) 3045-3192"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6952077,
+        "lng": -49.3960712,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "3457621",
+      "nome": "CLINICA DE FISIOTERAPIA SAO JUDAS TADEU",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA SANTO ANTONIO",
+        "numero": "629",
+        "bairro": "CENTRO",
+        "cep": "88801-440"
+      },
+      "telefones": [
+        "(48) 3437-7303"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67085907477691,
+        "lng": -49.406375885009766,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2540320",
+      "nome": "CLINICA DE NEFROLOGIA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA VITAL BRASIL",
+        "numero": "S/N",
+        "bairro": "CRUZEIRO DO SUL",
+        "cep": "88811-042"
+      },
+      "telefones": [
+        "(48) 8437-6086"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.671762755036244,
+        "lng": -49.40526008605957,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "6567274",
+      "nome": "CLINICA DE OLHOS ANTONELLI",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "JOAO CECHINEL",
+        "numero": "368",
+        "bairro": "PIO CORREA",
+        "cep": "88811-500"
+      },
+      "telefones": [
+        "(48) 3437-1788"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.674586705610473,
+        "lng": -49.36180830001831,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2541343",
+      "nome": "CLINICA DE OLHOS PEREIRA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOAO CECHINEL",
+        "numero": "71",
+        "bairro": "PIO CORREA",
+        "cep": "88801-305"
+      },
+      "telefones": [
+        "(48) 3433-0582"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67616808468351,
+        "lng": -49.363160133361816,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "9819371",
+      "nome": "CLINICA MEDICA CORAL",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CORONEL PEDRO BENEDET",
+        "numero": "225",
+        "bairro": "CENTRO",
+        "cep": "88801-250"
+      },
+      "telefones": [
+        "(48) 3437-3739"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67078376773682,
+        "lng": -49.35702323913574,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "5144965",
+      "nome": "CLINICA MEDICA FISIOTERAPICA SALGADO LTDA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CORONEL MARCOS ROVARIS",
+        "numero": "675",
+        "bairro": "PIO CORREA",
+        "cep": "88801-100"
+      },
+      "telefones": [
+        "(48) 3433-3912"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.682982802328446,
+        "lng": -49.34277534484863,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "6725279",
+      "nome": "CLINICA MICHELS",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOAO CECHINEL",
+        "numero": "71",
+        "bairro": "CENTRO",
+        "cep": "88811-500"
+      },
+      "telefones": [
+        "(48) 3045-3434"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.673758354664475,
+        "lng": -49.35781717300415,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "7208928",
+      "nome": "CLINICA OLIVO",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA SAO JOSE",
+        "numero": "884",
+        "bairro": "CRUZEIRO DO SUL",
+        "cep": "88811-070"
+      },
+      "telefones": [
+        "(48) 3413-7500"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67502387879999,
+        "lng": -49.37136022596836,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "5013100",
+      "nome": "CLINICA OTOFACIAL",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CORONEL PEDRO BENEDET",
+        "numero": "505",
+        "bairro": "CENTRO",
+        "cep": "88801-302"
+      },
+      "telefones": [
+        "(48) 3437-1400"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6726287746377,
+        "lng": -49.36612129211426,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "3226530",
+      "nome": "CLINICAS INTEGRADAS UNESC",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA UNIVERSITARIA",
+        "numero": "1105",
+        "bairro": "UNIVERSITARIO",
+        "cep": "88806-000"
+      },
+      "telefones": [
+        "(48) 3431-2532"
+      ],
+      "turno": "ATENDIMENTO NOS TURNOS DA MANHA, TARDE E NOITE",
+      "geo": {
+        "lat": -28.70254605,
+        "lng": -49.4082917194976,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2702797",
+      "nome": "CTCR CENTRO DE TRATAMENTO DE CALCULOS RENAIS LTDA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOAO CECHINEL",
+        "numero": "352",
+        "bairro": "CENTRO",
+        "cep": "88811-500"
+      },
+      "telefones": [
+        "(48) 3437-5093"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.66731958538551,
+        "lng": -49.356980323791504,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "9530053",
+      "nome": "DARIO ANTONELLI OFTALMOLOGIA LTDA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ANTONIO DE LUCCA",
+        "numero": "165",
+        "bairro": "PIO CORREA",
+        "cep": "88811-503"
+      },
+      "telefones": [
+        "(48) 3433-5583"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67564096097823,
+        "lng": -49.36382532119751,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "7810733",
+      "nome": "ENDOSUL",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA VITAL BRASIL",
+        "numero": "260",
+        "bairro": "CRUZEIRO DO SUL",
+        "cep": "88811-042"
+      },
+      "telefones": [
+        "(48) 3437-6843"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.669748290447064,
+        "lng": -49.36275243759155,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "9432671",
+      "nome": "ESPACO ELEVARE",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CORONEL PEDRO BENEDET",
+        "numero": "333",
+        "bairro": "CENTRO",
+        "cep": "88801-250"
+      },
+      "telefones": [
+        "(48) 3413-9960"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.675207964521796,
+        "lng": -49.364941120147705,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "6156568",
+      "nome": "FISIOCENTER",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOAO CECHINEL",
+        "numero": "368",
+        "bairro": "PIO CORREA",
+        "cep": "88811-450"
+      },
+      "telefones": [
+        "(48) 3437-1788"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67549035371811,
+        "lng": -49.35964107513428,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "51020",
+      "nome": "FISIOLIGHT CENTRO DE FISIOTERAPIA E REABILITACAO LTDA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA VIDAL RAMOS",
+        "numero": "110",
+        "bairro": "PIO CORREA",
+        "cep": "88811-525"
+      },
+      "telefones": [
+        "(48) 3045-4979"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6777624,
+        "lng": -49.3612901,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "6385117",
+      "nome": "FISIOVIT CLINICA DE REABILITACAO",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA DESEMBARGADOR PEDRO SILVA",
+        "numero": "540",
+        "bairro": "CENTRO",
+        "cep": "88802-300"
+      },
+      "telefones": [
+        "(48) 3437-7936"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6918197,
+        "lng": -49.3691447,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "3399656",
+      "nome": "GASTROSLIM",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOAO CEHINEL",
+        "numero": "461",
+        "bairro": "PIO CORREA",
+        "cep": "88811-500"
+      },
+      "telefones": [
+        "(48) 3045-6833"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6820039198826,
+        "lng": -49.354705810546875,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "9833056",
+      "nome": "GSS CLINICA MEDICA EIRELI",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CECILIA DAROS CASAGRANDE",
+        "numero": "170",
+        "bairro": "COMERCIARIO",
+        "cep": "88802-400"
+      },
+      "telefones": [
+        "(48) 99909-2276"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6749101,
+        "lng": -49.3603623,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "9712038",
+      "nome": "HOSPITAL DE OLHOS DE CRICIUMA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JULIO GAIDZINSKI",
+        "numero": "485",
+        "bairro": "CRUZEIRO DO SUL",
+        "cep": "88811-022"
+      },
+      "telefones": [
+        "(48) 3056-1051"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.680723829032832,
+        "lng": -49.35564994812012,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "2897474",
+      "nome": "INTEGRAMENTE CRICIUMA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA GIACOMO SONEGO NETO",
+        "numero": "26",
+        "bairro": "PINHEIRINHO",
+        "cep": "88804-440"
+      },
+      "telefones": [
+        "(48) 3403-7030"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.692206437564153,
+        "lng": -49.393908977508545,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "248428",
+      "nome": "KBS CLINICA MEDICA LTDA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ANTONIO DE LUCCA",
+        "numero": "91",
+        "bairro": "PIO CORREA",
+        "cep": "88811-503"
+      },
+      "telefones": [
+        "(48) 9984-8499"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.670407231724504,
+        "lng": -49.38457489013672,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-17",
+      "observacoes": null
+    },
+    {
+      "cnes": "2990326",
+      "nome": "LABKA ODONTOLOGIA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA DOS IMIGRANTES",
+        "numero": "2379",
+        "bairro": "RIO MAINA",
+        "cep": "88817-600"
+      },
+      "telefones": [
+        "(48) 99868-6175"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.683359293140576,
+        "lng": -49.361572265625,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "4392337",
+      "nome": "LARISSA VENANCIO FISIOTERAPIA LTDA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOSE MANOEL CARVALHO",
+        "numero": "100",
+        "bairro": "SANTA CATARINA",
+        "cep": "88810-218"
+      },
+      "telefones": [
+        "(48) 99803-8849"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6720756,
+        "lng": -49.3787579,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2846055",
+      "nome": "LUMINA OFTALMOLOGIA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CORONEL PEDRO BENEDET",
+        "numero": "505",
+        "bairro": "CENTRO",
+        "cep": "88811-500"
+      },
+      "telefones": [
+        "(48) 3366-1129"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.678540108533188,
+        "lng": -49.382171630859375,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-12-17",
+      "observacoes": null
+    },
+    {
+      "cnes": "839779",
+      "nome": "MELHOR EM CASA CRICIUMA",
+      "categoria": "especializado",
+      "tipo_cnes": "SERVICO DE ATENCAO DOMICILIAR ISOLADO(HOME CARE)",
+      "codigo_tipo_cnes": 77,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA LUIZ PIROLA DE NOE",
+        "numero": "150",
+        "bairro": "RIO MAINA",
+        "cep": "88818-070"
+      },
+      "telefones": [
+        "(48) 3403-6000"
+      ],
+      "turno": "ATENDIMENTO NOS TURNOS DA MANHA, TARDE E NOITE",
+      "geo": {
+        "lat": -28.6699695,
+        "lng": -49.4289063,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "9244026",
+      "nome": "MIOCUORE CARDIOLOGIA LTDA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA SANTO ANTONIO",
+        "numero": "951",
+        "bairro": "CRUZEIRO DO SUL",
+        "cep": "88811-040"
+      },
+      "telefones": [
+        "(48) 3081-0080"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.679556673740024,
+        "lng": -49.38178539276123,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "4842863",
+      "nome": "MOISES MENSOR FISIOTERAPIA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA CENTENARIO",
+        "numero": "11",
+        "bairro": "PINHEIRINHO",
+        "cep": "88805-000"
+      },
+      "telefones": [
+        "(48) 98422-7038"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67228989825484,
+        "lng": -49.3630313873291,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-04-28",
+      "observacoes": null
+    },
+    {
+      "cnes": "3405230",
+      "nome": "MOVIMENTO OFICINA EM FISIOTERAPIA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ANTONIO DE LUCCA",
+        "numero": "91",
+        "bairro": "PIO CORREA",
+        "cep": "88811-503"
+      },
+      "telefones": [
+        "(48) 3439-0603"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67645047129171,
+        "lng": -49.36479091644287,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "5735769",
+      "nome": "NASPOLINI FISIOTERAPIA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA IRMAO WALMIR ORSI",
+        "numero": "65",
+        "bairro": "SANTA AUGUSTA",
+        "cep": "88805-420"
+      },
+      "telefones": [
+        "(48) 99907-5000"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.673572,
+        "lng": -49.365939,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2649268",
+      "nome": "NEFROCLINICA CRICIUMA LTDA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOAO CECHINEL",
+        "numero": "352",
+        "bairro": "CENTRO",
+        "cep": "88811-500"
+      },
+      "telefones": [],
+      "turno": "ATENDIMENTO NOS TURNOS DA MANHA, TARDE E NOITE",
+      "geo": {
+        "lat": -28.676053,
+        "lng": -49.3631531,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": "O cadastro informa o telefone como “48-34375101/34378278”."
+    },
+    {
+      "cnes": "842656",
+      "nome": "NEUROESPECIALISTAS CLINICA DE NEUROLOGIA LTDA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA LEO LOMBARDI",
+        "numero": "365",
+        "bairro": "PIO CORREA",
+        "cep": "88811-600"
+      },
+      "telefones": [
+        "(48) 3056-2192"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.674881,
+        "lng": -49.3578162,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "7396333",
+      "nome": "NEUROSUL",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA LEO LOMBARDI",
+        "numero": "365",
+        "bairro": "PIO CORREA",
+        "cep": "88811-600"
+      },
+      "telefones": [
+        "(48) 3433-5158"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.674437267621048,
+        "lng": -49.35781444579459,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "267260",
+      "nome": "NIANNA ADMINISTRADORA DE BENS EIRELI",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA ESTEVAO EMILIO DE SOUZA",
+        "numero": "24",
+        "bairro": "CEARA",
+        "cep": "88815-180"
+      },
+      "telefones": [
+        "(48) 99611-9246"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.679895526616498,
+        "lng": -49.348740577697754,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "5293294",
+      "nome": "OFTALMOCLINICA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOAO CECHINEL",
+        "numero": "521",
+        "bairro": "PIO CORREA",
+        "cep": "88811-500"
+      },
+      "telefones": [
+        "(48) 3045-1323"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.675998652353226,
+        "lng": -49.3625807762146,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-17",
+      "observacoes": null
+    },
+    {
+      "cnes": "7381565",
+      "nome": "OTOCENTER CLINICA DE OTORRINOLARINGOLOGIA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA CENTENARIO",
+        "numero": "7400",
+        "bairro": "NOSSA SENHORA DA SAL",
+        "cep": "88815-001"
+      },
+      "telefones": [
+        "(48) 3443-3142"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.7042744,
+        "lng": -49.4047613,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "5485479",
+      "nome": "PRO SORRISO ODONTOLOGIA CRICIUMA LTDA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA SANTOS DUMONT",
+        "numero": "1400",
+        "bairro": "SAO LUIZ",
+        "cep": "88803-200"
+      },
+      "telefones": [
+        "(48) 99691-2499"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.692199298319572,
+        "lng": -49.37388329999338,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "5959411",
+      "nome": "PROFISIO CENTRO",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CORONEL PEDRO BENEDET",
+        "numero": "333",
+        "bairro": "CENTRO",
+        "cep": "88801-250"
+      },
+      "telefones": [
+        "(48) 3433-1025"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.675151486591187,
+        "lng": -49.36513423919678,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "9979778",
+      "nome": "PROFISIO PROSPERA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JULIA BENEDET SALVADOR",
+        "numero": "35",
+        "bairro": "PROSPERA",
+        "cep": "88811-760"
+      },
+      "telefones": [
+        "(48) 3045-6074"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67447374904897,
+        "lng": -49.35135841369629,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "5034663",
+      "nome": "PROGRAMA DE DST HIV AIDS E HEPATITES VIRAIS",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA RIO DOS CEDROS",
+        "numero": "155",
+        "bairro": "SANTA AUGUSTA",
+        "cep": "88805-430"
+      },
+      "telefones": [
+        "(48) 3445-8730"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.678238902132758,
+        "lng": -49.369940757751465,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "3534502",
+      "nome": "PROGRAMA DE HANSENIASE E TUBERCULOSE",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA RIO DOS CEDROS",
+        "numero": "155",
+        "bairro": "SANTA AUGUSTA",
+        "cep": "88805-430"
+      },
+      "telefones": [
+        "(48) 3445-8515"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.697570831242643,
+        "lng": -49.40420866012573,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "5122457",
+      "nome": "PRONTO AR PULMOCLINICA CLINICA MEDICA LTDA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ANTONIO DE LUCCA",
+        "numero": "91",
+        "bairro": "CENTRO",
+        "cep": "88811-503"
+      },
+      "telefones": [],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67494440058513,
+        "lng": -49.35560703277588,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-11",
+      "observacoes": "O cadastro informa o telefone como “4834374088/34337681”."
+    },
+    {
+      "cnes": "5013070",
+      "nome": "REABILI CLINICA DE FISIOTERAPIA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA DOS IMIGRANTES",
+        "numero": "1439",
+        "bairro": "RIO MAINA",
+        "cep": "88817-600"
+      },
+      "telefones": [
+        "(48) 3442-5415"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.66701834672541,
+        "lng": -49.42465782165527,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2978326",
+      "nome": "REGENERE",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JORNALISTA EZEQUIEL DOS PASSOS",
+        "numero": "350",
+        "bairro": "VERA CRUZ",
+        "cep": "88810-050"
+      },
+      "telefones": [
+        "(48) 99988-5355"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6705339,
+        "lng": -49.3775957,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "6941591",
+      "nome": "RESSOAR APARELHOS AUDITIVOS",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CORONEL PEDRO BENEDET",
+        "numero": "505",
+        "bairro": "CENTRO",
+        "cep": "88801-250"
+      },
+      "telefones": [
+        "(48) 3045-3969"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.675132660607556,
+        "lng": -49.36511278152466,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "8514402",
+      "nome": "ROBERGE FONOAUDIOLOGIA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CELESTINA ZILLI ROVARIS",
+        "numero": "500",
+        "bairro": "CENTRO",
+        "cep": "88802-210"
+      },
+      "telefones": [
+        "(48) 99658-8447"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.667884405539258,
+        "lng": -49.378952980041504,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "4226194",
+      "nome": "RR FISIOTERAPIA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA FELIPE COLOMBO",
+        "numero": "1063",
+        "bairro": "VILA ZULEIMA",
+        "cep": "88817-120"
+      },
+      "telefones": [
+        "(48) 98444-8761"
+      ],
+      "turno": "ATENDIMENTO SOMENTE A TARDE",
+      "geo": {
+        "lat": -28.6716945,
+        "lng": -49.405026,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2419971",
+      "nome": "SANTO AGOSTINHO CENTRO DE ESPECIALIDADES EM SAUDE CES",
+      "categoria": "especializado",
+      "tipo_cnes": "POLICLINICA",
+      "codigo_tipo_cnes": 4,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA LUIZ PIROLLA DE NOE",
+        "numero": "150",
+        "bairro": "RIO MAINA",
+        "cep": "88818-070"
+      },
+      "telefones": [
+        "(48) 3403-7436"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.678012996764032,
+        "lng": -49.3700909614563,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "3297446",
+      "nome": "SAUDE DA MULHER CRIANCA E ADOLESCENTE CESMCA",
+      "categoria": "especializado",
+      "tipo_cnes": "POLICLINICA",
+      "codigo_tipo_cnes": 4,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA LUIZ PIROLA NOE",
+        "numero": "150",
+        "bairro": "RIO MAINA",
+        "cep": "88818-070"
+      },
+      "telefones": [
+        "(48) 3403-7414"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6699695,
+        "lng": -49.4289063,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-08-18",
+      "observacoes": null
+    },
+    {
+      "cnes": "3942392",
+      "nome": "SERVICO SOCIAL DA INDUSTRIA SESI",
+      "categoria": "especializado",
+      "tipo_cnes": "POLICLINICA",
+      "codigo_tipo_cnes": 4,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA MARECHAL DEODORO",
+        "numero": "80",
+        "bairro": "CENTRO",
+        "cep": "88801-110"
+      },
+      "telefones": [
+        "(48) 3431-9800"
+      ],
+      "turno": "ATENDIMENTO COM TURNOS INTERMITENTES",
+      "geo": {
+        "lat": -28.67884131406748,
+        "lng": -49.36511278152466,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "7569653",
+      "nome": "SOS CORACAO SS",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ANTONIO DE LUCCA",
+        "numero": "148",
+        "bairro": "PIO CORREA",
+        "cep": "88811-503"
+      },
+      "telefones": [
+        "(48) 3413-6445"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.676149258882567,
+        "lng": -49.3640398979187,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "4858638",
+      "nome": "TEAKIDS DESENVOLVIMENTO INFANTIL",
+      "categoria": "especializado",
+      "tipo_cnes": "POLICLINICA",
+      "codigo_tipo_cnes": 4,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JULIA BENEDET SALVADOR",
+        "numero": "81",
+        "bairro": "PROSPERA",
+        "cep": "88811-760"
+      },
+      "telefones": [
+        "(48) 3437-2983"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67345713451482,
+        "lng": -49.34934139251709,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "792810",
+      "nome": "TOPANOTTI SERVICOS MEDICOS",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "ANTONIO DE LUCCA",
+        "numero": "148",
+        "bairro": "PIO CORREA",
+        "cep": "88811-503"
+      },
+      "telefones": [
+        "(48) 3056-0909"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67776826539813,
+        "lng": -49.37024116516113,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-02-14",
+      "observacoes": null
+    },
+    {
+      "cnes": "9876820",
+      "nome": "TRENTO SERVICOS MEDICOS LTDA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CORONEL PEDRO BENEDET",
+        "numero": "333",
+        "bairro": "CENTRO",
+        "cep": "88801-250"
+      },
+      "telefones": [
+        "(48) 3081-9881"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.676563425721845,
+        "lng": -49.3665075302124,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-12-30",
+      "observacoes": null
+    },
+    {
+      "cnes": "7845049",
+      "nome": "TRIADE PILATES E FISIOTERAPIA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA BRAZ CARDOSO FERNANDES",
+        "numero": "183",
+        "bairro": "SANTA LUZIA",
+        "cep": "88807-270"
+      },
+      "telefones": [
+        "(48) 3443-8604"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.70658615774655,
+        "lng": -49.42431449890137,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "5723760",
+      "nome": "UNIDADE DE SAUDE DA MULHER",
+      "categoria": "especializado",
+      "tipo_cnes": "POLICLINICA",
+      "codigo_tipo_cnes": 4,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "MARIA FERNANDES ARGENTE",
+        "numero": "85",
+        "bairro": "SANTO ANTONIO",
+        "cep": "88809-340"
+      },
+      "telefones": [],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.678,
+        "lng": -49.37,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": "O cadastro informa o telefone como “48-34037417/7414”."
+    },
+    {
+      "cnes": "4043413",
+      "nome": "VISAO CLINICA DE EXAMES",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOAO CECHINEL",
+        "numero": "168",
+        "bairro": "PIO CORREA",
+        "cep": "88811-500"
+      },
+      "telefones": [
+        "(48) 99909-2276"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.675961000687057,
+        "lng": -49.362709522247314,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "7213603",
+      "nome": "VISIOCRI EXAMES EM OFTALMOLOGIA",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ANTONIO DE LUCCA",
+        "numero": "165",
+        "bairro": "PIO CORREA",
+        "cep": "88811-503"
+      },
+      "telefones": [
+        "(48) 3437-4392"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.677598835656013,
+        "lng": -49.36979055404663,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2869403",
+      "nome": "ZACCARON SERVICOS MEDICOS",
+      "categoria": "especializado",
+      "tipo_cnes": "CLINICA/CENTRO DE ESPECIALIDADE",
+      "codigo_tipo_cnes": 36,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOAO CECHINEL",
+        "numero": "168",
+        "bairro": "PIO CORREA",
+        "cep": "88811-500"
+      },
+      "telefones": [
+        "(48) 3433-0943"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67658225144836,
+        "lng": -49.362945556640625,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "6812155",
+      "nome": "FARMACIA ESCOLA COMPONENTE ESPECIALIZADO",
+      "categoria": "farmacia",
+      "tipo_cnes": "FARMACIA",
+      "codigo_tipo_cnes": 43,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA UNIVERSITARIA",
+        "numero": "1105",
+        "bairro": "UNIVERSITARIO",
+        "cep": "88806-000"
+      },
+      "telefones": [
+        "(48) 3431-2789"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.66679241716207,
+        "lng": -49.31591033935547,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "9874186",
+      "nome": "FARMACIA JUDICIAL CRICIUMA",
+      "categoria": "farmacia",
+      "tipo_cnes": "FARMACIA",
+      "codigo_tipo_cnes": 43,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA RIO DOS CEDROS",
+        "numero": "155",
+        "bairro": "SANTA AUGUSTA",
+        "cep": "88805-430"
+      },
+      "telefones": [
+        "(48) 3437-7893"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6974966,
+        "lng": -49.4046117,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "7563256",
+      "nome": "FARMACIA POPULAR DO BRASIL CRICIUMA",
+      "categoria": "farmacia",
+      "tipo_cnes": "FARMACIA",
+      "codigo_tipo_cnes": 43,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA HENRIQUE LAGE",
+        "numero": "240",
+        "bairro": "CENTRO",
+        "cep": "88801-010"
+      },
+      "telefones": [
+        "(48) 3445-8409"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": null,
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "7937547",
+      "nome": "CENTRAL DE REGULACAO DE CRICIUMA",
+      "categoria": "gestao",
+      "tipo_cnes": "CENTRAL DE REGULACAO DO ACESSO",
+      "codigo_tipo_cnes": 81,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA DOMENICO SONEGO",
+        "numero": "542",
+        "bairro": "SANTA BARBARA",
+        "cep": "88804-050"
+      },
+      "telefones": [
+        "(48) 3445-8400"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6975257,
+        "lng": -49.4046481,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "119598",
+      "nome": "CENTRAL MUNICIPAL DE REDE DE FRIO DE CRICIUMA",
+      "categoria": "gestao",
+      "tipo_cnes": "CENTRAL DE ABASTECIMENTO",
+      "codigo_tipo_cnes": 84,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA RIO DOS CEDROS",
+        "numero": "155",
+        "bairro": "SANTA AUGUSTA",
+        "cep": "88805-430"
+      },
+      "telefones": [
+        "(48) 3445-8774"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.69749663522707,
+        "lng": -49.40461167228705,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "111759",
+      "nome": "CENTRAL REGIONAL DE REDE FRIO CRICIUMA",
+      "categoria": "gestao",
+      "tipo_cnes": "CENTRAL DE ABASTECIMENTO",
+      "codigo_tipo_cnes": 84,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA HUMBERTO DE CAMPOS",
+        "numero": "56",
+        "bairro": "PIO CORREA",
+        "cep": "88811-570"
+      },
+      "telefones": [
+        "(48) 3461-2154"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6749183,
+        "lng": -49.3612916,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-11-13",
+      "observacoes": null
+    },
+    {
+      "cnes": "6045391",
+      "nome": "CENTRO DE SAUDE",
+      "categoria": "gestao",
+      "tipo_cnes": "CENTRAL DE REGULACAO DO ACESSO",
+      "codigo_tipo_cnes": 81,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "MARIA FERNANDES ARGENTE",
+        "numero": "85",
+        "bairro": "SANTO ANTONIO",
+        "cep": "88809-340"
+      },
+      "telefones": [
+        "(04) 83403-7400"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.678,
+        "lng": -49.37,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "9495037",
+      "nome": "COMPLEXO REGULADOR HOSPITALAR AMBULATORIAL MACRORREGIAO SUL",
+      "categoria": "gestao",
+      "tipo_cnes": "CENTRAL DE REGULACAO DO ACESSO",
+      "codigo_tipo_cnes": 81,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA HUMBERTO DE CAMPOS",
+        "numero": "56",
+        "bairro": "PIO CORREA",
+        "cep": "88811-570"
+      },
+      "telefones": [
+        "(48) 3461-2126"
+      ],
+      "turno": "ATENDIMENTO CONTINUO DE 24 HORAS/DIA (PLANTAO:INCLUI SABADOS, DOMINGOS E FERIADOS)",
+      "geo": {
+        "lat": -28.675753916281224,
+        "lng": -49.367687702178955,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "6507506",
+      "nome": "SECRETARIA MUNICIPAL DE SAUDE DE CRICIUMA",
+      "categoria": "gestao",
+      "tipo_cnes": "CENTRAL DE GESTAO EM SAUDE",
+      "codigo_tipo_cnes": 68,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA DOMENICO SONEGO",
+        "numero": "542",
+        "bairro": "SANTA BARBARA",
+        "cep": "88804-050"
+      },
+      "telefones": [
+        "(48) 3445-8400"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6896908,
+        "lng": -49.38040098440253,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2540479",
+      "nome": "CLINIGASTRO CLINICA MEDICA LTDA",
+      "categoria": "hospital",
+      "tipo_cnes": "HOSPITAL/DIA - ISOLADO",
+      "codigo_tipo_cnes": 62,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ANTONIO DE LUCCA",
+        "numero": "50",
+        "bairro": "CENTRO",
+        "cep": "88811-503"
+      },
+      "telefones": [
+        "(48) 3431-9999"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.672082806592403,
+        "lng": -49.3720006942749,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "451126",
+      "nome": "HOSPITAL DE RETAGUARDA RIO MAINA",
+      "categoria": "hospital",
+      "tipo_cnes": "HOSPITAL GERAL",
+      "codigo_tipo_cnes": 5,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA LUIS PIROLA DE NOE",
+        "numero": "150",
+        "bairro": "VILA ISABEL",
+        "cep": "88818-070"
+      },
+      "telefones": [
+        "(48) 3801-0274"
+      ],
+      "turno": "ATENDIMENTO CONTINUO DE 24 HORAS/DIA (PLANTAO:INCLUI SABADOS, DOMINGOS E FERIADOS)",
+      "geo": {
+        "lat": -28.678,
+        "lng": -49.37,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "366323",
+      "nome": "HOSPITAL MARIA SCHMITT",
+      "categoria": "hospital",
+      "tipo_cnes": "HOSPITAL/DIA - ISOLADO",
+      "codigo_tipo_cnes": 62,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA UNIVERSITARIA",
+        "numero": "2080",
+        "bairro": "SANTA LUZIA",
+        "cep": "88807-260"
+      },
+      "telefones": [
+        "(48) 3420-1106"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.7018998,
+        "lng": -49.4205752,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-04-07",
+      "observacoes": null
+    },
+    {
+      "cnes": "2594277",
+      "nome": "HOSPITAL MATERNO INFANTIL SANTA CATARINA",
+      "categoria": "hospital",
+      "tipo_cnes": "HOSPITAL GERAL",
+      "codigo_tipo_cnes": 5,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA WENCESLAU BRAZ",
+        "numero": "1015",
+        "bairro": "OPERARIA NOVA",
+        "cep": "88809-020"
+      },
+      "telefones": [
+        "(48) 3512-2137"
+      ],
+      "turno": "ATENDIMENTO CONTINUO DE 24 HORAS/DIA (PLANTAO:INCLUI SABADOS, DOMINGOS E FERIADOS)",
+      "geo": {
+        "lat": -28.67554683146602,
+        "lng": -49.387149810791016,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-05",
+      "observacoes": null
+    },
+    {
+      "cnes": "284556",
+      "nome": "HOSPITAL SAO JOAO BATISTA",
+      "categoria": "hospital",
+      "tipo_cnes": "HOSPITAL GERAL",
+      "codigo_tipo_cnes": 5,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA VITAL BRASIL",
+        "numero": "455",
+        "bairro": "CRUZEIRO DO SUL",
+        "cep": "88811-042"
+      },
+      "telefones": [
+        "(48) 3461-6111"
+      ],
+      "turno": "ATENDIMENTO CONTINUO DE 24 HORAS/DIA (PLANTAO:INCLUI SABADOS, DOMINGOS E FERIADOS)",
+      "geo": {
+        "lat": -28.6696379,
+        "lng": -49.3627048,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-02-14",
+      "observacoes": null
+    },
+    {
+      "cnes": "2758164",
+      "nome": "HOSPITAL SAO JOSE",
+      "categoria": "hospital",
+      "tipo_cnes": "HOSPITAL GERAL",
+      "codigo_tipo_cnes": 5,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JULIO GAIDZINSKI",
+        "numero": "90",
+        "bairro": "PIO CORREA",
+        "cep": "88811-000"
+      },
+      "telefones": [
+        "(48) 3431-1500"
+      ],
+      "turno": "ATENDIMENTO CONTINUO DE 24 HORAS/DIA (PLANTAO:INCLUI SABADOS, DOMINGOS E FERIADOS)",
+      "geo": {
+        "lat": -28.674003095398398,
+        "lng": -49.36399698257446,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-05",
+      "observacoes": null
+    },
+    {
+      "cnes": "5712068",
+      "nome": "HOSPITAL UNIMED CRICIUMA",
+      "categoria": "hospital",
+      "tipo_cnes": "HOSPITAL GERAL",
+      "codigo_tipo_cnes": 5,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA ESTEVAO EMILIO DE SOUZA",
+        "numero": "101",
+        "bairro": "CEARA",
+        "cep": "88815-180"
+      },
+      "telefones": [
+        "(48) 3478-2100"
+      ],
+      "turno": "ATENDIMENTO NOS TURNOS DA MANHA, TARDE E NOITE",
+      "geo": {
+        "lat": -28.683032,
+        "lng": -49.3495851,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "4917294",
+      "nome": "PRONTO ATENDIMENTO SANTA LUZIA",
+      "categoria": "pronto_atendimento",
+      "tipo_cnes": "PRONTO ATENDIMENTO",
+      "codigo_tipo_cnes": 73,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA UNIVERSITARIA",
+        "numero": "2080",
+        "bairro": "SANTA LUZIA",
+        "cep": "88807-260"
+      },
+      "telefones": [],
+      "turno": "ATENDIMENTO CONTINUO DE 24 HORAS/DIA (PLANTAO:INCLUI SABADOS, DOMINGOS E FERIADOS)",
+      "geo": {
+        "lat": -28.703777268220144,
+        "lng": -49.46197734449613,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "9874887",
+      "nome": "UPA DA BOA VISTA DALBI JOSE SEBASTIANA",
+      "categoria": "pronto_atendimento",
+      "tipo_cnes": "PRONTO ATENDIMENTO",
+      "codigo_tipo_cnes": 73,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA SAO FRANCISCO DO SUL",
+        "numero": "S/N",
+        "bairro": "BOA VISTA",
+        "cep": "88805-700"
+      },
+      "telefones": [
+        "(48) 3445-8767"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6811897,
+        "lng": -49.4077715,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "9550348",
+      "nome": "UPA DA PROSPERA DR ANTONIO CARLOS ALTHOFF",
+      "categoria": "pronto_atendimento",
+      "tipo_cnes": "PRONTO ATENDIMENTO",
+      "codigo_tipo_cnes": 73,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA GENERAL OSVALDO PINTO DA VEIGA",
+        "numero": "S/N",
+        "bairro": "PROSPERA",
+        "cep": "88811-070"
+      },
+      "telefones": [
+        "(48) 3413-5314"
+      ],
+      "turno": "ATENDIMENTO CONTINUO DE 24 HORAS/DIA (PLANTAO:INCLUI SABADOS, DOMINGOS E FERIADOS)",
+      "geo": {
+        "lat": -28.676469297038523,
+        "lng": -49.3306303024292,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-10-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "2419777",
+      "nome": "UPA DO RIO MAINA JOSE MARCOMIN",
+      "categoria": "pronto_atendimento",
+      "tipo_cnes": "PRONTO ATENDIMENTO",
+      "codigo_tipo_cnes": 73,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA SANTOS UGIONI",
+        "numero": "S/N",
+        "bairro": "RIO MAINA",
+        "cep": "88818-490"
+      },
+      "telefones": [
+        "(48) 3413-5550"
+      ],
+      "turno": "ATENDIMENTO CONTINUO DE 24 HORAS/DIA (PLANTAO:INCLUI SABADOS, DOMINGOS E FERIADOS)",
+      "geo": {
+        "lat": -28.661671216419496,
+        "lng": -49.427833557128906,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-11",
+      "observacoes": null
+    },
+    {
+      "cnes": "105775",
+      "nome": "CENTRO DE ATENDIMENTO PARA ENFRENTAMENTO A COVID 19 CRICIUMA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOAO CECHINEL",
+        "numero": "100",
+        "bairro": "PIO CORREA",
+        "cep": "88811-501"
+      },
+      "telefones": [
+        "(48) 3444-7153"
+      ],
+      "turno": "ATENDIMENTO NOS TURNOS DA MANHA, TARDE E NOITE",
+      "geo": {
+        "lat": -28.678,
+        "lng": -49.37,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "887595",
+      "nome": "CONSULTORIO NA RUA CRICIUMA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA LUIS PIROLA NOE",
+        "numero": "150",
+        "bairro": "VILA ISABEL",
+        "cep": "88818-070"
+      },
+      "telefones": [
+        "(48) 99814-4746"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67340065564034,
+        "lng": -49.365971088409424,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "3435482",
+      "nome": "EQUIPE DE REABILITACAO DOMICILIAR",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA LUIS PIROLA DE NOE",
+        "numero": "150",
+        "bairro": "VILA ISABEL",
+        "cep": "88818-070"
+      },
+      "telefones": [
+        "(48) 3445-8400"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.678,
+        "lng": -49.37,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2647354",
+      "nome": "UNIDADE BASICA DE SAUDE ANA MARIA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA GILIO BURIGO",
+        "numero": "S/N",
+        "bairro": "ANA MARIA",
+        "cep": "88815-318"
+      },
+      "telefones": [
+        "(48) 3445-8450"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.688724140142533,
+        "lng": -49.347431659698486,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "6355455",
+      "nome": "UNIDADE BASICA DE SAUDE ARGENTINA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "TRAVESSA TAQUARI",
+        "numero": "S/N",
+        "bairro": "ARGENTINA",
+        "cep": "88813-550"
+      },
+      "telefones": [
+        "(48) 3445-8451"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67705289351167,
+        "lng": -49.370412826538086,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2419858",
+      "nome": "UNIDADE BASICA DE SAUDE BOA VISTA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA SAO FRANCISCO DO SUL",
+        "numero": "S/N",
+        "bairro": "BOA VISTA",
+        "cep": "88805-700"
+      },
+      "telefones": [
+        "(48) 3445-8765"
+      ],
+      "turno": "ATENDIMENTO NOS TURNOS DA MANHA, TARDE E NOITE",
+      "geo": {
+        "lat": -28.682982802328446,
+        "lng": -49.40993785858154,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "4058720",
+      "nome": "UNIDADE BASICA DE SAUDE BRASILIA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA XINGU",
+        "numero": "S/N",
+        "bairro": "BRASILIA",
+        "cep": "88813-170"
+      },
+      "telefones": [
+        "(48) 3462-1340"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67752353346044,
+        "lng": -49.375927448272705,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "7032218",
+      "nome": "UNIDADE BASICA DE SAUDE CENTRO",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOAO PESSOA",
+        "numero": "196",
+        "bairro": "CENTRO",
+        "cep": "88801-530"
+      },
+      "telefones": [
+        "(48) 3430-0959"
+      ],
+      "turno": "ATENDIMENTO NOS TURNOS DA MANHA, TARDE E NOITE",
+      "geo": {
+        "lat": -28.6757874,
+        "lng": -49.3722674,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2419904",
+      "nome": "UNIDADE BASICA DE SAUDE CENTRO SOCIAL URBANO",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ACRE",
+        "numero": "191",
+        "bairro": "PROSPERA",
+        "cep": "88813-340"
+      },
+      "telefones": [
+        "(48) 3445-8456"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6844537,
+        "lng": -49.3433855,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2647427",
+      "nome": "UNIDADE BASICA DE SAUDE CIDADE MINEIRA VELHA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA LINDOLFO MEIRA",
+        "numero": "S/N",
+        "bairro": "MINEIRA NOVA",
+        "cep": "88806-480"
+      },
+      "telefones": [
+        "(48) 3445-8454"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6871739,
+        "lng": -49.4252167,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-01-27",
+      "observacoes": null
+    },
+    {
+      "cnes": "2647281",
+      "nome": "UNIDADE BASICA DE SAUDE COLONIAL",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOSE VANIO BURIGO",
+        "numero": "S/N",
+        "bairro": "COLONIAL",
+        "cep": "88819-232"
+      },
+      "telefones": [
+        "(48) 3442-3658"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6580891,
+        "lng": -49.4406331,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2647419",
+      "nome": "UNIDADE BASICA DE SAUDE CRISTO REDENTOR",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CECILIA MARIA VIEIRA BATISTA",
+        "numero": "S/N",
+        "bairro": "CRISTO REDENTOR",
+        "cep": "88816-236"
+      },
+      "telefones": [
+        "(48) 3445-8455"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.7028916,
+        "lng": -49.3354418,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2419947",
+      "nome": "UNIDADE BASICA DE SAUDE DE SAO ROQUE",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA LUIZ JOSE MARIANO",
+        "numero": "S/N",
+        "bairro": "SAO ROQUE",
+        "cep": "88805-530"
+      },
+      "telefones": [
+        "(48) 3445-8487"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": null,
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2647346",
+      "nome": "UNIDADE BASICA DE SAUDE LARANJINHA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CAETANO RONCHI",
+        "numero": "S/N",
+        "bairro": "LARANJINHA",
+        "cep": "88818-680"
+      },
+      "telefones": [
+        "(48) 3445-8457"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6558748,
+        "lng": -49.4173488,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "4758358",
+      "nome": "UNIDADE BASICA DE SAUDE LINHA ANTA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CAETANO SCREMIN",
+        "numero": "S/N",
+        "bairro": "LINHA ANTA",
+        "cep": "88812-751"
+      },
+      "telefones": [],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.683058100599137,
+        "lng": -49.25376892089844,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2647273",
+      "nome": "UNIDADE BASICA DE SAUDE LINHA BATISTA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RODOVIA LEONARDO BIALECK",
+        "numero": "S/N",
+        "bairro": "LINHA BATISTA",
+        "cep": "88812-870"
+      },
+      "telefones": [
+        "(48) 3445-8478"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6572681,
+        "lng": -49.2826056,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2419769",
+      "nome": "UNIDADE BASICA DE SAUDE MAE LUZIA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA VEREADOR JOSE DANDOLINI",
+        "numero": "160",
+        "bairro": "MAE LUZIA",
+        "cep": "88808-500"
+      },
+      "telefones": [
+        "(48) 3445-8458"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.7054793,
+        "lng": -49.4701628,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "7806353",
+      "nome": "UNIDADE BASICA DE SAUDE MARIA CEU",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA GONZAGA AMANTE",
+        "numero": "280",
+        "bairro": "MARIA CEU",
+        "cep": "88810-332"
+      },
+      "telefones": [
+        "(48) 3438-0727"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6708732,
+        "lng": -49.3913358,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2647303",
+      "nome": "UNIDADE BASICA DE SAUDE METROPOL",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOSE MANOEL SEBASTIAO",
+        "numero": "S/N",
+        "bairro": "METROPOL",
+        "cep": "88819-795"
+      },
+      "telefones": [
+        "(48) 3445-8483"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6482404,
+        "lng": -49.4303361,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2419882",
+      "nome": "UNIDADE BASICA DE SAUDE MILANESE",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA VALDIR VAZ FRANCO",
+        "numero": "S/N",
+        "bairro": "MILANESE",
+        "cep": "88804-528"
+      },
+      "telefones": [
+        "(48) 3445-8422"
+      ],
+      "turno": "ATENDIMENTO SOMENTE PELA MANHA",
+      "geo": {
+        "lat": -28.6965145,
+        "lng": -49.3915144,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2419785",
+      "nome": "UNIDADE BASICA DE SAUDE MINA DO MATO",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ANTONIO TEODORO MAXIMO",
+        "numero": "72",
+        "bairro": "MINA DO MATO",
+        "cep": "88810-530"
+      },
+      "telefones": [
+        "(48) 3403-6011"
+      ],
+      "turno": "ATENDIMENTO NOS TURNOS DA MANHA, TARDE E NOITE",
+      "geo": {
+        "lat": -28.6619238,
+        "lng": -49.3840914,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "4058836",
+      "nome": "UNIDADE BASICA DE SAUDE MINA DO TOCO",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA BENJAMIN PELEGRINI",
+        "numero": "S/N",
+        "bairro": "MINA DO TOCO",
+        "cep": "88819-481"
+      },
+      "telefones": [
+        "(48) 3445-8484"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.659110522213574,
+        "lng": -49.38199996948242,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2419912",
+      "nome": "UNIDADE BASICA DE SAUDE MINA UNIAO",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA CATARINA MILANEZ",
+        "numero": "S/N",
+        "bairro": "MINA UNIAO",
+        "cep": "88806-610"
+      },
+      "telefones": [
+        "(48) 3445-8482"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6858094,
+        "lng": -49.4303354,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2702789",
+      "nome": "UNIDADE BASICA DE SAUDE MINEIRAS",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA LINDOLFO MEIRA",
+        "numero": "S/N",
+        "bairro": "MINEIRA NOVA",
+        "cep": "88806-480"
+      },
+      "telefones": [
+        "(48) 3445-8453"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6871739,
+        "lng": -49.4252167,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2026-01-27",
+      "observacoes": null
+    },
+    {
+      "cnes": "2647435",
+      "nome": "UNIDADE BASICA DE SAUDE MORRO ESTEVAO",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA BRUNO NICROSINI",
+        "numero": "153",
+        "bairro": "MORRO ESTEVAO",
+        "cep": "88816-710"
+      },
+      "telefones": [
+        "(48) 3461-8450"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.735452560055275,
+        "lng": -49.37187194824219,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2419750",
+      "nome": "UNIDADE BASICA DE SAUDE NOSSA SENHORA DA SALETE",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA DIONISIO MILIOLI",
+        "numero": "S/N",
+        "bairro": "NOSSA SENHORA DA SAL",
+        "cep": "88815-510"
+      },
+      "telefones": [
+        "(48) 3445-8461"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.689382962051898,
+        "lng": -49.339942932128906,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2647370",
+      "nome": "UNIDADE BASICA DE SAUDE NOVA ESPERANCA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA FAUSTO ANTONIO MARQUES",
+        "numero": "S/N",
+        "bairro": "NOVA ESPERANCA",
+        "cep": "88806-056"
+      },
+      "telefones": [
+        "(48) 3445-8472"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.705293,
+        "lng": -49.4347786,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "7154348",
+      "nome": "UNIDADE BASICA DE SAUDE OPERARIA NOVA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ATAULFO ALVES",
+        "numero": "S/N",
+        "bairro": "OPERARIA NOVA",
+        "cep": "88809-210"
+      },
+      "telefones": [
+        "(48) 3437-9705"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.677259975349646,
+        "lng": -49.386892318725586,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "3065596",
+      "nome": "UNIDADE BASICA DE SAUDE PARAISO TEREZA CRISTINA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA IMIGRANTE BENEDET",
+        "numero": "S/N",
+        "bairro": "PARAISO",
+        "cep": "88805-120"
+      },
+      "telefones": [
+        "(48) 3445-8480"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6918646,
+        "lng": -49.3992072,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "4058755",
+      "nome": "UNIDADE BASICA DE SAUDE PINHEIRINHO",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA IMIGRANTE MELLER",
+        "numero": "S/N",
+        "bairro": "PINHEIRINHO",
+        "cep": "88805-085"
+      },
+      "telefones": [
+        "(48) 3445-8846"
+      ],
+      "turno": "ATENDIMENTO NOS TURNOS DA MANHA, TARDE E NOITE",
+      "geo": {
+        "lat": -28.6927881,
+        "lng": -49.3940596,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "3447995",
+      "nome": "UNIDADE BASICA DE SAUDE PRIMEIRA LINHA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RODOVIA ALEXANDRE BELOLI",
+        "numero": "S/N",
+        "bairro": "PRIMEIRA LINHA",
+        "cep": "88816-500"
+      },
+      "telefones": [
+        "(48) 3445-8404"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.7190985,
+        "lng": -49.3704907,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2758237",
+      "nome": "UNIDADE BASICA DE SAUDE PROSPERA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA PERNAMBUCO",
+        "numero": "S/N",
+        "bairro": "PROSPERA",
+        "cep": "88813-010"
+      },
+      "telefones": [
+        "(48) 3439-3097"
+      ],
+      "turno": "ATENDIMENTO NOS TURNOS DA MANHA, TARDE E NOITE",
+      "geo": {
+        "lat": -28.678711,
+        "lng": -49.3495535,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2647397",
+      "nome": "UNIDADE BASICA DE SAUDE QUARTA LINHA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA MONSUETO LUIZ ROSSO",
+        "numero": "65",
+        "bairro": "QUARTA LINHA",
+        "cep": "88812-499"
+      },
+      "telefones": [
+        "(48) 3437-6741"
+      ],
+      "turno": "ATENDIMENTO NOS TURNOS DA MANHA, TARDE E NOITE",
+      "geo": {
+        "lat": -28.79474103018491,
+        "lng": -49.370155334472656,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2647400",
+      "nome": "UNIDADE BASICA DE SAUDE RENASCER MINA QUATRO",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA HEITOR FRAGA DE OLIVEIRA",
+        "numero": "144",
+        "bairro": "RENASCER",
+        "cep": "88816-013"
+      },
+      "telefones": [
+        "(48) 3445-8460"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.71196863370573,
+        "lng": -49.36088562011719,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2419939",
+      "nome": "UNIDADE BASICA DE SAUDE SANGAO",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RODOVIA JORGE LACERDA",
+        "numero": "21",
+        "bairro": "SANGAO",
+        "cep": "88805-350"
+      },
+      "telefones": [
+        "(48) 3445-8486"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.7051682,
+        "lng": -49.4051736,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "4058712",
+      "nome": "UNIDADE BASICA DE SAUDE SANTA AUGUSTA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA DOS ITALIANOS",
+        "numero": "S/N",
+        "bairro": "SANTA AUGUSTA",
+        "cep": "88805-400"
+      },
+      "telefones": [
+        "(48) 3445-8465"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.689192,
+        "lng": -49.4116324,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2540339",
+      "nome": "UNIDADE BASICA DE SAUDE SANTA BARBARA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA SAMPAIO VIANA",
+        "numero": "S/N",
+        "bairro": "SANTA BARBARA",
+        "cep": "88804-270"
+      },
+      "telefones": [
+        "(48) 3445-8405"
+      ],
+      "turno": "ATENDIMENTO NOS TURNOS DA MANHA, TARDE E NOITE",
+      "geo": {
+        "lat": -28.6872614,
+        "lng": -49.3856629,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2647311",
+      "nome": "UNIDADE BASICA DE SAUDE SANTA LUZIA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA BRAZ CARDOSO FERNANDES",
+        "numero": "S/N",
+        "bairro": "SANTA LUZIA",
+        "cep": "88807-270"
+      },
+      "telefones": [
+        "(48) 3461-9450"
+      ],
+      "turno": "ATENDIMENTO NOS TURNOS DA MANHA, TARDE E NOITE",
+      "geo": {
+        "lat": -28.7047565,
+        "lng": -49.4267193,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2419823",
+      "nome": "UNIDADE BASICA DE SAUDE SANTO ANTONIO",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ATAIDE BOTELHO",
+        "numero": "S/N",
+        "bairro": "SANTO ANTONIO",
+        "cep": "88809-405"
+      },
+      "telefones": [
+        "(48) 3445-8467"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6811003279657,
+        "lng": -49.395389556884766,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2758210",
+      "nome": "UNIDADE BASICA DE SAUDE SAO DEFENDE",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOA BATISTA CORDEIRO",
+        "numero": "S/N",
+        "bairro": "SAO DEFENDE",
+        "cep": "88808-073"
+      },
+      "telefones": [
+        "(48) 3445-8469"
+      ],
+      "turno": "ATENDIMENTO NOS TURNOS DA MANHA, TARDE E NOITE",
+      "geo": {
+        "lat": -28.70474174913438,
+        "lng": -49.45598602294922,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2647338",
+      "nome": "UNIDADE BASICA DE SAUDE SAO LUIZ",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "AVENIDA PRESIDENTE PRUDENTE",
+        "numero": "S/N",
+        "bairro": "SAO LUIZ",
+        "cep": "88803-210"
+      },
+      "telefones": [
+        "(48) 3445-8462"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.693147579146434,
+        "lng": -49.371185302734375,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2758229",
+      "nome": "UNIDADE BASICA DE SAUDE SAO MARCOS",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA MANUEL ANTONIO FERREIRA",
+        "numero": "S/N",
+        "bairro": "SAO MARCOS",
+        "cep": "88810-000"
+      },
+      "telefones": [
+        "(48) 3445-8452"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.678,
+        "lng": -49.37,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "4058771",
+      "nome": "UNIDADE BASICA DE SAUDE SAO SEBASTIAO",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ROSA AMPOLINA CANDIDO",
+        "numero": "S/N",
+        "bairro": "SAO SEBASTIAO",
+        "cep": "88807-143"
+      },
+      "telefones": [
+        "(48) 3445-8470"
+      ],
+      "turno": "ATENDIMENTO NOS TURNOS DA MANHA, TARDE E NOITE",
+      "geo": {
+        "lat": -28.697514365372466,
+        "lng": -49.44328308105469,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2647265",
+      "nome": "UNIDADE BASICA DE SAUDE SAO SIMAO",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA VENANCIO MARTINELLO",
+        "numero": "335",
+        "bairro": "SAO SIMAO",
+        "cep": "88811-815"
+      },
+      "telefones": [
+        "(48) 3445-8471"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6495136,
+        "lng": -49.3480032,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2419920",
+      "nome": "UNIDADE BASICA DE SAUDE VERDINHO",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ALBINO DALTOE",
+        "numero": "S/N",
+        "bairro": "VERDINHO",
+        "cep": "88814-540"
+      },
+      "telefones": [
+        "(48) 3445-8485"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.75772730515467,
+        "lng": -49.41581726074219,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2647389",
+      "nome": "UNIDADE BASICA DE SAUDE VILA BELMIRO",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA PROFESSORA ROSA DE SOUZA ALBANO",
+        "numero": "S/N",
+        "bairro": "VILA BELMIRO",
+        "cep": "88806-697"
+      },
+      "telefones": [
+        "(48) 3445-8489"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6952008,
+        "lng": -49.4291958,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2652005",
+      "nome": "UNIDADE BASICA DE SAUDE VILA FRANCESA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA JOSE LUCIO GODINHO",
+        "numero": "S/N",
+        "bairro": "VILA FRANCESA",
+        "cep": "88817-378"
+      },
+      "telefones": [
+        "(48) 3445-8473"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.674782,
+        "lng": -49.4142317,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2419793",
+      "nome": "UNIDADE BASICA DE SAUDE VILA MANAUS",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA SAO FRANCISCO DE ASSIS",
+        "numero": "S/N",
+        "bairro": "VILA MANAUS",
+        "cep": "88806-825"
+      },
+      "telefones": [
+        "(48) 3445-8479"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.69634739723547,
+        "lng": -49.42349910736084,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2419890",
+      "nome": "UNIDADE BASICA DE SAUDE VILA RICA IMIGRANTES",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA DOMINGOS DE VILLA",
+        "numero": "S/N",
+        "bairro": "VILA RICA",
+        "cep": "88813-730"
+      },
+      "telefones": [
+        "(48) 3445-8474"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.67417253095618,
+        "lng": -49.32706832885742,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2419963",
+      "nome": "UNIDADE BASICA DE SAUDE VILA ZULEIMA",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA ANTONIO DE OLIVEIRA",
+        "numero": "S/N",
+        "bairro": "VILA ZULEIMA",
+        "cep": "88817-250"
+      },
+      "telefones": [
+        "(48) 3445-8475"
+      ],
+      "turno": "ATENDIMENTOS NOS TURNOS DA MANHA E A TARDE",
+      "geo": {
+        "lat": -28.6654889,
+        "lng": -49.3995765,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    },
+    {
+      "cnes": "2419874",
+      "nome": "UNIDADE BASICA DE SAUDE WOSOCRIS",
+      "categoria": "ubs",
+      "tipo_cnes": "CENTRO DE SAUDE/UNIDADE BASICA",
+      "codigo_tipo_cnes": 2,
+      "atende_sus": true,
+      "endereco": {
+        "logradouro": "RUA VIRGILIO MONDARDO",
+        "numero": "S/N",
+        "bairro": "RIO MAINA",
+        "cep": "88818-338"
+      },
+      "telefones": [
+        "(48) 3403-7000"
+      ],
+      "turno": "ATENDIMENTO NOS TURNOS DA MANHA, TARDE E NOITE",
+      "geo": {
+        "lat": -28.6610575,
+        "lng": -49.4384794,
+        "fonte": "CNES — declarado pelo estabelecimento",
+        "obtido_em": "2026-09-08"
+      },
+      "atualizado_no_cnes_em": "2025-09-03",
+      "observacoes": null
+    }
+  ],
+  "proveniencia": [
+    {
+      "fonte_nome": "CNES — estabelecimentos de Criciúma/SC",
+      "fonte_url": "https://apidadosabertos.saude.gov.br/cnes/estabelecimentos?codigo_municipio=420460",
+      "fonte_arquivo": "fontes/sc-criciuma/cnes-estabelecimentos.json",
+      "fonte_data": "2026-09-08",
+      "extraido_em": "2026-09-08",
+      "verificado_em": "2026-09-08",
+      "metodo": "automatica"
+    }
+  ]
+}

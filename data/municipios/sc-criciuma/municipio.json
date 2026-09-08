@@ -1,0 +1,28 @@
+{
+  "id": "sc-criciuma",
+  "nome": "Criciúma",
+  "uf": "SC",
+  "ibge": "4204608",
+  "ddd": "48",
+  "telefone_assistencia_farmaceutica": null,
+  "exigencias_gerais": [
+    "Morar em Criciúma",
+    "Ter cadastro no sistema da prefeitura. O cadastro é feito na sua unidade de saúde.",
+    "A receita original, não uma cópia"
+  ],
+  "centro": {
+    "lat": -28.6775,
+    "lng": -49.3697
+  },
+  "proveniencia": [
+    {
+      "fonte_nome": "REMUME Criciúma versão 11/2024",
+      "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+      "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+      "fonte_data": "2024-11-01",
+      "extraido_em": "2026-09-03",
+      "verificado_em": "2026-09-04",
+      "metodo": "ia-assistida"
+    }
+  ]
+}

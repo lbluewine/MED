@@ -1,0 +1,121 @@
+{
+  "comentario": [
+    "Onde fica o site de cada prefeitura, e onde a REMUME dela é publicada.",
+    "O domínio é descoberto por scripts/monta_catalogo_prefeituras.py.",
+    "O bloco 'remume' é preenchido à mão e nunca é sobrescrito.",
+    "confirmacao: 'titulo' o título diz prefeitura e o nome da cidade;",
+    "             'responde' o endereço responde mas o título não confirma;",
+    "             'manual' alguém conferiu e escreveu;",
+    "             'nenhuma' não achamos — precisa de gente."
+  ],
+  "prefeituras": [
+    {
+      "slug": "sc-joinville",
+      "nome": "Joinville",
+      "uf": "SC",
+      "populacao": 616317,
+      "dominio": "joinville.sc.gov.br",
+      "url": "https://joinville.sc.gov.br/",
+      "titulo_visto": "Página principal do site - Prefeitura de Joinville",
+      "confirmacao": "titulo",
+      "verificado_em": "2026-09-08",
+      "remume": null
+    },
+    {
+      "slug": "sc-florianopolis",
+      "nome": "Florianópolis",
+      "uf": "SC",
+      "populacao": 537211,
+      "dominio": null,
+      "url": null,
+      "titulo_visto": null,
+      "confirmacao": "nenhuma",
+      "verificado_em": "2026-09-08",
+      "remume": null
+    },
+    {
+      "slug": "sc-blumenau",
+      "nome": "Blumenau",
+      "uf": "SC",
+      "populacao": 361261,
+      "dominio": "blumenau.sc.gov.br",
+      "url": "https://blumenau.sc.gov.br/",
+      "titulo_visto": "Prefeitura de Blumenau",
+      "confirmacao": "titulo",
+      "verificado_em": "2026-09-08",
+      "remume": null
+    },
+    {
+      "slug": "sc-sao-jose",
+      "nome": "São José",
+      "uf": "SC",
+      "populacao": 270299,
+      "dominio": "saojose.sc.gov.br",
+      "url": "https://saojose.sc.gov.br/",
+      "titulo_visto": "Prefeitura Municipal De São José &#8211; www.saojose.sc.gov.br",
+      "confirmacao": "titulo",
+      "verificado_em": "2026-09-08",
+      "remume": null
+    },
+    {
+      "slug": "sc-itajai",
+      "nome": "Itajaí",
+      "uf": "SC",
+      "populacao": 264054,
+      "dominio": "itajai.sc.gov.br",
+      "url": "https://itajai.sc.gov.br/",
+      "titulo_visto": "Município de Itajaí",
+      "confirmacao": "responde",
+      "verificado_em": "2026-09-08",
+      "remume": null
+    },
+    {
+      "slug": "sc-chapeco",
+      "nome": "Chapecó",
+      "uf": "SC",
+      "populacao": 254785,
+      "dominio": "chapeco.sc.gov.br",
+      "url": "https://chapeco.sc.gov.br/",
+      "titulo_visto": "Prefeitura de Chapecó",
+      "confirmacao": "titulo",
+      "verificado_em": "2026-09-08",
+      "remume": null
+    },
+    {
+      "slug": "sc-palhoca",
+      "nome": "Palhoça",
+      "uf": "SC",
+      "populacao": 222598,
+      "dominio": null,
+      "url": null,
+      "titulo_visto": null,
+      "confirmacao": "nenhuma",
+      "verificado_em": "2026-09-08",
+      "remume": null
+    },
+    {
+      "slug": "sc-criciuma",
+      "nome": "Criciúma",
+      "uf": "SC",
+      "populacao": 214493,
+      "dominio": "criciuma.sc.gov.br",
+      "url": "https://criciuma.sc.gov.br/",
+      "titulo_visto": "Prefeitura Municipal de Criciúma",
+      "confirmacao": "manual",
+      "verificado_em": "2026-09-08",
+      "remume": {
+        "ancora": "direta",
+        "url_listagem": null,
+        "regra": null,
+        "url_documento": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+        "observacao": "A listagem do CIGTES é montada por JavaScript e não dá para ler sem navegador. Ver docs/DADOS.md.",
+        "situacao": "no_lugar",
+        "achado_por": "direta",
+        "detalhe": null,
+        "url_diario": null,
+        "sha256": "ca3ad22bf3590ce8a4c35b17ddef4b3b75738eb6039efb35c9e9a7e083281fc2",
+        "conferido_em": "2026-09-08"
+      }
+    }
+  ]
+}

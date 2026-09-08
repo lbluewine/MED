@@ -1,0 +1,3027 @@
+[
+  {
+    "id": "ubs-sao-marcos",
+    "nome": "UBS São Marcos",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Manoel Antônio Ferreira, S/N",
+      "bairro": "São Marcos",
+      "cep": "88819-730",
+      "geo": {
+        "lat": -28.64048481754211,
+        "lng": -49.41993072423852,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8452"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-ana-maria",
+    "nome": "Unidade Básica de Saúde Ana Maria",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Avenida Gilio Burigo, sem número",
+      "bairro": "Ana Maria",
+      "cep": "88815-318",
+      "geo": {
+        "lat": -28.70471064745048,
+        "lng": -49.359817131009585,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8450"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-argentina",
+    "nome": "Unidade Básica de Saúde Argentina",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Travessa Taquarí, sem número",
+      "bairro": "Argentina",
+      "cep": "88813-550",
+      "geo": {
+        "lat": -28.668952291247088,
+        "lng": -49.34532838102925,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8451"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-boa-vista",
+    "nome": "Unidade Básica de Saúde Boa Vista",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua São Francisco Do Sul, sem número",
+      "bairro": "Boa Vista",
+      "cep": "88805-700",
+      "geo": {
+        "lat": -28.6890085,
+        "lng": -49.408725,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8765"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-brasilia",
+    "nome": "Unidade Básica de Saúde Brasília",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Xingú, sem número",
+      "bairro": "Brasília",
+      "cep": "88813-170",
+      "geo": {
+        "lat": -28.67493910000001,
+        "lng": -49.3557918921875,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3462-1340"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-centro",
+    "nome": "Unidade Básica de Saúde Centro",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua João Pessoa, 187",
+      "bairro": "Centro",
+      "cep": "88810-020",
+      "geo": {
+        "lat": -28.676886799999984,
+        "lng": -49.387760692187506,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3430-0959",
+      "3430-0960"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-centro-social-urbano",
+    "nome": "Unidade Básica de Saúde Centro Social Urbano",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Acre, 191",
+      "bairro": "Próspera",
+      "cep": "88813-340",
+      "geo": {
+        "lat": -28.561691164781738,
+        "lng": -55.26360487098919,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8456"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-colonial",
+    "nome": "Unidade Básica de Saúde Colonial",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua José Vanio Burigo, sem número",
+      "bairro": "Colonial",
+      "cep": "88819-232",
+      "geo": {
+        "lat": -28.647352974662432,
+        "lng": -49.4435970851992,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "3442-3658"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-cristo-redentor",
+    "nome": "Unidade Básica de Saúde Cristo Redentor",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Cecília Maria Vieria Batista, sem número",
+      "bairro": "Cristo Redentor",
+      "cep": "88816-236",
+      "geo": {
+        "lat": -28.703118,
+        "lng": -49.3357774,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8455"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-laranjinha",
+    "nome": "Unidade Básica de Saúde Laranjinha",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Caetano Ronchi, sem número",
+      "bairro": "Laranjinha",
+      "cep": "88818-680",
+      "geo": {
+        "lat": -28.663222120042263,
+        "lng": -49.41742659206543,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8457"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-linha-anta",
+    "nome": "Unidade Básica de Saúde Linha Anta",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Caetano Scremim, S/N",
+      "bairro": "Linha Anta",
+      "cep": "88812-751",
+      "geo": {
+        "lat": -28.669310463457762,
+        "lng": -49.25785331906978,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3434-1583"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-linha-batista",
+    "nome": "Unidade Básica de Saúde Linha Batista",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rodovia Leonardo Bialeck, sem número",
+      "bairro": "Linha Batista",
+      "cep": "88812-870",
+      "geo": {
+        "lat": -28.6571406,
+        "lng": -49.3032195,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8478"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-maria-ceu",
+    "nome": "Unidade Básica de Saúde Maria Céu",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Luiz Gonzaga Amante, 280",
+      "bairro": "Maria Céu",
+      "cep": "88810-332",
+      "geo": {
+        "lat": -28.664328025352624,
+        "lng": -49.39032998623048,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3438-0727"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-metropol",
+    "nome": "Unidade Básica de Saúde Metropol",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua José Manoel Sebastião, sem número",
+      "bairro": "Metropol",
+      "cep": "88819-795",
+      "geo": {
+        "lat": -28.649191526702456,
+        "lng": -49.43632288480287,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8483"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-milanese",
+    "nome": "Unidade Básica de Saúde Milanese",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Valdir Vaz Franco, sem número",
+      "bairro": "Milanese",
+      "cep": "88804-000",
+      "geo": {
+        "lat": -28.696472099999987,
+        "lng": -49.393569382556144,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8422"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-mina-uniao",
+    "nome": "Unidade Básica de Saúde Mina União",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Catarina Milanez, sem número",
+      "bairro": "Mina União",
+      "cep": "88806-610",
+      "geo": {
+        "lat": -28.6852997,
+        "lng": -49.4302379,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8482"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-mina-do-mato",
+    "nome": "Unidade Básica de Saúde Mina do Mato",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Antônio Teodoro Máximo, 72",
+      "bairro": "Mina do Mato",
+      "cep": "88810-530",
+      "geo": {
+        "lat": -28.662148394052156,
+        "lng": -49.38389804120027,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3403-6011"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-mina-do-toco",
+    "nome": "Unidade Básica de Saúde Mina do Toco",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rodovia Archimedes Naspolini, sem número",
+      "bairro": "Mina do Toco",
+      "cep": "88819-450",
+      "geo": {
+        "lat": -28.6395967,
+        "lng": -49.3880417,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8484"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-mineiras",
+    "nome": "Unidade Básica de Saúde Mineiras",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Lindolfo Meira, S/N",
+      "bairro": "Mineira Nova",
+      "cep": "88806-480",
+      "geo": {
+        "lat": -28.687236557871373,
+        "lng": -49.42476949521652,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8454"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-morro-estevao",
+    "nome": "Unidade Básica de Saúde Morro Estevão",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Bruno Nicrosini, 153",
+      "bairro": "Morro Estevão",
+      "cep": "88816-710",
+      "geo": {
+        "lat": -28.7360691,
+        "lng": -49.3729287,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3461-8450"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-mae-luzia",
+    "nome": "Unidade Básica de Saúde Mãe Luzia",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rod. Vereador José Dandolin, sem número",
+      "bairro": "Mãe Luzia",
+      "cep": "88808-500",
+      "geo": {
+        "lat": -28.705763400000002,
+        "lng": -49.50526888437499,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8458"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-nossa-senhora-da-salete",
+    "nome": "Unidade Básica de Saúde Nossa Senhora da Salete",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Dionísio Milioli, sem número",
+      "bairro": "Nossa Senhora da Salete",
+      "cep": "88815-510",
+      "geo": {
+        "lat": -28.6927974,
+        "lng": -49.3437165,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8461"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-nova-esperanca",
+    "nome": "Unidade Básica de Saúde Nova Esperança",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Fausto Antonio Marques, sem número",
+      "bairro": "Nova Esperança",
+      "cep": "88806-056",
+      "geo": {
+        "lat": -28.7050463,
+        "lng": -49.4328483,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8472"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-operaria-nova",
+    "nome": "Unidade Básica de Saúde Operária Nova",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Ataulfo Alves, sem número",
+      "bairro": "Operária Nova",
+      "cep": "88809-210",
+      "geo": {
+        "lat": -28.679358,
+        "lng": -49.3865664,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3437-9705"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-paraiso-tereza-cristina",
+    "nome": "Unidade Básica de Saúde Paraíso / Tereza Cristina",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Imigrante Benedet , sem número",
+      "bairro": "Paraíso",
+      "cep": "88805-120",
+      "geo": {
+        "lat": -28.673218,
+        "lng": -49.375251,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8480"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-pinheirinho",
+    "nome": "Unidade Básica de Saúde Pinheirinho",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Imigrante Meller, sem número",
+      "bairro": "Pinheirinho",
+      "cep": "88805-085",
+      "geo": {
+        "lat": -28.6968509,
+        "lng": -49.4002304,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8846"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-primeira-linha",
+    "nome": "Unidade Básica de Saúde Primeira Linha",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rodovia Alexandre Beloli, sem número",
+      "bairro": "Primeira Linha",
+      "cep": "88816-500",
+      "geo": {
+        "lat": -28.7187905,
+        "lng": -49.3725742,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8404"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-prospera",
+    "nome": "Unidade Básica de Saúde Próspera",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Pernambuco, sem número",
+      "bairro": "Próspera",
+      "cep": "88813-030",
+      "geo": {
+        "lat": -28.6780701,
+        "lng": -49.3487483,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3439-3097"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-renascer",
+    "nome": "Unidade Básica de Saúde Renascer",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Heitor Fraga de Oliveira, 144",
+      "bairro": "Renascer",
+      "cep": "88816-013",
+      "geo": {
+        "lat": -28.7111397,
+        "lng": -49.3609439,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8460"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-sangao",
+    "nome": "Unidade Básica de Saúde Sangão",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rod. Governador Jorge Lacerda, sem número (ao lado da Igreja)",
+      "bairro": "Sangão",
+      "cep": "88805-350",
+      "geo": {
+        "lat": -28.738045499999988,
+        "lng": -49.66864947499999,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8486"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-santa-augusta",
+    "nome": "Unidade Básica de Saúde Santa Augusta",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Av. dos Italianos, sem número",
+      "bairro": "Santa Augusta",
+      "cep": "88805-400",
+      "geo": {
+        "lat": -28.6954714,
+        "lng": -49.4053269,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8465"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-santa-barbara",
+    "nome": "Unidade Básica de Saúde Santa Bárbara",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Sampaio Viana, s/n",
+      "bairro": "Santa Bárbara",
+      "cep": "88804-270",
+      "geo": {
+        "lat": -28.6837343,
+        "lng": -49.3833741,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8405"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-santa-luzia",
+    "nome": "Unidade Básica de Saúde Santa Luzia",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Braz Cardoso Fernandes, sem número",
+      "bairro": "Santa Luzia",
+      "cep": "88806-033",
+      "geo": {
+        "lat": -28.701701,
+        "lng": -49.429351,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3461-9450"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-santo-antonio",
+    "nome": "Unidade Básica de Saúde Santo Antônio",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Ataide Botelho, sem número",
+      "bairro": "Santo Antônio",
+      "cep": "88809-405",
+      "geo": {
+        "lat": -28.67488923153586,
+        "lng": -49.3830442968154,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8467"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-sao-defende",
+    "nome": "Unidade Básica de Saúde São Defende",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua João Batista Cordeiro, sem número",
+      "bairro": "São Defende",
+      "cep": "88808-073",
+      "geo": {
+        "lat": -28.692454092765686,
+        "lng": -49.44908272568149,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8469"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-sao-luiz",
+    "nome": "Unidade Básica de Saúde São Luiz",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Avenida Presidente Prudente, sem número",
+      "bairro": "São Luiz",
+      "cep": "88803-210",
+      "geo": {
+        "lat": -28.6931543,
+        "lng": -49.3748267,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8462"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-sao-sebastiao",
+    "nome": "Unidade Básica de Saúde São Sebastião",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua José Machado Souza, s/n",
+      "bairro": "São Sebastião",
+      "cep": "88807-150",
+      "geo": {
+        "lat": -28.6991657,
+        "lng": -49.4398887,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8470"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-sao-simao",
+    "nome": "Unidade Básica de Saúde São Simão",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Venancio Martinello, 335",
+      "bairro": "São Simão",
+      "cep": "88811-815",
+      "geo": {
+        "lat": -28.682290619183433,
+        "lng": -49.40093415629991,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8471"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-verdinho",
+    "nome": "Unidade Básica de Saúde Verdinho",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Albino Daltoé, sem número",
+      "bairro": "Verdinho",
+      "cep": "88814-545",
+      "geo": {
+        "lat": -28.8054366,
+        "lng": -49.4162672,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8485"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-vila-belmiro",
+    "nome": "Unidade Básica de Saúde Vila Belmiro",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Professora Rosa de Souza Albano, sem número",
+      "bairro": "Vila Belmiro",
+      "cep": "88806-697",
+      "geo": {
+        "lat": -28.6952305823931,
+        "lng": -49.431290684916085,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8489"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-vila-francesa",
+    "nome": "Unidade Básica de Saúde Vila Francesa",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua José Lucio Godinho, sem número",
+      "bairro": "Vila Francesa",
+      "cep": "88817-378",
+      "geo": {
+        "lat": -28.6746344,
+        "lng": -49.4145647,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8473"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-vila-manaus",
+    "nome": "Unidade Básica de Saúde Vila Manaus",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua São Francisco de Assis, sem número",
+      "bairro": "Vila Manaus",
+      "cep": "88806-825",
+      "geo": {
+        "lat": -28.6979323,
+        "lng": -49.4248216,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8479"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-vila-rica-imigrantes",
+    "nome": "Unidade Básica de Saúde Vila Rica / Imigrantes",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Domingos de Villa, sem número",
+      "bairro": "Vila Rica",
+      "cep": "88813-730",
+      "geo": {
+        "lat": -28.6773431,
+        "lng": -49.3255228,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8474"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-vila-zuleima",
+    "nome": "Unidade Básica de Saúde Vila Zuleima",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Antônio de Oliveira, sem número",
+      "bairro": "Vila Zuleima",
+      "cep": "88817-250",
+      "geo": {
+        "lat": -28.66381258240544,
+        "lng": -49.402894384916614,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8475"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "unidade-basica-de-saude-wosocris-rio-maina",
+    "nome": "Unidade Básica de Saúde Wosocris / Rio Maina",
+    "tipo": "dispensario_ubs",
+    "endereco": {
+      "logradouro": "Rua Virgílio Mondardo, sem número",
+      "bairro": "Wosocris",
+      "cep": "88818-190",
+      "geo": {
+        "lat": -28.665488899999986,
+        "lng": -49.43195768255615,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3403-7000"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Parte dos medicamentos do componente básico. Procure a unidade onde você faz acompanhamento.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "complexo-de-saude-santo-agostinho",
+    "nome": "Complexo de Saúde Santo Agostinho",
+    "tipo": "farmacia_alimentar",
+    "endereco": {
+      "logradouro": "Rua Luiz Pirolla de Noé, 150 (Complexo Multiprofissional)",
+      "bairro": "Vila Isabel",
+      "cep": "88818-070",
+      "geo": {
+        "lat": -28.667353527491272,
+        "lng": -49.43329668479864,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3403-7436"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [],
+    "entrega_descricao": "Fórmulas infantis, dietas para sonda, complementos alimentares e o que foi pedido na justiça.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [
+      "A REMUME de 2024 informa outro telefone: (48) 3437-7893. Se ninguém atender no número acima, tente esse.",
+      "A REMUME informa atendimento das 8h às 17h."
+    ],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      },
+      {
+        "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+        "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+        "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+        "fonte_data": "2024-11-01",
+        "extraido_em": "2026-09-03",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "caps-ii-centro-de-atencao-psicossocial-ii",
+    "nome": "CAPS II - Centro de Atenção Psicossocial II",
+    "tipo": "farmacia_caps",
+    "endereco": {
+      "logradouro": "Rua Madre Tereza Michel, 446",
+      "bairro": "Michel",
+      "cep": "88803-030",
+      "geo": {
+        "lat": -28.6862535,
+        "lng": -49.3713645,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8736"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos para quem faz tratamento no próprio CAPS II.",
+    "restricao": "Atende só quem é acompanhado no CAPS II. Se você não faz tratamento lá, procure a farmácia distrital do seu bairro.",
+    "observacoes": null,
+    "divergencias": [],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      },
+      {
+        "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+        "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+        "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+        "fonte_data": "2024-11-01",
+        "extraido_em": "2026-09-03",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "caps-ii-ad-centro-de-atencao-psicossocial-ii-alcool-e-outras-drogas",
+    "nome": "CAPS II AD - Centro de Atenção Psicossocial II Álcool e Outras Drogas",
+    "tipo": "farmacia_caps",
+    "endereco": {
+      "logradouro": "Rua Luís Pirola de Noé, 150",
+      "bairro": "Vila Isabel",
+      "cep": "88818-070",
+      "geo": {
+        "lat": -28.667343503784622,
+        "lng": -49.429459257165014,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8488"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos para quem faz tratamento no próprio CAPS II AD.",
+    "restricao": "Atende só quem é acompanhado no CAPS II AD. Se você não faz tratamento lá, procure a farmácia distrital do seu bairro.",
+    "observacoes": null,
+    "divergencias": [
+      "A REMUME de 2024 informa outro endereço: Rua João Batista Rita, sem número, no bairro Santa Luzia. Ligue antes de ir."
+    ],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      },
+      {
+        "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+        "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+        "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+        "fonte_data": "2024-11-01",
+        "extraido_em": "2026-09-03",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "caps-iii-centro-de-atencao-psicossocial-iii",
+    "nome": "CAPS III - Centro de Atenção Psicossocial III",
+    "tipo": "farmacia_caps",
+    "endereco": {
+      "logradouro": "R. Quinze de Novembro, 205",
+      "bairro": "Centro",
+      "cep": "88801-140",
+      "geo": {
+        "lat": -28.679546279993613,
+        "lng": -49.366481312739644,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3403-3450"
+    ],
+    "horarios": [],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos para quem faz tratamento no próprio CAPS III.",
+    "restricao": "Atende só quem é acompanhado no CAPS III. Se você não faz tratamento lá, procure a farmácia distrital do seu bairro.",
+    "observacoes": "O portal da prefeitura informa o expediente como: 24hrs.",
+    "divergencias": [
+      "A REMUME de 2024 informa outro endereço: Rua Santo Antônio, 1080, no bairro Cruzeiro do Sul. Ligue antes de ir."
+    ],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      },
+      {
+        "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+        "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+        "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+        "fonte_data": "2024-11-01",
+        "extraido_em": "2026-09-03",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "farmacia-escola",
+    "nome": "Farmácia Escola",
+    "tipo": "farmacia_ceaf",
+    "endereco": {
+      "logradouro": "Avenida Universitária, 1105",
+      "bairro": "Universitário",
+      "cep": "88806-000",
+      "geo": {
+        "lat": -28.7016362,
+        "lng": -49.4083808,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3431-2786"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "16:30"
+      }
+    ],
+    "dispensa": [
+      "especializado"
+    ],
+    "entrega_descricao": "Os medicamentos de alto custo, que quem entrega é o governo do estado (CEAF).",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [
+      "A REMUME de 2024 informa outro telefone: (48) 3431-2789. Se ninguém atender no número acima, tente esse.",
+      "A REMUME informa esta farmácia como Clínicas Integradas da UNESC, com atendimento das 8h às 17h."
+    ],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      },
+      {
+        "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+        "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+        "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+        "fonte_data": "2024-11-01",
+        "extraido_em": "2026-09-03",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "farmacia-central",
+    "nome": "Farmácia Central",
+    "tipo": "farmacia_distrital",
+    "endereco": {
+      "logradouro": "Rua Maria Fernandes Argente, 85",
+      "bairro": "Santo Antônio",
+      "cep": "88809-301",
+      "geo": {
+        "lat": -28.684135528220555,
+        "lng": -49.39374398479466,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3403-7440"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [
+      "Esta farmácia não aparece na REMUME de 2024. Ligue antes de ir."
+    ],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      },
+      {
+        "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+        "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+        "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+        "fonte_data": "2024-11-01",
+        "extraido_em": "2026-09-03",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "farmacia-distrital-boa-vista",
+    "nome": "Farmácia Distrital Boa Vista",
+    "tipo": "farmacia_distrital",
+    "endereco": {
+      "logradouro": "Rua Tangará, sem número",
+      "bairro": "Boa Vista",
+      "cep": "88805-500",
+      "geo": {
+        "lat": -28.66397094937197,
+        "lng": -49.45397198359704,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8765"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [
+      "A REMUME de 2024 traz um CEP inválido para este endereço. O CEP mostrado aqui é o do portal da prefeitura.",
+      "A REMUME informa que fica na esquina com a Rua São Francisco do Sul, e que abre das 7h às 19h."
+    ],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      },
+      {
+        "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+        "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+        "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+        "fonte_data": "2024-11-01",
+        "extraido_em": "2026-09-03",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "farmacia-distrital-centro",
+    "nome": "Farmácia Distrital Centro",
+    "tipo": "farmacia_distrital",
+    "endereco": {
+      "logradouro": "Rua João Pessoa, 187",
+      "bairro": "Centro",
+      "cep": "88810-020",
+      "geo": null
+    },
+    "telefones": [
+      "(48) 3430-0934"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [
+      "A REMUME de 2024 informa outro telefone: (48) 3430-0959. Se ninguém atender no número acima, tente esse.",
+      "A REMUME de 2024 informa o CEP 88801-530 para este mesmo endereço, e o portal da prefeitura informa 88810-020. A rua e o número são os mesmos.",
+      "A REMUME informa que esta farmácia abre das 7h às 19h.",
+      "O mapa do portal da prefeitura, para este endereço, aponta para um lugar chamado de outro jeito. Por isso ela não tem pino no mapa deste site, mesmo o endereço e o telefone estando corretos."
+    ],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      },
+      {
+        "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+        "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+        "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+        "fonte_data": "2024-11-01",
+        "extraido_em": "2026-09-03",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "farmacia-distrital-prospera",
+    "nome": "Farmácia Distrital Próspera",
+    "tipo": "farmacia_distrital",
+    "endereco": {
+      "logradouro": "Rua Pernambuco, sem número",
+      "bairro": "Próspera",
+      "cep": "88813-010",
+      "geo": {
+        "lat": -28.67833289287366,
+        "lng": -49.35753953102414,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3439-3097"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [
+      "A REMUME informa que fica nos fundos da Praça da Chaminé, na esquina com a Travessa do Mineiro, e que abre das 7h às 19h."
+    ],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      },
+      {
+        "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+        "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+        "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+        "fonte_data": "2024-11-01",
+        "extraido_em": "2026-09-03",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "farmacia-distrital-quarta-linha",
+    "nome": "Farmácia Distrital Quarta Linha",
+    "tipo": "farmacia_distrital",
+    "endereco": {
+      "logradouro": "Rua Monsueto Luiz Rosso, 65",
+      "bairro": "Quarta Linha",
+      "cep": "88812-499",
+      "geo": {
+        "lat": -28.791310653165354,
+        "lng": -49.36434369774829,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3437-6741"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
+    "restricao": null,
+    "observacoes": "Fica dentro da Unidade Básica de Saúde (posto de saúde) do bairro, que abre das 7h às 19h. A farmácia, dentro do posto, abre das 8h às 17h.",
+    "divergencias": [
+      "A REMUME de 2024 informa o endereço como Rodovia Monsueto Luiz Rosso, sem número, e o portal da prefeitura informa Rua Monsueto Luiz Rosso, 65."
+    ],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      },
+      {
+        "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+        "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+        "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+        "fonte_data": "2024-11-01",
+        "extraido_em": "2026-09-03",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "farmacia-distrital-santa-luzia",
+    "nome": "Farmácia Distrital Santa Luzia",
+    "tipo": "farmacia_distrital",
+    "endereco": {
+      "logradouro": "Rua Braz Cardoso Fernandes, sem número",
+      "bairro": "Santa Luzia",
+      "cep": "88807-270",
+      "geo": {
+        "lat": -28.704892500000003,
+        "lng": -50.48048959999997,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3461-9450"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [
+      "A REMUME informa que esta farmácia abre das 8h às 18h."
+    ],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      },
+      {
+        "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+        "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+        "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+        "fonte_data": "2024-11-01",
+        "extraido_em": "2026-09-03",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "criciuma-farmacia-ubs-mina-do-mato",
+    "nome": "Farmácia da UBS Mina do Mato",
+    "tipo": "farmacia_distrital",
+    "endereco": {
+      "logradouro": "Rua Antônio Teodoro Máximo, sem número",
+      "bairro": "Mina do Mato",
+      "cep": "88810-530",
+      "geo": null
+    },
+    "telefones": [
+      "(48) 3403-6011"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [
+      "O portal da prefeitura não cadastra esta farmácia. O endereço e o telefone vêm da REMUME de 2024. Ligue antes de ir."
+    ],
+    "proveniencia": [
+      {
+        "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+        "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+        "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+        "fonte_data": "2024-11-01",
+        "extraido_em": "2026-09-03",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "criciuma-farmacia-ubs-santa-barbara",
+    "nome": "Farmácia da UBS Santa Bárbara",
+    "tipo": "farmacia_distrital",
+    "endereco": {
+      "logradouro": "Rua Sampaio Viana",
+      "bairro": "Santa Bárbara",
+      "cep": "88804-270",
+      "geo": null
+    },
+    "telefones": [
+      "(48) 3445-8405"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [
+      "O portal da prefeitura não cadastra esta farmácia. O endereço e o telefone vêm da REMUME de 2024. Ligue antes de ir."
+    ],
+    "proveniencia": [
+      {
+        "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+        "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+        "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+        "fonte_data": "2024-11-01",
+        "extraido_em": "2026-09-03",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "criciuma-farmacia-ubs-sao-sebastiao",
+    "nome": "Farmácia da UBS São Sebastião",
+    "tipo": "farmacia_distrital",
+    "endereco": {
+      "logradouro": "Rua José Machado de Souza, sem número",
+      "bairro": "São Sebastião",
+      "cep": "88807-150",
+      "geo": null
+    },
+    "telefones": [
+      "(48) 3445-8470"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [
+      "O portal da prefeitura não cadastra esta farmácia. O endereço e o telefone vêm da REMUME de 2024. Ligue antes de ir."
+    ],
+    "proveniencia": [
+      {
+        "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+        "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+        "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+        "fonte_data": "2024-11-01",
+        "extraido_em": "2026-09-03",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "criciuma-farmacia-wosocris-rio-maina",
+    "nome": "Farmácia da Wosocris / Rio Maina",
+    "tipo": "farmacia_distrital",
+    "endereco": {
+      "logradouro": "Rua Virgílio Mondardo, sem número",
+      "bairro": "Catarinense",
+      "cep": "88818-338",
+      "geo": null
+    },
+    "telefones": [
+      "(48) 3403-7000"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "07:00",
+        "fecha": "19:00"
+      }
+    ],
+    "dispensa": [
+      "basico"
+    ],
+    "entrega_descricao": "Medicamentos do componente básico, incluindo os controlados. É a farmácia de referência do distrito.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [
+      "O portal da prefeitura não cadastra esta farmácia. O endereço e o telefone vêm da REMUME de 2024. Ligue antes de ir."
+    ],
+    "proveniencia": [
+      {
+        "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+        "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+        "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+        "fonte_data": "2024-11-01",
+        "extraido_em": "2026-09-03",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "farmacia-estrategica",
+    "nome": "Farmácia Estratégica",
+    "tipo": "farmacia_estrategica",
+    "endereco": {
+      "logradouro": "Rua Rio dos Cedros, 155 (antigo CEREST)",
+      "bairro": "Santa Augusta",
+      "cep": "88805-430",
+      "geo": {
+        "lat": -28.697844376909668,
+        "lng": -49.40695998572992,
+        "conferido_por": "Portal da Transparência de Criciúma",
+        "conferido_em": "2026-09-04"
+      }
+    },
+    "telefones": [
+      "(48) 3445-8730"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "18:00"
+      }
+    ],
+    "dispensa": [
+      "estrategico"
+    ],
+    "entrega_descricao": "Medicamentos dos programas de HIV e aids, hepatites, tuberculose, hanseníase, sífilis, toxoplasmose, influenza e tabagismo.",
+    "restricao": null,
+    "observacoes": null,
+    "divergencias": [
+      "A REMUME chama esta unidade de Farmácia Estratégica e informa que fica no Centro de Vigilância em Saúde, com atendimento das 7h às 16h. O endereço e o telefone são os mesmos que o portal da prefeitura cadastra como PAMDHA."
+    ],
+    "proveniencia": [
+      {
+        "fonte_nome": "Portal da Transparência de Criciúma, endereços e telefones das unidades de saúde",
+        "fonte_url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+        "fonte_arquivo": "fontes/sc-criciuma/transparencia-unidades-2026-09-04.json",
+        "fonte_data": "2026-09-04",
+        "extraido_em": "2026-09-04",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      },
+      {
+        "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+        "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+        "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+        "fonte_data": "2024-11-01",
+        "extraido_em": "2026-09-03",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  },
+  {
+    "id": "criciuma-pamgc",
+    "nome": "Programa de medida de glicemia (PAMGC)",
+    "tipo": "programa_insumos",
+    "endereco": {
+      "logradouro": "Clínicas Integradas da UNESC",
+      "bairro": null,
+      "cep": null,
+      "geo": null
+    },
+    "telefones": [
+      "3431-4538"
+    ],
+    "horarios": [
+      {
+        "dias": null,
+        "abre": "08:00",
+        "fecha": "12:00"
+      },
+      {
+        "dias": null,
+        "abre": "13:00",
+        "fecha": "17:00"
+      }
+    ],
+    "dispensa": [],
+    "entrega_descricao": "Insulina NPH e Regular, fitas e aparelho de medir açúcar no sangue.",
+    "restricao": "Entrega as fitas e o aparelho só para quem usa insulina ou está grávida. É preciso fazer cadastro antes.",
+    "observacoes": "Leve uma caixa de isopor pequena para trazer a insulina. A REMUME informa só Clínicas Integradas da UNESC, sem rua e sem número.",
+    "divergencias": [
+      "O portal da prefeitura não cadastra este programa."
+    ],
+    "proveniencia": [
+      {
+        "fonte_nome": "REMUME Criciúma versão 11/2024, seção 8 (Locais de acesso aos medicamentos)",
+        "fonte_url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+        "fonte_arquivo": "fontes/sc-criciuma/remume-2024-11.pdf",
+        "fonte_data": "2024-11-01",
+        "extraido_em": "2026-09-03",
+        "verificado_em": "2026-09-04",
+        "metodo": "ia-assistida"
+      }
+    ]
+  }
+]

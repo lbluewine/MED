@@ -1,0 +1,646 @@
+{
+  "municipio_id": "sc-criciuma",
+  "farmacias": [
+    {
+      "cnpj": "09077244000147",
+      "razao_social": "DROGARIA E FARMACIA MARANATA LTDA",
+      "nome_fantasia": "REDE PRECO BARATO",
+      "logradouro": "RUA SAO FRANCISCO DO SUL, 135",
+      "complemento": "SALA 01",
+      "bairro_painel": "BOA VISTA",
+      "bairro": "SAO FRANCISCO",
+      "cep": "88805-700",
+      "divergencias": [
+        "O painel do Ministério informa este endereço no bairro BOA VISTA, e a Receita Federal no bairro SAO FRANCISCO."
+      ],
+      "geo": {
+        "lat": -28.688377,
+        "lng": -49.408698,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "84683481032613",
+      "razao_social": "CIA LATINO AMERICANA DE MEDICAMENTOS",
+      "nome_fantasia": "FARMACIA PRECO POPULAR",
+      "logradouro": "RUA CORONEL PEDRO BENEDET, 460",
+      "complemento": null,
+      "bairro_painel": "CENTRO",
+      "bairro": "PIO CORREA",
+      "cep": "88801-250",
+      "divergencias": [
+        "O painel do Ministério informa este endereço no bairro CENTRO, e a Receita Federal no bairro PIO CORREA."
+      ],
+      "geo": {
+        "lat": -28.675117,
+        "lng": -49.365288,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "84683481004407",
+      "razao_social": "CIA LATINO AMERICANA DE MEDICAMENTOS",
+      "nome_fantasia": "FARMACIA CATARINENSE",
+      "logradouro": "RUA CORONEL PEDRO BENEDET, 363",
+      "complemento": "SALA 101",
+      "bairro_painel": "CENTRO",
+      "bairro": "CENTRO",
+      "cep": "88801-250",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.675715,
+        "lng": -49.365947,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "84683481013740",
+      "razao_social": "CIA LATINO AMERICANA DE MEDICAMENTOS",
+      "nome_fantasia": "FARMACIA PRECO POPULAR",
+      "logradouro": "PRACA DR. NEREU RAMOS, 34",
+      "complemento": "SALA 01",
+      "bairro_painel": "CENTRO",
+      "bairro": "CENTRO",
+      "cep": "88801-505",
+      "divergencias": [],
+      "geo": null
+    },
+    {
+      "cnpj": "84683481019862",
+      "razao_social": "CIA LATINO AMERICANA DE MEDICAMENTOS",
+      "nome_fantasia": "FARMACIA PRECO POPULAR",
+      "logradouro": "RUA JOAO PESSOA, 07",
+      "complemento": "TERREO",
+      "bairro_painel": "CENTRO",
+      "bairro": "CENTRO",
+      "cep": "88801-530",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.676486125,
+        "lng": -49.371592,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "aproximada",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "84683481022650",
+      "razao_social": "CIA LATINO AMERICANA DE MEDICAMENTOS",
+      "nome_fantasia": "DROGARIA CATARINENSE",
+      "logradouro": "RUA MAJOR ACACIO MOREIRA, 289",
+      "complemento": null,
+      "bairro_painel": "CENTRO",
+      "bairro": "CENTRO",
+      "cep": "88801-160",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.680411,
+        "lng": -49.36182,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "84683481003192",
+      "razao_social": "CIA LATINO AMERICANA DE MEDICAMENTOS",
+      "nome_fantasia": "VAREJO III",
+      "logradouro": "AVENIDA CENTENARIO, 2728",
+      "complemento": "SALA 02 A",
+      "bairro_painel": "CENTRO",
+      "bairro": "CENTRO",
+      "cep": "88802-000",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.680833,
+        "lng": -49.37685,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "08890786000171",
+      "razao_social": "DROGARIA FERREIRA & FERREIRA LTDA",
+      "nome_fantasia": "DROGARIA BOM PRECO",
+      "logradouro": "AVENIDA CENTENARIO, 3420",
+      "complemento": "SALA 01",
+      "bairro_painel": "CENTRO",
+      "bairro": "CENTRO",
+      "cep": "88802-000",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.679777,
+        "lng": -49.371401,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "aproximada",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "04263115000120",
+      "razao_social": "DANIEL BORGO ZILLI LTDA",
+      "nome_fantasia": null,
+      "logradouro": "RUA JOAQUIM NABUCO, 277",
+      "complemento": null,
+      "bairro_painel": "CENTRO",
+      "bairro": "CENTRO",
+      "cep": "88802-200",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.682084,
+        "lng": -49.371972,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "61585865064044",
+      "razao_social": "RAIA DROGASIL S/A",
+      "nome_fantasia": null,
+      "logradouro": "RUA JOAQUIM NABUCO, 520",
+      "complemento": "LOJA 01",
+      "bairro_painel": "CENTRO",
+      "bairro": "CENTRO",
+      "cep": "88802-200",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.68362,
+        "lng": -49.372124,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "03777341007179",
+      "razao_social": "SERVICO SOCIAL DA INDUSTRIA",
+      "nome_fantasia": "FARMASESI PEDRO BENEDET",
+      "logradouro": "RUA CORONEL PEDRO BENEDET, 310",
+      "complemento": "SALA 2",
+      "bairro_painel": "CENTRO",
+      "bairro": "CENTRO",
+      "cep": "88801-250",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.675963,
+        "lng": -49.366549,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "03777341016321",
+      "razao_social": "SERVICO SOCIAL DA INDUSTRIA",
+      "nome_fantasia": "FARMASESI CRICIUMA",
+      "logradouro": "RUA MARECHAL DEODORO, 80",
+      "complemento": "ANEXO SESI CLINICA",
+      "bairro_painel": "CENTRO",
+      "bairro": "CENTRO",
+      "cep": "88801-110",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.67974,
+        "lng": -49.367561,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "03777341018103",
+      "razao_social": "SERVICO SOCIAL DA INDUSTRIA",
+      "nome_fantasia": "FARMASESI JOAO ZANETTE",
+      "logradouro": "RUA CONSELHEIRO JOAO ZANETTE, 50",
+      "complemento": "SALA 01 E 101",
+      "bairro_painel": "CENTRO",
+      "bairro": "CENTRO",
+      "cep": "88801-050",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.679086,
+        "lng": -49.369257,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "85276350000138",
+      "razao_social": "FARMACIA UNIFARMA LTDA",
+      "nome_fantasia": "FARMACIA MAIS FARMA",
+      "logradouro": "AVENIDA COCAL, 34",
+      "complemento": null,
+      "bairro_painel": "CIDADE MINEIRA NOVA",
+      "bairro": "CIDADE MINEIRA VELHA",
+      "cep": "88806-500",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.690095,
+        "lng": -49.422858,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "06626253059989",
+      "razao_social": "EMPREENDIMENTOS PAGUE MENOS S/A",
+      "nome_fantasia": "FARMACIAS PAGUE MENOS",
+      "logradouro": "RUA SANTA CATARINA, 309",
+      "complemento": null,
+      "bairro_painel": "COMERCIARIO",
+      "bairro": "COMERCIARIO",
+      "cep": "88802-260",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.683288,
+        "lng": -49.369027,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "aproximada",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "12144864000166",
+      "razao_social": "FARMACIA TAUFEMBACH LTDA",
+      "nome_fantasia": "FARMACIA TAUFEMBACH LTDA",
+      "logradouro": "RUA CLARINDA MILIOLI DE LUCA, 30",
+      "complemento": "SALA 01",
+      "bairro_painel": "MINA DO MATO",
+      "bairro": "MINA DO MATO",
+      "cep": "88810-400",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.668926,
+        "lng": -49.389407,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "11228966000105",
+      "razao_social": "DROGARIA E FARMACIA J.C. LTDA",
+      "nome_fantasia": "UNIAO FARMA",
+      "logradouro": "RUA LIBANO JOSE GOMES, 715",
+      "complemento": "SALA 03",
+      "bairro_painel": "MINA UNIAO",
+      "bairro": "MINA UNIAO",
+      "cep": "88806-620",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.692857557502737,
+        "lng": -49.43323588937568,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "aproximada",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "02264421000155",
+      "razao_social": "FARMACIA FLAUFARMA LTDA",
+      "nome_fantasia": "FARMACIA FLAUFARMA",
+      "logradouro": "RUA VALENTIM PIZZETTI, 599",
+      "complemento": null,
+      "bairro_painel": "NOSSA SENHORA DA SALETE",
+      "bairro": "NSA. SRA. DA SALETE",
+      "cep": "88815-500",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.693258,
+        "lng": -49.342002,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "13538174000154",
+      "razao_social": "FARMACIA CAROL LTDA",
+      "nome_fantasia": "FARMACIA OPERARIA NOVA",
+      "logradouro": "RUA WENCESLAU BRAZ, 349",
+      "complemento": null,
+      "bairro_painel": "OPERARIA NOVA",
+      "bairro": "OPERARIA NOVA",
+      "cep": "88809-020",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.679343,
+        "lng": -49.38247,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "13731143000115",
+      "razao_social": "FARMACIA FAMAVIVAFE LTDA",
+      "nome_fantasia": "REDE PONTO BARATO",
+      "logradouro": "AVENIDA CENTENARIO, 1399",
+      "complemento": null,
+      "bairro_painel": "PINHEIRINHO",
+      "bairro": "PINHEIRINHO",
+      "cep": "88804-000",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.697269,
+        "lng": -49.398205,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "07727631000156",
+      "razao_social": "MUNDIAL FARMA FARMACIA LTDA",
+      "nome_fantasia": "MUNDIAL FARMA FARMACIA",
+      "logradouro": "RUA IMIGRANTE MELLER, 920",
+      "complemento": "SALA 01",
+      "bairro_painel": "PINHEIRINHO",
+      "bairro": "PINHEIRINHO",
+      "cep": "88805-085",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.695908,
+        "lng": -49.399303,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "06626253039520",
+      "razao_social": "EMPREENDIMENTOS PAGUE MENOS S/A",
+      "nome_fantasia": "FARMACIA PAGUE MENOS",
+      "logradouro": "RUA CORONEL PEDRO BENEDET, 446",
+      "complemento": "SALA 01",
+      "bairro_painel": "PIO CORREA",
+      "bairro": "PIO CORREA",
+      "cep": "88811-508",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.675183,
+        "lng": -49.365505,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "84683481006965",
+      "razao_social": "CIA LATINO AMERICANA DE MEDICAMENTOS",
+      "nome_fantasia": "FARMACIA PRECO POPULAR",
+      "logradouro": "RUA GENERAL OSVALDO PINTO DA VEIGA, 1090",
+      "complemento": "SALA 09 A 16",
+      "bairro_painel": "PROSPERA",
+      "bairro": "PROSPERA",
+      "cep": "88813-000",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.680378589928058,
+        "lng": -49.34462252517986,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "aproximada",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "07013721000185",
+      "razao_social": "DROGARIA E FARMACIA NOVA PROSPERA LTDA",
+      "nome_fantasia": null,
+      "logradouro": "RUA GAL. OSVALDO PINTO DA VEIGA, 742",
+      "complemento": "SALA 02",
+      "bairro_painel": "PROSPERA",
+      "bairro": "PROSPERA",
+      "cep": "88813-000",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.679509071428573,
+        "lng": -49.347794285714286,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "aproximada",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "05588970000173",
+      "razao_social": "FARMACIA FORMULAS E FARMACOS LTDA",
+      "nome_fantasia": "FARMACIA VITAL FARMA",
+      "logradouro": "RUA GENERAL OSWALDO PINTO DA VEIGA, 1575",
+      "complemento": "SALA 01 E 02",
+      "bairro_painel": "PROSPERA",
+      "bairro": "PROSPERA",
+      "cep": "88813-000",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.679747,
+        "lng": -49.341306,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "aproximada",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "11655466000141",
+      "razao_social": "LARA MILANEZ MEDICAMENTOS E PERFUMARIA LTDA",
+      "nome_fantasia": "FARMACIAS ANTONELLI",
+      "logradouro": "RODOVIA LUIZ ROSSO, 10910",
+      "complemento": null,
+      "bairro_painel": "QUARTA LINHA",
+      "bairro": "QUARTA LINHA",
+      "cep": "88812-350",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.788114614285714,
+        "lng": -49.36493164285714,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "aproximada",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "84683481028691",
+      "razao_social": "CIA LATINO AMERICANA DE MEDICAMENTOS",
+      "nome_fantasia": "FARMACIA PRECO POPULAR",
+      "logradouro": "AVENIDA DOS IMIGRANTES, 2150",
+      "complemento": "LOJA 01",
+      "bairro_painel": "RIO MAINA",
+      "bairro": "RIO MAINA",
+      "cep": "88817-600",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.667436,
+        "lng": -49.424465,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "08100470000139",
+      "razao_social": "DROGARIA E FARMACIA J.SOUZA LTDA",
+      "nome_fantasia": "FARMACIA PARDAL",
+      "logradouro": "AVENIDA DOS IMIGRANTES, 2139",
+      "complemento": "SALA 01",
+      "bairro_painel": "RIO MAINA",
+      "bairro": "RIO MAINA",
+      "cep": "88818-400",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.667465,
+        "lng": -49.42452,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "03777341007098",
+      "razao_social": "SERVICO SOCIAL DA INDUSTRIA",
+      "nome_fantasia": "FARMASESI RIO MAINA",
+      "logradouro": "AVENIDA DOS IMIGRANTES, 1680",
+      "complemento": "SALA 03 E 04",
+      "bairro_painel": "RIO MAINA",
+      "bairro": "RIO MAINA",
+      "cep": "88817-600",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.669974,
+        "lng": -49.421168,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "81314338000110",
+      "razao_social": "DENFARMA DROGARIA E PERFUMARIA LTDA",
+      "nome_fantasia": null,
+      "logradouro": "AVENIDA UNIVERSITARIA, 2210",
+      "complemento": null,
+      "bairro_painel": "SANTA LUZIA",
+      "bairro": "SANTA LUZIA",
+      "cep": "88807-260",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.702524,
+        "lng": -49.425107,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "aproximada",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "77862886000107",
+      "razao_social": "NEUSA DA SILVA MENDES LTDA",
+      "nome_fantasia": "FARMACIA DENISE",
+      "logradouro": "AVENIDA UNIVERSITARIA, 1709",
+      "complemento": "SALA TERREA",
+      "bairro_painel": "SANTA LUZIA",
+      "bairro": "SANTA LUZIA",
+      "cep": "88807-261",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.702522447368423,
+        "lng": -49.425738947368416,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "aproximada",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "09658712000177",
+      "razao_social": "DROGARIA MORRO ESTEVAO LTDA",
+      "nome_fantasia": "FARMACIA MORRO ESTEVAO",
+      "logradouro": "RODOVIA LUIZ ROSSO, 5090",
+      "complemento": "SALA 01",
+      "bairro_painel": "SAO LUIZ",
+      "bairro": "MORRO ESTEVAO",
+      "cep": "88803-470",
+      "divergencias": [
+        "O painel do Ministério informa este endereço no bairro SAO LUIZ, e a Receita Federal no bairro MORRO ESTEVAO."
+      ],
+      "geo": {
+        "lat": -28.737551,
+        "lng": -49.371665,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "07311242000145",
+      "razao_social": "FARMACIA SAO LUIZ ORIONE LTDA",
+      "nome_fantasia": "FARMACIA SAO SIMAO",
+      "logradouro": "RUA OCTAVIO FONTANA, 502",
+      "complemento": "LOT VILA BEATRIZ",
+      "bairro_painel": "SAO SIMAO",
+      "bairro": "SAO SIMAO",
+      "cep": "88811-460",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.649542,
+        "lng": -49.349843,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "numero",
+        "obtido_em": "2026-09-06"
+      }
+    },
+    {
+      "cnpj": "13730568000100",
+      "razao_social": "FARMACIA E DROGARIA PRECO MELHOR LTDA",
+      "nome_fantasia": "REDE FARMACIAS POUPAMIL",
+      "logradouro": "AVENIDA UNIVERSITARIA, 2405",
+      "complemento": "SALA 02",
+      "bairro_painel": "VILA NOVA ESPERANCA",
+      "bairro": "VILA NOVA ESPERANCA",
+      "cep": "88806-001",
+      "divergencias": [],
+      "geo": {
+        "lat": -28.702763916666665,
+        "lng": -49.431221916666665,
+        "fonte": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+        "precisao": "aproximada",
+        "obtido_em": "2026-09-06"
+      }
+    }
+  ],
+  "proveniencia": [
+    {
+      "fonte_nome": "Consulta de endereços das farmácias do PFPB — Ministério da Saúde",
+      "fonte_url": "https://infoms.saude.gov.br/extensions/SEIDIGI_DEMAS_PFPB_ENDERECOS/index.html",
+      "fonte_arquivo": null,
+      "fonte_data": "2026-09-04",
+      "extraido_em": "2026-09-06",
+      "verificado_em": "2026-09-06",
+      "metodo": "automatica"
+    },
+    {
+      "fonte_nome": "Cadastro Nacional da Pessoa Jurídica — Receita Federal",
+      "fonte_url": "https://brasilapi.com.br/docs#tag/CNPJ",
+      "fonte_arquivo": null,
+      "fonte_data": "2026-09-06",
+      "extraido_em": "2026-09-06",
+      "verificado_em": "2026-09-06",
+      "metodo": "automatica"
+    },
+    {
+      "fonte_nome": "CNEFE — Cadastro Nacional de Endereços, Censo 2022 (IBGE)",
+      "fonte_url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/CSV/Municipio/",
+      "fonte_arquivo": "fontes/nacional/cnefe-4204608-criciuma.zip",
+      "fonte_data": "2022-08-01",
+      "extraido_em": "2026-09-06",
+      "verificado_em": "2026-09-06",
+      "metodo": "automatica"
+    }
+  ]
+}

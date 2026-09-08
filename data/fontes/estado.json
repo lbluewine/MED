@@ -1,0 +1,99 @@
+{
+  "comentario": [
+    "O que a página /fontes publica. Gerado por scripts/verifica_fontes.py.",
+    "Não editar à mão: a próxima execução sobrescreve."
+  ],
+  "conferido_em": "2026-09-08",
+  "fontes": [
+    {
+      "id": "remume-criciuma",
+      "descricao": "REMUME de Criciúma",
+      "tipo": "arquivo",
+      "url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/20",
+      "arquivo": "sc-criciuma/remume-2024-11.pdf",
+      "situacao": "igual",
+      "conferida_em": "2026-09-08",
+      "mudou_em": null
+    },
+    {
+      "id": "ubs-criciuma",
+      "descricao": "Lista das UBS de Criciúma, por distrito",
+      "tipo": "arquivo",
+      "url": "https://cigtes.criciuma.sc.gov.br/redes-de-atencao-saude/material-apoio/21",
+      "arquivo": "sc-criciuma/ubs-lista-telefonica.pdf",
+      "situacao": "igual",
+      "conferida_em": "2026-09-08",
+      "mudou_em": null
+    },
+    {
+      "id": "resme-sc",
+      "descricao": "Relação Estadual de Medicamentos Ambulatorial (RESME)",
+      "tipo": "arquivo",
+      "url": "https://www.saude.sc.gov.br/index.php/pt/component/edocman/relacao-estadual-de-medicamentos-resme-ambulatorial/download",
+      "arquivo": "sc/resme-2026-07-07.pdf",
+      "situacao": "igual",
+      "conferida_em": "2026-09-08",
+      "mudou_em": null
+    },
+    {
+      "id": "unidades-criciuma",
+      "descricao": "Unidades de saúde no Portal da Transparência de Criciúma",
+      "tipo": "extraida",
+      "url": "https://transparencia.criciuma.sc.gov.br/unidades?url=unidades&search=&tipo%5B0%5D=3",
+      "arquivo": "sc-criciuma/transparencia-unidades-2026-09-04.json",
+      "situacao": "igual",
+      "conferida_em": "2026-09-08",
+      "mudou_em": null
+    },
+    {
+      "id": "ceaf-sc",
+      "descricao": "Doenças e documentos do CEAF em Santa Catarina",
+      "tipo": "extraida",
+      "url": "https://www.saude.sc.gov.br/index.php/pt/assistencia-farmaceutica/componente-especializado-da-assistencia-farmaceutica-ceaf",
+      "arquivo": "sc/ceaf-condicoes-2026-09-04.json",
+      "situacao": "igual",
+      "conferida_em": "2026-09-08",
+      "mudou_em": null
+    },
+    {
+      "id": "pregao-038-criciuma",
+      "descricao": "Edital do pregão 038/FMS/2024. Não é lista de dispensação; guardado só como referência.",
+      "tipo": "sem_verificacao",
+      "url": null,
+      "arquivo": "sc-criciuma/pregao-038-fms-2024-guia-farmacia.pdf",
+      "situacao": "sem_verificacao",
+      "conferida_em": null,
+      "mudou_em": null
+    },
+    {
+      "id": "pfpb-elenco",
+      "descricao": "Elenco de medicamentos e insumos do Programa Farmácia Popular",
+      "tipo": "arquivo",
+      "url": "https://www.gov.br/saude/pt-br/composicao/sectics/farmacia-popular/arquivos/elenco-de-medicamentos-e-insumos-pfpb.pdf",
+      "arquivo": "nacional/pfpb-elenco-2026-08-31.pdf",
+      "situacao": "igual",
+      "conferida_em": "2026-09-08",
+      "mudou_em": null
+    },
+    {
+      "id": "cnefe-criciuma",
+      "descricao": "CNEFE do Censo 2022 em Criciúma: endereço com coordenada, do IBGE",
+      "tipo": "arquivo",
+      "url": "https://ftp.ibge.gov.br/Cadastro_Nacional_de_Enderecos_para_Fins_Estatisticos/Censo_Demografico_2022/Arquivos_CNEFE/CSV/Municipio/42_SC/4204608_CRICIUMA.zip",
+      "arquivo": "nacional/cnefe-4204608-criciuma.zip",
+      "situacao": "igual",
+      "conferida_em": "2026-09-08",
+      "mudou_em": null
+    },
+    {
+      "id": "cnes-estabelecimentos",
+      "descricao": "Estabelecimentos de saúde no CNES, por município publicado",
+      "tipo": "extraida",
+      "url": "https://apidadosabertos.saude.gov.br/cnes/estabelecimentos",
+      "arquivo": "sc-criciuma/cnes-estabelecimentos.json",
+      "situacao": "igual",
+      "conferida_em": "2026-09-08",
+      "mudou_em": null
+    }
+  ]
+}

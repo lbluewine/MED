@@ -1,0 +1,232 @@
+@import "tailwindcss";
+
+/*
+ * Public Sans, a fonte do design system do governo federal, escolhida em
+ * 05/09/2026 para o site acompanhar o mockup novo.
+ *
+ * Substituiu a Atkinson Hyperlegible, que era do Braille Institute e foi
+ * desenhada para baixa visão. A troca é uma decisão de identidade, não de
+ * legibilidade: os arquivos da Atkinson continuam em public/fontes/ e a volta
+ * é trocar estes três @font-face. Ver docs/STACK.md.
+ *
+ * Servida junto com o site, nunca por CDN. Fonte de terceiro vaza o IP de
+ * quem lê, e aqui isso seria dado de saúde.
+ */
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fontes/PublicSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/fontes/PublicSans-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Public Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fontes/PublicSans-Bold.woff2") format("woff2");
+}
+
+/*
+ * Tokens de docs/STACK.md. Verde, vermelho e âmbar carregam significado, então
+ * nunca aparecem sozinhos: sempre com texto e ícone.
+ */
+@theme {
+  --color-fundo: #ffffff;
+  --color-texto: #132b48;
+  --color-texto-suave: #4a6382;
+  --color-linha: #dde6f2;
+
+  /* Os três que querem dizer alguma coisa. Nunca usados como enfeite. */
+  --color-tem: #0b6e4f;
+  --color-nao-tem: #a4231e;
+  --color-processo: #b45309;
+
+  /*
+   * Azul de identidade, na paleta do padrão gov.br, adotada em 05/09/2026
+   * junto com o mockup novo.
+   *
+   * A cor de enfeite é sempre esta, nunca o verde, o vermelho ou o âmbar: se
+   * o verde virar enfeite, ele para de significar "o SUS entrega", que é a
+   * informação mais importante do site.
+   *
+   * Contrastes conferidos: branco sobre --marca 12,3:1; --marca-link sobre
+   * branco 7,3:1; texto sobre --marca-fundo 12,9:1. AA pede 4,5:1.
+   */
+  --color-marca: #0c326f;
+  --color-marca-link: #1351b4;
+  --color-marca-fundo: #eef4fc;
+  --color-marca-linha: #dde6f2;
+  /* Fundo de página do mockup: um azul quase branco, não o branco puro. */
+  --color-marca-veu: #f4f8fd;
+  /* Tons do mockup: fundo de página, borda de cartão, divisória interna. */
+  --color-veu-topo: #eef4fc;
+  --color-veu-base: #f7fafe;
+  --color-borda-cartao: #e2eaf5;
+  --color-divisoria: #eef3fa;
+  --color-marca-suave: #e7f0fd;
+  --color-marca-fraca: #3f6bb5;
+  --color-seta: #8aa2bd;
+  --color-letra-fantasma: #c3d5ec;
+
+  /* Números e códigos, no mono do sistema — sem baixar mais uma fonte. */
+  --font-mono: ui-monospace, "SFMono-Regular", "Menlo", "Consolas", monospace;
+
+  /*
+   * Aviso em fundo claro. O âmbar cheio com texto branco pesava demais num
+   * cartão pequeno; aqui o texto fica escuro e o contraste sobe para 15:1.
+   */
+  --color-aviso: #fdf0dc;
+  --color-aviso-linha: #e9a23b;
+
+  /* Superfícies: só separam bloco de bloco. O texto em cima segue --texto. */
+  --color-superficie: #f4f8fd;
+  --color-superficie-forte: #e2eaf5;
+  --color-linha-suave: #e6e6e6;
+
+  /* Canto de cartão e de botão. */
+  --radius-cartao: 14px;
+  --radius-botao: 10px;
+
+  --font-sans: "Public Sans", system-ui, sans-serif;
+
+  /* Corpo 18px. Nada abaixo de 16px em lugar nenhum. */
+  --text-base: 1.125rem;
+  --text-base--line-height: 1.6;
+  --text-sm: 1rem;
+  --text-sm--line-height: 1.6;
+}
+
+
+html {
+  color-scheme: light;
+}
+
+/*
+ * Link é azul e sublinhado. O sublinhado fica: quem não distingue a cor
+ * precisa de outra pista, e daltonismo é comum na faixa etária deste site.
+ */
+a {
+  color: var(--color-marca-link);
+}
+
+body {
+  /* Fundo do mockup: azul quase branco no topo, clareando até 420px. */
+  background: linear-gradient(var(--color-veu-topo), var(--color-veu-base) 420px);
+  background-attachment: fixed;
+  color: var(--color-texto);
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
+
+/* Foco visível e nítido, sem depender do estilo do navegador. */
+:focus-visible {
+  outline: 3px solid var(--color-texto);
+  outline-offset: 2px;
+}
+
+/*
+  Os campos de busca já mostram o foco com um anel arredondado no contêiner
+  (acompanha a borda da caixa). O contorno quadrado padrão, por cima disso,
+  cortava a caixa arredondada — por isso ele é desligado aqui, com uma classe
+  específica para vencer a regra acima na cascata.
+*/
+.campo-busca-entrada:focus-visible {
+  outline: none;
+}
+
+/* Movimento só como resposta a uma ação, e nem isso para quem pediu menos. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/*
+ * A arte do banner da home. Duas versões pelo peso: o público tem internet
+ * ruim, e não faz sentido baixar a imagem grande num celular.
+ */
+.banner-sus {
+  background-image: url("/imagens/banner-sus-mobile.webp");
+}
+
+@media (min-width: 768px) {
+  .banner-sus {
+    background-image: url("/imagens/banner-sus.webp");
+  }
+}
+
+/*
+ * Véu sobre a arte, para o texto ser legível por cima dela.
+ *
+ * No celular a arte chega perto das letras, então o véu é quase cheio. Da
+ * largura em que sobra espaço, ele encurta e libera a faixa entre 45% e 70%,
+ * que é onde a arte traz "Saúde é um direito de todos" — medido na imagem, não
+ * chutado. A logomarca fica de 77% em diante e nunca é coberta.
+ */
+.banner-veu {
+  background-image: linear-gradient(
+    100deg,
+    #eaf4fe 0%,
+    #eaf4fe 62%,
+    rgba(234, 244, 254, 0.9) 78%,
+    rgba(234, 244, 254, 0.55) 100%
+  );
+}
+
+@media (min-width: 1024px) {
+  .banner-veu {
+    background-image: linear-gradient(
+      100deg,
+      #eaf4fe 0%,
+      #eaf4fe 24%,
+      rgba(234, 244, 254, 0.8) 34%,
+      rgba(234, 244, 254, 0) 45%
+    );
+  }
+}
+
+/* Muita gente vai imprimir o checklist e levar no papel. */
+@media print {
+  .nao-imprime {
+    display: none !important;
+  }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.9em;
+  }
+}
+
+/*
+ * Uma linha da lista de cidades de um estado.
+ *
+ * Classe própria, e não utilitários repetidos: em Minas Gerais são 853
+ * linhas, e o mesmo punhado de classes copiado 853 vezes vira dezenas de KB
+ * de HTML em cima de quem tem internet ruim.
+ */
+.link-cidade {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 48px;
+  padding: 0.625rem 0;
+  border-bottom: 1px solid var(--color-divisoria);
+  text-decoration: none;
+  color: var(--color-marca-link);
+}
+
+.link-cidade:hover {
+  text-decoration: underline;
+}

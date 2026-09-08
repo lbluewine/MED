@@ -1,0 +1,2432 @@
+{
+  "comentario": [
+    "Anexo I da REMUME de Campo Grande 2021, lido do diário oficial.",
+    "NÃO é dado publicado: falta conferência humana e falta unidades.json.",
+    "Gerado por scripts/le_remume_campo_grande.py."
+  ],
+  "municipio_id": "ms-campo-grande",
+  "conferencia": {
+    "itens_lidos": 334,
+    "numeracao_da_fonte": "1 a 334",
+    "itens_faltando": [],
+    "itens_repetidos": [],
+    "celulas_vazias": [],
+    "palavras_reparadas": 3,
+    "itens_a_conferir": [
+      16,
+      50,
+      85,
+      286,
+      288
+    ]
+  },
+  "a_conferir": [
+    {
+      "item": 16,
+      "nome": "sódio",
+      "motivos": [
+        "o nome começa em minúscula — pode estar cortado"
+      ]
+    },
+    {
+      "item": 50,
+      "nome": "multibacilar +",
+      "motivos": [
+        "o nome começa em minúscula — pode estar cortado",
+        "a concentração é longa demais — pode ter juntado linhas vizinhas"
+      ]
+    },
+    {
+      "item": 85,
+      "nome": "de Potássio",
+      "motivos": [
+        "o nome começa em minúscula — pode estar cortado"
+      ]
+    },
+    {
+      "item": 286,
+      "nome": "Ringer Lactato",
+      "motivos": [
+        "a concentração é longa demais — pode ter juntado linhas vizinhas"
+      ]
+    },
+    {
+      "item": 288,
+      "nome": "p/ Reidratação Oral",
+      "motivos": [
+        "o nome começa em minúscula — pode estar cortado"
+      ]
+    }
+  ],
+  "reparos": [
+    {
+      "item": 203,
+      "campo": "nome",
+      "antes": "Medroxiprogester ona",
+      "depois": "Medroxiprogesterona"
+    },
+    {
+      "item": 204,
+      "campo": "nome",
+      "antes": "Medroxiprogester ona",
+      "depois": "Medroxiprogesterona"
+    },
+    {
+      "item": 262,
+      "campo": "nome",
+      "antes": "Polimetilmetacrilat o",
+      "depois": "Polimetilmetacrilato"
+    }
+  ],
+  "itens": [
+    {
+      "item": 1,
+      "nome": "Abacavir",
+      "concentracao": "300 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 2,
+      "nome": "Abacavir",
+      "concentracao": "20 mg/ml",
+      "forma": "Solução oral",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 3,
+      "nome": "Aciclovir",
+      "concentracao": "250 mg",
+      "forma": "Pó para solução injetável",
+      "local": "CEDIP"
+    },
+    {
+      "item": 4,
+      "nome": "Aciclovir",
+      "concentracao": "200 mg",
+      "forma": "Comprimido",
+      "local": "APS de REFERÊNCIA, CEDIP, CTA E CEM"
+    },
+    {
+      "item": 5,
+      "nome": "Aciclovir",
+      "concentracao": "5%",
+      "forma": "Creme",
+      "local": "APS de REFERÊNCIA, CEDIP, CTA E CEM"
+    },
+    {
+      "item": 6,
+      "nome": "Ácido Acetilsalicílico",
+      "concentracao": "100 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 7,
+      "nome": "Ácido Fólico",
+      "concentracao": "5 mg",
+      "forma": "Comprimido",
+      "local": "APS"
+    },
+    {
+      "item": 8,
+      "nome": "Ácido Folínico",
+      "concentracao": "15 mg",
+      "forma": "Comprimido",
+      "local": "Unidades com demanda"
+    },
+    {
+      "item": 9,
+      "nome": "Ácido Tranexâmico",
+      "concentracao": "50 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 10,
+      "nome": "Ácido Valpróico",
+      "concentracao": "500 mg",
+      "forma": "Comprimido",
+      "local": "CAPS, CEM, CRS, APS com presença do farmacêutico"
+    },
+    {
+      "item": 11,
+      "nome": "Adenosina",
+      "concentracao": "3 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 12,
+      "nome": "Bidestilada (água para injeção)",
+      "concentracao": "-",
+      "forma": "Ampola (10ml)",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 13,
+      "nome": "Albendazol",
+      "concentracao": "400 mg",
+      "forma": "Comprimido",
+      "local": "APS"
+    },
+    {
+      "item": 14,
+      "nome": "Albendazol",
+      "concentracao": "40 mg/ml",
+      "forma": "Suspensão oral",
+      "local": "APS"
+    },
+    {
+      "item": 15,
+      "nome": "Álcool Etílico Alendronato de",
+      "concentracao": "70° INPM",
+      "forma": "Frasco (100 ml)",
+      "local": "APS (Rede Cegonha)"
+    },
+    {
+      "item": 16,
+      "nome": "sódio",
+      "concentracao": "70 mg",
+      "forma": "Comprimido",
+      "local": "CEM"
+    },
+    {
+      "item": 17,
+      "nome": "Alfaepoetina",
+      "concentracao": "10.000 UI",
+      "forma": "Injetável (frasco- ampola)",
+      "local": "CEDIP"
+    },
+    {
+      "item": 18,
+      "nome": "Alopurinol",
+      "concentracao": "300 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 19,
+      "nome": "Aminofilina",
+      "concentracao": "24 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 20,
+      "nome": "Amiodarona",
+      "concentracao": "50 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 21,
+      "nome": "Amiodarona",
+      "concentracao": "200 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 22,
+      "nome": "Amitriptilina",
+      "concentracao": "25 mg",
+      "forma": "Comprimido",
+      "local": "CAPS, CEM, CRS, APS com presença do farmacêutico"
+    },
+    {
+      "item": 23,
+      "nome": "Amoxicilina",
+      "concentracao": "50 mg/ml",
+      "forma": "Pó para suspensão oral",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 24,
+      "nome": "Amoxicilina",
+      "concentracao": "500 mg",
+      "forma": "Cápsula/ Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 25,
+      "nome": "Amoxicilina+ Clavulanato",
+      "concentracao": "(50 + 12,5) mg/ml",
+      "forma": "Suspensão oral",
+      "local": "Todas unidades de saúde com farmacêutico"
+    },
+    {
+      "item": 26,
+      "nome": "Amoxicilina+ Clavulanato",
+      "concentracao": "500 mg + 100 mg",
+      "forma": "Injetável (frasco-ampola)",
+      "local": "CEDIP (Agravo de Dengue)"
+    },
+    {
+      "item": 27,
+      "nome": "Amoxicilina+ Clavulanato",
+      "concentracao": "500 mg + 125 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde com farmacêutico"
+    },
+    {
+      "item": 28,
+      "nome": "Anfotericina B Desoxicolato",
+      "concentracao": "50 mg",
+      "forma": "Pó liofilizado para solução injetável",
+      "local": "CEDIP"
+    },
+    {
+      "item": 29,
+      "nome": "Anfotericina B lipossomal",
+      "concentracao": "50 mg",
+      "forma": "Pó liofilizado para solução injetável",
+      "local": "CEDIP"
+    },
+    {
+      "item": 30,
+      "nome": "Anlodipino",
+      "concentracao": "5 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 31,
+      "nome": "Atazanavir",
+      "concentracao": "200 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 32,
+      "nome": "Atazanavir",
+      "concentracao": "300 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 33,
+      "nome": "Atenolol",
+      "concentracao": "50 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 34,
+      "nome": "Atracúrio",
+      "concentracao": "10mg/ml",
+      "forma": "Solução injetável",
+      "local": "UPAS/CRS"
+    },
+    {
+      "item": 35,
+      "nome": "Atropina",
+      "concentracao": "0,25 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 36,
+      "nome": "Azitromicina",
+      "concentracao": "40 mg/ml",
+      "forma": "Pó para suspensão oral",
+      "local": "Todas unidades de saúde com farmacêutico"
+    },
+    {
+      "item": 37,
+      "nome": "Azitromicina",
+      "concentracao": "500 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde com farmacêutico"
+    },
+    {
+      "item": 38,
+      "nome": "Azitromicina",
+      "concentracao": "500 mg",
+      "forma": "Pó para suspensão injetável",
+      "local": "CEDIP (Agravo de Dengue)"
+    },
+    {
+      "item": 39,
+      "nome": "Beclometasona",
+      "concentracao": "200 mcg",
+      "forma": "Aerossol ou spray",
+      "local": "CEM"
+    },
+    {
+      "item": 40,
+      "nome": "Beclometasona",
+      "concentracao": "250 mcg",
+      "forma": "Aerossol ou spray",
+      "local": "CEM"
+    },
+    {
+      "item": 41,
+      "nome": "Benzilpenicilina Benzatina",
+      "concentracao": "1200000 UI",
+      "forma": "Pó para suspenção injetável",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 42,
+      "nome": "Benzilpenicilina Benzatina",
+      "concentracao": "600000 UI",
+      "forma": "Pó para suspenção injetável",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 43,
+      "nome": "Benzilpenicilina Potassica",
+      "concentracao": "5000000 UI",
+      "forma": "Pó para solução injetável",
+      "local": "UPA"
+    },
+    {
+      "item": 44,
+      "nome": "Benzilpenicilina Potassica",
+      "concentracao": "300.000 UI + 100.000 UI",
+      "forma": "Pó para suspenção injetável",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 45,
+      "nome": "Bicarbonato de Sódio",
+      "concentracao": "8,4 mg/ml",
+      "forma": "Solução injetável Ampola (10 ml)",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 46,
+      "nome": "Bicarbonato de Sódio",
+      "concentracao": "8,4 mg/ml",
+      "forma": "Solução injetável Frasco (250 ml)",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 47,
+      "nome": "Biperideno",
+      "concentracao": "2mg",
+      "forma": "Comprimido",
+      "local": "CAPS, CEM, CRS, APS com presença do farmacêutico"
+    },
+    {
+      "item": 48,
+      "nome": "Biperideno",
+      "concentracao": "5mg/ml",
+      "forma": "Solução injetável",
+      "local": "CAPS/CRS/UPA"
+    },
+    {
+      "item": 49,
+      "nome": "Bisacodil (somente de exame)",
+      "concentracao": "5mg",
+      "forma": "Drágea",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 50,
+      "nome": "multibacilar +",
+      "concentracao": "Rifampicina 300mg Dapsona 100mg 100mg/ 3mg Rifampicina 300mg e 150mg +",
+      "forma": "Blister",
+      "local": "UNIDADES COM DEMANDA UNIDADES COM"
+    },
+    {
+      "item": 51,
+      "nome": "Blister multibacilar",
+      "concentracao": "Dapsona 50mg + Clofazimina 50 mg",
+      "forma": "Blister",
+      "local": "DEMANDA"
+    },
+    {
+      "item": 52,
+      "nome": "Blister paucibacilar",
+      "concentracao": "Rifampicina 300mg+ Dapsona 100 mg",
+      "forma": "Blister",
+      "local": "UNIDADES COM DEMANDA"
+    },
+    {
+      "item": 53,
+      "nome": "Blister paucibacilar",
+      "concentracao": "Rifampicina 150mg e 300mg + Dapsona 50mg",
+      "forma": "Blister",
+      "local": "UNIDADES COM DEMANDA"
+    },
+    {
+      "item": 54,
+      "nome": "Bromoprida",
+      "concentracao": "4 mg/ml",
+      "forma": "Solução oral",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 55,
+      "nome": "Bromoprida",
+      "concentracao": "5 mg/ml",
+      "forma": "Solução injetável",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 56,
+      "nome": "Budesonida",
+      "concentracao": "32 mcg",
+      "forma": "Aerossol ou spray",
+      "local": "CEM"
+    },
+    {
+      "item": 57,
+      "nome": "Bupropiona",
+      "concentracao": "150 mg",
+      "forma": "Comprimido",
+      "local": "Unidades com Programa Nacional de Tabagismo com presença de farmacêutico"
+    },
+    {
+      "item": 58,
+      "nome": "Butilescopolamina",
+      "concentracao": "10 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 59,
+      "nome": "Butilescopolamina",
+      "concentracao": "20 mg/ml",
+      "forma": "Solução injetável",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 60,
+      "nome": "Cabergolina",
+      "concentracao": "0,5 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 61,
+      "nome": "Captopril",
+      "concentracao": "25 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 62,
+      "nome": "Carbamazepina",
+      "concentracao": "20 mg/ml",
+      "forma": "Suspensão oral",
+      "local": "CAPS, CEM, CRS, APS com presença do farmacêutico"
+    },
+    {
+      "item": 63,
+      "nome": "Carbamazepina",
+      "concentracao": "200 mg",
+      "forma": "Comprimido",
+      "local": "CAPS, CEM, CRS, APS com presença do farmacêutico"
+    },
+    {
+      "item": 64,
+      "nome": "Carbonato de Calcio + colecalciferol",
+      "concentracao": "500 mg + 400 UI",
+      "forma": "Comprimido",
+      "local": "CEM"
+    },
+    {
+      "item": 65,
+      "nome": "Carvão ativado",
+      "concentracao": "10 g",
+      "forma": "Unidade",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 66,
+      "nome": "Carvão ativado",
+      "concentracao": "50 g",
+      "forma": "Unidade",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 67,
+      "nome": "Carvedilol",
+      "concentracao": "12,5 mg",
+      "forma": "Comprimido",
+      "local": "CEM"
+    },
+    {
+      "item": 68,
+      "nome": "Carvedilol",
+      "concentracao": "6,25 mg",
+      "forma": "Comprimido",
+      "local": "CEM"
+    },
+    {
+      "item": 69,
+      "nome": "Cefalexina",
+      "concentracao": "50 mg/ml",
+      "forma": "Pó para suspensão oral",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 70,
+      "nome": "Cefalexina",
+      "concentracao": "500 mg",
+      "forma": "Cápsula/Compri mido/Drágea",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 71,
+      "nome": "Ceftriaxona",
+      "concentracao": "1g",
+      "forma": "Pó para solução injetável",
+      "local": "CRS/UPA/CEDIP/CT A"
+    },
+    {
+      "item": 72,
+      "nome": "Cetamina",
+      "concentracao": "50 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 73,
+      "nome": "Cetoprofeno",
+      "concentracao": "100 mg/uni",
+      "forma": "Pó para solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 74,
+      "nome": "Cilostazol",
+      "concentracao": "50 mg",
+      "forma": "Comprimido",
+      "local": "CEM"
+    },
+    {
+      "item": 75,
+      "nome": "Cinarizina",
+      "concentracao": "75 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 76,
+      "nome": "Ciprofibrato",
+      "concentracao": "100 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 77,
+      "nome": "Ciprofloxacino",
+      "concentracao": "500 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde com farmacêutico"
+    },
+    {
+      "item": 78,
+      "nome": "Claritromicina",
+      "concentracao": "500 mg",
+      "forma": "Comprimido",
+      "local": "CEM"
+    },
+    {
+      "item": 79,
+      "nome": "Clindamicina",
+      "concentracao": "300 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 80,
+      "nome": "Clindamicina",
+      "concentracao": "150 mg/ml",
+      "forma": "Pó para solução injetável",
+      "local": "CEDIP"
+    },
+    {
+      "item": 81,
+      "nome": "Clofazimina",
+      "concentracao": "100 mg",
+      "forma": "Cápsula",
+      "local": "Unidades com demanda"
+    },
+    {
+      "item": 82,
+      "nome": "Clofazimina",
+      "concentracao": "50 mg",
+      "forma": "Cápsula",
+      "local": "Unidades com demanda"
+    },
+    {
+      "item": 83,
+      "nome": "Clomipramina",
+      "concentracao": "25 mg",
+      "forma": "Comprimido",
+      "local": "CAPS, CEM, CRS, APS com presença do farmacêutico"
+    },
+    {
+      "item": 84,
+      "nome": "Clonazepam",
+      "concentracao": "2,5 mg/ml",
+      "forma": "Solução oral",
+      "local": "CAPS, CEM, CRS, APS com presença do farmacêutico"
+    },
+    {
+      "item": 85,
+      "nome": "de Potássio",
+      "concentracao": "60 mg/ml",
+      "forma": "Solução oral Solução injetável",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 86,
+      "nome": "Cloreto de Potássio",
+      "concentracao": "19,1 mg/ml",
+      "forma": "Ampola (10 ml)",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 87,
+      "nome": "Cloreto de Sódio",
+      "concentracao": "20%",
+      "forma": "Solução injetável Ampola (10 ml)",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 88,
+      "nome": "Cloreto de Sódio- Solução Nasal com conservante",
+      "concentracao": "0,90%",
+      "forma": "Solução nasal FRASCO (30ML)",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 89,
+      "nome": "Clorexidina",
+      "concentracao": "0,50%",
+      "forma": "Frasco (100 ml)",
+      "local": "CEDIP"
+    },
+    {
+      "item": 90,
+      "nome": "Clorexidina Degermante",
+      "concentracao": "2,00%",
+      "forma": "Frasco (1000 ml)",
+      "local": "CEDIP"
+    },
+    {
+      "item": 91,
+      "nome": "Cloroquina",
+      "concentracao": "150 mg",
+      "forma": "Comprimido",
+      "local": "CEM"
+    },
+    {
+      "item": 92,
+      "nome": "Clorpromazina",
+      "concentracao": "100 mg",
+      "forma": "Comprimido",
+      "local": "CAPS, CEM, CRS, APS com presença do farmacêutico"
+    },
+    {
+      "item": 93,
+      "nome": "Darunavir",
+      "concentracao": "150 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 94,
+      "nome": "Darunavir",
+      "concentracao": "300 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 95,
+      "nome": "Deslanosideo",
+      "concentracao": "0,2 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 96,
+      "nome": "Dexametasona",
+      "concentracao": "4 mg/ml",
+      "forma": "Solução injetável",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 97,
+      "nome": "Dexametasona Creme",
+      "concentracao": "1 mg/g",
+      "forma": "Creme",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 98,
+      "nome": "Dexametasona",
+      "concentracao": "4 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 99,
+      "nome": "Dexametasona Solução Oftálmica",
+      "concentracao": "0,10%",
+      "forma": "Solução oftálmica Frasco (5ml)",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 100,
+      "nome": "Dexametasona Elixir",
+      "concentracao": "0,1 mg/ml",
+      "forma": "Elixir",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 101,
+      "nome": "Dexclorfeniramina Solução Oral",
+      "concentracao": "0,4 mg/ml",
+      "forma": "Solução oral",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 102,
+      "nome": "Dexclorfeniramina",
+      "concentracao": "2 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 103,
+      "nome": "Diazepam",
+      "concentracao": "5 mg",
+      "forma": "Comprimido",
+      "local": "CAPS, CEM, CRS, APS com presença do farmacêutico"
+    },
+    {
+      "item": 104,
+      "nome": "Diazepam",
+      "concentracao": "5 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CAPS/CRS/UPA Todas unidades de"
+    },
+    {
+      "item": 105,
+      "nome": "Diclofenaco",
+      "concentracao": "25 mg/ml",
+      "forma": "Solução injetável",
+      "local": "saúde"
+    },
+    {
+      "item": 106,
+      "nome": "Digoxina",
+      "concentracao": "0,25 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 107,
+      "nome": "Diosmina + Hesperidina",
+      "concentracao": "450 mg + 50 mg",
+      "forma": "Comprimido",
+      "local": "CEM"
+    },
+    {
+      "item": 108,
+      "nome": "Dipirona",
+      "concentracao": "500 mg/ml",
+      "forma": "Solução oral Frasco (10ml)",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 109,
+      "nome": "Dipirona",
+      "concentracao": "500 mg/ml",
+      "forma": "Solução injetável",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 110,
+      "nome": "Dispositivo intra- uterino (DIU)",
+      "concentracao": "-",
+      "forma": "-",
+      "local": "Unidades com demanda"
+    },
+    {
+      "item": 111,
+      "nome": "Dobutamina",
+      "concentracao": "12,5 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 112,
+      "nome": "Dolutegravir",
+      "concentracao": "50mg",
+      "forma": "Comprimido",
+      "local": "CEDIP, CTA, UPA, CRS E UDMS"
+    },
+    {
+      "item": 113,
+      "nome": "Dopamina",
+      "concentracao": "5 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 114,
+      "nome": "Doxazosina",
+      "concentracao": "2 mg",
+      "forma": "Comprimido",
+      "local": "CEM/Centro de Referência do Homem"
+    },
+    {
+      "item": 115,
+      "nome": "Doxiciclina",
+      "concentracao": "100 mg",
+      "forma": "Comprimido",
+      "local": "APS de REFERÊNCIA, CTA, CEDIP E CEM"
+    },
+    {
+      "item": 116,
+      "nome": "Efavirenz",
+      "concentracao": "200 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 117,
+      "nome": "Efavirenz",
+      "concentracao": "600 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 118,
+      "nome": "Enalapril",
+      "concentracao": "10 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 119,
+      "nome": "Enfuvirtida",
+      "concentracao": "90 mg",
+      "forma": "Pó liofilizado para solução injetável",
+      "local": "CEDIP"
+    },
+    {
+      "item": 120,
+      "nome": "Epinefrina",
+      "concentracao": "1 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 121,
+      "nome": "Eritromicina",
+      "concentracao": "50 mg/ml",
+      "forma": "Suspensão oral",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 122,
+      "nome": "Eritromicina",
+      "concentracao": "500 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 123,
+      "nome": "Espiramicina",
+      "concentracao": "500 mg",
+      "forma": "Comprimido",
+      "local": "Unidades com demanda"
+    },
+    {
+      "item": 124,
+      "nome": "Espironolactona",
+      "concentracao": "100 mg",
+      "forma": "Comprimido",
+      "local": "CEM"
+    },
+    {
+      "item": 125,
+      "nome": "Espironolactona",
+      "concentracao": "25 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 126,
+      "nome": "Estreptomicina",
+      "concentracao": "1 g",
+      "forma": "Pó para solução injetável",
+      "local": "Unidades com demanda"
+    },
+    {
+      "item": 127,
+      "nome": "Estriol",
+      "concentracao": "1 mg/g",
+      "forma": "Creme",
+      "local": "APS"
+    },
+    {
+      "item": 128,
+      "nome": "Estrogênios Conjugados",
+      "concentracao": "0,3 mg",
+      "forma": "Comprimido",
+      "local": "APS"
+    },
+    {
+      "item": 129,
+      "nome": "Etambutol",
+      "concentracao": "400 mg",
+      "forma": "Comprimido",
+      "local": "Unidades com demanda"
+    },
+    {
+      "item": 130,
+      "nome": "Etomidato",
+      "concentracao": "2 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA/SAMU"
+    },
+    {
+      "item": 131,
+      "nome": "Etravirina",
+      "concentracao": "100 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP"
+    },
+    {
+      "item": 132,
+      "nome": "Fenitoína",
+      "concentracao": "100 mg",
+      "forma": "Comprimido",
+      "local": "CAPS, CEM, CRS, APS com presença do farmacêutico"
+    },
+    {
+      "item": 133,
+      "nome": "Fenitoína",
+      "concentracao": "50 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CAPS/CRS/UPA"
+    },
+    {
+      "item": 134,
+      "nome": "Fenobarbital",
+      "concentracao": "100 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CAPS/CRS/UPA"
+    },
+    {
+      "item": 135,
+      "nome": "Fenobarbital",
+      "concentracao": "100 mg",
+      "forma": "Comprimido",
+      "local": "CAPS, CEM, CRS, APS com presença do farmacêutico"
+    },
+    {
+      "item": 136,
+      "nome": "Fenobarbital",
+      "concentracao": "40 mg/ml",
+      "forma": "Solução oral",
+      "local": "CAPS, CEM, CRS, APS com presença do farmacêutico"
+    },
+    {
+      "item": 137,
+      "nome": "Fentanila",
+      "concentracao": "0,05 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA/CEM"
+    },
+    {
+      "item": 138,
+      "nome": "Finasterida",
+      "concentracao": "5 mg",
+      "forma": "Comprimido",
+      "local": "CEM/Centro de Referência do homem"
+    },
+    {
+      "item": 139,
+      "nome": "Fluconazol",
+      "concentracao": "150 mg",
+      "forma": "Cápsula",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 140,
+      "nome": "Flumazenil",
+      "concentracao": "0,1 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CAPS/CRS/UPA"
+    },
+    {
+      "item": 141,
+      "nome": "Fluoxetina",
+      "concentracao": "20 mg",
+      "forma": "Cápsula/Compri mido",
+      "local": "CAPS, CEM, CRS, APS com presença do farmacêutico"
+    },
+    {
+      "item": 142,
+      "nome": "Furosemida",
+      "concentracao": "10 mg/ml",
+      "forma": "Solução injetável",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 143,
+      "nome": "Furosemida",
+      "concentracao": "40 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 144,
+      "nome": "Ganciclovir",
+      "concentracao": "500 mg",
+      "forma": "Frasco-ampola",
+      "local": "CEDIP"
+    },
+    {
+      "item": 145,
+      "nome": "Gel lubrificante",
+      "concentracao": "-",
+      "forma": "Sachê",
+      "local": "CEDIP/CTA E UDMS"
+    },
+    {
+      "item": 146,
+      "nome": "Gentamicina",
+      "concentracao": "40 mg/ml",
+      "forma": "Solução injetável",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 147,
+      "nome": "Gentamicina Solução Oftálmica",
+      "concentracao": "5 mg/ml",
+      "forma": "Solução Oftálmica Frasco (5ml)",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 148,
+      "nome": "Ginkgo Biloba",
+      "concentracao": "80 mg",
+      "forma": "Extrato Seco",
+      "local": "CEM"
+    },
+    {
+      "item": 149,
+      "nome": "Glibenclamida",
+      "concentracao": "5 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 150,
+      "nome": "Gliclazida",
+      "concentracao": "30 mg",
+      "forma": "Comprimido",
+      "local": "CEM"
+    },
+    {
+      "item": 151,
+      "nome": "Glicose",
+      "concentracao": "50 mg/ml",
+      "forma": "Solução injetável Frasco 500 ml",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 152,
+      "nome": "Glicose",
+      "concentracao": "50%",
+      "forma": "Solução injetável Ampola",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 153,
+      "nome": "Glucantime",
+      "concentracao": "300 mg/ml",
+      "forma": "Ampola",
+      "local": "CEDIP"
+    },
+    {
+      "item": 154,
+      "nome": "Gluconato de Cálcio",
+      "concentracao": "10%",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 155,
+      "nome": "Guaco (Milkania glomerata S.)",
+      "concentracao": "Xarope em formulação isenta de açúcar frasco 120 ml",
+      "forma": "Solução oral",
+      "local": "Todas as unidades de saúde"
+    },
+    {
+      "item": 156,
+      "nome": "Haloperidol Decanoato",
+      "concentracao": "50 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CAPS"
+    },
+    {
+      "item": 157,
+      "nome": "Haloperidol",
+      "concentracao": "5 mg",
+      "forma": "Comprimido",
+      "local": "CAPS, CEM, CRS, APS com presença do farmacêutico"
+    },
+    {
+      "item": 158,
+      "nome": "Haloperidol",
+      "concentracao": "5 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CAPS/CRS/UPA"
+    },
+    {
+      "item": 159,
+      "nome": "Heparina",
+      "concentracao": "5000 UI/ml",
+      "forma": "Solução injetável",
+      "local": "CEM"
+    },
+    {
+      "item": 160,
+      "nome": "Hidralazina",
+      "concentracao": "20 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 161,
+      "nome": "Hidroclorotiazida",
+      "concentracao": "25 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 162,
+      "nome": "Hidrocortisona Hidróxido de",
+      "concentracao": "500 mg",
+      "forma": "Pó para solução injetável",
+      "local": "CRS/UPA Todas unidades de"
+    },
+    {
+      "item": 163,
+      "nome": "Alumínio",
+      "concentracao": "61,5 mg/ml",
+      "forma": "Suspensão oral",
+      "local": "saúde"
+    },
+    {
+      "item": 164,
+      "nome": "Hidroxietilamida",
+      "concentracao": "60 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 165,
+      "nome": "Histerômetro (Acompanha DIU)",
+      "concentracao": "-",
+      "forma": "-",
+      "local": "UNIDADES COM DEMANDA"
+    },
+    {
+      "item": 166,
+      "nome": "Ibuprofeno",
+      "concentracao": "50 mg/ml",
+      "forma": "Suspensão oral",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 167,
+      "nome": "Ibuprofeno",
+      "concentracao": "600 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 168,
+      "nome": "Imipramina",
+      "concentracao": "25 mg",
+      "forma": "Comprimido",
+      "local": "CAPS, CEM, CRS, APS com presença do farmacêutico"
+    },
+    {
+      "item": 169,
+      "nome": "Insulina de ação rápida",
+      "concentracao": "100 UI/ml",
+      "forma": "Solução injetável com sistema de aplicação",
+      "local": "SEREDI/CEM - CEI"
+    },
+    {
+      "item": 170,
+      "nome": "Insulina de ação ultra-rápida",
+      "concentracao": "100 UI/ml",
+      "forma": "Solução injetável com sistema de aplicação",
+      "local": "SEREDI/CEM - CEI"
+    },
+    {
+      "item": 171,
+      "nome": "Insulina Humana NPH 100",
+      "concentracao": "100 UI/ml",
+      "forma": "Solução injetável com sistema de aplicação",
+      "local": "APS E CEM"
+    },
+    {
+      "item": 172,
+      "nome": "Insulina Humana NPH 100",
+      "concentracao": "100 UI/ml",
+      "forma": "Suspensão injetável",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 173,
+      "nome": "Insulina regular",
+      "concentracao": "100 UI/ml",
+      "forma": "Solução injetável com sistema de aplicação",
+      "local": "APS E CEM"
+    },
+    {
+      "item": 174,
+      "nome": "Insulina regular",
+      "concentracao": "100 UI/ml",
+      "forma": "Solução injetável",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 175,
+      "nome": "Isoconazol",
+      "concentracao": "10 mg/g",
+      "forma": "Creme",
+      "local": "APS de REFERÊNCIAS, CEDIP, CTA E CEM"
+    },
+    {
+      "item": 176,
+      "nome": "Isoflavona",
+      "concentracao": "75 mg",
+      "forma": "Cápsula/Compri mido",
+      "local": "CEM"
+    },
+    {
+      "item": 177,
+      "nome": "Isoniazida",
+      "concentracao": "100 mg",
+      "forma": "Comprimido",
+      "local": "Unidades com demanda"
+    },
+    {
+      "item": 178,
+      "nome": "Isoniazida Isoniazida +",
+      "concentracao": "300 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP e CTA Unidades com"
+    },
+    {
+      "item": 179,
+      "nome": "Rifampicina",
+      "concentracao": "75 mg + 150 mg",
+      "forma": "Cápsula",
+      "local": "demanda"
+    },
+    {
+      "item": 180,
+      "nome": "Isoniazida + Rifampicina",
+      "concentracao": "50 mg + 75 mg",
+      "forma": "Comprimido dispersível",
+      "local": "Unidades com demanda"
+    },
+    {
+      "item": 181,
+      "nome": "Isossorbida",
+      "concentracao": "5 mg",
+      "forma": "Comprimido",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 182,
+      "nome": "Isossorbida",
+      "concentracao": "40 mg",
+      "forma": "Comprimido",
+      "local": "CEM"
+    },
+    {
+      "item": 183,
+      "nome": "Itraconazol",
+      "concentracao": "100 mg",
+      "forma": "Cápsula",
+      "local": "APS de REFERÊNCIAS, CEDIP, CTA E CEM"
+    },
+    {
+      "item": 184,
+      "nome": "Ivermectina",
+      "concentracao": "6 mg",
+      "forma": "Comprimido",
+      "local": "APS"
+    },
+    {
+      "item": 185,
+      "nome": "Lamivudina",
+      "concentracao": "10 mg/ml",
+      "forma": "Solução oral",
+      "local": "CEDIP/CTA/CRS/ UPA"
+    },
+    {
+      "item": 186,
+      "nome": "Lamivudina + Zidovudina",
+      "concentracao": "150 mg + 300 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP e CTA"
+    },
+    {
+      "item": 187,
+      "nome": "Levodopa + benserazida",
+      "concentracao": "100 mg + 25 mg",
+      "forma": "Comprimido",
+      "local": "CEM"
+    },
+    {
+      "item": 188,
+      "nome": "Levodopa + benserazida",
+      "concentracao": "200 mg + 50 mg",
+      "forma": "Comprimido",
+      "local": "CEM"
+    },
+    {
+      "item": 189,
+      "nome": "Levodopa + Carbidopa",
+      "concentracao": "250 mg + 25 mg",
+      "forma": "Comprimido",
+      "local": "CEM/APS"
+    },
+    {
+      "item": 190,
+      "nome": "Levofloxacino",
+      "concentracao": "5 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CEDIP (Agravo de Dengue)"
+    },
+    {
+      "item": 191,
+      "nome": "Levofloxacino",
+      "concentracao": "500 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP (Agravo de Dengue)"
+    },
+    {
+      "item": 192,
+      "nome": "Levomepromazina",
+      "concentracao": "25 mg",
+      "forma": "Comprimido",
+      "local": "CAPS, CEM, CRS, APS com presença do farmacêutico"
+    },
+    {
+      "item": 193,
+      "nome": "Levonorgestrel",
+      "concentracao": "0,75 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 194,
+      "nome": "Levonorgestrel + etinilestradiol",
+      "concentracao": "0,15 mg +0,03 mg",
+      "forma": "Blister",
+      "local": "APS"
+    },
+    {
+      "item": 195,
+      "nome": "Levotiroxina",
+      "concentracao": "100 mcg",
+      "forma": "Comprimido",
+      "local": "CEM"
+    },
+    {
+      "item": 196,
+      "nome": "Levotiroxina",
+      "concentracao": "25 mcg",
+      "forma": "Comprimido",
+      "local": "CEM"
+    },
+    {
+      "item": 197,
+      "nome": "Levotiroxina",
+      "concentracao": "50 mcg",
+      "forma": "Comprimido",
+      "local": "CEM"
+    },
+    {
+      "item": 198,
+      "nome": "Lidocaína",
+      "concentracao": "20 mg/ml",
+      "forma": "Solução injetável",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 199,
+      "nome": "(Carbonato)",
+      "concentracao": "300 mg",
+      "forma": "Comprimido",
+      "local": "CAPS/CEM"
+    },
+    {
+      "item": 200,
+      "nome": "Lopinavir",
+      "concentracao": "80 mg/ml + 20 mg/ml",
+      "forma": "Solução oral",
+      "local": "CEDIP/CRS/UPA"
+    },
+    {
+      "item": 201,
+      "nome": "Loratadina",
+      "concentracao": "1 mg/ml",
+      "forma": "Xarope",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 202,
+      "nome": "Losartana",
+      "concentracao": "50 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 203,
+      "nome": "Medroxiprogesterona",
+      "concentracao": "10 mg",
+      "forma": "Comprimido",
+      "local": "APS"
+    },
+    {
+      "item": 204,
+      "nome": "Medroxiprogesterona",
+      "concentracao": "150 mg/ml",
+      "forma": "Suspensão injetável",
+      "local": "APS"
+    },
+    {
+      "item": 205,
+      "nome": "Metformina",
+      "concentracao": "500 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 206,
+      "nome": "Metformina",
+      "concentracao": "850 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 207,
+      "nome": "Metildopa",
+      "concentracao": "250 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 208,
+      "nome": "Metilprednisolona",
+      "concentracao": "500 mg",
+      "forma": "Injetável Ampola",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 209,
+      "nome": "Metoclopramida",
+      "concentracao": "10 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 210,
+      "nome": "Metoclopramida",
+      "concentracao": "5 mg/ml",
+      "forma": "Solução injetável",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 211,
+      "nome": "Metoclopramida",
+      "concentracao": "4 mg/ml",
+      "forma": "Solução oral Frasco",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 212,
+      "nome": "Metoprolol",
+      "concentracao": "1 mg/ml",
+      "forma": "Ampola",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 213,
+      "nome": "Metoprolol",
+      "concentracao": "50 mg",
+      "forma": "Comprimido",
+      "local": "CEM"
+    },
+    {
+      "item": 214,
+      "nome": "Metronidazol injetável",
+      "concentracao": "5 mg/ml",
+      "forma": "Solução injetável Frasco (100 ml)",
+      "local": "CRS/UPA/CEDIP"
+    },
+    {
+      "item": 215,
+      "nome": "Metronidazol",
+      "concentracao": "250 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 216,
+      "nome": "Metronidazol Solução Oral",
+      "concentracao": "40 mg/ml",
+      "forma": "Solução oral",
+      "local": "APS"
+    },
+    {
+      "item": 217,
+      "nome": "Metronidazol Geleia",
+      "concentracao": "100 mg/g",
+      "forma": "Geleia ginecológica",
+      "local": "APS"
+    },
+    {
+      "item": 218,
+      "nome": "Miconazol Dermatológico",
+      "concentracao": "20 mg/g",
+      "forma": "Creme",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 219,
+      "nome": "Midazolam",
+      "concentracao": "5 mg/ml (3ml)",
+      "forma": "Solução injetável",
+      "local": "CAPS/CRS/UPA"
+    },
+    {
+      "item": 220,
+      "nome": "Midazolam",
+      "concentracao": "5 mg/ml (10ml)",
+      "forma": "Solução injetável",
+      "local": "CAPS/CRS/UPA"
+    },
+    {
+      "item": 221,
+      "nome": "Minociclina",
+      "concentracao": "100 mg",
+      "forma": "Comprimido",
+      "local": "Unidades com demanda"
+    },
+    {
+      "item": 222,
+      "nome": "Morfina",
+      "concentracao": "10 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CAPS/CRS/UPA"
+    },
+    {
+      "item": 223,
+      "nome": "Naloxona",
+      "concentracao": "0,4 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CAPS/CRS/UPA/CE M"
+    },
+    {
+      "item": 224,
+      "nome": "Neomicina + 5 Bacitracina",
+      "concentracao": "mg/g + 250 UI/g",
+      "forma": "Creme",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 225,
+      "nome": "Nevirapina",
+      "concentracao": "10 mg/ml",
+      "forma": "Suspensão oral",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 226,
+      "nome": "Nevirapina",
+      "concentracao": "200 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 227,
+      "nome": "Nicotina",
+      "concentracao": "14 mg",
+      "forma": "Adesivo",
+      "local": "Unidades com Programa Nacional de Tabagismo"
+    },
+    {
+      "item": 228,
+      "nome": "Nicotina",
+      "concentracao": "2 mg",
+      "forma": "Pastilha",
+      "local": "Unidades com Programa Nacional de Tabagismo"
+    },
+    {
+      "item": 229,
+      "nome": "Nicotina",
+      "concentracao": "21 mg",
+      "forma": "Adesivo",
+      "local": "Unidades com Programa Nacional de Tabagismo"
+    },
+    {
+      "item": 230,
+      "nome": "Nicotina",
+      "concentracao": "4 mg",
+      "forma": "Pastilha",
+      "local": "Unidades com Programa Nacional de Tabagismo"
+    },
+    {
+      "item": 231,
+      "nome": "Nicotina",
+      "concentracao": "7 mg",
+      "forma": "Adesivo",
+      "local": "Unidades com Programa Nacional de Tabagismo"
+    },
+    {
+      "item": 232,
+      "nome": "Nifedipino",
+      "concentracao": "10 mg",
+      "forma": "Cápsula/Compri mido",
+      "local": "CEM"
+    },
+    {
+      "item": 233,
+      "nome": "Nistatina Geleia Vaginal",
+      "concentracao": "25000 UI/g",
+      "forma": "Bisnaga",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 234,
+      "nome": "Nistatina Solução Oral",
+      "concentracao": "100000 UI/ml",
+      "forma": "Solução oral",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 235,
+      "nome": "Nitrazepam",
+      "concentracao": "5 mg",
+      "forma": "Comprimido",
+      "local": "CAPS, CEM, CRS, APS com presença do farmacêutico"
+    },
+    {
+      "item": 236,
+      "nome": "Nitrofurantoína",
+      "concentracao": "100 mg",
+      "forma": "Cápsula",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 237,
+      "nome": "Nitroprussiato",
+      "concentracao": "25 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 238,
+      "nome": "Norepinefrina",
+      "concentracao": "2 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 239,
+      "nome": "Noretisterona",
+      "concentracao": "0,35 mg",
+      "forma": "Comprimido",
+      "local": "APS"
+    },
+    {
+      "item": 240,
+      "nome": "Noretisterona + Estradiol",
+      "concentracao": "50 mg/ml + 5 mg/ml",
+      "forma": "Solução injetável",
+      "local": "APS"
+    },
+    {
+      "item": 241,
+      "nome": "Nortriptilina",
+      "concentracao": "25 mg",
+      "forma": "Cápsula",
+      "local": "CAPS, CEM, CRS, APS com presença do farmacêutico"
+    },
+    {
+      "item": 242,
+      "nome": "Ocitocina",
+      "concentracao": "5 UI/ml",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 243,
+      "nome": "Ofloxacino",
+      "concentracao": "400 mg",
+      "forma": "Comprimido",
+      "local": "Unidades com demanda"
+    },
+    {
+      "item": 244,
+      "nome": "Óleo Mineral",
+      "concentracao": "100%",
+      "forma": "Solução oral Frasco (100ml)",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 245,
+      "nome": "Omeprazol",
+      "concentracao": "20 mg",
+      "forma": "Cápsula",
+      "local": "APS"
+    },
+    {
+      "item": 246,
+      "nome": "Omeprazol",
+      "concentracao": "40 mg",
+      "forma": "Pó para solução oral",
+      "local": "CEDIP (Agravo de Dengue)"
+    },
+    {
+      "item": 247,
+      "nome": "Ondansetrona",
+      "concentracao": "2 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 248,
+      "nome": "Oseltamivir",
+      "concentracao": "30 mg",
+      "forma": "Cápsula",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 249,
+      "nome": "Oseltamivir",
+      "concentracao": "45 mg",
+      "forma": "Cápsula",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 250,
+      "nome": "Oseltamivir",
+      "concentracao": "75 mg",
+      "forma": "Cápsula",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 251,
+      "nome": "Papaína",
+      "concentracao": "10%",
+      "forma": "Creme",
+      "local": "APS"
+    },
+    {
+      "item": 252,
+      "nome": "Paracetamol",
+      "concentracao": "200 mg/ml",
+      "forma": "Solução oral",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 253,
+      "nome": "Paracetamol",
+      "concentracao": "500 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 254,
+      "nome": "Percloreto ferrico",
+      "concentracao": "50%",
+      "forma": "Pote",
+      "local": "CEM"
+    },
+    {
+      "item": 255,
+      "nome": "Permetrina",
+      "concentracao": "1%",
+      "forma": "Loção",
+      "local": "APS"
+    },
+    {
+      "item": 256,
+      "nome": "Permetrina",
+      "concentracao": "5%",
+      "forma": "Loção",
+      "local": "APS"
+    },
+    {
+      "item": 257,
+      "nome": "Petidina",
+      "concentracao": "50 mg/ml",
+      "forma": "Ampola",
+      "local": "CAPS/CRS/UPA"
+    },
+    {
+      "item": 258,
+      "nome": "Pirazinamida",
+      "concentracao": "30 mg/ml",
+      "forma": "Solução oral",
+      "local": "Unidades com demanda"
+    },
+    {
+      "item": 259,
+      "nome": "Pirazinamida",
+      "concentracao": "500 mg",
+      "forma": "Comprimido Comprimido",
+      "local": "Unidades com demanda Unidades com"
+    },
+    {
+      "item": 260,
+      "nome": "Pirazinamida",
+      "concentracao": "150 mg",
+      "forma": "dispersível",
+      "local": "demanda"
+    },
+    {
+      "item": 261,
+      "nome": "Pirimetamina",
+      "concentracao": "25 mg",
+      "forma": "Comprimido",
+      "local": "Unidades com demanda"
+    },
+    {
+      "item": 262,
+      "nome": "Polimetilmetacrilato",
+      "concentracao": "0,3 ml",
+      "forma": "Seringa",
+      "local": "CEDIP"
+    },
+    {
+      "item": 263,
+      "nome": "Prednisolona Solução Oral",
+      "concentracao": "3 mg/ml",
+      "forma": "Solução oral",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 264,
+      "nome": "Prednisona",
+      "concentracao": "20 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 265,
+      "nome": "Prednisona",
+      "concentracao": "5 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 266,
+      "nome": "Preservativo interno",
+      "concentracao": "-",
+      "forma": "-",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 267,
+      "nome": "Preservativo NÃO LUBRIFICADO",
+      "concentracao": "-",
+      "forma": "-",
+      "local": "Locais com ultrassom"
+    },
+    {
+      "item": 268,
+      "nome": "Preservativo externo",
+      "concentracao": "52 mm",
+      "forma": "-",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 269,
+      "nome": "Preservativo externo",
+      "concentracao": "49 mm",
+      "forma": "-",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 270,
+      "nome": "Prometazina",
+      "concentracao": "25 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 271,
+      "nome": "Prometazina",
+      "concentracao": "25 mg/ml",
+      "forma": "Solução injetável",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 272,
+      "nome": "Própolis",
+      "concentracao": "10%",
+      "forma": "Unidade",
+      "local": "APS"
+    },
+    {
+      "item": 273,
+      "nome": "Propranolol",
+      "concentracao": "40 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 274,
+      "nome": "Proximetacaína",
+      "concentracao": "5 mg/ml",
+      "forma": "Frasco (5ml)",
+      "local": "CRS/UPA/CEM"
+    },
+    {
+      "item": 275,
+      "nome": "Raltegravir",
+      "concentracao": "100 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA/UPA/CR S"
+    },
+    {
+      "item": 276,
+      "nome": "Raltegravir",
+      "concentracao": "400 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 277,
+      "nome": "Ranitidina",
+      "concentracao": "150 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 278,
+      "nome": "Ranitidina (Palmitato)",
+      "concentracao": "25 mg/ml 1.000 UI/g + 400",
+      "forma": "Solução injetável Creme ou",
+      "local": "Todas unidades de saúde Todas unidades de"
+    },
+    {
+      "item": 279,
+      "nome": "Calciferol + Óxido de Zinco",
+      "concentracao": "UI/g + 100mg/g",
+      "forma": "pomada",
+      "local": "saúde"
+    },
+    {
+      "item": 280,
+      "nome": "Ribavirina",
+      "concentracao": "250 mg",
+      "forma": "Cápsula",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 281,
+      "nome": "Rifabutina",
+      "concentracao": "150 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 282,
+      "nome": "Rifampicina",
+      "concentracao": "20 mg/ml",
+      "forma": "Suspensão oral",
+      "local": "Unidades com demanda"
+    },
+    {
+      "item": 283,
+      "nome": "Rifampicina",
+      "concentracao": "300 mg",
+      "forma": "Cápsula",
+      "local": "Unidades com demanda"
+    },
+    {
+      "item": 284,
+      "nome": "Rifampicina +Isoniazida Pirazinamida+Etam butol (Coxcip 4)",
+      "concentracao": "150 mg + 75 mg + 400 mg + 275 mg",
+      "forma": "Comprimido",
+      "local": "Unidades com demanda"
+    },
+    {
+      "item": 285,
+      "nome": "Rifampicina +Isoniazida Pirazinamida (Coxcip 3)",
+      "concentracao": "75 mg + 50 mg + 150 mg",
+      "forma": "Comprimido dispersível",
+      "local": "Unidades com demanda"
+    },
+    {
+      "item": 286,
+      "nome": "Ringer Lactato",
+      "concentracao": "3mg/ml (lactato de sódio) + 6mg/ml (cloreto de sódio) + 0,3mg/ml (cloreto de potássio) + 0,2mg/ml (cloreto de cálcio)",
+      "forma": "Solução injetável Frasco (500 ml)",
+      "local": "CRS/UPA/CEM"
+    },
+    {
+      "item": 287,
+      "nome": "Ritonavir",
+      "concentracao": "100 mg",
+      "forma": "Cápsula",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 288,
+      "nome": "p/ Reidratação Oral",
+      "concentracao": "27,9g/unidade",
+      "forma": "Envelope",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 289,
+      "nome": "Salbutamol",
+      "concentracao": "0,5 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 290,
+      "nome": "Salbutamol Spray",
+      "concentracao": "100 mcg",
+      "forma": "Spray",
+      "local": "CEM"
+    },
+    {
+      "item": 291,
+      "nome": "Salbutamol Solução Oral",
+      "concentracao": "0,4 mg/ml",
+      "forma": "Solução oral",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 292,
+      "nome": "Saquinavir",
+      "concentracao": "200 mg",
+      "forma": "Cápsula",
+      "local": "CEDIP"
+    },
+    {
+      "item": 293,
+      "nome": "Simeticona (somente preparo de exame)",
+      "concentracao": "40 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 294,
+      "nome": "Sinvastatina Solução",
+      "concentracao": "20 mg 5% glicose + 0,9%",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 295,
+      "nome": "Glicofisiológica",
+      "concentracao": "cloreto de sódio",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 296,
+      "nome": "Sulfadiazina",
+      "concentracao": "500 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP"
+    },
+    {
+      "item": 297,
+      "nome": "Sulfadiazina de Prata",
+      "concentracao": "10 mg/g",
+      "forma": "Creme",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 298,
+      "nome": "Sulfametoxazol + Trimetoprima Solução Oral",
+      "concentracao": "40 mg/ml + 8 mg/ml",
+      "forma": "Solução oral",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 299,
+      "nome": "Sulfametoxazol + Trimetoprima",
+      "concentracao": "400 mg + 80 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 300,
+      "nome": "Sulfametoxazol + Trimetoprima injetável",
+      "concentracao": "80 mg/ml + 16 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CEDIP (Agravo de Dengue)"
+    },
+    {
+      "item": 301,
+      "nome": "Sulfato de Magnésio",
+      "concentracao": "10%",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 302,
+      "nome": "Sulfato de Magnésio",
+      "concentracao": "50%",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA"
+    },
+    {
+      "item": 303,
+      "nome": "Sulfato Ferroso",
+      "concentracao": "25 mg/ml",
+      "forma": "Solução oral",
+      "local": "APS"
+    },
+    {
+      "item": 304,
+      "nome": "Sulfato Ferroso",
+      "concentracao": "40 mg",
+      "forma": "Comprimido",
+      "local": "APS"
+    },
+    {
+      "item": 305,
+      "nome": "Suxametônio",
+      "concentracao": "500 mg",
+      "forma": "Injetável Frasco-ampola",
+      "local": "CRS/UPA/CEM"
+    },
+    {
+      "item": 306,
+      "nome": "Talidomida",
+      "concentracao": "100 mg",
+      "forma": "Comprimido",
+      "local": "CEM"
+    },
+    {
+      "item": 307,
+      "nome": "Tenofovir",
+      "concentracao": "300 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 308,
+      "nome": "Tenofovir + Entricitabina",
+      "concentracao": "300 mg + 200 mg",
+      "forma": "Comprimido",
+      "local": "CTA"
+    },
+    {
+      "item": 309,
+      "nome": "Tenofovir + Lamivudina",
+      "concentracao": "300 mg + 300 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA/CRS/UP A E UDMS"
+    },
+    {
+      "item": 310,
+      "nome": "Tenofovir + Lamivudina + Efavirenz",
+      "concentracao": "300 mg + 300 mg + 600 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 311,
+      "nome": "Terizidona",
+      "concentracao": "250 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 312,
+      "nome": "Tiamazol",
+      "concentracao": "5 mg",
+      "forma": "Comprimido",
+      "local": "CEM"
+    },
+    {
+      "item": 313,
+      "nome": "Tiamina",
+      "concentracao": "300 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 314,
+      "nome": "Timolol",
+      "concentracao": "2,5 mg",
+      "forma": "Solução oftálmica",
+      "local": "CEM"
+    },
+    {
+      "item": 315,
+      "nome": "Tipranavir",
+      "concentracao": "250 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 316,
+      "nome": "Tiras Reagentes Glicemia Capilar",
+      "concentracao": "-",
+      "forma": "Tiras",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 317,
+      "nome": "Tramadol",
+      "concentracao": "50 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CAPS/CRS/UPA"
+    },
+    {
+      "item": 318,
+      "nome": "Ureia",
+      "concentracao": "10%",
+      "forma": "Creme",
+      "local": "APS"
+    },
+    {
+      "item": 319,
+      "nome": "Valaciclovir",
+      "concentracao": "500 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 320,
+      "nome": "Valproato de Sódio",
+      "concentracao": "50 mg/ml",
+      "forma": "Solução oral",
+      "local": "CAPS, CEM, CRS, APS com presença do farmacêutico"
+    },
+    {
+      "item": 321,
+      "nome": "Vancomicina",
+      "concentracao": "50 mg/ml",
+      "forma": "Injetável Ampola",
+      "local": "CEDIP (Agravo de Dengue)"
+    },
+    {
+      "item": 322,
+      "nome": "Varfarina sódica",
+      "concentracao": "5 mg",
+      "forma": "Comprimido",
+      "local": "CEM"
+    },
+    {
+      "item": 323,
+      "nome": "Verapamil",
+      "concentracao": "80 mg",
+      "forma": "Comprimido",
+      "local": "Todas unidades de saúde"
+    },
+    {
+      "item": 324,
+      "nome": "Vitamina A",
+      "concentracao": "100000 UI",
+      "forma": "Cápsula",
+      "local": "APS"
+    },
+    {
+      "item": 325,
+      "nome": "Vitamina A",
+      "concentracao": "200000 UI",
+      "forma": "Cápsula",
+      "local": "APS"
+    },
+    {
+      "item": 326,
+      "nome": "Vitamina C",
+      "concentracao": "100 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CEDIP"
+    },
+    {
+      "item": 327,
+      "nome": "Vitamina K",
+      "concentracao": "10 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CRS/UPA/CEM"
+    },
+    {
+      "item": 328,
+      "nome": "Vitaminas do Complexo B",
+      "concentracao": "-",
+      "forma": "Drágea",
+      "local": "APS"
+    },
+    {
+      "item": 329,
+      "nome": "Vitaminas do Complexo B injetável",
+      "concentracao": "-",
+      "forma": "Solução injetável",
+      "local": "CAPS/CRS/UPA"
+    },
+    {
+      "item": 330,
+      "nome": "Zidovudina Solução Oral",
+      "concentracao": "10 mg",
+      "forma": "Solução oral",
+      "local": "CRS/UPA/CEDIP"
+    },
+    {
+      "item": 331,
+      "nome": "Zidovudina",
+      "concentracao": "100 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 332,
+      "nome": "Zidovudina injetável",
+      "concentracao": "10 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CEDIP"
+    },
+    {
+      "item": 333,
+      "nome": "Zidovudina + lamivudina",
+      "concentracao": "300 mg + 150 mg",
+      "forma": "Comprimido",
+      "local": "CEDIP/CTA"
+    },
+    {
+      "item": 334,
+      "nome": "Zuclopentixol",
+      "concentracao": "200 mg/ml",
+      "forma": "Solução injetável",
+      "local": "CAPS"
+    }
+  ],
+  "proveniencia": [
+    {
+      "fonte_nome": "Resolução SESAU n. 628/2021 — REMUME Campo Grande 2021, Anexo I",
+      "fonte_url": "https://data.queridodiario.ok.org.br/5002704/2021-11-18/b15df93bb14a657fb9dd9a45f4473c050f37a2ac.pdf",
+      "fonte_arquivo": "fontes/ms-campo-grande/diario-6466-remume-2021.pdf",
+      "fonte_data": "2021-11-17",
+      "extraido_em": "2026-09-08",
+      "verificado_em": "2026-09-08",
+      "metodo": "ia-assistida"
+    }
+  ]
+}
